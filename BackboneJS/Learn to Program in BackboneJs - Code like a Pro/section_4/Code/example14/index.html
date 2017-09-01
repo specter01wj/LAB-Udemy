@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Sample Backbone.js application</title>
+	</head>
+	<body>
+		<!-- Template: Handlebars -->
+		<script id="books-template" type="text/x-handlebars-template">
+			{{#each library}}
+				{{!-- This is the book title })--}}
+				<li>
+					Book title: {{name}} by <em>{{author}}</em>
+					{{#unless published}}<span> - <u>Not yet Published</u></span>{{/unless}}
+				</li>
+			{{/each }}
+		</script>
+		
+		<ul id="book-list">
+		</ul>
+
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script src="handlebars.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

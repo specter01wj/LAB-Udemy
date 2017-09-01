@@ -1,0 +1,21 @@
+
+
+#formBox{
+	height:100px;
+	width:500px;
+}
+
+#container{
+	position:relative;
+top:40px;
+}
+
+
+
+
+#output{
+position:relative;
+width:360px;
+background-color:#DDD;
+	
+}

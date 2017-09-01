@@ -1,0 +1,94 @@
+
+body{
+	font-family:arial;
+	font-size:15px;
+	line-height: 1.6em;
+	background:#f4f4f4;
+    background-color: #58b1e7;
+}
+
+li{
+	list-style:none;
+}
+
+.container{
+	width:70%;
+	margin: 20px auto;
+	overflow:auto;
+}
+
+.pull-left{float:left;}
+.pull-right{float:right;}
+
+
+
+#calculator {
+    background-color: #273a63;
+    width: 450px;
+    height: 350px;
+    color: #fff;
+    padding: 55px;
+    padding-top: 30px;
+    border-style: none;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#calculator input {
+    float: right;
+    clear: both;
+    width: 125px;
+    height: 30px;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#calculator p {
+    font-size: 35px;
+}
+
+#calculator #addup {
+    background-color: #cc0000;
+    width: 220px;
+    height: 45px;
+    color: #fff;
+    font-size: 30px;
+    border-style: none;
+    border-radius: 10px;
+    margin-right: 120px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-right: 150px;
+    margin-top: 20px;
+}
+
+#perc {
+    color: #cd5c5c;
+}
+
+
+header{
+	background:#1f88f4;
+	color:#ffffff;
+	padding:5px 10px;
+	overflow:auto;
+	font-size:16px;
+}
+
+footer{
+	background:#1f88f4;
+	color:#ffffff;
+	padding:5px 10px;
+	overflow:auto;
+}
+
+@media only screen and (max-width: 900px){
+	.container{
+		width:95%;
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "description": "my blog",
+  "main": "server.js",
+  "dependencies":{
+  	"express":"*"
+  },
+  "author": "zeke",
+  "license": "BSD-2-Clause"
+}

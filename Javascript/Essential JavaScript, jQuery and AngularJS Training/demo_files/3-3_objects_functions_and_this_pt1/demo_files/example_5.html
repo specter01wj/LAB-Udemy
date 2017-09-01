@@ -1,0 +1,39 @@
+
+<script>
+
+
+
+
+
+
+var object1 = {
+    prop: 'obj1Prop',
+    get:function(){ alert(this.prop);
+    }
+}
+
+var object2 = {
+    prop: "obj2Prop",
+} 
+
+
+
+var getFromObject2 = object1.get.bind(object2); 
+
+
+getFromObject2();   // obj2Prop
+
+
+
+ 
+
+
+
+
+
+</script>
+
+
+
+
+

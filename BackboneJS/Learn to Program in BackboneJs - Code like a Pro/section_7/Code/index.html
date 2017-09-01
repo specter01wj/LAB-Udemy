@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Eduonix Twitter Example</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h2>My Tweets</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div id="timeline" class="col-md-6">
+			<!-- Timeline data -->
+		</div>
+		<div id="profile-view" class="col-md-4  pull-right">
+		<!-- Profile data -->
+		</div>
+		<div class="col-md-4 pull-right" id="search">
+			<form action="#" class="form">
+				<div class="form-group">
+					<input type="text" class="form-control" id="searchbox" placeholder="Type your search term here...">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary" id="searchbutton">Search</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Handlebars template -->
+<script type="text/x-handlebars-template" id="timeline-template">
+		<ul class="list-unstyled">
+			{{#each tweet}}
+			<li>
+				<div class="row">
+					<div class="col-md-2">
+						<img src="{{user.profile_image_url}}" alt="">
+					</div>
+					<div class="col-md-10">
+						<h4>{{user.name}}</h4>
+						<p>{{text}}</p>
+						<p>{{friendlyDate}}</p>
+					</div>
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+</script>
+<script type="text/x-handlebars-template" id="profile-template">
+	<div class="col-md-2">
+		<img src="{{user.profile_image_url}}" alt="">
+	</div>
+	<div class="col-md-10">
+		<h3 style="margin-top:0">{{user.name}}</h3>
+		<p>{{user.description}}</p>
+		<p class="pull-right"><strong>Followers: {{user.followers_count}}</strong></p>
+	</div>
+</script>
+<!-- Dependencies -->
+<script src="/Lib/jquery-2.1.4.min.js"></script>
+<script src="/Lib/underscore-min.js"></script>
+<script src="/Lib/backbone-min.js"></script>
+<script src="/Lib/handlebars.js"></script>
+<script src="/Lib/bootstrap.min.js"></script>
+<script src="/Lib/moment.js"></script>
+<!-- Models  -->
+<script src="/Models/Tweet.js"></script>
+<script src="/Models/Profile.js"></script>
+<script src="/Models/Search.js"></script>
+<!-- Collection -->
+<script src="/Collections/Timeline.js"></script>
+<!-- View -->
+<script src="/Views/TimelineView.js"></script>
+<script src="/Views/ProfileView.js"></script>
+<script src="/Views/SearchView.js"></script>
+<script src="/Views/ResultsView.js"></script>
+<!-- Router -->
+<script src="/Routers/AppRouter.js"></script>
+<!-- Main application file  -->
+<script src="/app.js"></script>
+</body>
+</html>

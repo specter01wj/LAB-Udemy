@@ -1,0 +1,13 @@
+{
+  "name": "mongooseExample",
+  "version": "0.0.0",
+  "description": "",
+  "dependencies":{
+  	"express":"*",
+  	"mongoose":"*",
+  	"ejs":"*"
+  },
+  "main": "server.js",
+  "author": "Zeke Nierenberg",
+  "license": "BSD-2-Clause"
+}

@@ -1,0 +1,98 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+	font-family:arial;
+}
+
+header{
+	height:50px;
+	background:#333;
+	color:#fff;
+}
+
+header h1{
+	text-align:center;
+	padding:5px;
+}
+
+#picbox{
+	width:650px;
+	margin:50px auto;
+	border:#ccc dotted 1px;
+	min-height:500px;
+	overflow:auto;
+}
+
+#picbox .back{
+	text-align:center;
+	padding-top:100px;
+	display:block;
+	opacity:0.4;
+}
+
+#picbox .preview{
+	width:245px;
+	height:215px;
+	float:left;
+	margin:55px 0 0 60px;
+	position:relative;
+	text-align:center;
+}
+
+#picbox .preview img{
+	max-width:240px;
+	max-height: 180px;
+	border:3px solid #fff;
+	display:block;
+	box-shadow: 0 0 2px #000;
+}
+
+#picbox .imageHolder{
+	display:inline-block;
+	position:relative;
+}
+
+#picbox .uploaded{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background:url(../images/check.png) no-repeat center center rgba(255,255,255,0.5);
+	display:none;
+}
+
+#picbox .preview.done .uploaded{
+	display:block;
+}
+
+#picbox .progressHolder{
+	position:absolute;
+	background:#252f38;
+	height:12px;
+	width:100%;
+	left:0;
+	bottom:0;
+	box-shadow: 0 0 2px #000;
+}
+
+#picbox .progress{
+	background:#2586d0;
+	position:absolute;
+	height:100%;
+	left:0;
+	width:0;
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.4) inset;
+	
+	-moz-transition:0.25s;
+	-webkit-transition:0.25s;
+	-o-transition:0.25s;
+	transition:0.25s;
+}
+
+#picbox .preview.done .progress{
+	width:100% !important;
+}

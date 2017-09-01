@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Section 4, my project</title>
+	</head>
+	<body>
+
+		<script id="books-template" type="text/x-handlebars-template">
+			{{#each library}}
+				<li>
+					Book title: {{name}} by <em>{{author}}</em>
+					<!--{{#if published}}<span> - <u>Published</u></span>
+					{{/if}}-->
+					{{#unless published}}<span> - <u>Not yet Published</u></span>
+					{{/unless}}
+				</li>
+			{{/each}}
+		</script>
+
+
+
+		<ul id="book-list">
+
+		</ul>
+
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script src="handlebars.js"></script>
+		<script src="app_handlebars.js"></script>
+	</body>
+</html>

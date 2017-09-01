@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Sample Backbone.js application</title>
+	</head>
+	<body>
+		<script id="book-template" type="text/template">
+			<table>
+				<tr>
+					<td>Title:</td>
+					<td><%= book.name %></td>
+				</tr>
+				<tr>
+					<td>Author</td>
+					<td><%= book.author %></td>
+				</tr>
+			</table>
+			<button id="previous">Previous</button>
+			<button id="next">Next</button>
+		</script>
+
+
+		<div id="book"></div>
+
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

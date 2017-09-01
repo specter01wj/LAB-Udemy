@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="container-1" class = "box">
+		<p>Drink contents</p>
+			<ul id = 'list'>
+				<li id="list-item-1" class = "list-item">Coffee</li>
+				<li id="list-item-2" class = "list-item">Stevia</li>
+				<li id="list-item-3" class = "list-item">Milk</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+
+
+/*   BEGIN Example of childNodes in action  */
+	var list = document.getElementById("list");
+	alert( list.childNodes[0]);  // #text
+	alert( list.childNodes[1].id);
+    alert( list.childNodes[2].id); // text white space with no id hence outputs undefined
+	alert( list.childNodes[3].id);
+	alert( list.childNodes[4].id); // text white space with no id hence outputs undefined
+	alert( list.childNodes[5].id);
+
+	// alert( list.childNodes[1].className);
+
+/* END Example of childNodes in action */
+
+/* BEGIN Using children instead of childNodes ignores white space "text" nodes*/ 
+
+    // alert(list.children[0].id);
+
+
+
+
+	</script>
+</html>

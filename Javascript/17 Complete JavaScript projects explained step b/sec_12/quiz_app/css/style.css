@@ -1,0 +1,141 @@
+
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+
+body{
+	font-family: Helvetica, sans-serif, arial;
+	font-size:15px;
+    color: #fff;
+	line-height: 1.6em;
+	background:#f4f4f4;
+    background-color: #6495ed;
+}
+
+h1 {
+    font-family: 'Rokkitt', serif;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+}
+
+ul {
+    list-style: none;
+}
+
+li{
+	font-family: 'Rokkitt', serif;
+    color: #feb135;
+    font-size: 2em;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 2em;
+}
+
+p {
+    font-family: 'Rokkitt', serif;
+}
+
+.container{
+	width:70%;
+	margin: 20px auto;
+	overflow:auto;
+}
+
+.pull-left{float:left;}
+.pull-right{float:right;}
+
+#wrapper {
+    width: 450px;
+    height: 650px;
+    background-color: #000365;
+    margin: 20px auto auto 135px;
+    padding: 10px 65px 30px 50px;
+    border-radius: 30px;
+}
+
+.quizContainer {
+    background-color: #000398;
+    border-radius: 8px;
+    width: 75%;
+    margin: auto;
+    margin-top: 190px;
+    padding-top: 5px;
+    position: relative;
+}
+
+.nextButoon {
+    border-radius: 6px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: #cc0000;
+    color: #fff;
+    font-family: 'Rokkitt', serif;
+    font-weight: bold;
+    position: relative;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.question {
+    font-family: 'Rokkitt', serif;
+    font-size: 2em;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    border-radius: 6px;
+    background-color: #f2f205;
+    text-align: center;
+    color: white;
+}
+
+.quizMessage {
+    background-color: peachpuff;
+    border-radius: 6px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    font-family: 'Rokkitt', serif;
+    color: red;
+}
+
+.choiceList {
+    font-family: Courier, serif;
+    color: blueviolet;
+}
+
+.result {
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+    background-color: linen;
+    margin: auto;
+    margin-bottom: 35px;
+    text-align: center;
+    font-family: 'Rokkitt', serif;
+}
+
+
+header{
+	background:#1f88f4;
+	color:#ffffff;
+	padding:5px 10px;
+	overflow:auto;
+	font-size:16px;
+}
+
+footer{
+	background:#1f88f4;
+	color:#ffffff;
+	padding:5px 10px;
+	overflow:auto;
+}
+
+@media only screen and (max-width: 900px){
+	.container{
+		width:95%;
+	}
+}

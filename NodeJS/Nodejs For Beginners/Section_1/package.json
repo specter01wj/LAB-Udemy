@@ -1,0 +1,19 @@
+{
+  "name": "Section_1",
+  "version": "1.0.0",
+  "description": "tbd",
+  "main": "s1_7.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "underscore": "latest",
+    "lodash": "*",
+    "mongoose": "*",
+    "express": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

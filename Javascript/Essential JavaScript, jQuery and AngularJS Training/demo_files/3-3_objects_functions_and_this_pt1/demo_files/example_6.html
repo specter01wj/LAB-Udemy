@@ -1,0 +1,37 @@
+<script>
+
+
+
+
+
+
+
+var box1 = {
+    toy: 'frisbee',
+    getToyOutOfBox:function(description){ 
+
+    	alert('A ' + this.toy + " is " + description );
+    }
+}
+
+var box2 = {
+    toy: "skateboard",
+} 
+
+box1.getToyOutOfBox('great!'); // A frisbee is great!
+box1.getToyOutOfBox.call(box2,"perfect!");
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+

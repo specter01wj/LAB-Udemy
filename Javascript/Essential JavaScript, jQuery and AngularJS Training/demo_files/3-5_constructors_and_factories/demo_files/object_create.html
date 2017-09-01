@@ -1,0 +1,23 @@
+<script>
+
+var animal = {
+ 	 legs : undefined,
+     type:  undefined,
+     notHuman:  true,
+};
+
+
+var cat = Object.create(animal);
+cat.legs = "4"
+cat.type = "lion"
+
+
+console.log(cat.legs);
+
+console.log(cat.type);
+
+console.log(cat.notHuman); // Inherits from original object
+
+
+
+</script>

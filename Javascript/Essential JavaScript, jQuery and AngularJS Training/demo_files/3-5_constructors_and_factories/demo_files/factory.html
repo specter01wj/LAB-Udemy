@@ -1,0 +1,22 @@
+<script>
+
+
+function animal(size, type, color){
+animalObj = {};
+animalObj.size = size;
+animalObj.type = type;
+animalObj.color = color;
+animalObj.getSize = function(){ alert(animalObj.size)};
+return animalObj;
+};
+
+var cat = animal("big", "lion", "yellow");
+
+
+console.log(cat.size);
+console.log(cat.type);
+console.log(cat.color);
+
+cat.getSize();
+
+</script>

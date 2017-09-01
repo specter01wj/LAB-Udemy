@@ -1,0 +1,11 @@
+{
+  "name": "expressProject",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies":{
+  	"express":"*"
+  },
+  "author": "Zeke",
+  "license": "BSD-2-Clause"
+}

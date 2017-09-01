@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Sample Backbone.js application</title>
+	</head>
+	<body>
+		<!-- Underscore templating -->
+		<script id="books-template" type="text/template">
+			<% for (var i = 0; i < library.length; i++){ %>
+				<li><%= library[i].name %></li>
+			<% } %>
+		</script>
+		
+		<ul id="book-list">
+		</ul>
+
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

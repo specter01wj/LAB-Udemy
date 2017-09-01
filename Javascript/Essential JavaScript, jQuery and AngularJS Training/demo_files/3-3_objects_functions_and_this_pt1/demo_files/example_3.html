@@ -1,0 +1,34 @@
+<script>
+
+
+
+
+
+
+
+"use strict"
+
+var intentionalGlobalVar;
+
+function doStuff(){
+ accidentalGlobal = "accidental global ! ";
+ intentionalGlobalVar = "This was a previous declared variable so it does not throw undefined";
+
+
+}
+
+doStuff();
+
+
+console.log(  accidentalGlobal ) // accidental global
+
+console.log( intentionalGlobalVar) // accidental global
+
+
+
+
+
+
+
+
+</script>

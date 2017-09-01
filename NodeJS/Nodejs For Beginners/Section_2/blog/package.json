@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "s2_6.js",
+  "dependencies": {
+    "express": "*",
+    "logger": "*",
+    "mongoose": "*",
+    "morgan":"*",
+    "body-parser":"*",
+    "ejs": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Wang",
+  "license": "ISC"
+}

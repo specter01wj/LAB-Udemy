@@ -1,0 +1,38 @@
+<script>
+
+
+
+
+
+
+
+
+
+
+var objectOne = {
+	myProp:  " Hi.....I'm objOne"
+};
+
+var objectTwo = {
+	myProp: " Hi.....I'm objTwo"
+}
+
+function getProp(){
+  return this.myProp ;
+}
+
+objectTwo.get = getProp;
+
+console.log( objectTwo.get() )  
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Sample Backbone.js application</title>
+	</head>
+	<body>
+		<!-- Template: Handlebars -->
+		<script id="book-template" type="text/tamplate">
+		<table>
+			<tr>
+				<td>
+					Title:
+				</td>
+				<td>
+					<%= book.name %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Authour:
+				</td>
+				<td>
+					<%= book.author %>
+				</td>
+			</tr>
+			</table>
+			<button type="button" name="button" id="previous">Ptrvious</button>
+			<button type="button" name="button" id="next">Next</button>
+		</script>
+
+		<div id="book-view"></div>
+
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="underscore-min.js"></script>
+		<script src="backbone-min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

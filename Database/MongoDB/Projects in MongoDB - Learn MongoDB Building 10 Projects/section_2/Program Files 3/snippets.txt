@@ -1,0 +1,89 @@
+use customers
+
+
+db.createUser( { "user" : "brad",
+                 "pwd": "1234",
+                 "roles" : [ { role: "clusterAdmin", db: "admin" },
+                             { role: "readAnyDatabase", db: "admin" },
+                             "readWrite"
+                             ] },
+               { w: "majority" , wtimeout: 5000 } )
+
+
+
+db.createCollection('customers')
+
+
+db.customers.insert({first_name:"John", last_name: "Doe"})
+
+
+db.customers.find()
+
+
+db.customers.find().pretty()
+
+
+db.customers.insert([
+	{
+		first_name:"Steven", last_name:"Johnson"
+	},
+	{
+		first_name:"Bob", last_name:"Smith"
+	},
+	{
+		first_name:"Michelle", last_name:"Ford"
+	},
+	{
+		first_name:"Jill", last_name:"Swanson"
+	}
+])
+
+
+db.customers.insert({first_name:"William", last_name: "Heart", gender:"male"})
+
+
+db.customers.insert({first_name:"Mary", last_name: "Jackson", gender:"female", age: 33, birthdate: new Date('Sep 10, 1981')})
+
+
+db.customers.find({gender:"male"})
+
+
+db.customers.find({gender:"male"}, {first_name: 1})
+
+db.customers.findOne({first_name:"William"})
+
+----------------------------------------------------------
+
+db.customers.update({first_name:"William"},{last_name:"Hill"})
+
+db.customers.update({
+first_name:"Jill"},
+{$set:{
+	last_name:"Hill"
+	}
+})
+
+db.customers.update({_id: ObjectId("55f057370558f99c3286a54b")},{
+$set:{
+	gender:"male",
+	age:"30",
+	birthdate: new Date("Aug 20, 1985")
+}})
+
+db.customers.update({first_name:"Michael"},{$set:{
+	first_name:"Michael",
+	last_name: "Jordan",
+	age: "50"
+}}, {upsert: true})
+
+db.customers.update({last_name:"Jordan"}, {$unset: {age: 1}})
+
+db.customers.update({first_name:"Mary"},{$inc:{age: 1}})
+
+db.customers.remove({first_name:'Steven'}, true)
+
+db.customers.remove({age:{$gt:31}}, true)
+
+
+
+

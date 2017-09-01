@@ -1,0 +1,410 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+a{
+	color: #333333;
+	text-decoration: none;
+}
+
+h2{
+	font-size: 25px;
+}
+
+ul,ol{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	margin: 0 auto;
+	width: 80%;
+	overflow: hidden;
+}
+
+#main-header{
+	height: 50px;
+	background: #333333;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+#branding{
+	float: left;
+	width: 50%;
+}
+
+#branding h1{
+	padding: 5px 0 0 70px;
+	color: #ffffff;
+	margin: 0 !important;
+}
+
+#branding img{
+	position: absolute;
+	width: 60px;
+	height: auto;
+}
+
+#main-nav{
+	float: right;
+	width: 50%;
+	padding-top: 12px;
+}
+
+#main-nav ul{
+	float: right;
+}
+
+#main-nav li{
+	float: left;
+	padding: 3px 5px 0 5px;
+	margin: 0 15px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	list-style: square;
+	color: #ffffff;
+}
+
+#main-nav a{
+	color: #ffffff;
+}
+
+#content{
+	float: left;
+	width: 63%;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	padding: 0 20px 20px 20px;
+}
+
+article{
+	border-bottom: 1px dotted #cccccc;
+	padding: 10px 0 20px 0;
+}
+
+article img{
+	width: 100%;
+}
+
+article h2{
+	margin: 0;
+	padding-top: 10px;
+}
+
+article .meta{
+	margin: 10px 0 10px 0;
+	padding: 5px;
+	background: #333333;
+	color: #ffffff;
+}
+
+article .meta span{
+	float: right;
+}
+
+article .readmore{
+	background: #f4f4f4;
+	color: #000000;
+	width: 97%;
+	display: block;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+}
+
+article .readmore:hover{
+	background: #cccccc;
+}
+
+#sidebar{
+	float: right;
+	width: 30%;
+}
+
+#sidebar .search{
+	float: right;
+}
+
+#sidebar .search input[type="search"]{
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	height: 20px;
+	width: 85%;
+	padding: 3px;
+	float: left;
+}
+
+#sidebar .search input[type="image"]{
+	width: 10%;
+	float: right;
+}
+
+#sidebar #sub-nav{
+	padding: 20px 0 20px 0;
+}
+
+#sidebar #sub-nav li{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px 0 5px 0;
+	border-bottom: 1px dotted #333333;
+}
+
+#sidebar #sub-nav a{
+	color: #333333;
+}
+
+#sidebar #sub-nav a:hover, #sidebar #sub-nav a.active{
+	color: #ff0000;
+}
+
+#sidebar .ad img{
+	width: 100%;
+	margin-bottom:20px;
+}
+
+#main-footer{
+	background: #333333;
+	color: #ffffff;
+	min-height: 180px;
+	margin-top: 20px;
+	overflow: auto;
+}
+
+#main-footer a{
+	color: #ffffff;
+}
+
+#main-footer .copy{
+	padding: 20px 0 0 0;
+}
+
+#main-footer .footer-left{
+	float: left;
+	width: 30%;
+}
+
+#main-footer .footer-right{
+	float: right;
+	width: 70%;
+}
+
+#main-footer .footer-nav{
+	float: left;
+	width: 31%;
+	font-size: 15px;
+	padding: 20px 0 20px 0;
+	margin-right: 10px;
+}
+
+#main-footer .footer-nav li{
+	padding: 5px 0 5px 0;
+	border-bottom: 1px dotted #666666;
+}
+
+#content #comments{
+	margin-top: 20px;
+}
+
+#content #comments .comment-left{
+	float: left;
+	width: 8%;
+}
+
+#content #comments .comment-left img{
+	width: 100%;
+}
+
+#content #comments .comment-right{
+	float: right;
+	width: 90%;
+}
+
+#content #comments .comment-form{
+	margin-top: 20px;
+	padding: 5px 20px 10px 20px;
+	background: #333333;
+	color: #ffffff;
+	border-radius: 10px;
+}
+
+#content #comments .comment-form input[type="text"], .comment-form input[type="email"]{
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	height: 20px;
+	padding: 3px;
+	width: 97%;
+}
+
+#content #comments .comment-form textarea{
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	padding: 3px;
+	width: 97%;
+}
+
+#content .add-form input[type="text"]{
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	height: 20px;
+	padding: 3px;
+	width: 97%;
+}
+
+#content .add-form select{
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	height: 30px;
+	padding: 3px;
+	width: 40%;
+}
+
+#content .add-form textarea{
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	padding: 3px;
+	width: 97%;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (max-width: 900px){
+	#branding h1{
+		display:none;
+	}
+	
+	#branding{
+		width:20%;
+	}
+	
+	#main-nav{
+		width:80%;
+	}
+	
+	#content{
+		float:none;
+		width:89%;
+	}
+	
+	#sidebar{
+		float:none;
+		width:100%;
+	}
+	
+	#main-footer  .footer-left,#main-footer .footer-right{
+		float:none;
+		width:100%;
+	}
+	
+	#main-footer .footer-nav{
+		float:none;
+		width:100%;
+	}
+	
+	#main-footer .copy{
+		text-align:center;
+	}
+}
+
+@media only screen and (max-width: 580px){
+	#main-nav li{
+		padding:3px 3px 0 3px;
+		margin:0 5px;
+		font-size:13px;
+		list-style:none;
+	}
+	
+	#content{
+		float:none;
+		width:87%;
+	}
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */

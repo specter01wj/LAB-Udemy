@@ -1,0 +1,11 @@
+{
+  "name": "monogProject",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies":{
+  	"mongodb":"*"
+  },
+  "author": "zeke",
+  "license": "BSD-2-Clause"
+}

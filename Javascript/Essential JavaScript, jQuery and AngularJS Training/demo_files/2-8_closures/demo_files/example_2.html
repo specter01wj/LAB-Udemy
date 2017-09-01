@@ -1,0 +1,45 @@
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+function outerFunc() {
+    var counter = 0;
+    return function showData() { 
+        return counter++
+    }
+}
+
+
+var inner = outerFunc();
+
+console.log(    inner()  );
+console.log(    inner()  );
+console.log(    inner()  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

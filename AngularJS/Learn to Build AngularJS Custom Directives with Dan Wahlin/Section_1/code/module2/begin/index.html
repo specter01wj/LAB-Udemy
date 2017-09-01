@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="directivesModule">
+    <body ng-controller="CustomersController">
+        <h1>Shared Scope Directive</h1>
+        <div shared-scope></div shared-scope>
+
+        <h1>Isolate Scope Directive</h1>
+        <div isolate-scope></div isolate-scope>
+
+        <h2>Isolate Scope with String</h2>
+        <div isolate-scope-with-string name="{{customer.name}}"></div isolate-scope-with-string>
+
+        <h2>Isolate Scope with Object</h2>
+        <div isolate-scope-with-object datasource="customer"></div isolate-scope-with-object>
+
+        <h2>Isolate Scope with Event</h2>
+        <div isolate-scope-with-event datasource="customer" action="changeData()">
+        </div isolate-scope-with-event>
+
+
+        <script src="../../scripts/angular.js"></script>
+        <script src="../../scripts/directivesController.js"></script>
+        <script src="sharedScopeDirective.js"></script>
+        <script src="isolateScopeDirective.js"></script>
+        <script src="isolateScopeWithStringDirective.js"></script>
+        <script src="isolateScopeWithObjectDirective.js"></script>
+        <script src="isolateScopeWithEventDirective.js"></script>
+    </body>
+</html>

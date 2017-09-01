@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+		<div id="container">
+			<header id="main">
+				<h1>Mood Teller</h1>
+			</header>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<main>
+				<section id="main">
+					<article>
+						<h2>Mood Teller</h2>
+						<p>Please type in your name and your current mood</p>
+						<form id="moodForm" action="#">
+							<label>Name:</label>
+							<input type="text" id="name" placeholder="Enter Your Name...">
+							<br><br>
+							<label>Mood:</label>
+							<input type="text" id="mood" placeholder="Enter Your Mood...">
+							<br><br>
+							<button onclick="showMood()">Tell Me</button> <button onclick="clearMood()">Clear Mood</button>
+						</form>
+						<div id="holder"></div>
+					</article>
+				</section>
+				<aside>
+					<h3>Sidebar</h3>
+					<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur rhoncus nunc et placerat commodo. Nam molestie at dolor nec pretium. Curabitur molestie, lorem id cursus dictum, urna sapien hendrerit ante, lacinia aliquam ligula mauris in dolor</p>
+				</aside>
+			</main>
+				<div class="clearfix"></div>
+				<footer>
+					<p>Copyright &copy; 2014, My HTML5 Website</p>
+				</footer>
+			</div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

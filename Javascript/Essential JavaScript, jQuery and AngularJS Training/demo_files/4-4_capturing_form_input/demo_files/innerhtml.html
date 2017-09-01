@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<form>
+			<input type="text" id="your-name" placeholder="Type your name">
+			<input type="button" id="submit-button" value="Submit">
+		</form>
+
+
+		<div id="output"></div>
+		<script>
+
+
+
+
+		var submitButton = document.getElementById('submit-button');
+		submitButton.addEventListener('click',saveName,false);
+
+
+
+
+		function saveName(){
+			var nameVal = document.getElementById('your-name').value;
+			console.log(nameVal);
+
+
+			   var name = document.getElementById('your-name');
+			   var outputElement = document.getElementById("output");
+			   name.value = "";
+
+			   outputElement.innerHTML = nameVal ; 
+		};
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>

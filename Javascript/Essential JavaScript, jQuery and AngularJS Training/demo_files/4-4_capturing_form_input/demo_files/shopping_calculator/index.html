@@ -1,0 +1,182 @@
+
+
+
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Form</title>
+
+
+
+
+<link rel="stylesheet" href="Form.css">
+
+
+
+<div id = "formBox">
+<form id="form" >
+
+
+
+<!-- Book -->	
+<input type="text" id="book" value="Book">
+<input type="number" id="bookQuantity" value="1">
+<input type="text" id="bookPrice" value="12.49">
+
+
+<!--Music CD -->
+<input type="text" id="bookStand" value="Book stand">
+<input type="number" id="bookStandQuantity" value="1">
+<input type="text" id="bookStandPrice" value="14.99">
+
+
+<!--Chocolate Bar -->
+<input type="text" id="pens" value="Pens">
+<input type="number" id="pensQuantity" value="1">
+<input type="text" id="pensPrice" value="0.85">
+
+
+
+<!--output-->
+<input type="button" id="button" value="Get receipt">
+</form>
+</div>
+
+
+
+
+
+<div id="container">
+
+<div id="bookTotalReceipt"></div>
+
+<div id="bookStandTotalReceipt"></div>
+
+<div id="pensTotalReceipt"></div>
+
+<div id="taxTotalReceipt"></div>
+
+<div id="totalReceipt"></div>
+
+</div>
+
+
+
+
+<script> // JS BEGINS
+
+
+
+//BEGIN.................submit button
+var button = document.getElementById('button'); 
+//END .................of submit button
+
+button.addEventListener('click', buy,false)
+
+
+
+
+// BEGIN....function launched when user clicks button to create total.
+function buy() {  
+
+
+// BEGIN............Assign DOM items to variables.
+// *--Book--*
+var book = document.getElementById("book").value; 
+var bookQuantity = document.getElementById("bookQuantity").value;
+var bookPrice = document.getElementById("bookPrice").value;
+
+// *--Music CD--*
+var bookStand = document.getElementById("bookStand").value; 
+var bookStandQuantity = document.getElementById("bookStandQuantity").value;
+var bookStandPrice = document.getElementById("bookStandPrice").value;
+
+// *--Chocolate Bar--*
+var pens = document.getElementById("pens").value; 
+var pensQuantity = document.getElementById("pensQuantity").value;
+var pensPrice = document.getElementById("pensPrice").value;
+
+//END .............of Assign DOM items to variables.
+
+
+
+
+
+
+// BEGIN....Convert form inputs to floats
+var bookQuantity = parseFloat(bookQuantity);
+var bookPrice = parseFloat(bookPrice);
+
+var bookStandQuantity = parseFloat(bookStandQuantity);
+var bookStandPrice = parseFloat(bookStandPrice);
+
+var pensQuantity = parseFloat(pensQuantity);
+var pensPrice = parseFloat(pensPrice);
+
+// END....Convert form inputs to floats 
+
+// *-- book Total Calculation--*
+
+var bookPreTaxTotal = (bookQuantity * bookPrice);
+var bookTax = bookPreTaxTotal * .09;
+var bookTotal = bookPreTaxTotal + bookTax;
+
+// *-- bookStand Total Calculation--*
+
+var bookStandPreTaxTotal = (bookStandQuantity * bookStandPrice);
+var bookStandTax = bookStandPreTaxTotal * .09;
+var bookStandTotal = bookStandPreTaxTotal + bookStandTax;
+
+// *-- pens Total Calculation--*
+
+var pensPreTaxTotal = (pensQuantity * pensPrice);
+var pensTax = pensPreTaxTotal * .09;
+var pensTotal = pensPreTaxTotal + pensTax;
+
+
+// *-- Tax calculation--*
+
+var taxTotalBeforeRounding = bookTax + bookStandTax + pensTax; 
+
+
+var taxTotal = (Math.round(taxTotalBeforeRounding  * 100) / 100).toFixed(2);  
+
+// *-- All Items calculated with Tax--*
+
+var totalBeforeRounding = bookTotal + bookStandTotal + pensTotal;
+
+var total = (Math.round(totalBeforeRounding  * 100) / 100).toFixed(2);  
+
+
+
+bookTotalReceipt.innerHTML = "Book: " + bookTotal.toFixed(2); 
+bookStandTotalReceipt.innerHTML = "Book stand: " + bookStandTotal.toFixed(2); 
+pensTotalReceipt.innerHTML = "Pens: " + pensTotal.toFixed(2); 
+taxTotalReceipt.innerHTML = "Tax: " + taxTotal; 
+totalReceipt.innerHTML = "Total: " + total; 
+
+
+};
+
+// END....of function launched when user clicks button
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

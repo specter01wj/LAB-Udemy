@@ -1,0 +1,23 @@
+<script>
+
+var goodFood = ["fish","greens","fruit"];
+
+var junkFood = ["candy","soda","cookies"];
+
+var allTheFood = goodFood.concat(junkFood);
+
+
+
+allTheFood.splice(3,0,"grains","juice");
+
+document.write(allTheFood);   //fish,greens,fruit,grains,juice,candy,soda,cookies
+
+
+
+
+// allTheFood.splice(3,5,"grains","juice"); // remove items after juice
+
+// document.write(allTheFood);
+
+
+</script>

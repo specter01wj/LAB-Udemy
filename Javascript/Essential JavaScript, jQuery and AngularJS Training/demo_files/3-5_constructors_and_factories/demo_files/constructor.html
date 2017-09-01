@@ -1,0 +1,21 @@
+<script>
+
+
+function Animal(size, type, color) {
+ this.size = size;
+ this.type = type;
+ this.color  = color;
+};
+
+
+Animal.prototype.getSize = function(){ alert( this.size)};
+
+
+var cat = new Animal("big","lion","yellow");
+
+console.log(cat.size);
+console.log(cat.type);
+console.log(cat.color);
+cat.getSize();
+
+</script>

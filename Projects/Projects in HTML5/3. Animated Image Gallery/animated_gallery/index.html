@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JinWang Photo Gallery</title>    
+		<!-- Main CSS File -->
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<!-- Add fancyBox CSS -->
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+		
+		<!-- Include JQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- Quicksand Plugin -->
+		<script src="js/jquery.quicksand.js"></script>
+		<!-- Fancybox js -->
+		<script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<script type="text/javascript" src="js/fancybox/jquery.fancybox-buttons.js"></script>
+		<script type="text/javascript" src="js/fancybox/jquery.fancybox-media.js?v=1.0.6"></script>
+		<script type="text/javascript" src="js/fancybox/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+		<!-- Include Custom JS-->
+		<script src="js/script.js"></script>
+		<script>
+			//Call Fancybox
+			$(document).ready(function(){
+				$(".fancybox").fancybox();
+			});
+		</script>
+    </head>
+	
+    <body>
+		<header>
+			<div class="container">
+				<nav id="navbar">
+				</nav>
+			</div>
+		</header>
+		
+		<section id="main">
+			<div class="container">
+				<ul id="gallery">
+					<li data-tags="Logo Design, Print Design"><a class="fancybox" rel="group" href="img/1.jpg"><img src="img/1.jpg"></a></li>
+					<li data-tags="Web Design, Logo Design"><a class="fancybox" rel="group" href="img/2.jpg"><img src="img/2.jpg"></a></li>
+					<li data-tags="Print Design"><a class="fancybox" rel="group" href="img/3.jpg"><img src="img/3.jpg"></a></li>
+					<li data-tags="Logo Design, Web Design, Print Design"><a class="fancybox" rel="group" href="img/4.jpg"><img src="img/4.jpg"></a></li>
+					<li data-tags="Logo Design"><a class="fancybox" rel="group" href="img/5.jpg"><img src="img/5.jpg"></a></li>
+					<li data-tags="Print Design, Web Design"><a class="fancybox" rel="group" href="img/6.jpg"><img src="img/6.jpg"></a></li>
+				</ul>
+			</div>
+			<hr>
+			<footer>
+				<div class="container">
+					<p>JinWang Photo Gallery &copy; 2015</p>
+				</div>
+			</footer>
+		</section>
+		
+    </body>
+</html>

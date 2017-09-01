@@ -1,0 +1,1 @@
+<h1>Task for today is <%= task %></h1>

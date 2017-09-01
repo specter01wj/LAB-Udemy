@@ -1,0 +1,35 @@
+<script>
+
+
+
+
+var storage = [];
+
+function sendData() {
+    storage.push('store the data'); // send multiple peices of data
+    storage.push('even more data'); // more data
+    storage.push(42); //a random number
+};
+
+sendData();
+
+function retriveData(d, i) {
+    return d[i]
+};
+
+
+
+retriveData(storage, 0); // store the data
+retriveData(storage, 1); // even more data
+retriveData(storage, 2); // 42
+
+
+
+
+
+
+
+
+
+
+</script>

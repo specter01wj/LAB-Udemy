@@ -1,0 +1,24 @@
+body {
+    min-height: 2000px;
+}
+
+.navbar-static-top {
+    margin-bottom: 19px;
+    background: #333;
+}
+
+#todo-list input.edit {
+    display: none; /* Hides input box*/
+}
+
+#todo-list .editing label {
+    display: none; /* Hides label text when .editing*/
+}
+
+#todo-list .editing input.edit {
+    display: inline; /* Shows input text box when .editing*/
+}
+
+.line-through{
+    text-decoration-line:line-through;
+}

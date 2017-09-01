@@ -1,0 +1,21 @@
+<script>
+
+
+
+
+
+
+var data = " Important data that I don't want deleted";
+
+function testScope() {
+    var data = "Some data";
+}
+testScope();
+console.log(data); // Important data that I don't want deleted
+
+
+
+
+
+
+</script>
