@@ -8,11 +8,14 @@
 </head>
 <body>
 <!--Place all DOM elements here -->
+	<div class="my_svg">
+	</div>
+
 <script>
-var w = 800;
-var h = 450;
+var w = 300;
+var h = 250;
 var data = [132,71,337,93,78,43,20,16,30,8,17,21];
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".my_svg").append("svg")
 			.attr("id", "chart")
 			.attr("width", w)
 			.attr("height", h);
@@ -21,14 +24,16 @@ svg.selectAll(".bar")
 	.enter()
 		.append("rect")
 		.attr("class", "bar")
-		.attr("x", 0)
+		.attr("x", function(d,i){
+			return i * 5;
+		})
 		.attr("y", function(d,i){
 			return i * 20;
 		})
 		.attr("width", function(d,i){
-			return d;
+			return d * i;
 		})
-		.attr("height", 19)
+		.attr("height", 15)
 </script>	
 </body>
 </html>
