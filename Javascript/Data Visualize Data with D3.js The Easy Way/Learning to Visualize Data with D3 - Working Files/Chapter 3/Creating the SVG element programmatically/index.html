@@ -8,11 +8,14 @@
 </head>
 <body>
 <!--Place all DOM elements here -->
+	<div class="my_svg">
+	</div>
+
 <script>
-var w = 800;
-var h = 450;
+var w = 300;
+var h = 250;
 var data = [132,71,337,93,78,43,20,16,30,8,17,21];
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".my_svg").append("svg")
 			.attr("id", "chart")
 			.attr("width", w)
 			.attr("height", h);
