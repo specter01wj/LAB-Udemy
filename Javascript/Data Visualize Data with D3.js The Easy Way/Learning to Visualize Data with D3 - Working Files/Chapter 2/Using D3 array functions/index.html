@@ -9,6 +9,7 @@
 <body>
 <!--Place all DOM elements here -->
 <script>
+
 var data = [132,71,337,93,78,43,20,16,30,8,17,21];
 var dataMinValue = d3.min(data);
 var dataMaxValue = d3.max(data);
@@ -29,6 +30,7 @@ var donuts = [
 	{key: "Fritter", 	value: 17},
 	{key: "Bearclaw", 	value: 21}
 ];
+
 var donutsMinValue = d3.min(donuts, function(d){
 	return d.value;
 });
@@ -38,7 +40,9 @@ var donutsMaxValue = d3.max(donuts, function(d){
 var donutsLoHiValue = d3.extent(donuts, function(d){
 	return d.value;
 });
+
 console.log(donutsMinValue, donutsMaxValue, donutsLoHiValue);
+
 </script>	
 </body>
 </html>
