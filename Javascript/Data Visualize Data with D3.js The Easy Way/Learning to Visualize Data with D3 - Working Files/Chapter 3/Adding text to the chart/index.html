@@ -8,9 +8,12 @@
 </head>
 <body>
 <!--Place all DOM elements here -->
+	<div class="my_svg">
+	</div>
+
 <script>
-var w = 800;
-var h = 450;
+var w = 300;
+var h = 250;
 var data = [132,71,337,93,78,43,20,16,30,8,17,21];
 var x = d3.scale.linear()
 		.domain([0,d3.max(data)])
@@ -18,7 +21,7 @@ var x = d3.scale.linear()
 var y = d3.scale.linear()
 		.domain([0,data.length])
 		.range([0,h]);
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".my_svg").append("svg")
 			.attr("id", "chart")
 			.attr("width", w)
 			.attr("height", h);
@@ -45,12 +48,12 @@ svg.selectAll(".bar-label")
 		.attr("x", function(d,i){
 			return x(d);
 		})
-		.attr("dx", -4)
+		.attr("dx", -1)
 		.attr("y", function(d,i){
 			return y(i);
 		})
 		.attr("dy", function(d,i){
-			return y(1)/1.5+2;
+			return y(1)/1.5+1;
 		})
 		.text(function(d,i){
 			return d;
