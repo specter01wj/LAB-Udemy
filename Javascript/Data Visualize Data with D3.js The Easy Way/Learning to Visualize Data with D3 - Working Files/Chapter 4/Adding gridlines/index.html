@@ -8,6 +8,9 @@
 </head>
 <body>
 <!--Place all DOM elements here -->
+	<div class="my_svg">
+	</div>
+
 <script>
 var data = [
 	{key: "Glazed",		value: 132},
@@ -23,8 +26,8 @@ var data = [
 	{key: "Fritter", 	value: 17},
 	{key: "Bearclaw", 	value: 21}
 ];
-var w = 800;
-var h = 450;
+var w = 500;
+var h = 350;
 var margin = {
 	top: 40,
 	bottom: 40,
@@ -56,7 +59,12 @@ var yGridlines = d3.svg.axis()
 				.tickSize(-width,0,0)
 				.tickFormat("")
 				.orient("left");
-var svg = d3.select("body").append("svg")
+var xGridlines = d3.svg.axis()
+				.scale(x)
+				.tickSize(width,0,0)
+				.tickFormat("")
+				.orient("top");
+var svg = d3.select(".my_svg").append("svg")
 			.attr("id", "chart")
 			.attr("width", w)
 			.attr("height", h);
@@ -66,8 +74,12 @@ var chart = svg.append("g")
 function plot(params){
 	this.append("g")
 		.call(yGridlines)
-		.classed("gridline", true)
+		.classed("ygridline", true)
 		.attr("transform", "translate(0,0)")
+	this.append("g")
+		.call(xGridlines)
+		.classed("xgridline", true)
+		.attr("transform", "translate(" + 0 + "," + height + ")")
 	this.selectAll(".bar")
 		.data(params.data)
 		.enter()

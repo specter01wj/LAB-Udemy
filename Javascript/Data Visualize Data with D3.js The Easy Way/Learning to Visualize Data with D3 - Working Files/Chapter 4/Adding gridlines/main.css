@@ -16,7 +16,7 @@ body,html{
 .bar-label{
 	fill: #000;
 	text-anchor: middle;
-	font-size: 18px;
+	font-size: 13px;
 }
 .axis path,
 .axis line{
@@ -24,9 +24,18 @@ body,html{
 	stroke: #000;
 	shape-rendering: crispEdges;
 }
-.gridline path,
-.gridline line{
+.ygridline path,
+.ygridline line {
 	fill: none;
-	stroke: #ccc;
+	stroke: #CF6610;
 	shape-rendering: crispEdges;
+}
+.xgridline path,
+.xgridline line {
+	fill: none;
+	stroke: #83DB94;
+	shape-rendering: crispEdges;
+}
+.axis text {
+	font-size: 10px;
 }
