@@ -16,7 +16,7 @@ body,html{
 .bar-label{
 	fill: white;
 	text-anchor: end;
-	font-size: 18px;
+	font-size: 13px;
 }
 .axis path,
 .axis line{
