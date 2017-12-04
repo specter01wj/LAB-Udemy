@@ -8,14 +8,17 @@
 </head>
 <body>
 <!--Place all DOM elements here -->
+	<div class="my_svg">
+	</div>
+
 <script>
-var w = 800;
-var h = 450;
+var w = 300;
+var h = 250;
 var margin = {
 	top: 20,
 	bottom: 20,
-	left: 20,
-	right: 20
+	left: 5,
+	right: 5
 };
 var width = w - margin.left - margin.right;
 var height = h - margin.top - margin.bottom;
@@ -27,7 +30,7 @@ var x = d3.scale.linear()
 var y = d3.scale.linear()
 		.domain([0,data.length])
 		.range([0,height]);
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".my_svg").append("svg")
 			.attr("id", "chart")
 			.attr("width", w)
 			.attr("height", h);
