@@ -8,6 +8,9 @@
 </head>
 <body>
 <!--Place all DOM elements here -->
+	<div class="my_svg">
+	</div>
+
 <script>
 var data = [
 	{key: "Glazed",		value: 132},
@@ -23,8 +26,8 @@ var data = [
 	{key: "Fritter", 	value: 17},
 	{key: "Bearclaw", 	value: 21}
 ];
-var w = 800;
-var h = 450;
+var w = 400;
+var h = 350;
 var margin = {
 	top: 58,
 	bottom: 100,
@@ -56,7 +59,7 @@ var yGridlines = d3.svg.axis()
 				.tickSize(-width,0,0)
 				.tickFormat("")
 				.orient("left");
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".my_svg").append("svg")
 			.attr("id", "chart")
 			.attr("width", w)
 			.attr("height", h);
