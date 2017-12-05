@@ -127,7 +127,7 @@ function plot(params){
 		.attr("x", 0)
 		.attr("y", 0)
 		.style("text-anchor", "middle")
-		.attr("transform", "translate(-50," + height/2 + ") rotate(-90)")
+		.attr("transform", "translate(-40," + height/1.5 + ") rotate(-90)")
 		.text("Units sold");
 
 	this.select(".x.axis")
@@ -135,7 +135,7 @@ function plot(params){
 		.attr("x", 0)
 		.attr("y", 0)
 		.style("text-anchor", "middle")
-		.attr("transform", "translate(" + width/2 + ",80)")
+		.attr("transform", "translate(" + width/3 + ",80)")
 		.text("Donut type");
 }
 plot.call(chart, {data: data});
