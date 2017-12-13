@@ -34,7 +34,7 @@ body,html{
 	fill: none;
 	stroke: #ccc;
 	stroke-width: 4px;
-	stroke-dasharray: 10;
+	stroke-dasharray: 10,5,20;
 }
 .area{
 	opacity: 0.25;

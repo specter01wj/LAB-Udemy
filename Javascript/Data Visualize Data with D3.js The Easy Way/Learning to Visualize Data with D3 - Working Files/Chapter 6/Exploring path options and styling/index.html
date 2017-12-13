@@ -8,6 +8,9 @@
 </head>
 <body>
 <!--Place all DOM elements here -->
+	<div class="my_svg">
+	</div>
+
 <script>
 var data = [
 	{key: "Jelly", value: 60, date: "2014/01/01" },
@@ -42,8 +45,8 @@ var data = [
 	{key: "Jelly", value: 40, date: "2014/01/30" },
 	{key: "Jelly", value: 39, date: "2014/01/31" }
 ];
-var w = 800;
-var h = 450;
+var w = 400;
+var h = 350;
 var margin = {
 	top: 58,
 	bottom: 100,
@@ -53,7 +56,7 @@ var margin = {
 var width = w - margin.left - margin.right;
 var height = h - margin.top - margin.bottom;
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".my_svg").append("svg")
 			.attr("id", "chart")
 			.attr("width", w)
 			.attr("height", h);
@@ -89,7 +92,8 @@ var line = d3.svg.line()
 			.y(function(d){
 				return y(d.value);
 			})
-			.interpolate("monotone");
+			.interpolate("cardinal");
+			//.interpolate("monotone");
 var area = d3.svg.area()
 			.x(function(d){
 				var date = dateParser(d.date);
@@ -99,7 +103,7 @@ var area = d3.svg.area()
 			.y1(function(d){
 				return y(d.value);
 			})
-			.interpolate("monotone");
+			.interpolate("cardinal");
 function plot(params){
 	this.append("g")
 		.classed("x axis", true)
