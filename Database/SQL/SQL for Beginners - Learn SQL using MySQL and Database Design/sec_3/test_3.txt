@@ -1,0 +1,54 @@
+show databases;
+
+create database jw_coffeeStore;
+
+use jw_coffeeStore;
+
+create table products (
+	
+    id int auto_increment primary key,
+    name varchar(30),
+    price decimal(3,2)
+
+);
+
+create table customers (
+
+	id int auto_increment primary key,
+    first_name varchar(30),
+    last_name varchar(30),
+    gender enum('m','f'),
+    phone_num varchar(11)
+
+);
+
+CREATE TABLE orders (
+
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	product_id INT,
+	customer_id INT,
+	order_time DATETIME,
+	FOREIGN KEY (product_id) REFERENCES products(id),
+	FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+
+show tables;
+
+select * from products;
+
+alter table products
+add column coffee_origin varchar(30);
+
+alter table products
+drop column coffee_origin;
+
+
+select * from customers;
+select * from orders;
+
+
+
+
+
+
+
