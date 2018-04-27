@@ -64,7 +64,7 @@ show tables;
 drop table test;
 
 
-
+truncate table test;
 
 
 
