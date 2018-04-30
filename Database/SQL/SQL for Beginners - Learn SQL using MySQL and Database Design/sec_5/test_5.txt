@@ -3,84 +3,17 @@ show databases;
 create database sec5_test;
 
 use sec5_test;
+use jw_coffeeStore;
 
 show tables;
 
-create table addresses (
+describe products;
 
-	id int,
-    house_number int,
-    city varchar(20),
-    postcode varchar(7)
+select * from products;
 
-);
+insert into products (name, price, coffee_origin)
+values ('Mocha', 5.75, 'USA');
 
-select * from addresses;
-
-create table people (
-
-	id int,
-    first_name varchar(20),
-    last_name varchar(20),
-    address_id int
-
-);
-
-create table pets (
-
-	id int,
-    name varchar(20),
-    species varchar(20),
-    owner_id int
-
-);
-
-
-describe addresses;
-
-alter table addresses
-add primary key (id);
-
-alter table addresses
-drop primary key;
-
-describe people;
-
-alter table people
-add primary key (id);
-
-
-alter table people
-add constraint FK_PeopleAddress
-foreign key (address_id) references addresses(id);
-
-alter table people
-drop foreign key FK_PeopleAddress;
-
-
-select * from pets;
-describe pets;
-
-alter table pets
-add constraint u_species unique (species);
-
-alter table pets
-drop index u_species;
-
-
-alter table pets change `species` `animal_type` varchar(20);
-
-
-describe addresses;
-
-alter table addresses modify city varchar(30);
-
-
-
-
-
-
-
-
-
+insert into products (name, price, coffee_origin)
+values ('Latte', 6.75, 'China'), ('Cappuci', 7.75, 'Japan');
 
