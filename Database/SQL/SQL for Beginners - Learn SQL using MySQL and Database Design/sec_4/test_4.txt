@@ -68,5 +68,17 @@ alter table pets
 drop index u_species;
 
 
+alter table pets change `species` `animal_type` varchar(20);
+
+
+
+
+
+
+
+
+
+
+
 
 
