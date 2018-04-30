@@ -33,6 +33,27 @@ set coffee_origin = 'Japan'
 where coffee_origin = 'UK';
 
 
+drop table people;
+
+create table people (
+    id int auto_increment primary key,
+    name varchar(30),
+    age int,
+    gender enum('M', 'F')
+);
+
+select * from people;
+
+insert into people (name, age, gender)
+values ('James', 23, 'M'), ('Kim', 25, 'F'), ('Lee', 26, 'F');
+
+delete from people
+where name = 'Kim';
+
+
+
+
+
 
 
 
