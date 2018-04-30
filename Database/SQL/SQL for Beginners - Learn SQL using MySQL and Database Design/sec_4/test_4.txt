@@ -50,6 +50,15 @@ alter table people
 add primary key (id);
 
 
+alter table people
+add constraint FK_PeopleAddress
+foreign key (address_id) references addresses(id);
+
+alter table people
+drop foreign key FK_PeopleAddress;
+
+
+
 
 
 
