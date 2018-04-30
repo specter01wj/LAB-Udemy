@@ -17,3 +17,23 @@ values ('Mocha', 5.75, 'USA');
 insert into products (name, price, coffee_origin)
 values ('Latte', 6.75, 'China'), ('Cappuci', 7.75, 'Japan');
 
+
+update products
+set coffee_origin = 'UK'
+where id = 3;
+
+set sql_safe_updates = 0;
+
+update products
+set price = 3.55, coffee_origin = 'China'
+where name = 'Latte';
+
+update products
+set coffee_origin = 'Japan'
+where coffee_origin = 'UK';
+
+
+
+
+
+
