@@ -5,7 +5,9 @@ use jw_coffeeStore;
 select * from customers;
 select last_name, gender from customers;
 
-
+select * from products;
+select * from products where coffee_origin = 'USA' and price = 5.75;
+select * from products where coffee_origin = 'USA' or price = 3.55;
 
 
 
