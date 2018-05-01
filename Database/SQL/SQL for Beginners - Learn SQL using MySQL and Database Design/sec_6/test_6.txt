@@ -31,7 +31,14 @@ where last_name in ('taylor','bluth');
 select * from customers
 where first_name not in ('kat','emma','paul');
 
+select * from orders;
 
+select * from orders
+where order_time between '2017-01-01' and '2017-02-01';
+select * from orders
+where customer_id between 5 and 10;
+select * from customers
+where last_name between 'A' and 'L';
 
 
 
