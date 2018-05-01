@@ -11,7 +11,8 @@ select * from products where coffee_origin = 'USA' or price = 3.55;
 
 select * from products where price >= 5.55;
 
-
+select * from customers;
+select * from customers where phone_num is not null;
 
 
 
