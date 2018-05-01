@@ -25,7 +25,11 @@ select * from customers
 where gender = 'M' and phone_num is null;
 
 
+select * from customers
+where last_name in ('taylor','bluth');
 
+select * from customers
+where first_name not in ('kat','emma','paul');
 
 
 
