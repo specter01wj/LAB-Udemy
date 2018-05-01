@@ -40,7 +40,13 @@ where customer_id between 5 and 10;
 select * from customers
 where last_name between 'A' and 'L';
 
+select * from customers
+where last_name like '%w%';
+select * from customers
+where first_name like '_o%';
 
+select * from products
+where price like '3%';
 
 
 
