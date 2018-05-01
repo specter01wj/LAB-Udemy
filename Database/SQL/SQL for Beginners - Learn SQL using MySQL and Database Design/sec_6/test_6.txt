@@ -9,7 +9,7 @@ select * from products;
 select * from products where coffee_origin = 'USA' and price = 5.75;
 select * from products where coffee_origin = 'USA' or price = 3.55;
 
-
+select * from products where price >= 5.55;
 
 
 
