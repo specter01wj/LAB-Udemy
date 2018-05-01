@@ -14,7 +14,15 @@ select * from products where price >= 5.55;
 select * from customers;
 select * from customers where phone_num is not null;
 
+select first_name, phone_num from customers 
+where gender = 'f' and last_name = 'bluth';
+select * from customers where last_name = 'bluth';
 
+select * from products
+where price > 5.00 or coffee_origin = 'USA';
+
+select * from customers
+where gender = 'M' and phone_num is null;
 
 
 
