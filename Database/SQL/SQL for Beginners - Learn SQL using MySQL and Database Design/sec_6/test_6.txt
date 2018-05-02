@@ -49,6 +49,26 @@ select * from products
 where price like '3%';
 
 
+select * from products
+order by price desc;
+
+select * from customers
+order by last_name asc;
+
+select * from orders
+where customer_id = 1
+order by order_time asc;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
