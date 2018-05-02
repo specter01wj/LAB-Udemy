@@ -59,7 +59,17 @@ select * from orders
 where customer_id = 1
 order by order_time asc;
 
+#exec 2
+select name, price from products
+where coffee_origin in ('USA', 'China')
+order by name asc;
 
+select * from orders
+where order_time between '2017-02-01' and '2017-02-28'
+and customer_id in (2,4,6,8);
+
+select * from customers
+where last_name like '%ar%';
 
 
 
