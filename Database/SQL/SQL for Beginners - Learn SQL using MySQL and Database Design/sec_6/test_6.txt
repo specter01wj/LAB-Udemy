@@ -86,7 +86,7 @@ order by last_name
 limit 5 offset 6;
 
 
-
+select name as coffee, price, coffee_origin as country from products;
 
 
 
