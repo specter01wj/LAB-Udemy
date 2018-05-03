@@ -89,4 +89,15 @@ limit 5 offset 6;
 select name as coffee, price, coffee_origin as country from products;
 
 
+#exec 3
+select DISTINCT last_name from customers
+order by last_name;
+
+select * from orders
+where order_time between '2017-02-01' AND '2017-02-28'
+and customer_id = 1
+order by order_time asc
+limit 5;
+
+select name, price as retail_price, coffee_origin from products;
 
