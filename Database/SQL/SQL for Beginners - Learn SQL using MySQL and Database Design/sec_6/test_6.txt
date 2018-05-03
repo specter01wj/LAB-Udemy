@@ -72,7 +72,13 @@ select * from customers
 where last_name like '%ar%';
 
 
+select * from products;
+insert into products (name, price, coffee_origin)
+values ('Mocha_3', 9.75, 'USA');
+select distinct coffee_origin from products;
 
+select distinct customer_id, product_id from orders
+where order_time between '2017-02-01' and '2017-02-28';
 
 
 
