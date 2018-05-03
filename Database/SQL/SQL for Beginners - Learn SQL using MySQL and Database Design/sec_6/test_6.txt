@@ -81,7 +81,9 @@ select distinct customer_id, product_id from orders
 where order_time between '2017-02-01' and '2017-02-28';
 
 
-
+select * from customers
+order by last_name
+limit 5 offset 6;
 
 
 
