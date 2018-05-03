@@ -1,0 +1,24 @@
+use jw_coffeeStore;
+
+select * from customers;
+select * from products;
+select * from orders;
+
+select products.name, orders.order_time from orders
+inner join products on orders.product_id = products.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
