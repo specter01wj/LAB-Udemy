@@ -49,9 +49,17 @@ right join customers c on o.customer_id = c.id
 order by o.order_time
 limit 10;
 
+update orders
+set customer_id = 1
+where id = 1;
 
+#Joining more than Two Tables
 
-
+select p.name, p.price, c.first_name, c.last_name, o.order_time from products p
+join orders o on p.id = o.product_id
+join customers c on c.id = o.customer_id
+where c.last_name = 'Martin'
+order by o.order_time;
 
 
 
