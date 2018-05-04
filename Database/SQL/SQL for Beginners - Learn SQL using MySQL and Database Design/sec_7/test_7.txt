@@ -37,7 +37,17 @@ left join orders o on c.id = o.customer_id
 order by o.order_time
 limit 10;
 
+#right join
 
+select o.id, c.phone_num, c.last_name, o.order_time from customers c
+right join orders o on c.id = o.customer_id
+order by o.order_time
+limit 10;
+
+select o.id, c.phone_num, c.last_name, o.order_time from orders o
+right join customers c on o.customer_id = c.id
+order by o.order_time
+limit 10;
 
 
 
