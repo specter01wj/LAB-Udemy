@@ -4,6 +4,8 @@ select * from customers;
 select * from products;
 select * from orders;
 
+#inner join
+
 select products.name, orders.order_time from orders
 inner join products on orders.product_id = products.id;
 
@@ -18,7 +20,22 @@ join products p on o.product_id = p.id
 where o.product_id = 5
 order by o.order_time;
 
+#left join
+select * from orders;
 
+update orders
+set customer_id = null
+where id = 1;
+
+select o.id, c.phone_num, c.last_name, o.order_time from orders o
+left join customers c on o.customer_id = c.id
+order by o.order_time
+limit 10;
+
+select o.id, c.phone_num, c.last_name, o.order_time from customers c
+left join orders o on c.id = o.customer_id
+order by o.order_time
+limit 10;
 
 
 
