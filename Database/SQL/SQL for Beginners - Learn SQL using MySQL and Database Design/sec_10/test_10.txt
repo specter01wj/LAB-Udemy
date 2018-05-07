@@ -12,7 +12,11 @@ select * from rooms;
 select sum(no_seats) from rooms
 where id > 1;
 
+#min and max
+select * from films;
 
+select max(length_min) from films;
+select min(length_min) from films;
 
 
 
