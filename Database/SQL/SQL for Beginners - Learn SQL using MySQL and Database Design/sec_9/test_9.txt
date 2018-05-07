@@ -52,7 +52,18 @@ create table screenings (
 describe screenings;
 
 
+create table seats (
 
+	id int primary key auto_increment,
+    row_id char(1) not null,
+    number int not null,
+    room_id int not null,
+    foreign key (room_id) references rooms(id)
+
+);
+alter table seats change `row_id` `row` char(1);
+
+describe seats;
 
 
 
