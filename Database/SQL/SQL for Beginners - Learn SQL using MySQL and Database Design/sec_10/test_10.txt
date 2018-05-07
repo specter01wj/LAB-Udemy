@@ -1,9 +1,17 @@
 use cinema_booking_system; 
 
+#count
 select * from customers;
 
 select count(*) from customers
 where last_name = 'smith';
+
+#sum
+select * from rooms;
+
+select sum(no_seats) from rooms
+where id > 1;
+
 
 
 
