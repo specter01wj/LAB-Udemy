@@ -27,7 +27,15 @@ create table customers (
 describe customers;
 
 
+create table rooms (
 
+	id int primary key auto_increment,
+    name varchar(45) not null,
+    no_seats int not null
+
+);
+
+describe rooms;
 
 
 
