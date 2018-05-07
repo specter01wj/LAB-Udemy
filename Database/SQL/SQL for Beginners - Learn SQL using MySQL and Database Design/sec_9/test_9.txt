@@ -15,6 +15,28 @@ select * from films;
 describe films;
 
 
+create table customers (
+	
+    id int primary key auto_increment,
+    first_name varchar(45),
+    last_name varchar(45) not null,
+    email varchar(45) not null unique
+
+);
+
+describe customers;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
