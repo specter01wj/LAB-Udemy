@@ -1,0 +1,37 @@
+use cinema_booking_system; 
+
+#non-correlated subquery
+select * from screenings;
+select * from films;
+
+
+select id, start_time from screenings
+where film_id in
+	(select id from films
+		where length_min > 120); 
+
+select id from films
+		where length_min > 120
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
