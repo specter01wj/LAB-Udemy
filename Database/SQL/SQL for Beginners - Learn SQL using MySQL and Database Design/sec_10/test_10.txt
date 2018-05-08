@@ -55,8 +55,10 @@ join customers c on b.customer_id = c.id
 group by f.name, s.start_time, c.first_name, c.last_name
 order by s.start_time;
 
-
-
+#having clause
+select customer_id, screening_id, count(id) from bookings
+group by customer_id, screening_id
+having customer_id = 10;
 
 
 
