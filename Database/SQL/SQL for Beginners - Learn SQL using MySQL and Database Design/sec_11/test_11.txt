@@ -49,6 +49,34 @@ from bookings b
 order by screening_id;
 
 
+#exec 1
+-- 1. Select the film name and length for all films with a length greater than the average film length. 
+select * from films;
+
+select name, length_min from films
+where length_min > 
+( select avg(length_min) from films );
+
+select avg(length_min) from films;
+
+-- 2. Select the maximum number and the minimum number of screenings for a particular film.
+select * from screenings;
+
+select max(id), min(id) from
+( select film_id, count(id) as id from screenings
+	group by film_id) a;
+
+select film_id, count(id) as id from screenings
+group by film_id;
+
+-- 3. Select each film name and the number of screenings for that film.
+select * from screenings;
+select * from films;
+
+select name, 
+( select count(id) from screenings
+	where film_id = f.id)
+from films f;
 
 
 
