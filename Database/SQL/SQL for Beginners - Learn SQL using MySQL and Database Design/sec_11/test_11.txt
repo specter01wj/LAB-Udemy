@@ -11,7 +11,7 @@ where film_id in
 		where length_min > 120); 
 
 select id from films
-		where length_min > 120
+		where length_min > 120;
 
 -- where
 select * from customers;
@@ -77,17 +77,5 @@ select name,
 ( select count(id) from screenings
 	where film_id = f.id)
 from films f;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
