@@ -1,0 +1,16 @@
+set serveroutput on;
+
+declare
+  v_text varchar2(50) not null default 'James Wang';
+begin
+  v_text := 'PL/SQL' || ' Udemy';
+  dbms_output.put_line(v_text);
+end;
+
+declare
+  v_num number(4,2) not null := 50.42;
+begin
+  dbms_output.put_line(v_num || ' Beg to ADV');
+end;
+
+
