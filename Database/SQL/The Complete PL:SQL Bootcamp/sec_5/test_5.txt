@@ -14,3 +14,30 @@ begin
 end;
 
 
+declare
+  v_num pls_integer not null := 50;
+begin
+  dbms_output.put_line(v_num || ' Beg to ADV');
+end;
+
+declare
+  v_num binary_float not null := 50.1234f;
+begin
+  dbms_output.put_line(v_num || ' Beg to ADV');
+end;
+
+declare
+  --v_date date not null := sysdate;
+  --v_date date not null := '22-nov-18 14:01:33';
+  --v_date timestamp with time zone not null := systimestamp;
+  --v_date interval day(4) to second(2) := '24 02:05:21.012';
+  v_date interval year to month := '12-3';
+begin
+  dbms_output.put_line(v_date || ' Beg to ADV');
+end;
+
+declare
+v_bool varchar2 := true;
+begin
+  dbms_output.put_line(v_bool);
+end;
