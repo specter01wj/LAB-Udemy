@@ -68,12 +68,21 @@ declare
   end;
 
 
+--PL/SQL Delimiters and Commenting 
+
+declare
+  v_text varchar2(10) := 'PL/SQL';
+begin
+  dbms_output.put_line(v_text || ' is a good language.');
+end;
+
+
+--PL SQL Variable Scope
 
 
 
 
-
-
+--Using Bind Variables
 
 
 
