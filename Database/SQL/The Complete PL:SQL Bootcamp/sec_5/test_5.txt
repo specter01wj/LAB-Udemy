@@ -1,5 +1,7 @@
 set serveroutput on;
 
+--Declaring & Initializing & Using Variables 
+
 declare
   v_text varchar2(50) not null default 'James Wang';
 begin
@@ -41,3 +43,37 @@ v_bool varchar2 := true;
 begin
   dbms_output.put_line(v_bool);
 end;
+
+
+--Using %Type Attribute
+
+declare
+  v_type employees.job_id%type;
+  begin
+    v_type := 'IT_PROG';
+    dbms_output.put_line(v_type);
+  end;
+
+declare
+  v_type employees.job_id%type;
+  v_type2 v_type%type;
+  v_type3 employees.job_id%type;
+  begin
+    v_type := 'IT_PROG';
+    v_type2 := 'SA_MAN';
+    v_type3 := null;
+    dbms_output.put_line(v_type);
+    dbms_output.put_line(v_type2);
+    dbms_output.put_line(v_type3 || 'Hello');
+  end;
+
+
+
+
+
+
+
+
+
+
+
