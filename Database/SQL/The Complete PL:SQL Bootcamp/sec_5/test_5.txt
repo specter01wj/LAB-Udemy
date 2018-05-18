@@ -80,6 +80,25 @@ end;
 --PL SQL Variable Scope
 
 
+begin <<outer>>
+DECLARE
+  v_outer VARCHAR2(50) := 'outer!';
+  v_text VARCHAR2(50) := 'out-text!';
+BEGIN
+  dbms_output.put_line(v_outer);
+  declare
+    v_inner varchar2(50) := 'inner!';
+    v_text varchar2(50) := 'in-text!';
+  BEGIN
+    dbms_output.put_line('inside -> ' || v_outer);
+    dbms_output.put_line('inside(inner) -> ' || v_inner);
+    dbms_output.put_line('inside_text -> ' || v_text);
+    dbms_output.put_line('inside_text(outer) -> ' || outer.v_text);
+  END;
+  --dbms_output.put_line(v_inner);
+  dbms_output.put_line('outside -> ' || v_text);
+END;
+end outer;
 
 
 --Using Bind Variables
