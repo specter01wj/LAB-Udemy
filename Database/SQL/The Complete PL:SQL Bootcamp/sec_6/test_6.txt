@@ -17,9 +17,9 @@ begin
       dbms_output.put_line('Greater than 30!');
   end if;
 end;
+
   
 --Case Expressions
-
 
 declare
   v_job_code varchar2(10) := 'SA_MAN';
@@ -65,7 +65,7 @@ begin
 end;
 
 
-
+--Basic Loops
 
 
 
