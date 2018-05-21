@@ -1,0 +1,47 @@
+set serveroutput on;
+
+--What are Control Structures & IF Statements
+
+declare
+  v_num number := 15;
+  v_name varchar2(30) := 'James';
+  --v_num number := null;
+begin
+  if v_num < 10 then
+    dbms_output.put_line('Smaller than 10!');
+  elsif v_num < 20 and v_name = 'James' then
+    dbms_output.put_line('Smaller than 20!');
+  elsif v_num < 30 then
+    dbms_output.put_line('Smaller than 30!');
+  else
+      dbms_output.put_line('Greater than 30!');
+  end if;
+end;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
