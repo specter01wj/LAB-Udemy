@@ -178,11 +178,53 @@ end;
 --GOTO Statement
 
 
+declare
+  v_searched_num number := 37;
+  v_is_prime boolean := true;
+begin
+  for x in 2..v_searched_num - 1 loop
+    if v_searched_num mod x = 0 then
+      dbms_output.put_line(v_searched_num || ' is NOT a prime num!');
+      v_is_prime := false;
+      goto end_point;
+    end if;
+  end loop;
+  
+  if v_is_prime then
+    dbms_output.put_line(v_searched_num || ' is a prime num..');
+  end if;
+  
+  <<end_point>>
+  dbms_output.put_line('Check Complete!!!');
+end;
 
 
-
-
-
+declare
+  v_searched_num number := 32453;
+  v_is_prime boolean := true;
+  x number := 2;
+begin
+<<start_point>>
+    if v_searched_num mod x = 0 then
+      dbms_output.put_line(v_searched_num || ' is NOT a prime num!');
+      v_is_prime := false;
+      goto end_point;
+    end if;
+    
+    x := x + 1;
+    if x = v_searched_num then
+      goto prime_point;
+    end if;
+    
+    goto start_point;
+  <<prime_point>>
+  if v_is_prime then
+    dbms_output.put_line(v_searched_num || ' is a prime num..');
+  end if;
+  
+  <<end_point>>
+  dbms_output.put_line('Check Complete!!!');
+end;
 
 
 
