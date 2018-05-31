@@ -1,0 +1,32 @@
+set serveroutput on;
+
+--Operating Wİth Selected Queries
+
+select * from employees;
+
+declare
+  v_name varchar2(50);
+  v_salary employees.salary%type;
+begin
+  select first_name || ' ' || last_name, salary into v_name, v_salary from employees where employee_id = 100;
+  dbms_output.put_line('The salary of ' || v_name || ' is : ' || v_salary);
+end;
+
+declare
+  v_name varchar2(50);
+  v_salary employees.salary%type;
+  v_employee_id employees.employee_id%type := 130;
+begin
+  select first_name || ' ' || last_name, salary into v_name, v_salary 
+         from employees where employee_id = v_employee_id;
+  dbms_output.put_line('The salary of ' || v_name || ' is : ' || v_salary);
+end;
+
+
+--DML Operations in PL/SQL
+
+
+
+
+
+
