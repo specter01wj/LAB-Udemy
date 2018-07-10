@@ -12,7 +12,7 @@ public class s6_1 {
 //            System.out.println("Was not 1 or 2");
 //        }
 
-        int switchValue = 6;
+        int switchValue = 4;
 
         switch(switchValue) {
             case 1:
@@ -40,7 +40,7 @@ public class s6_1 {
         // display a message if any of these are found and then break
         // Add a default which displays a message saying not found
 
-        char charValue = 'G';
+        char charValue = 'D';
         switch(charValue) {
             case 'A':
                 System.out.println("A was found");
