@@ -36,7 +36,7 @@ public class s6_Day_of_Week {
             System.out.println("Invalid day");
         }*/
 
-        switch(day) {
+        /*switch(day) {
             case 0:
                 System.out.println("Sunday");
                 break;
@@ -62,7 +62,13 @@ public class s6_Day_of_Week {
             default:
                 System.out.println("Invalid day");
                 break;
-        }
+        }*/
+
+        String[] arr = {"Sunday", "Monday", "Tuesday",
+                "Wednesday", "Thursday", "Friday", "Saturday"};
+
+        System.out.println(day >= 0 && day <= 6 ? arr[day] : "Invalid day");
+        
     }
 
 }
