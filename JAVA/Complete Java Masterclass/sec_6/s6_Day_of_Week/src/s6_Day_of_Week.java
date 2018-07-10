@@ -68,7 +68,7 @@ public class s6_Day_of_Week {
                 "Wednesday", "Thursday", "Friday", "Saturday"};
 
         System.out.println(day >= 0 && day <= 6 ? arr[day] : "Invalid day");
-        
+
     }
 
 }
