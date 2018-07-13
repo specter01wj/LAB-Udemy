@@ -3,7 +3,7 @@
 public class s6_3 {
 
     public static void main(String[] args) {
-	    int count = 6;
+//	    int count = 6;
 //        while(count != 6) {
 //            System.out.println("Count value is " + count);
 //            count++;
