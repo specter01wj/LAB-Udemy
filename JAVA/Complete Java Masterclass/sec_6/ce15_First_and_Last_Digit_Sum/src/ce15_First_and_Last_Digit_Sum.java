@@ -40,4 +40,3 @@ public class ce15_First_and_Last_Digit_Sum {
     }
 
 }
-
