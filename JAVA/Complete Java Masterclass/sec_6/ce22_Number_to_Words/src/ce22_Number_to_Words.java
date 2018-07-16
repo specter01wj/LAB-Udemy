@@ -4,7 +4,7 @@ public class ce22_Number_to_Words {
 
     public static void main(String[] args) {
 
-        int input = 1010;
+        int input = 2345000;
         numberToWords(input);
         //System.out.println("input1: " + input1 + " input2: " + input2 + "\noutput: " + output);
 
@@ -18,17 +18,20 @@ public class ce22_Number_to_Words {
 
         int reverseNumber = reverse(number);
         int length = getDigitCount(number);
+        String[] arr = {"Zero", "One", "Two", "Three",
+                "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
         if (number < 1) {
             System.out.println("Invalid Value");
         } else {
-            int extra = 0;
             int lastDigit = 0;
             for (int i = 0; i < length; i++) {
                 lastDigit = reverseNumber % 10;
                 reverseNumber /= 10;
 
-                if (lastDigit == 0) {
+                System.out.println(arr[lastDigit]);
+
+                /*if (lastDigit == 0) {
                     System.out.println("Zero");
                 } else if (lastDigit == 1) {
                     System.out.println("One");
@@ -48,7 +51,7 @@ public class ce22_Number_to_Words {
                     System.out.println("Eight");
                 } else {
                     System.out.println("Nine");
-                }
+                }*/
             }
         }
     }
@@ -61,7 +64,6 @@ public class ce22_Number_to_Words {
         } else if (number == 0) {
             return 1;
         } else {
-
             while (number != 0) {
                 number /= 10;
                 count++;
