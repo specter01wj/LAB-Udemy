@@ -6,6 +6,9 @@ public class s6_4 {
         String numberAsString = "2018.125";
         System.out.println("numberAsString= " + numberAsString);
 
+        int number1 = Integer.parseInt("2019");
+        System.out.println("Int number = " + number1);
+
         double number = Double.parseDouble(numberAsString);
         System.out.println("number = " + number);
 
