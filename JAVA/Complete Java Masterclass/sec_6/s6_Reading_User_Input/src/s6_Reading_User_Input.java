@@ -7,13 +7,13 @@ public class s6_Reading_User_Input {
 
         Scanner scanner = new Scanner(System.in);
 
-        int counter = 0;
+        int counter = 1;
         int sum = 0;
 
 //        while(true) {
-        while(counter < 10) {
-            int order = counter + 1;
-            System.out.println("Enter number #" + order + ":");
+        while(counter <= 10) {
+            //counter++;
+            System.out.println("Enter number #" + counter + ":");
 
             boolean isAnInt = scanner.hasNextInt();
 
