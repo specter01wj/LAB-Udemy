@@ -9,7 +9,7 @@ public class Account {
     private String customerPhoneNumber;
 
     public Account() {
-        this("56789", 2.50, "Default name", "Default address", "default phone");
+        this("56789", 2500.75, "Jin Wang", "jw@gmail.com", "415-465-9333");
         System.out.println("Empty constructor called");
     }
 
