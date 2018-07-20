@@ -3,7 +3,7 @@
 public class s7_4 {
 
     public static void main(String[] args) {
-  
+
         VipPerson person1 = new VipPerson();
         System.out.println(person1.getName());
 
