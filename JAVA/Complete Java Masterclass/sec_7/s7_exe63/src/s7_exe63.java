@@ -12,7 +12,6 @@ public class s7_exe63 {
     public static void printHello() {
         System.out.println("Hello!");
     }
-    
 
 }
 
