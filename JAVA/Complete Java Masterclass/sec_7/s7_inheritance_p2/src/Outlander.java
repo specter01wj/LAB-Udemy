@@ -28,7 +28,7 @@ public class Outlander extends Car {
         if(newVelocity > 0) {
             changeVelocity(newVelocity, getCurrentDirection());
         }
-        
+
     }
 
 }
