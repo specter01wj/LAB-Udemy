@@ -2,7 +2,7 @@
 
 public class Player {
 
-    public String fullName;
+    public String name;
     public int health;
     public String weapon;
 
