@@ -11,7 +11,6 @@ public class s8_6 {
         hamburger.addHamburgerAddition3("Cheese", 1.13);
         System.out.println("Total Burger price is " + hamburger.itemizeHamburger());
 
-        
     }
 
 }
