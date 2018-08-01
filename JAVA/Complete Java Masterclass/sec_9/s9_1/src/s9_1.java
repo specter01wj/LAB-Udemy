@@ -1,4 +1,5 @@
 
+import java.util.Scanner;
 
 public class s9_1 {
 
@@ -31,7 +32,6 @@ public class s9_1 {
         }
 
         return (double) sum / (double)array.length;
-
     }
 
 }
