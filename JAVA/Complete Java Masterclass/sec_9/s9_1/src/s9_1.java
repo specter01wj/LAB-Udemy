@@ -32,6 +32,7 @@ public class s9_1 {
         }
 
         return (double) sum / (double)array.length;
+        
     }
 
 }
