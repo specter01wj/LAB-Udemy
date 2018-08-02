@@ -13,8 +13,8 @@ public class s9_2 {
 
         anotherIntValue++;
 
-        System.out.println("myIntValue = " + myIntValue);
-        System.out.println("anotherIntValue = " + anotherIntValue);
+        System.out.println("After ADD myIntValue = " + myIntValue);
+        System.out.println("After ADD anotherIntValue = " + anotherIntValue);
 
         int[] myIntArray = new int[5];
         int[] anotherArray = myIntArray;
