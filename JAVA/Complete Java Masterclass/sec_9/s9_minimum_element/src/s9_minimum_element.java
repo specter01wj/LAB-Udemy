@@ -29,7 +29,6 @@ public class s9_minimum_element {
         }
         return array;
     }
-    
 
     private static int findMin(int[] array) {
 
