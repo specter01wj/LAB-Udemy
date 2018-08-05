@@ -39,7 +39,7 @@ public class s9_arraylist_p1 {
         for (int i = 0; i < orig.length; i++) {
             arr[i] = orig[i];
         }
-        orig[1]=110;
+        orig[1] = 110;
     }
 
 
