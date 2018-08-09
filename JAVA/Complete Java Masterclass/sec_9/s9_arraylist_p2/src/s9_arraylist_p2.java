@@ -29,15 +29,15 @@ public class s9_arraylist_p2 {
                     break;
 
                 case 3:
-                    updateContact();
+                    mobilePhone.updateContact();
                     break;
 
                 case 4:
-                    removeContact();
+                    mobilePhone.removeContact();
                     break;
 
                 case 5:
-                    queryContact();
+                    mobilePhone.queryContact();
                     break;
 
                 case 6:
