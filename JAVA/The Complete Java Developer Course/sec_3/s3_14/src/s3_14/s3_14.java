@@ -9,6 +9,10 @@ public class s3_14 {
 		
 		System.out.println("Sum: " + sum);
 		
+		int i=5;
+		System.out.println(i++);
+		System.out.print(i--);
+		
 	}
 
 }
