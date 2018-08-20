@@ -25,6 +25,14 @@ static Scanner reader = new Scanner(System.in);
 			System.out.println("Grade F!");
 		} 
 		
+		double num1 = 3.5;
+		double tmp = num1*10%10;
+		int num2 = (int)num1;
+		 if(tmp>=5){
+			 num2++;
+		 }
+		 
+		 System.out.println("output: " + num2);
 	}
 
 }
