@@ -33,6 +33,7 @@ static Scanner reader = new Scanner(System.in);
 		 }
 		 
 		 System.out.println("output: " + num2);
+		 
 	}
 
 }
