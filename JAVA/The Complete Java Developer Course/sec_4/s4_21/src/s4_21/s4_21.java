@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class s4_21 {
 	
-static Scanner reader = new Scanner(System.in);
+	static Scanner reader = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		
