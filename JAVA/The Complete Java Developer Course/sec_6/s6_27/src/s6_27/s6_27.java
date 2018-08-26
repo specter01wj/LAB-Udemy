@@ -15,7 +15,6 @@ public class s6_27 {
 			System.out.println(jobs[i]);
 		}
 		
-		
 	}
 
 }
