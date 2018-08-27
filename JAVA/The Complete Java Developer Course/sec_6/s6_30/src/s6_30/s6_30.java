@@ -1,5 +1,7 @@
 package s6_30;
 
+import java.util.Arrays;
+
 public class s6_30 {
 	
 	public static void main(String[] args) {
@@ -15,6 +17,11 @@ public class s6_30 {
 		System.out.println("");
 		
 		System.out.println("print split: ");
+		String[] split_name = name.split(" ");
+		for(int j=0; j<split_name.length;j++){
+			System.out.println(split_name[j]);
+		}
+		System.out.println("output: " + Arrays.toString(split_name));
 		
 	}
 
