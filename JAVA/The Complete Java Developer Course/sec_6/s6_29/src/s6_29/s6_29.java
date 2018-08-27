@@ -9,7 +9,7 @@ public class s6_29 {
 		
 		for(int i=0; i < 3; i++){
 			for(int j=0; j < 3; j++){
-				data[i][j] = j + 2;
+				data[i][j] = i + j + 2;
 			}
 		}
 		
