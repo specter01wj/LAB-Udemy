@@ -22,6 +22,5 @@ public class s7_32 {
 		
 		System.out.println("r2 = " + r2);
 	}
-	
 
 }
