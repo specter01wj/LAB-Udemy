@@ -7,9 +7,16 @@ public class s7_33 {
 		return r;
 	}
 	
+	double div(int n1, int n2) {
+		double r = n1 / n2;
+		return r;
+	}
 	
 	public static void main(String[] args) {
 		double r = new s7_33().div(19.32, 7.26);
+		System.out.println("output r: " + r);
+		
+		r = new s7_33().div(11, 9);
 		System.out.println("output r: " + r);
 	}
 	
