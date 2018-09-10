@@ -19,6 +19,7 @@ public class s8_38 {
 		System.out.println("Car2 Price: " + price2);
 		System.out.println("Car2 Owner: " + car2.Owner);
 		
+		
 	}
 	
 }
