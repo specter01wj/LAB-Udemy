@@ -10,33 +10,28 @@
 		*/
 			$(document).ready(function(){
 				
-				function tripleAdd(num1) {
-				  	return function(num2) {
-				  		return function(num3) {
-				  			return num1 + num2 + num3;
-				  		}
-				  	}
-				}
+				(function doubleNumber(num){
+					return num * 2;
+				})(10);
 
-				function tripleAdd1(num1, num2, num3) {
-					return num1 + num2 + num3;
-				}
+				(function(){
 
-				function quadrupleAdd(num1) {
-					return function(num2) {
-						return function(num3, num4) {
-							return num1 + num2 + num3 + num4;
-						}
+					function getTotal(a, b) {
+						return a + b;
 					}
-				}
-				
-				var tt1 = tripleAdd(10)(20)(30);
-				var tt2 = tripleAdd1(10, 30, 40);
-				var tt3 = quadrupleAdd(10)(20)(30, 40);
 
-				$('#t1').html('<h2>tripleAdd Results are:' + tt1 + '</h2><br>' + 
-					'<h2>tripleAdd1 Results are:' + tt2 + '</h2><br>' + 
-					'<h2>quadrupleAdd Results are:' + tt3 + '</h2>');
+					var curr = 'currency';
+					var tt1 = getTotal(100, 200) + curr;
+
+					if(true) {
+						$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
+					}
+
+				})();
+				
+				// var tt1 = doubleNumber();
+
+				// $('#t1').html('<h2>tripleAdd Results are:' + tt1 + '</h2>');
 			});
 			
 			
