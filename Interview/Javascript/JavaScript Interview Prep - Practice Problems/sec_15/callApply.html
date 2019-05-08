@@ -14,7 +14,8 @@
 				const car1 = {
 				  brand: 'Porsche',
 				  getCarDescription: function(cost, year, color) {
-				    console.log(`This car is a ${this.brand}. The price is $${cost}. The year is ${year}. The color is ${color}.\n`);
+				    // console.log(`This car is a ${this.brand}. The price is $${cost}. The year is ${year}. The color is ${color}.\n`);
+				    console.log("Make: " + this.brand + "; Cost: " + cost + "; Year: " + year + "; Color: " + color);
 				  }
 				};
 				 
@@ -25,15 +26,23 @@
 				const car3 = {
 				  brand: 'Ford'
 				};
+
+				const bike1 = {
+					architect: "Tai",
+					brand: "Suzuki"
+				}
 				 
 				car1.getCarDescription(80000, 2010, 'blue');
 				car1.getCarDescription.call(car2, 200000, 2013, 'yellow');
 				car1.getCarDescription.apply(car3, [35000, 2012, 'black']);
 
+				car1.getCarDescription.apply(bike1, [230, 2012, 'black']);
+
 				
 				// var tt1 = doubleNumber();
 
 				// $('#t1').html('<h2>tripleAdd Results are:' + tt1 + '</h2>');
+				
 			});
 			
 			
