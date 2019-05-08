@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+		/*
+		Curry Function
+		*/
+		
+			$(document).ready(function(){
+				
+
+				// tab 1
+ 
+				// function getProduct(num1, num2) {
+				//   return num1 * num2;
+				// }
+
+				function getProduct(num1) {
+					return function(num2) {
+						return num1 * num2;
+					}
+				}
+
+				var tt1 = getProduct(10)(20);
+
+				// tab 2
+ 
+				// function getTravelTime(distance, speed) {
+				//   return distance / speed;
+				// }
+				 
+				function getTravelTime(distance) {
+				  return function(speed) {
+				    return distance / speed;
+				  };
+				}
+				 
+				const travelTimeBosNyc = getTravelTime(400);
+				const travelTimeMiamiAtlanta = getTravelTime(600);
+				console.log(travelTimeBosNyc(100));
+				console.log(travelTimeMiamiAtlanta(200));
+
+				
+				// var tt1 = doubleNumber();
+
+				$('#t1').html('<h2>tripleAdd Results are:' + tt1 + '</h2>');
+			});
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
