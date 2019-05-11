@@ -35,6 +35,34 @@
 				};
 
 				console.log(student.getClasses());
+
+
+				// constructor function 
+				function Car(color, brand, year, height) {
+				  this.color = color;
+				  this.brand = brand;
+				  this.year = year;
+				  this.heightOfCar = height;
+				}
+				 
+				Car.prototype.getColor = function() {
+				  return this.color;
+				};
+				Car.prototype.getHeight = function() {
+				  return this.heightOfCar;
+				};
+
+				Car.prototype.heightOfCar = this.height;
+				 
+				const carlysCar = new Car('blue', 'ferarri', 2015, 21);
+				const jimsCar = new Car('red', 'tesla', 2014);
+				 
+				console.log(carlysCar);
+
+				console.log(carlysCar.getColor());
+				console.log(carlysCar.getHeight());
+				console.log(jimsCar.getColor());
+				console.log(jimsCar.getHeight());
 				
 				
 				// var tt1 = doubleNumber();
