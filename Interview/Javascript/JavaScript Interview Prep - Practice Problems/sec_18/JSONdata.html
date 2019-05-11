@@ -16,7 +16,7 @@
 			$(document).ready(function(){
 				
 
-				const myJsonObj = {
+				/*const myJsonObj = {
 				  myString: [some string],
 				  myNumber: [some number],
 				  myNull: [null],
@@ -25,26 +25,30 @@
 				  myArray: [some array],
 				  myFunction: [some function],
 				  myObject: [some object]
-				};
+				};*/
 
 				const myJsonObj = {
-				  myString: "James Wang!",
+				  myString: 'James Wang!',
 				  myNumber: 11.11,
 				  myNull: null,
 				  myBoolean: true,
-				  myUndefined: undefined,
+				  // myUndefined: undefined,
 				  myArray: [1, 2, "abc"],
 				  myFunction: function(a, b){
-				  	return this.a + this.b;
+				  	return a + b;
 				  },
 				  myObject: {
 				  	"ab": 11,
 				  	"name": "Jin",
 				  	"myfun": function(a){
-				  		return this.a;
+				  		return a;
 				  	}
 				  }
 				};
+
+				console.log(myJsonObj.myObject.myfun(12));
+				console.log(myJsonObj.myFunction(3, 5));
+				console.log(myJsonObj.myString);
 
 
 				// var tt1 = doubleNumber();
