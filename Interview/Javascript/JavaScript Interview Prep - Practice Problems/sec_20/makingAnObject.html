@@ -43,6 +43,9 @@
 				  this.brand = brand;
 				  this.year = year;
 				  this.heightOfCar = height;
+				  this.getBrand = function() {
+				  	return this.brand;
+				  }
 				}
 				 
 				Car.prototype.getColor = function() {
@@ -58,6 +61,7 @@
 				const jimsCar = new Car('red', 'tesla', 2014);
 				 
 				console.log(carlysCar);
+				console.log(carlysCar.getBrand());
 
 				console.log(carlysCar.getColor());
 				console.log(carlysCar.getHeight());
