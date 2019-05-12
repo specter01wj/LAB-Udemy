@@ -13,35 +13,61 @@
 
 				this.distance = 10000;
 
-				const roadTrip1 = {
+				/*const roadTrip1 = {
 				  distance: 3000,
 				  getDistance: function() {
 				    return this.distance;
 				  }
+				};*/
+
+				const roadTrip1 = {
+				  distance: 3000,
+				  getDistance: function(unit, caption) {
+				  	var args = Array.prototype.slice.call(arguments);
+					  
+					  if (args.length === 0) {
+					    return this.distance;
+					  } else if (args.length === 1) {
+					    /*return function(num2) {
+					      return args[0] + num2;
+					    };*/
+					    return this.distance + args[0];
+					  } else {
+					  	return this.distance + args[0] + args[1];
+					  }
+				  }
 				};
 
-				console.log(roadTrip1.getDistance());
+				// console.log(roadTrip1.getDistance());
 
-				const getTripDistance1 = roadTrip1.getDistance;
+				// const getTripDistance1 = roadTrip1.getDistance;
+				const getTripDistance1 = roadTrip1.getDistance.bind(roadTrip1);
 
 				console.log(getTripDistance1());
 
 
-
-				/*const roadTrip2 = {
-				  distance: 3000,
-				  getDistance: function(unit, caption) {
-				    return this.distance + unit + caption;
-				  }
-				};
 				 
 				const roadTrip3 = {
 				  distance: 5000
-				};*/
+				};
 
-				
+				const getTripDistance2 = roadTrip1.getDistance.bind(roadTrip3);
+
+				console.log(getTripDistance2());
+
+
+
+				const roadTrip2 = {
+				  distance: 8000,
+				  getDistance: function(unit) {
+				    return this.distance + unit;
+				  }
+				};
 				 
-				// const getTripDistance = roadTrip1.getDistance.bind(roadTrip2, 'km');
+				const getTripDistance3 = roadTrip1.getDistance.bind(roadTrip2, 'km');
+
+				console.log(getTripDistance3());
+				console.log(getTripDistance3('/hour'));
 				 
 				// getTripDistance(' in total');
 
