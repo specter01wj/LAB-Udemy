@@ -10,23 +10,32 @@
 			$(document).ready(function(){
 				
 
-				const fizzBuzz = function(num) {
+				const harmlessRansomNote = function(noteText, magazineText) {
 
-					let myArr = [];
+					let noteArr = noteText.split(' ');
+					let magazineArr = magazineText.split(' ');
+					let magazineObj = {};
 
-					for(var i = 1; i <= num; i++) {
-						if(i % 15 === 0) {
-							myArr.push('FizzBuzz');
-						} else if(i % 5 === 0) {
-							myArr.push('Buzz');
-						} else if(i % 3 === 0) {
-							myArr.push('Fizz');
-						} else {
-							myArr.push(i);
+					magazineArr.forEach(function(word) {
+						if(!magazineObj[word]) {
+							magazineObj[word] = 0;
 						}
-					}
+						magazineObj[word]++;
+					});
 
-					return myArr;
+					let IsNote = true;
+					noteArr.forEach(function(word) {
+						if(magazineObj[word]) {
+							magazineObj[word]--;
+							if(magazineObj[word] < 0) {
+								IsNote = false;
+							}
+						} else {
+							IsNote = false;
+						}
+					});
+
+					return IsNote;
 
 				}
 				
@@ -34,7 +43,7 @@
 				var magazineText = 'puerto rico is a place of great wonder and excitement it has many secret waterfall locations that i am an admirer of you must hike quite a distance to find the secret places as they are far from populated areas but it is worth the effort a tip i have for you is to go early in the morning when it is not so hot out also note that you must wear hiking boots this is one of the best places i have ever visited';
 				var tt1 = harmlessRansomNote(noteText, magazineText);
 
-				$('#t1').html('<h2>tripleAdd Results are:' + tt1 + '</h2>');
+				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
 			
 			
