@@ -19,6 +19,9 @@
 				const data2 = [].filter.call(data1, function(elem, index) {
 				  return index > 6;
 				});
+
+				// only use read-only method: filter, forEach, map, some, every
+				// cannot use: push, pop, splice, shift, reverse
 				 
 				console.log(data2);
 
