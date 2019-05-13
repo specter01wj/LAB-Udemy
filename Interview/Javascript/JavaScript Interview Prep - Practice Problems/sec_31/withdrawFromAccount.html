@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+		/*
+		Withdraw From Account
+		*/
+		
+			$(document).ready(function(){
+				
+				const account1 = {
+				  name: 'Jen',
+				  totalAmount: 5000,
+				  deductAmount: function(amount) {
+				    this.totalAmount -= amount;
+				    return 'Amount in account: ' + this.totalAmount;
+				  },
+				};
+				 
+				const account2 = {
+				  name: 'James',
+				  totalAmount: 8000,
+				};
+				 
+				const withdrawFromAccount = function(amount) {
+				  return account1.deductAmount.bind(account2, amount);
+				};
+				 
+				console.log(withdrawFromAccount(500)());
+				console.log(withdrawFromAccount(200)());
+
+
+				// var tt1 = doubleNumber();
+
+				// $('#t1').html('<h2>tripleAdd Results are:' + tt1 + '</h2>');
+				
+			});
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
