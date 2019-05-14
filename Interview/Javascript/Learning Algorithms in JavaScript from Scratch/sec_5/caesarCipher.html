@@ -33,7 +33,12 @@
     						newIndex = 26 + newIndex;
     					}
 
-    					newStr += alphabet[newIndex];
+    					if (str[i] === str[i].toUpperCase()) {
+					      newStr += alphabet[newIndex].toUpperCase();
+					    }
+					    else {
+					    	newStr += alphabet[newIndex];
+					    }
 
 					}
 
