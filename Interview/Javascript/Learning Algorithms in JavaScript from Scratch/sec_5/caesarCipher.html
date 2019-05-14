@@ -10,43 +10,39 @@
 			$(document).ready(function(){
 				
 
-				const isPalindrome = function(noteText) {
+				const caesarCipher = function(str, num) {
+					var num1 = num % 26;
+					var str1 = str.toLowerCase();
+					var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+					var newStr = '';
 
-					let charArr = noteText.toLowerCase().split('');
-					let validChar = 'abcdefghijklmnopqrstuvwxyz'.split('');
+					for(var i = 0; i < str1.length; i++) {
+						var currentLetter = str1[i];
+					    if (currentLetter === ' ') {
+					      newStr += currentLetter;
+					      continue;
+					    }
 
-					let lettersArr = [];
-					charArr.forEach(function(char) {
-						if(validChar.indexOf(char) !== -1) {
-							lettersArr.push(char);
-						}
-					});
+					    var currentIndex = alphabet.indexOf(currentLetter);
+					    var newIndex = currentIndex + num1;
 
-					return lettersArr.join('') === lettersArr.reverse().join('');
+					    if (newIndex > 25) {
+					    	newIndex = newIndex - 26;
+					    }
+    					if (newIndex < 0) {
+    						newIndex = 26 + newIndex;
+    					}
 
-				}
+    					newStr += alphabet[newIndex];
 
-				const isPalindrome2 = function(str) {
-
-					var i, len = str.length;
-
-					for(i =0; i<len/2; i++){
-						if (str[i] !== str[len -1 -i])
-					    	return false;
 					}
-					
-					return true;
 
-				}
-
-				const isPalindrome3 = function(str) {
-
-					return str == str.split('').reverse().join('');
+					return newStr;
 
 				}
 				
-				var noteText = "Madam, I'm Adam";
-				var tt1 = isPalindrome(noteText);
+				var noteText = "Zoo Keeper";
+				var tt1 = caesarCipher(noteText, 2);
 
 				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
