@@ -10,37 +10,43 @@
 			$(document).ready(function(){
 				
 
-				const harmlessRansomNote = function(noteText, magazineText) {
+				const isPalindrome = function(noteText) {
 
-					let noteArr = noteText.split(' ');
-					let magazineArr = magazineText.split(' ');
-					let magazineObj = {};
+					let charArr = noteText.toLowerCase().split('');
+					let validChar = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-					magazineArr.forEach(function(word) {
-						if(!magazineObj[word]) {
-							magazineObj[word] = 0;
-						}
-						magazineObj[word]++;
-					});
-
-					let IsNote = true;
-					noteArr.forEach(function(word) {
-						if(magazineObj[word]) {
-							magazineObj[word]--;
-							if(magazineObj[word] < 0) {
-								IsNote = false;
-							}
-						} else {
-							IsNote = false;
+					let lettersArr = [];
+					charArr.forEach(function(char) {
+						if(validChar.indexOf(char) !== -1) {
+							lettersArr.push(char);
 						}
 					});
 
-					return IsNote;
+					return lettersArr.join('') === lettersArr.reverse().join('');
+
+				}
+
+				const isPalindrome2 = function(str) {
+
+					var i, len = str.length;
+
+					for(i =0; i<len/2; i++){
+						if (str[i] !== str[len -1 -i])
+					    	return false;
+					}
+					
+					return true;
+
+				}
+
+				const isPalindrome3 = function(str) {
+
+					return str == str.split('').reverse().join('');
 
 				}
 				
 				var noteText = "Madam, I'm Adam";
-				var tt1 = isPalindrome(noteText, magazineText);
+				var tt1 = isPalindrome(noteText);
 
 				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
