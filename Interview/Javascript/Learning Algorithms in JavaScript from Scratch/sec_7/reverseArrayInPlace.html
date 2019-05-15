@@ -10,26 +10,21 @@
 			$(document).ready(function(){
 				
 
-				const reverseWords = function(str) {
-					var wordsArr = str.split(' ');
-					var resultArr = [];
+				const reverseWords = function(arr) {
+					for(var i = 0; i < arr.length / 2; i++) {
+						var tmp = arr[i];
+						arr[i] = arr[arr.length - 1 - i];
+						arr[arr.length - 1 - i] = tmp;
+					}
 
-					wordsArr.forEach(function(word){
-						var reversedWord = '';
-						for(var i = word.length - 1;i >= 0; i--) {
-							reversedWord += word[i];
-						}
-						resultArr.push(reversedWord);
-					});
-
-					return resultArr.join(' ');
+					return arr;
 
 				}
 				
-				var noteText = "Coding JavaScript";
-				var noteText2 = "This is a string of words";
+				var noteText = [1, 2, 3, 4, 5, 6, 7, 8];
+				// var noteText2 = "This is a string of words";
 
-				var tt1 = reverseWords(noteText2);
+				var tt1 = reverseWords(noteText);
 
 				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
