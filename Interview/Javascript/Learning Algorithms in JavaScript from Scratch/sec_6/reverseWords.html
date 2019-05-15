@@ -14,11 +14,19 @@
 					var wordsArr = str.split(' ');
 					var resultArr = [];
 
-					
+					wordsArr.forEach(function(word){
+						var reversedWord = '';
+						for(var i = word.length - 1;i >= 0; i--) {
+							reversedWord += word[i];
+						}
+						resultArr.push(reversedWord);
+					});
+
+					return resultArr.join(' ');
 
 				}
 				
-				var noteText = "Zoo Keeper";
+				var noteText = "Coding JavaScript";
 
 				var tt1 = reverseWords(noteText);
 
