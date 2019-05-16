@@ -40,18 +40,49 @@
 					if(arr.length % 2 !== 0) {
 						median = arr[Math.floor(arr.length / 2)];
 					} else {
-						var mid1 = array[(array.length / 2) - 1];
-					    var mid2 = array[array.length / 2];
+						var mid1 = arr[(arr.length / 2) - 1];
+					    var mid2 = arr[arr.length / 2];
 					    median = (mid1 + mid2) / 2;
 					}
 
 					return median;
 				}
+
+				function getMode(array) {
+					var modeObj = {};
+  
+				  	// create modeObj
+				  	array.forEach(function(num){
+				    	if(!modeObj[num]) {
+				    		modeObj[num] = 0;
+				    	}
+				    	modeObj[num]++;
+				  	});
+				  
+				  	// create array of mode/s 
+				  	var maxFrequency = 0;
+				  	var modes = [];
+				  	for(var num in modeObj) {
+				    	if(modeObj[num] > maxFrequency) {
+					      	modes = [num];
+					      	maxFrequency = modeObj[num];
+				    	} else if(modeObj[num] === maxFrequency) {
+				    		modes.push(num);
+				    	}
+				  	}
+				  	// if every value appears same amount of times 
+				  	if (modes.length === Object.keys(modeObj).length) {
+				  		modes = [];
+				  	}
+				  	
+				  	return modes;
+				}
 				
-				var noteText = [9,10,23,10,23,9];
+				var noteText = [9,10,23,10,23,9,100,13,202,13,23,13,13];
 				// var noteText2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-				var tt1 = meanMedianMode(noteText2);
+				var tt1 = meanMedianMode(noteText);
+				console.log(tt1);
 
 				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
