@@ -14,14 +14,23 @@
 					
 					var pairs = [];
 					var hashTable = [];
+					var hashTable2 = {};
 
-					for(var i = 0; i < arr.length; i++) {
+					/*for(var i = 0; i < arr.length; i++) {
 						var currNum = arr[i];
 						var counterpart = sum - currNum;
 						if(hashTable.indexOf(counterpart) !== -1) {
 							pairs.push([currNum, counterpart]);
 						}
 						hashTable.push(currNum);
+					}*/
+					for(var i = 0; i < arr.length; i++) {
+						var currNum = arr[i];
+						var counterpart = sum - currNum;
+						if(Object.values(hashTable2).indexOf(counterpart) !== -1) {
+							pairs.push([currNum, counterpart]);
+						}
+						hashTable2[i] = currNum;
 					}
 
 					return pairs;
