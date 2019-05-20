@@ -18,7 +18,12 @@
 					if(midElem === key) {
 						return true;
 					} else if(midElem < key && arr.length > 1) {
-						
+						// return binarySearch(arr.splice(midIdx, arr.length), key);
+						return binarySearch(arr.splice(midIdx, Math.ceil(arr.length / 2)), key);
+					} else if(midElem > key && arr.length > 1) {
+						return binarySearch(arr.splice(0, midIdx), key);
+					} else {
+						return false;
 					}
 
 				}
@@ -26,7 +31,7 @@
 				var noteText = [5, 7, 12, 16, 36, 39, 42, 56, 71];
 				var noteText2 = [40, 11, 19, 17, -12];
 
-				var tt1 = binarySearch(noteText1, 56);
+				var tt1 = binarySearch(noteText, 56);
 
 				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
