@@ -10,15 +10,19 @@
 			$(document).ready(function(){
 				
 
-				const fibonacci = function(arr, key) {
+				const fibonacci = function(pos) {
 					
-					
+					if(pos < 3) {
+						return 1;
+					} else {
+						return fibonacci(pos - 1) + fibonacci(pos - 2);
+					}
 				}
 				
-				var noteText = [5, 7, 12, 16, 36, 39, 42, 56, 71];
-				var noteText2 = [40, 11, 19, 17, -12];
+				// var noteText = [5, 7, 12, 16, 36, 39, 42, 56, 71];
+				// var noteText2 = [40, 11, 19, 17, -12];
 
-				var tt1 = fibonacci(noteText, 56);
+				var tt1 = fibonacci(6);
 
 				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
