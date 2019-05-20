@@ -10,10 +10,14 @@
 			$(document).ready(function(){
 				
 
-				const binarySearch = function(arr, sum) {
+				const binarySearch = function(arr, key) {
 					
 					var midIdx = Math.floor(arr.length / 2);
 					var midElem = arr[midIdx];
+
+					if(midElem === key) {
+						return true;
+					}
 
 				}
 				
