@@ -21,7 +21,7 @@
 					primes[1] = false;
 
 					for(var i = 2; i <= Math.sqrt(num); i++) {
-						for(var j = 2; i * j <= n; j++) {
+						for(var j = 2; i * j <= num; j++) {
 							primes[i * j] = false;
 						}
 					}
