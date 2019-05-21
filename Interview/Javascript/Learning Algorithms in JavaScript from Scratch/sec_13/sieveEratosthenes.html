@@ -10,16 +10,37 @@
 			$(document).ready(function(){
 				
 
-				const sieveOfEratosthenes = function() {
+				const sieveOfEratosthenes = function(num) {
 					
-					var 
+					var primes = [];
+					for(var i = 0; i <= num; i++) {
+						primes[i] = true;
+					}
+
+					primes[0] = false;
+					primes[1] = false;
+
+					for(var i = 2; i <= Math.sqrt(num); i++) {
+						for(var j = 2; i * j <= n; j++) {
+							primes[i * j] = false;
+						}
+					}
+
+					var result = [];
+					for(var i = 0; i < primes.length; i++) {
+						if(primes[i]) {
+							result.push(i);
+						}
+					}
+
+					return result;
 
 				}
 
 				// var noteText = [5, 7, 12, 16, 36, 39, 42, 56, 71];
 				// var noteText2 = [40, 11, 19, 17, -12];
 
-				var tt1 = sieveOfEratosthenes(500);
+				var tt1 = sieveOfEratosthenes(49);
 
 				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
