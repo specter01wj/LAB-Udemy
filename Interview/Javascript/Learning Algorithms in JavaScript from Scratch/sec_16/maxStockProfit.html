@@ -10,16 +10,40 @@
 			$(document).ready(function(){
 				
 
-				const maxStockProfit = function(arr) {
+				const maxStockProfit = function(pricesArr) {
 					
-					
+					var maxProfit = -1;
+					var buyPrice = 0;
+					var sellPrice = 0;
+
+					var changeBuyPrice = true;
+
+					for(var i = 0; i < pricesArr.length; i++) {
+
+						if(changeBuyPrice) {
+							buyPrice = pricesArr[i];
+						}
+						sellPrice = pricesArr[i + 1];
+
+						if(sellPrice < buyPrice) {
+							changeBuyPrice = true;
+						} else {
+							var tempProfit = sellPrice - buyPrice;
+							if(tempProfit > maxProfit) {
+								maxProfit = tempProfit;
+							}
+							changeBuyPrice = false;
+						}
+					}
+
+					return maxProfit;
 
 				}
 
 				var noteText = [10, 18, 4, 5, 9, 6, 16, 12];
-				var noteText2 = [11, 7, 4, 1, 15, 12, 3];
+				var noteText2 = [32, 46, 26, 38, 40, 48, 42];
 
-				var tt1 = maxStockProfit(noteText);
+				var tt1 = maxStockProfit(noteText2);
 
 				$('#t1').html('<h2>Results are:' + tt1 + '</h2>');
 			});
