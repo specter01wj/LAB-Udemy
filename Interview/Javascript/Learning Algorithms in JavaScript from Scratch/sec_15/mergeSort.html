@@ -17,7 +17,30 @@
 				    var firstHalf = arr.slice(0, middleIndex);
 				    var secondHalf = arr.slice(middleIndex);
 				    
-				    // return merge(mergeSort(firstHalf), mergeSort(secondHalf));
+				    return merge(mergeSort(firstHalf), mergeSort(secondHalf));
+
+				}
+
+				function merge(arr1, arr2) {
+
+					var result = [];
+
+					while(arr1.length && arr2.length) {
+						var minElem;
+						if(arr1[0] < arr2[0]) {
+							minElem = arr1.shift();
+						} else {
+							result.push(minElem);
+						}
+					}
+
+					if(arr1.length) {
+						result = result.concat(arr1);
+					} else {
+						result = result.concat(arr2);
+					}
+
+					return result;
 
 				}
 
