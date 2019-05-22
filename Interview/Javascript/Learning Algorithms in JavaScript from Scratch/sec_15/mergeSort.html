@@ -30,8 +30,9 @@
 						if(arr1[0] < arr2[0]) {
 							minElem = arr1.shift();
 						} else {
-							result.push(minElem);
+							minElem = arr2.shift();
 						}
+						result.push(minElem);
 					}
 
 					if(arr1.length) {
@@ -45,7 +46,7 @@
 				}
 
 				var noteText = [6000, 34, 203, 3, 746, 200, 984, 198, 764, 9, 1];
-				var noteText2 = [40, 11, 19, 17, -12, 11, 20, -1, 19];
+				var noteText2 = [11, 7, 4, 1, 15, 12, 3];
 
 				var tt1 = mergeSort(noteText);
 
