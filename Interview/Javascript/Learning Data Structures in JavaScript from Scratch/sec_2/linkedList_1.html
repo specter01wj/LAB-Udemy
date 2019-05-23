@@ -5,16 +5,20 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 		/*
-		Constructor Functions and the "this" Keyword
+		Linked List
 		*/
 			$(document).ready(function(){
 				
 
-				function User(firstName, lastName, age, gender) {
-					this.firstName = firstName;
-					this.lastName = lastName;
-					this.age = age;
-					this.gender = gender;
+				function LinkedList() {
+					this.head = head;
+					this.tail = tail;
+				}
+
+				function Node(value, next, prev) {
+					this.value = value;
+					this.next = next;
+					this.prev = prev;
 				}
 
 				var user1 = new User('James', 'Wang', 32, 'male');
