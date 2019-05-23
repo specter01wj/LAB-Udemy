@@ -22,6 +22,10 @@
 					this.prev = prev;
 				}
 
+				LinkedList.prototype.addToHead = function(value) {
+					var newNode = new Node(value, this.head, null);
+				}
+
 				var linkedList1 = new LinkedList();
 				console.log(linkedList1);
 
