@@ -47,14 +47,34 @@
 					this.tail = newNode;
 				}
 
-				var linkedList2 = new LinkedList();
-				linkedList2.addToTail(10);
-				linkedList2.addToTail(20);
-				linkedList2.addToTail(30);
+				LinkedList.prototype.removeHead = function() {
+					if(!this.head) {
+						return null;
+					}
 
-				linkedList2.addToHead(100);
+					var val = this.head.value;
+					this.head = this.head.next;
+					if(this.head) {
+						this.head.prev = null;
+					} else {
+						this.tail = null;
+					}
 
-				console.log(linkedList2);
+					return val;
+				}
+
+
+				var linkedList4 = new LinkedList();
+				linkedList4.addToTail(1000);
+				linkedList4.addToTail(2000);
+				linkedList4.addToTail(3000);
+
+				console.log(linkedList4);
+
+				var val4 = linkedList4.removeHead();
+
+				console.log(linkedList4);
+				console.log(val4);
 
 				// var node1 = new Node(100, 'node2', null);
 				// console.log(node1);
