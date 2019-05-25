@@ -93,17 +93,22 @@
 				}
 
 
-				var linkedList5 = new LinkedList();
-				linkedList5.addToTail(1000);
-				linkedList5.addToTail(2000);
-				linkedList5.addToTail(3000);
+				var linkedList6 = new LinkedList();
 
-				console.log(linkedList5);
+				linkedList6.addToHead(100);
+				linkedList6.addToHead('James');
+				linkedList6.addToHead(true);
 
-				var val5 = linkedList5.removeTail();
+				linkedList6.addToTail(201);
+				linkedList6.addToTail('Jenny');
+				linkedList6.addToTail(false);
 
-				console.log(linkedList5);
-				console.log(val5);
+				console.log(linkedList6);
+
+				var val6 = linkedList6.search('James');
+
+				console.log(linkedList6);
+				console.log(val6);
 
 				// var node1 = new Node(100, 'node2', null);
 				// console.log(node1);
