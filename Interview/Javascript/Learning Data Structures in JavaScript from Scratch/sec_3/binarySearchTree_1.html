@@ -12,16 +12,15 @@
 			$(document).ready(function(){
 				
 
-				function LinkedList() {
-					this.head = null;
-					this.tail = null;
+				function factorial() {
+					if(num === 1) {
+						return num;
+					} else {
+						return num * factorial(num - 1);
+					}
 				}
 
-				function Node(value, next, prev) {
-					this.value = value;
-					this.next = next;
-					this.prev = prev;
-				}
+				
 
 				var linkedList1 = new LinkedList();
 				console.log(linkedList1);
