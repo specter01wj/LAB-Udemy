@@ -50,9 +50,9 @@
 						return value;
 					} else if(value < this.value) {
 						if(!this.left) {
-							this.left = new BST(value);
+							return false;
 						} else {
-							this.left.insert(value);
+							return this.left.contains(value);
 						}
 					} else {
 						if(!this.right) {
