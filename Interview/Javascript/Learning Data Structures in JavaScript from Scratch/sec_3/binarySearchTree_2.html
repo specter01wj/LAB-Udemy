@@ -30,7 +30,15 @@
 				}
 
 				BST.prototype.insert = function(value) {
-					
+					if(value <= this.value) {
+						if(!this.left) {
+							this.left = new BST(value);
+						} else {
+							this.left.insert(value);
+						}
+					} else {
+						
+					}
 				}
 
 				var bst1 = new BST(50);
