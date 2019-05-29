@@ -56,9 +56,9 @@
 						}
 					} else {
 						if(!this.right) {
-							this.right = new BST(value);
+							return false;
 						} else {
-							this.right.insert(value);
+							return this.right.contains(value);
 						}
 					}
 				}
