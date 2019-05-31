@@ -63,6 +63,18 @@
 					}
 				}
 
+				BST.prototype.depthFirstTraversal = function(iterFunc) {
+					if(this.left) {
+						this.left.depthFirstTraversal(iterFunc);
+					}
+
+					iterFunc(this.value);
+					
+					if(this.right) {
+						this.right.depthFirstTraversal(iterFunc);
+					}
+				}
+
 				var bst1 = new BST(50);
 
 				bst1.insert(30);
