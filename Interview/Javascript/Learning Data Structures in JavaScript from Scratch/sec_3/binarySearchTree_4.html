@@ -7,7 +7,7 @@
 		/*
 		Binary Search Tree
 
-		Contains
+		Depth First Traversal
 		*/
 			$(document).ready(function(){
 				
@@ -103,6 +103,13 @@
 
 				console.log(bst1.contains(100));
 				console.log(bst1.contains(1001));
+
+
+				bst1.depthFirstTraversal(log);
+
+				function log(value) {
+					console.log(value);
+				}
 				
 				// var noteText = [5, 7, 12, 16, 36, 39, 42, 56, 71];
 				// var noteText2 = [40, 11, 19, 17, -12];
