@@ -64,15 +64,7 @@
 				}
 
 				BST.prototype.breadthFirstTraversal = function(iterFunc) {
-					if(this.left) {
-						this.left.depthFirstTraversal(iterFunc);
-					}
-
-					iterFunc(this.value);
-
-					if(this.right) {
-						this.right.depthFirstTraversal(iterFunc);
-					}
+					var queue = [];
 				}
 
 				var bst1 = new BST(50);
