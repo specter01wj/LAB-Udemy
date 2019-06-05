@@ -93,7 +93,7 @@
 					if(order === 'pre-order') {
 						iterFunc(this.value);
 					}
-					
+
 					if(this.left) {
 						this.left.depthFirstTraversal(iterFunc, order);
 					}
@@ -139,7 +139,9 @@
 
 				// bst1.depthFirstTraversal(log);
 				
-				bst1.depthFirstTraversal2(log);
+				// bst1.depthFirstTraversal2(log);
+
+				bst1.depthFirstTraversal3(log);
 
 				function log(value) {
 					console.log(value);
