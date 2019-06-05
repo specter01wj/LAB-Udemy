@@ -116,7 +116,7 @@
 					}
 
 					if(this.left) {
-						this.left.depthFirstTraversal3(iterFunc, order);
+						this.left.depthFirstTraversal4(iterFunc, order);
 					}
 
 					if(order === 'in-order') {
@@ -124,7 +124,11 @@
 					}
 
 					if(this.right) {
-						this.right.depthFirstTraversal3(iterFunc, order);
+						this.right.depthFirstTraversal4(iterFunc, order);
+					}
+
+					if(order === 'post-order') {
+						iterFunc(this.value);
 					}
 				}
 
@@ -162,7 +166,9 @@
 				
 				// bst1.depthFirstTraversal2(log, 'in-order');
 
-				bst1.depthFirstTraversal3(log, 'pre-order');
+				// bst1.depthFirstTraversal3(log, 'pre-order');
+
+				bst1.depthFirstTraversal4(log, 'post-order');
 
 				function log(value) {
 					console.log(value);
