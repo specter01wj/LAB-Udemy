@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+		/*
+		Binary Search Tree
+
+		Independence Exercise
+		*/
+			$(document).ready(function(){
+
+				function BST(value) {
+					this.value = value;
+					this.left = null;
+					this.right = null;
+				}
+
+				BST.prototype.insert = function(value) {
+					if(value <= this.value) {
+						if(!this.left) {
+							this.left = new BST(value);
+						} else {
+							this.left.insert(value);
+						}
+					} else {
+						if(!this.right) {
+							this.right = new BST(value);
+						} else {
+							this.right.insert(value);
+						}
+					}
+				}
+
+				BST.prototype.contains = function(value) {
+					if(value === this.value) {
+						return value;
+					} else if(value < this.value) {
+						if(!this.left) {
+							return false;
+						} else {
+							return this.left.contains(value);
+						}
+					} else {
+						if(!this.right) {
+							return false;
+						} else {
+							return this.right.contains(value);
+						}
+					}
+				}
+
+				BST.prototype.getMinVal = function(iterFunc) {
+					
+				}
+
+				BST.prototype.getMaxVal = function(iterFunc) {
+					
+				}
+
+				var bst1 = new BST(50);
+
+				bst1.insert(30);
+				bst1.insert(70);
+				bst1.insert(100);
+				bst1.insert(60);
+				bst1.insert(59);
+				bst1.insert(20);
+				bst1.insert(45);
+				bst1.insert(35);
+				bst1.insert(85);
+				bst1.insert(105);
+				bst1.insert(10);
+
+				/*
+							50
+							/\
+						30		70
+						/\		/\
+					  20  45  60 100
+					  /\  /\  /\  /\
+					10   35  59  85 105
+				*/
+
+				console.log(bst1);
+
+				console.log(bst1.contains(100));
+				console.log(bst1.contains(1001));
+
+
+				bst1.breadthFirstTraversal(log2);
+
+				function log(value) {
+					console.log(value);
+				}
+
+				function log2(node) {
+					console.log(node.value);
+				}
+				
+				// var noteText = [5, 7, 12, 16, 36, 39, 42, 56, 71];
+				// var noteText2 = [40, 11, 19, 17, -12];
+
+				// var tt1 = fibonacci2(12);
+
+				// $('#t1').html('<h2>Results are:' + tt1 + '</h2>');
+			});
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
