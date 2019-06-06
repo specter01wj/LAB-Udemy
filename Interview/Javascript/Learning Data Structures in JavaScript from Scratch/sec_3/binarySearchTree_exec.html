@@ -52,7 +52,11 @@
 				}
 
 				BST.prototype.getMinVal = function(iterFunc) {
-					
+					if(this.left) {
+						return this.left.getMinVal();
+					} else {
+						
+					}
 				}
 
 				BST.prototype.getMaxVal = function(iterFunc) {
