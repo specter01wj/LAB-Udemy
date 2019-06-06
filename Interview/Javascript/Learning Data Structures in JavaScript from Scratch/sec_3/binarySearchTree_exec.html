@@ -51,7 +51,7 @@
 					}
 				}
 
-				BST.prototype.getMinVal = function(iterFunc) {
+				BST.prototype.getMinVal = function() {
 					if(this.left) {
 						return this.left.getMinVal();
 					} else {
@@ -59,8 +59,12 @@
 					}
 				}
 
-				BST.prototype.getMaxVal = function(iterFunc) {
-					
+				BST.prototype.getMaxVal = function() {
+					if(this.right) {
+						return this.right.getMaxVal();
+					} else {
+						return this.value;
+					}
 				}
 
 				var bst1 = new BST(50);
