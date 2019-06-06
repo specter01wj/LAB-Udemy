@@ -55,6 +55,10 @@
 					var queue = [this];
 					while(queue.length) {
 						var treeNode = queue.shift();
+						iterFunc(treeNode);
+						if(treeNode.left) {
+							queue.push(treeNode.left);
+						}
 					}
 				}
 
