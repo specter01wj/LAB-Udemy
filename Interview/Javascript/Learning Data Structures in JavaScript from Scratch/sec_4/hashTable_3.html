@@ -32,6 +32,10 @@
 					return total % this.numBuckets;
 				}
 
+				HashTable.prototype.insert = function(key, value) {
+					var index = this.hash(key);
+				}
+
 				var myHT_1 = new HashTable(30);
 				console.log(myHT_1);
 
