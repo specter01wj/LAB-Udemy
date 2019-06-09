@@ -34,6 +34,7 @@
 
 				HashTable.prototype.insert = function(key, value) {
 					var index = this.hash(key);
+					console.log('INDEX: ' + index);
 					if(!this.buckets[index]) {
 						this.buckets[index] = new HashNode(key, value);
 					} else {
@@ -51,6 +52,12 @@
 				// console.log('hello'.charCodeAt(1));
 
 				console.log(myHT_1.hash('Becca'));
+
+				myHT_1.insert('James', 'jw@gmail.com');
+				myHT_1.insert('Kim', 'km@gmail.com');
+				myHT_1.insert('Jin', 'jw8212@gmail.com');
+
+				console.log(myHT_1.buckets);
 				
 				// var noteText = [5, 7, 12, 16, 36, 39, 42, 56, 71];
 				// var noteText2 = [40, 11, 19, 17, -12];
