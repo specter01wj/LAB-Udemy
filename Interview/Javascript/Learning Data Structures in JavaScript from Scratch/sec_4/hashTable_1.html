@@ -5,19 +5,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 		/*
-		Binary Search Tree
+		Hash Tables
 
-		Recursion
+		Hash Table and Hash Node Constructor Functions
 		*/
 			$(document).ready(function(){
 				
 
-				function factorial(num) {
-					if(num === 1) {
-						return num;
-					} else {
-						return num * factorial(num - 1);
-					}
+				function HashTable(size) {
+					this.buckets = Array(size);
+					this.numBuckets = this.buckets.length;
 				}
 
 				var recur1 = factorial(4);
