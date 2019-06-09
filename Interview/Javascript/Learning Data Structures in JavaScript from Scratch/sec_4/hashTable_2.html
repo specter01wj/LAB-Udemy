@@ -7,7 +7,7 @@
 		/*
 		Hash Tables
 
-		Hash Table and Hash Node Constructor Functions
+		Hash Method
 		*/
 			$(document).ready(function(){
 				
@@ -21,6 +21,15 @@
 					this.key = key;
 					this.value = value;
 					this.next = next || null;
+				}
+
+				HashTable.prototype.hash = function(key) {
+					var total = 0;
+					for(var i = 0; i < key.length; i++) {
+						total += key.charCodeAt(i);
+					}
+
+					return total % this.numBuckets;
 				}
 
 				var myHT_1 = new HashTable(30);
