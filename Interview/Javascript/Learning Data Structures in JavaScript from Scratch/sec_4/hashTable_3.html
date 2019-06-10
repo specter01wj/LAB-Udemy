@@ -51,6 +51,8 @@
 					console.log('INDEX: ' + index);
 					if(!this.buckets[index]) {
 						this.buckets[index] = new HashNode(key, value);
+					} else if(this.buckets[index].key === key) {
+						this.buckets[index].value = value;
 					} else {
 						var currentNode = this.buckets[index];
 						while(currentNode.next) {
