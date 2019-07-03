@@ -20,32 +20,35 @@
 
 <div class="container main-content" ng-controller="MinMaxCtrl as vm">
 
-	<form ng-submit="onSubmit()"
+	<form ng-submit="vm.onSubmit()"
 				novalidate="novalidate"
-			  ng-hide="submitted" >
+			  ng-hide="submitted" name="theForm">
 		<div class="form-group" >
 			<label for="name" class="control-label">Name</label >
 			<input type="text"
 			       class="form-control"
-			       ng-model="formModel.name"
+			       ng-model="vm.formModel.name"
 			       id="name"
 					   required="required" >
 		</div >
 
-		<div class="form-group">
-			<label for="email" class="control-label">Email</label >
+		<div class="form-group" ng-class="{
+				'has-error': !theForm.email1.$valid && (!theForm.$pristine || theForm.$submitted),
+				'has-success': theForm.email1.$valid && (!theForm.$pristine || theForm.$submitted)
+			}">
+			<label for="email1" class="control-label">Email</label >
 			<input type="email"
 			       class="form-control"
-			       ng-model="formModel.email"
-			       id="email"
-					   required="required" >
+			       ng-model="vm.formModel.email"
+			       id="email1"
+					required="required" >
 		</div >
 
 		<div class="form-group" >
 			<label for="username" class="control-label">Username</label >
 			<input type="text"
 			       class="form-control"
-			       ng-model="formModel.username"
+			       ng-model="vm.formModel.username"
 			       ng-pattern="/^[A-Za-z0-9_]{1,32}$/"
 			       ng-minlength="7"
 			       ng-pattern-err-type="badUsername"
@@ -57,7 +60,7 @@
 			<label for="age" class="control-label">Age</label >
 			<input type="number"
 			       class="form-control"
-			       ng-model="formModel.age"
+			       ng-model="vm.formModel.age"
 			       min="18"
 			       max="64"
 			       id="age"
@@ -70,7 +73,7 @@
 			<label for="sex" class="control-label">Sex</label >
 			<select id="sex"
 							class="form-control"
-							ng-model="formModel.sex"
+							ng-model="vm.formModel.sex"
 							required="required" >
 				<option value="" >Please Choose</option >
 				<option value="male" >Male</option >
@@ -82,7 +85,7 @@
 			<label for="password" class="control-label">Password</label >
 			<input type="password"
 			       class="form-control"
-			       ng-model="formModel.password"
+			       ng-model="vm.formModel.password"
 			       id="password"
 			       required="required"
 						 ng-minlength="10">
@@ -98,14 +101,14 @@
 			        ladda="submitting"
 			        data-style="expand-right"
 							type="submit">
-				<span ng-show="submitting">Registering</span>
-				<span ng-show="!submitting">Register</span>
+				<span ng-show="vm.submitting">Registering</span>
+				<span ng-show="!vm.submitting">Register</span>
 			</button>
 		</div>
 
 	</form >
 
-	<div class="alert alert-info text-center" ng-show="submitted">
+	<div class="alert alert-info text-center" ng-show="vm.submitted">
 		<h3>Thanks for Registering!</h3>
 	</div>
 
@@ -115,7 +118,7 @@
 
 
 <!-- <script src="../libs/angular/angular.min.js" ></script > -->
-<script src="angular1610.min.js" ></script >
+<script src="angular150.min.js" ></script >
 <script src="libs/angular-auto-validate/dist/jcs-auto-validate.min.js" ></script >
 <script src="libs/ladda/dist/spin.min.js" ></script >
 <script src="libs/ladda/dist/ladda.min.js" ></script >
