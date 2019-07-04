@@ -22,24 +22,6 @@
 		vm.submitted = false;
 		vm.has_error = false;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		vm.onSubmit = function () {
 			vm.submitting = true;
 			console.log("Hey i'm submitted!");
