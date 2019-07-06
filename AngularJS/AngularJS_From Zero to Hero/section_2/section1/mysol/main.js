@@ -26,6 +26,7 @@
 			vm.submitting = true;
 			console.log("Hey i'm submitted!");
 			console.log(vm.formModel);
+			
 
 			$http.post('https://minmax-server.herokuapp.com/register/', vm.formModel).
 				success(function (data) {
