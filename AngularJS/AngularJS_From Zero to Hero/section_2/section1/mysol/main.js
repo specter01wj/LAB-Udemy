@@ -32,6 +32,7 @@
 
 
 
+
 			
 
 			$http.post('https://minmax-server.herokuapp.com/register/', vm.formModel).
