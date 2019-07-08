@@ -23,7 +23,10 @@
 	<form ng-submit="vm.onSubmit()"
 				novalidate="novalidate"
 			  ng-hide="submitted" name="theForm">
-		<div class="form-group" >
+		<div class="form-group" ng-class="{
+				'has-error': !theForm.name.$valid && (!theForm.$pristine || theForm.$submitted),
+				'has-success': theForm.name.$valid && (!theForm.$pristine || theForm.$submitted)
+			}">
 			<label for="name" class="control-label">Name</label >
 			<input type="text"
 			       class="form-control"
