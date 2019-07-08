@@ -24,20 +24,21 @@
 				novalidate="novalidate"
 			  ng-hide="submitted" name="theForm">
 		<div class="form-group" ng-class="{
-				'has-error': !theForm.name.$valid && (!theForm.$pristine || theForm.$submitted),
-				'has-success': theForm.name.$valid && (!theForm.$pristine || theForm.$submitted)
+				'has-error': !theForm.name.$valid && (!theForm.name.$pristine || theForm.$submitted),
+				'has-success': theForm.name.$valid && (!theForm.name.$pristine || theForm.$submitted)
 			}">
 			<label for="name" class="control-label">Name</label >
 			<input type="text"
 			       class="form-control"
 			       ng-model="vm.formModel.name"
+			       ng-pattern="/^[A-Za-z]+$/"
 			       id="name"
-					   required="required" >
+				   required="required" name="name">
 		</div >
 
 		<div class="form-group" ng-class="{
-				'has-error': !theForm.email1.$valid && (!theForm.$pristine || theForm.$submitted),
-				'has-success': theForm.email1.$valid && (!theForm.$pristine || theForm.$submitted)
+				'has-error': !theForm.email1.$valid && (!theForm.email1.$pristine || theForm.$submitted),
+				'has-success': theForm.email1.$valid && (!theForm.email1.$pristine || theForm.$submitted)
 			}">
 			<label for="email1" class="control-label">Email</label >
 			<input type="email"
