@@ -23,3 +23,17 @@ circles.enter()
             return d;
         })
         .attr("fill", "red");
+
+var line = svg.selectAll("line").data(data);
+
+line.enter().append("line")
+    .attr("x1", function(d, i){
+        return (i * 50) + 25;
+    })
+    .attr("y1", 25)
+    .attr("x2", function(d, i){
+        return (i * 50) + 25;
+    })
+    .attr("y2", 55)
+    .attr("stroke", "brown")
+    .attr("stroke-width", 5);
