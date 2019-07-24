@@ -4,7 +4,8 @@
 *    2.4 - Adding SVGs with D3
 */
 
-var svg = d3.select("#chart-area").append("svg")
+var svg = d3.select("#chart-area")
+	.append("svg")
 	.attr("width", 400)
 	.attr("height", 400);
 
