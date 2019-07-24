@@ -10,7 +10,17 @@ var svg = d3.select("#chart-area")
 	.attr("height", 400);
 
 var circle = svg.append("circle")
-	.attr("cx", 100)
-	.attr("cy", 250)
-	.attr("r", 70)
-	.attr("fill", "grey");
+	.attr("cx", 50)
+	.attr("cy", 50)
+	.attr("r", 20)
+	.attr("fill", "red");
+
+var rectangle = svg.append("rect")
+	.attr("x", 100)
+	.attr("y", 50)
+	.attr("width", 50)
+	.attr("height", 50)
+	.attr("fill", "green")
+	.attr("stroke", "grey")
+	.attr("stroke-width", "3px");
+
