@@ -16,22 +16,22 @@ d3.json("data/buildings.json").then(function(data){
     });
 
     var rects = svg.selectAll("rect")
-            .data(data).enter()
-            .append("rect")
-            .attr("y", 0)
-            .attr("x", function(d, i){
-                return (i * 60);
-            })
-            .attr("width", 40)
-            .attr("height", function(d){
-                return d.height * 1.25;
-            })
-            .attr("fill", function(d) {
-                if(d.name === "Shanghai Tower") {
-                    return "purple";
-                } else {
-                   return "grey"; 
-               }
-            });
+        .data(data).enter()
+        .append("rect")
+        .attr("y", 0)
+        .attr("x", function(d, i){
+            return (i * 60);
+        })
+        .attr("width", 40)
+        .attr("height", function(d){
+            return d.height * 1.25;
+        })
+        .attr("fill", function(d) {
+            if(d.name === "Shanghai Tower") {
+                return "purple";
+            } else {
+               return "grey"; 
+           }
+        });
 
 })
