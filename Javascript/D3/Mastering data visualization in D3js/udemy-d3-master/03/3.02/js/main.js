@@ -24,7 +24,9 @@ d3.json("data/buildings.json").then(function(data){
         .data(data)
         .enter()
         .append("rect")
-        .attr("y", 0)
+        .attr("y", function(d, i) {
+            return i*20;
+        })
         .attr("x", function(d, i){
             return (i * 60);
         })
@@ -33,7 +35,11 @@ d3.json("data/buildings.json").then(function(data){
             return y(d.height);
         })
         .attr("fill", function(d) {
-            return "grey";
+            if(d.name === "Shanghai Tower") {
+                return "purple";
+            } else {
+                return "grey";
+            }
         });
         
 });
