@@ -27,6 +27,7 @@ d3.json("data/buildings.json").then(function(data){
         .paddingOuter(0.2);
 
 
+
         
 
     var y = d3.scaleLinear()
