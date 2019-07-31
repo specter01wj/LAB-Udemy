@@ -20,10 +20,22 @@ d3.json("data/buildings.json").then(function(data){
         .domain([0, 828])
         .range([0, 200]);*/
 
-    var y = d3.scaleLog()
+    /*var y = d3.scaleLog()
         .domain([300, 150000])
         .range([0, 400])
-        .base(10);
+        .base(10);*/
+
+    /*var y = d3.scaleTime()
+        .domain([new Date(2017, 8, 10), new Date(2019, 7, 21)])
+        .range([0, 400]);*/
+
+    /*var y = d3.scaleOrdinal()
+        .domain(["A", "B", "C", "D", "E", "F"])
+        .range(["RED", "ORANGE", "PURPLE"]);*/
+
+    var y = d3.scaleOrdinal()
+        .domain(["A", "B", "C", "D", "E", "F"])
+        .range(d3.schemeCategory10);
 
     var rects = svg.selectAll("rect")
         .data(data)
