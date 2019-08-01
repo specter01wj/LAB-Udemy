@@ -29,6 +29,7 @@ d3.json("data/buildings.json").then(function(data){
             return d.height;
         })])
         .range([0, 400]);
+        
 
     var rects = svg.selectAll("rect")
         .data(data)
