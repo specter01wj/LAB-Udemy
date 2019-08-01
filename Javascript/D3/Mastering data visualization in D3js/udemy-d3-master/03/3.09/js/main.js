@@ -38,6 +38,7 @@ d3.json("data/buildings.json").then(function(data){
         })])
         .range([0, height]);
 
+
         
 
     var rects = g.selectAll("rect")
