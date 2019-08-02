@@ -72,6 +72,7 @@ d3.json("data/buildings.json").then(function(data){
         .tickFormat(function(d){
             return d + "M";
         });
+        
     g.append("g")
         .attr("class", "y-axis")
         .call(yAxisCall);
