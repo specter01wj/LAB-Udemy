@@ -1,0 +1,9 @@
+The ng-controller Directive:
+
+ng-controller="CustomersController as ctrl"
+
+ng-repeat="cust in ctrl.customers"
+
+
+
+
