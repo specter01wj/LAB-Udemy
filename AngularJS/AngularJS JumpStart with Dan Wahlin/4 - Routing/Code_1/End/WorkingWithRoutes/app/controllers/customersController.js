@@ -8,6 +8,7 @@
            $scope.sortBy = propName;
 
 
+
            
            $scope.reverse = !$scope.reverse;
         };
