@@ -9,6 +9,7 @@
 
 
 
+
            
            $scope.reverse = !$scope.reverse;
         };
