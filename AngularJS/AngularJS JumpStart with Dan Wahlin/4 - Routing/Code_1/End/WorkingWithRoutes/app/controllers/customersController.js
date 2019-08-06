@@ -15,6 +15,7 @@
 
 
 
+
            
            $scope.reverse = !$scope.reverse;
         };
