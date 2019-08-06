@@ -7,6 +7,7 @@
         $scope.doSort = function(propName) {
            $scope.sortBy = propName;
 
+
            
            $scope.reverse = !$scope.reverse;
         };
