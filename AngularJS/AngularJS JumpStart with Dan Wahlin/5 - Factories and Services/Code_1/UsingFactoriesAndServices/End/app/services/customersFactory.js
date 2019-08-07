@@ -12,15 +12,6 @@
         };
         
         return factory;
-
-
-
-
-
-
-
-
-        
     };
     
     customersFactory.$inject = ['$http'];
