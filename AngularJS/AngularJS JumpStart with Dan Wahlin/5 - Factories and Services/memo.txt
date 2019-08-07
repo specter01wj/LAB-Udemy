@@ -1,0 +1,11 @@
+1. factory
+
+2. service
+
+3. values and constants
+
+4. $http
+
+5. $log
+
+
