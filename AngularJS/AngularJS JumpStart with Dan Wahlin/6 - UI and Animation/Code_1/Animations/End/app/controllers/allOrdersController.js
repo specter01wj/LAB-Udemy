@@ -21,11 +21,6 @@
                 total += $scope.orders[i].total;
             }
             $scope.ordersTotal = total;
-
-
-
-
-            
             $scope.totalType = ($scope.ordersTotal > 100) ? 'success' : 'danger';
         }
 
