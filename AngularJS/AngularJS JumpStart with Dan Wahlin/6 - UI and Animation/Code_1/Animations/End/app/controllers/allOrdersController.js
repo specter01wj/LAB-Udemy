@@ -24,6 +24,7 @@
 
 
 
+
             
             $scope.totalType = ($scope.ordersTotal > 100) ? 'success' : 'danger';
         }
