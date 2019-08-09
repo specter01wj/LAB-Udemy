@@ -6,6 +6,7 @@
         return {
             template: 'Hello World'
         };
+        
     });
 
 }());
