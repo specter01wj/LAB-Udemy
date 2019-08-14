@@ -3,10 +3,12 @@
   var app = angular.module('directivesModule');
 
   app.directive('isolateScopeWithString', function () {
-      return {
-
-          template: 'Name: {{name}}'
-      };
+	    return {
+	    	scope: {
+              	name: '@'
+          	},
+	        template: 'Name: {{name}}'
+	    };
   });
 
 }());
