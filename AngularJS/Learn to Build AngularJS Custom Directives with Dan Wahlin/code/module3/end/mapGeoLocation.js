@@ -15,7 +15,7 @@
            $window.navigator.geolocation.getCurrentPosition(mapLocation, geoError);
         }
 
-          function mapLocation(pos) {
+        function mapLocation(pos) {
               status.html('Found your location! Longitude: ' + pos.coords.longitude +
                           ' Latitude: ' + pos.coords.latitude);
 
