@@ -28,12 +28,6 @@
                 mapTypeId: google.maps.MapTypeId.ROADMAP
               };
 
-
-
-
-
-              
-
               var map = new google.maps.Map(mapContainer[0], options);
 
               var marker = new google.maps.Marker({
