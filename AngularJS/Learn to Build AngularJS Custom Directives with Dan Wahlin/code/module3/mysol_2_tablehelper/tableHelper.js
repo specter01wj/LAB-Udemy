@@ -29,6 +29,7 @@
 
           function wireEvents() {
               element.on('click', function(event) {
+                // console.log(event);
                  if (event.srcElement.nodeName === 'TH') {
                      var val = event.srcElement.innerHTML;
                      var col = (scope.columnmap) ? getRawColumnName(val) : val;
@@ -113,9 +114,14 @@
 
           function getColumnName(prop) {
               if (!scope.columnmap) return prop;
+
               var val = filterColumnMap(prop);
-              if (val && val.length && !val[0].hidden) return val[0][prop];
-              else return null;
+
+              if (val && val.length && !val[0].hidden) {
+                return val[0][prop];
+              } else {
+                return null;
+              }
           }
 
       };
