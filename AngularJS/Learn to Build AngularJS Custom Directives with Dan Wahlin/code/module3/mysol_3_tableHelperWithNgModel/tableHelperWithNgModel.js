@@ -18,6 +18,29 @@
           //Watch for ngModel to change. Required since the $modelValue
           //will be NaN initially
 
+          // 1
+          attrs.$observe('ngModel', function(value) {
+              scope.$watch(value, function(newValue) {
+                  render();
+              });
+          });
+
+          // 2
+          scope.$watch(attrs.ngModel, render);
+
+          // 3
+          scope.$watch(function() {
+             return ngModel.$modelValue;
+          }, function(newValue) {
+              render();
+          });
+
+          // 4
+          ngModel.$render = function() {
+              render();
+          };
+
+
           wireEvents();
 
           function render() {
