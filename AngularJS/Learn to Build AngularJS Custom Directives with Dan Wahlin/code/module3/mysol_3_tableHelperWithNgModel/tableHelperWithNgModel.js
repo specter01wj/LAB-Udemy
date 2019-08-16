@@ -19,21 +19,21 @@
           //will be NaN initially
 
           // 1
-          attrs.$observe('ngModel', function(value) {
+         /* attrs.$observe('ngModel', function(value) {
               scope.$watch(value, function(newValue) {
                   render();
               });
-          });
+          });*/
 
           // 2
-          scope.$watch(attrs.ngModel, render);
+          // scope.$watch(attrs.ngModel, render);
 
           // 3
-          scope.$watch(function() {
+         /* scope.$watch(function() {
              return ngModel.$modelValue;
           }, function(newValue) {
               render();
-          });
+          });*/
 
           // 4
           ngModel.$render = function() {
@@ -45,11 +45,13 @@
 
           function render() {
 
-
+            if (ngModel && ngModel.$modelValue.length) {
+              datasource = ngModel.$modelValue;
               table += tableStart;
               table += renderHeader();
               table += renderRows() + tableEnd;
               renderTable();
+            }
           }
 
           function wireEvents() {
