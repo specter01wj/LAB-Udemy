@@ -15,6 +15,7 @@
                vm.items = angular.copy(vm.datasource);
             }
 
+
             
 
             vm.addItem = function() {
