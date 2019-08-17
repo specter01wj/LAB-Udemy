@@ -14,13 +14,7 @@
             function init() {
                vm.items = angular.copy(vm.datasource);
             }
-
-
-
-
-
             
-
             vm.addItem = function() {
                 var name = 'New Directive Controller Item';
                 vm.add()(name);
