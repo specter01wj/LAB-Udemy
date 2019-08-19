@@ -8,12 +8,6 @@
 
             init();
 
-
-
-
-
-            
-
             function init() {
                 vm.items = angular.copy(vm.datasource);
             }
