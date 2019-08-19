@@ -16,8 +16,8 @@
                 var name = 'New Customer Added by Directive: vm.add()(name)';
 
                 //Call external scope's function
-
-
+                vm.add()(name);
+                
                 //Add new item to directive scope
                 vm.items.push({
                     name: name
