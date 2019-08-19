@@ -13,7 +13,9 @@
       <ul><li ng-repeat="cust in customers">{{ cust.name }}</li></ul>
 
       <h3>Passing Parameters out of a Directive Controller</h3>
-      Example 1: <div controller-passing-parameter1 datasource="customers"></div>
+      Example 1: 
+      <div controller-passing-parameter1 
+        datasource="customers" add="addCustomer(name)"></div>
       <br /><br />
       Example 2: <div controller-passing-parameter2 datasource="customers"></div>
 
