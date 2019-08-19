@@ -12,9 +12,9 @@
 
           vm.addTask = function () {
 
-            if (!vm.tasks) vm.tasks = [];
+            if (!vm.istasks) vm.istasks = [];
 
-              vm.tasks.push({
+              vm.istasks.push({
                 title: vm.title
               });
 
@@ -25,7 +25,7 @@
           restrict: 'E',
           transclude: true,
           scope: {
-            tasks: '='
+            istasks: '='
           },
           controller: controller,
           controllerAs: 'vm',
