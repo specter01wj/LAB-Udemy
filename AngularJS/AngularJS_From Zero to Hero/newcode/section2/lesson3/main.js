@@ -10,6 +10,7 @@ app.controller('PersonsController', function ($scope) {
 
 
 
+
 	
 
 	$scope.selectPerson = function (index) {
