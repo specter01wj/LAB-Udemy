@@ -28,10 +28,19 @@
 						<input type="text"
 						       class="form-control"
 						       id="name"
-						       ng-model="search"
+						       ng-model="search.$"
 						       placeholder="Search name..."
 								/>
 				</div >
+
+				<!-- <div class="form-group" >
+						<input type="text"
+						       class="form-control"
+						       id="name"
+						       ng-model="search"
+						       placeholder="Search name..."
+								/>
+				</div > -->
 
 			</form >
 		</div >
@@ -50,11 +59,16 @@
 					<th >Birthday</th >
 				</tr >
 
-				<tr ng-repeat="person in persons | filter:sensitiveSearch"
+				<tr ng-repeat="person in persons | filter:search"
 				    ng-style="{
 				 'background-color': $index == selectedIndex ? 'lightgray' : ''
 				 }"
 				    ng-click="selectPerson(person, $index)" >
+				<!-- <tr ng-repeat="person in persons | filter:sensitiveSearch"
+				    ng-style="{
+				 'background-color': $index == selectedIndex ? 'lightgray' : ''
+				 }"
+				    ng-click="selectPerson(person, $index)" > -->
 					<td >{{ $index }}</td >
 					<td >{{ person.name }}</td >
 					<td >{{ person.email }}</td >
