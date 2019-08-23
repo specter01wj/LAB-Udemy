@@ -4,7 +4,7 @@
 
   app.directive('isolateScope', function () {
       return {
-      	  // scope: {},
+      	  scope: {},
           template: 'Name: {{customer.name}} Street: {{customer.street}}'
       };
   });
