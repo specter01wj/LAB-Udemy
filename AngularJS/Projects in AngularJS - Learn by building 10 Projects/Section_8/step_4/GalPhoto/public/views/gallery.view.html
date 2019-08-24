@@ -1,0 +1,11 @@
+<div ng-controller="GalleryCtrl">
+	<h1>Most Popular Photos</h1>
+	<div class="row gallery">
+		<div class="col-md-3" ng-repeat="img in images">
+			<a href="#"><img class="main" ng-src="{{img.images.low_resolution.url}}"></a>
+			<div class="imgInfo">
+				<img class="avatar img-circle" ng-src="{{img.user.profile_picture}}"> Posted By: {{img.user.username}}
+			</div>
+		</div>
+	</div>
+</div>
