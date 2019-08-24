@@ -20,6 +20,7 @@ var app = angular.module("computer",['ngRoute'])
 
 
 
+
   
   console.log($scope);
 }]);
