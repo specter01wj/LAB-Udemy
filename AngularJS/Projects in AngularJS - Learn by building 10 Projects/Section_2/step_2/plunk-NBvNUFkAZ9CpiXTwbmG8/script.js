@@ -12,6 +12,7 @@ var app = angular.module("computer",['ngRoute'])
 .controller('MainCtrl', ['$scope', function($scope){
   $scope.person = 'John Doe';
 
+
   
   console.log($scope);
 }]);
