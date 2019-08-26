@@ -25,6 +25,7 @@ var app = angular.module("computer",['ngRoute'])
   $http.get('services.json').then(function(response){
     $scope.services = response.data;
 
+
     
   });
 }])
