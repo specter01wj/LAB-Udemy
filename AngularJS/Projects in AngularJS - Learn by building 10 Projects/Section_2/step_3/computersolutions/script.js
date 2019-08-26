@@ -26,6 +26,7 @@ var app = angular.module("computer",['ngRoute'])
     $scope.services = response.data;
 
 
+
     
   });
 }])
