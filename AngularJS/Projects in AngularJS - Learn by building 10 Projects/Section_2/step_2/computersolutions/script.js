@@ -10,8 +10,12 @@ var app = angular.module("computer",['ngRoute'])
 }])
 
 .controller('MainCtrl', ['$scope', function($scope){
-  $scope.person = 'John Doe';
+  $scope.person = 'James Wang';
 
   console.log($scope);
+}]);
+
+app.controller('TopCtrl', ['$scope', function($scope){
+  $scope.person = 'John Doe';
 }]);
 
