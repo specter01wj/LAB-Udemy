@@ -19,11 +19,11 @@
           //will be NaN initially
 
           // 1
-         /* attrs.$observe('ngModel', function(value) {
+          attrs.$observe('ngModel', function(value) {
               scope.$watch(value, function(newValue) {
                   render();
               });
-          });*/
+          });
 
           // 2
           // scope.$watch(attrs.ngModel, render);
@@ -36,9 +36,9 @@
           });*/
 
           // 4
-          ngModel.$render = function() {
+          /*ngModel.$render = function() {
               render();
-          };
+          };*/
 
 
           wireEvents();
