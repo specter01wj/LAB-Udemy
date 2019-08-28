@@ -17,8 +17,8 @@
           //Watch for changes to the collection so that the table gets re-rendered as necessary
           scope.$watchCollection('datasource', render);
 
-          //columnmap = scope.$eval(attrs.columnmap);
-          columnmap = $parse(attrs.columnmap)();
+          columnmap = scope.$eval(attrs.columnmap);
+          // columnmap = $parse(attrs.columnmap)();
 
           wireEvents();
 
