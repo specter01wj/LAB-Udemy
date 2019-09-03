@@ -7,6 +7,7 @@ export class LikeComponent {
         this._likesCount += (this._isSelected) ? -1 : +1;
         this._isSelected = !this._isSelected;
     }
+    
 
     get likesCount() { 
         return this._likesCount;
