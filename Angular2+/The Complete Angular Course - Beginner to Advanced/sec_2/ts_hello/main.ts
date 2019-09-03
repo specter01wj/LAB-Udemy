@@ -3,4 +3,6 @@ function log(message) {
 	console.log(message);
 }
 
-var message = 'James Wang!';
+var message = 'James Wang';
+
+log(message);
