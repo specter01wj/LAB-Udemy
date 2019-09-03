@@ -1,6 +1,6 @@
 
-import { LikeComponent } from './like.component';
+function log(message) {
+	console.log(message);
+}
 
-let component = new LikeComponent(10, true);
-component.onClick();
-console.log(`likesCount: ${component.likesCount}, isSelected: ${component.isSelected}`);
+var message = 'James Wang!';
