@@ -10,6 +10,7 @@ export class LikeComponent {
     
     get likesCount() { 
         return this._likesCount;
+
         
     }
 
