@@ -1,0 +1,80 @@
+{
+  "data": {
+    "user": [
+      {
+        "name": "Brad Traversy",
+        "email": "techguyinfo@gmail.com",
+        "password": "123456",
+        "createdAt": "2015-06-10T16:24:48.576Z",
+        "updatedAt": "2015-06-10T16:24:48.576Z",
+        "id": 1
+      },
+      {
+        "name": "John Doe",
+        "email": "jdoe@gmail.com",
+        "password": "abcdefg",
+        "createdAt": "2015-06-10T16:25:29.109Z",
+        "updatedAt": "2015-06-10T16:25:29.109Z",
+        "id": 2
+      },
+      {
+        "name": "Sam Smith",
+        "email": "ssmith@gmail.com",
+        "password": "$2a$10$YBNMC1.hUQ6gFXOfU8EB4O55sgagcHHuwe7ImoPgheemPpO/rUT..",
+        "lastLoggedIn": "2015-06-11T02:07:32.927Z",
+        "gravatarUrl": "http://www.gravatar.com/avatar/f9cfdf6e4f578b0390a84ff9d545f69f?",
+        "createdAt": "2015-06-11T02:07:32.930Z",
+        "updatedAt": "2015-06-11T02:07:32.930Z",
+        "id": 3
+      },
+      {
+        "name": "Tom Smith",
+        "email": "tsmith@gmail.com",
+        "password": "$2a$10$j8LeWeLSBZKtzLxqryAuUOmJlo8e/D8vAYBm8JebTe64NyfdkW5zy",
+        "lastLoggedIn": "2015-06-11T13:11:32.775Z",
+        "gravatarUrl": "http://www.gravatar.com/avatar/7b0b78b5eabc2798a9e8b889dcca2bf2?",
+        "createdAt": "2015-06-11T13:11:32.781Z",
+        "updatedAt": "2015-06-11T13:11:32.781Z",
+        "id": 4
+      }
+    ]
+  },
+  "schema": {
+    "user": {
+      "name": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "lastLoggedIn": {
+        "type": "date",
+        "defaultsTo": "1970-01-01T00:00:00.000Z"
+      },
+      "gravatarUrl": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 4
+    }
+  }
+}
