@@ -12,9 +12,6 @@ app.controller('PersonListController', function ($scope, ContactService) {
 	$scope.order = "email";
 	$scope.contacts = ContactService;
 
-
-
-
 	$scope.sensitiveSearch = function (person) {
 		if ($scope.search) {
 			return person.name.indexOf($scope.search) == 0 ||
