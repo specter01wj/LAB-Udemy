@@ -11,6 +11,7 @@ app.controller('PersonListController', function ($scope, ContactService) {
 	$scope.search = "";
 	$scope.order = "email";
 	$scope.contacts = ContactService;
+	
 
 	$scope.sensitiveSearch = function (person) {
 		if ($scope.search) {
