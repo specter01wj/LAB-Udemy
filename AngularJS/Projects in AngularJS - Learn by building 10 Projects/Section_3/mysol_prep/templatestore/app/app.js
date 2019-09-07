@@ -21,6 +21,7 @@ angular.module('templateStore', [
 
 
 
+
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/templates'});
 }]);
