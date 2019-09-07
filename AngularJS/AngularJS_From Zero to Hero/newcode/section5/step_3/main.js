@@ -22,6 +22,18 @@ app.controller('PersonListController', function ($scope, ContactService) {
 
 });
 
+app.filter('defaultImage', function () {
+
+	return function (input, param) {
+		
+		if (!input) {
+			return param;
+		}
+		return input;
+	};
+
+});
+
 app.service('ContactService', function () {
 
 	return {

@@ -72,7 +72,7 @@
 							<th >Birthday</th >
 						</tr >
 
-						<tr ng-repeat="person in filteredPersons = (contacts.persons | filter:sensitiveSearch | orderBy:order)"
+						<tr ng-repeat="person in filteredPersons = (contacts.persons | filter:sensitiveSearch | defaultImage: [{'name': 'James Wang'}] | orderBy:order)"
 						    ng-style="{
 							 'background-color': person.email == contacts.selectedPerson.email ? 'lightgray' : ''
 						}"
