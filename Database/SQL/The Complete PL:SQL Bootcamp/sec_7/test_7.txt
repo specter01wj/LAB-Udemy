@@ -1,0 +1,65 @@
+set serveroutput on;
+
+--Operating Wİth Selected Queries
+
+select * from employees;
+
+declare
+  v_name varchar2(50);
+  v_salary employees.salary%type;
+begin
+  select first_name || ' ' || last_name, salary into v_name, v_salary from employees where employee_id = 100;
+  dbms_output.put_line('The salary of ' || v_name || ' is : ' || v_salary);
+end;
+
+declare
+  v_name varchar2(50);
+  v_salary employees.salary%type;
+  v_employee_id employees.employee_id%type := 130;
+begin
+  select first_name || ' ' || last_name, salary into v_name, v_salary 
+         from employees where employee_id = v_employee_id;
+  dbms_output.put_line('The salary of ' || v_name || ' is : ' || v_salary);
+end;
+
+
+--DML Operations in PL/SQL
+
+create table employees_copy as select * from employees;
+select * from employees_copy;
+
+begin
+  for i in 207..216 loop
+    insert into employees_copy
+      (employee_id, first_name, last_name, email, hire_date, job_id, salary)
+    values
+      (i, 'employee_id#' || i, 'temp_emp', 'abc@xmail.com', sysdate, 'IT_PROG', 1000);
+  end loop;
+end;
+
+
+declare
+  v_salary_increase number := 400;
+begin
+  for i in 207..216 loop
+    update employees_copy
+      set salary = salary + v_salary_increase
+      where employee_id = i;
+  end loop;
+end;
+
+
+declare
+  v_salary_increase number := 400;
+begin
+  for i in 207..216 loop
+    delete from employees_copy
+      where employee_id = i;
+  end loop;
+end;
+
+
+--Using Sequences in PL/SQL
+
+
+
