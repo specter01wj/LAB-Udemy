@@ -9,6 +9,10 @@ export class CoursesComponent implements OnInit {
 
 	name = "James Wang";
 
+	getTitle() {
+		return this.name;
+	}
+
   constructor() { }
 
   ngOnInit() {
