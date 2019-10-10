@@ -9,6 +9,8 @@ export class CoursesComponent implements OnInit {
 
 	name = "James Wang";
 
+	courses = ["course1", "course2", "course3"];
+
 	getTitle() {
 		return this.name;
 	}
