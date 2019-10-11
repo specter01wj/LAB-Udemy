@@ -27,3 +27,10 @@
 <div (click)="onDivClicked($event)">
 	<button class="btn btn-success" (click)="onSuccess($event)">Success</button>
 </div>
+
+
+<!-- <input (keyup)="onKeyUp($event)" /> -->
+<input (keyup.enter)="onKeyUp()" />
+
+<!-- <input (keyup.enter)="onKeyUp2($event)" /> -->
+<input #email (keyup.enter)="onKeyUp2(email.value)" />

@@ -18,6 +18,24 @@ export class CoursesComponent implements OnInit {
   colspan_6 = 6;
   isActive = false;
 
+  /*onKeyUp($event) {
+    if($event.keyCode === 13) {
+      console.log("Enter was pressed!");
+    }
+  }*/
+
+  onKeyUp($event) {
+    console.log("Enter was pressed!");
+  }
+
+  /*onKeyUp2($event) {
+    console.log("Pressed: " + $event.target.value);
+  }*/
+
+  onKeyUp2(email) {
+    console.log("Pressed: " + email);
+  }
+
   onSuccess($event) {
     $event.stopPropagation();
     console.log("On Success!");
