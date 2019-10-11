@@ -53,4 +53,7 @@
 </div>
 
 
+<!-- <span class="glyphicon glyphicon-star" [class.active]="isFavorite" (click)="toggleFav()"></span>
+<span class="glyphicon glyphicon-star-empty" [class.active]="!isFavorite" (click)="toggleFav()"></span> -->
 
+<span class="glyphicon" [class.glyphicon-star]="isFavorite" [class.glyphicon-star-empty]="!isFavorite" (click)="toggleFav()"></span>
