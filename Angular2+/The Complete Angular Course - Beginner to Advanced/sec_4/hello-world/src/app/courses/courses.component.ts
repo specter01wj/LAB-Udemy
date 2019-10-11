@@ -19,6 +19,14 @@ export class CoursesComponent implements OnInit {
   isActive = false;
   email = "jin.wang@usps.gov";
 
+  course = {
+    title: "Angular Course",
+    rating: 4.9745,
+    students: 30123,
+    price: 190.95,
+    releaseDate: new Date(2019, 10, 10)
+  }
+
   /*onKeyUp($event) {
     if($event.keyCode === 13) {
       console.log("Enter was pressed!");
