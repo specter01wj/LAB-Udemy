@@ -31,6 +31,8 @@ export class CoursesComponent implements OnInit {
   
   isFavorite = false;
 
+  inputTitleCase = "";
+
   /*onKeyUp($event) {
     if($event.keyCode === 13) {
       console.log("Enter was pressed!");
