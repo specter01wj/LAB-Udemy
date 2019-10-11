@@ -18,6 +18,15 @@ export class CoursesComponent implements OnInit {
   colspan_6 = 6;
   isActive = false;
 
+  onSuccess($event) {
+    $event.stopPropagation();
+    console.log("On Success!");
+  }
+
+  onDivClicked() {
+    console.log("On Div!");
+  }
+
   toggleWarning() {
     this.isActive = !this.isActive;
   }

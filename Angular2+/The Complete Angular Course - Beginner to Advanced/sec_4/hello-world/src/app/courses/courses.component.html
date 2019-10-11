@@ -23,3 +23,7 @@
 <button class="btn btn-warning" [class.active]="isActive" (click)="toggleWarning()">Warning</button>
 
 <button class="btn btn-info" [style.backgroundColor]="isActive ? 'blue' : 'orange'" (click)="toggleWarning()">Clear</button>
+
+<div (click)="onDivClicked($event)">
+	<button class="btn btn-success" (click)="onSuccess($event)">Success</button>
+</div>
