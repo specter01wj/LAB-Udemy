@@ -16,6 +16,11 @@ export class CoursesComponent implements OnInit {
   imageUrl = "http://lorempixel.com/400/200/";
   colspan_2 = 2;
   colspan_6 = 6;
+  isActive = false;
+
+  toggleWarning() {
+    this.isActive = !this.isActive;
+  }
 
 	getTitle() {
 		return this.name;
