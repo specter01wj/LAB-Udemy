@@ -27,6 +27,8 @@ export class CoursesComponent implements OnInit {
     releaseDate: new Date(2019, 10, 10)
   }
 
+  text = 'In a stunning announcement, Shepard Smith said on his Friday show that after more than two decades at Fox News, he was stepping down as chief news anchor, and leaving the network.'
+  
   /*onKeyUp($event) {
     if($event.keyCode === 13) {
       console.log("Enter was pressed!");
