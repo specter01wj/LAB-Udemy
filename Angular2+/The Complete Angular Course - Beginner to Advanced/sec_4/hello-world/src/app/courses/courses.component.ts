@@ -17,6 +17,7 @@ export class CoursesComponent implements OnInit {
   colspan_2 = 2;
   colspan_6 = 6;
   isActive = false;
+  email = "jin.wang@usps.gov";
 
   /*onKeyUp($event) {
     if($event.keyCode === 13) {
@@ -34,6 +35,10 @@ export class CoursesComponent implements OnInit {
 
   onKeyUp2(email) {
     console.log("Pressed: " + email);
+  }
+
+  onKeyUp3() {
+    console.log(this.email);
   }
 
   onSuccess($event) {
