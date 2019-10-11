@@ -14,6 +14,8 @@ export class CoursesComponent implements OnInit {
 	// courses = ["course1", "course2", "course3"];
 	courses = [];
   imageUrl = "http://lorempixel.com/400/200/";
+  colspan_2 = 2;
+  colspan_6 = 6;
 
 	getTitle() {
 		return this.name;
