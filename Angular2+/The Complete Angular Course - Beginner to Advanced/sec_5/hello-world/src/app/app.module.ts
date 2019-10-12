@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { SummaryPipePipe } from './pipes/summary-pipe.pipe';
 import { TitlecasePipePipe } from './pipes/titlecase-pipe.pipe';
+import { FavoriteComponent } from './component/favorite/favorite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     SummaryPipePipe,
-    TitlecasePipePipe
+    TitlecasePipePipe,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
