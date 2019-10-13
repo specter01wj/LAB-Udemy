@@ -12,4 +12,8 @@ export class AppComponent {
 		title: "Accenture",
 		isFav: false
 	}
+
+	onFavChanged() {
+		console.log("Fav Changed!");
+	}
 }
