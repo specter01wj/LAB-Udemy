@@ -14,6 +14,12 @@ export class AppComponent {
 		isFav: false
 	}
 
+	tweet = {
+		content: "Twitter",
+		likesCount: 10,
+		isLiked: false
+	}
+
 	// onFavChanged(isFav) {
 	onFavChanged(eventArgs: FavChangedEventArgs) {
 		// console.log("Fav Changed! " + isFav);
