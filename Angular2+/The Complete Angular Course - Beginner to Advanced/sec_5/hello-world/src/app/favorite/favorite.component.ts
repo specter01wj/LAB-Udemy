@@ -4,6 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.less']
+  // inputs: ['isFav']
 })
 export class FavoriteComponent implements OnInit {
 	@Input() isFav: boolean;
