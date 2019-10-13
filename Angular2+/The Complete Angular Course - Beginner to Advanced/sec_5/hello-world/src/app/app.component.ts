@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello- James world';
+
+  	post = {
+		title: "Accenture",
+		isFav: false
+	}
 }
