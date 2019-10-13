@@ -14,7 +14,8 @@ export class FavoriteComponent implements OnInit {
 
 	toggleFav() {
 		this.isFav = !this.isFav;
-		this.change.emit();
+		// this.change.emit(this.isFav);
+		this.change.emit({newVal: this.isFav});
 	}
 
   constructor() { }
@@ -22,4 +23,8 @@ export class FavoriteComponent implements OnInit {
   ngOnInit() {
   }
 
+}
+
+export interface FavChangedEventArgs {
+	newVal: boolean
 }

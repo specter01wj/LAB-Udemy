@@ -7,4 +7,4 @@
 <app-courses></app-courses>
 
 <!-- <app-favorite [isFav]="post.isFav"></app-favorite> -->
-<app-favorite [is-fav]="post.isFav" (change)="onFavChanged()"></app-favorite>
+<app-favorite [is-fav]="post.isFav" (change)="onFavChanged($event)"></app-favorite>
