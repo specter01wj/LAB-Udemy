@@ -4,6 +4,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.less']
+  /*styles: [
+  	`
+  		.glyphicon {
+			font-size: 60px;
+		}
+  	`
+  ]*/
   // inputs: ['isFav']
 })
 export class FavoriteComponent implements OnInit {
