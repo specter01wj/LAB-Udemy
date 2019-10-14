@@ -9,6 +9,8 @@ import { FavChangedEventArgs } from './favorite/favorite.component';
 export class AppComponent {
   title = 'hello- James world';
 
+  courses = [1, 2];
+
   	post = {
 		title: "Accenture",
 		isFav: false
