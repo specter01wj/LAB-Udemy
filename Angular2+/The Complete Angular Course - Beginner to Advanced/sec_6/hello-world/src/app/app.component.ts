@@ -34,6 +34,11 @@ export class AppComponent {
 		this.courses_2.push({id: 4, name: "course 4"});
 	}
 
+	onRemove(course) {
+		let index = this.courses_2.indexOf(course);
+		this.courses_2.splice(index, 1);
+	}
+
 	// onFavChanged(isFav) {
 	onFavChanged(eventArgs: FavChangedEventArgs) {
 		// console.log("Fav Changed! " + isFav);

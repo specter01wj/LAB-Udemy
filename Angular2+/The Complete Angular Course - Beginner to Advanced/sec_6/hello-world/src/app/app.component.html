@@ -86,6 +86,7 @@
 <ul>
 	<li *ngFor="let course of courses_2; even as isEven">
 		{{ course.name }} <span *ngIf="isEven">(Even)</span>
+		<button (click)="onRemove(course)">Remove</button>
 	</li>
 </ul>
 
