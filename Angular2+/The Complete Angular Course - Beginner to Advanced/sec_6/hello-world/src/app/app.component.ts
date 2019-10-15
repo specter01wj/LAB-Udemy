@@ -30,6 +30,10 @@ export class AppComponent {
 		isLiked: false
 	}
 
+	onAdd() {
+		this.courses_2.push({id: 4, name: "course 4"});
+	}
+
 	// onFavChanged(isFav) {
 	onFavChanged(eventArgs: FavChangedEventArgs) {
 		// console.log("Fav Changed! " + isFav);
