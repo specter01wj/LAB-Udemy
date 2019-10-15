@@ -17,6 +17,8 @@ export class AppComponent {
   	{id: 3, name: "course 3"}
   ];
 
+  courses_3;
+
   viewMode = "map";
 
   	post = {
@@ -37,6 +39,18 @@ export class AppComponent {
 	onRemove(course) {
 		let index = this.courses_2.indexOf(course);
 		this.courses_2.splice(index, 1);
+	}
+
+	loadCourses() {
+		this.courses_3 = [
+			{id: 10, name: "course 10"},
+  			{id: 11, name: "course 11"},
+  			{id: 12, name: "course 12"}	
+		]
+	}
+
+	trackCourse(index, course) {
+		return course ? course.id : undefined;
 	}
 
 	// onFavChanged(isFav) {

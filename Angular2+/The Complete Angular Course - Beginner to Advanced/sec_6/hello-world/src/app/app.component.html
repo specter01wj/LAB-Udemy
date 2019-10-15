@@ -93,7 +93,13 @@
 <button (click)="onAdd()">Add</button>
 
 
+<ul>
+	<li *ngFor="let course of courses_3; trackBy: trackCourse ">
+		{{ course.name }} 
+	</li>
+</ul>
 
+<button (click)="loadCourses()">Load Course</button>
 
 
 
