@@ -11,6 +11,8 @@ export class AppComponent {
 
   courses = [1, 2];
 
+  viewMode = "map";
+
   	post = {
 		title: "Accenture",
 		isFav: false
