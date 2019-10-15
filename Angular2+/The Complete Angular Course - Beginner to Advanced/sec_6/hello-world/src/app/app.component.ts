@@ -21,6 +21,8 @@ export class AppComponent {
 
   viewMode = "map";
 
+  canSave = true;
+
   	post = {
 		title: "Accenture",
 		isFav: false
