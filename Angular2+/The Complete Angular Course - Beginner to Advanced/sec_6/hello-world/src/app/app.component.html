@@ -122,7 +122,8 @@
 <span>{{ task.assignee?.name }}</span>
 
 
-<input type="text" appInputFormat>
+<input type="text" appInputFormat [format-type]="'uppercase'">
+<input type="text" appInputFormat [format-type]="'lowercase'">
 
 
 
