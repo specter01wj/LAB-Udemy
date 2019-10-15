@@ -34,6 +34,13 @@ export class AppComponent {
 		isLiked: false
 	}
 
+	task = {
+		title: "Mission 1",
+		assignee: {
+			name: "John Smith"
+		}
+	}
+
 	onAdd() {
 		this.courses_2.push({id: 4, name: "course 4"});
 	}
