@@ -132,8 +132,10 @@
 
 	<div class="form-group">
 		<label for="contactMethod">Contact Method</label>
-		<select ngModel name="contactMethod" id="contactMethod" class="form-control">
+		<select ngModel name="contactMethod" id="contactMethod" class="form-control"> <!-- multiple -->
+			<option value=""></option>
 			<option *ngFor="let method of contactMethods" [value]="method.id">{{ method.name }}</option>
+			<!-- <option *ngFor="let method of contactMethods" [ngValue]="method">{{ method.name }}</option> -->
 		</select>
 	</div>
 
