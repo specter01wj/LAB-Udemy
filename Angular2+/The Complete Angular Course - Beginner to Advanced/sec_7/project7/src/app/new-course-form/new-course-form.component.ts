@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewCourseFormComponent implements OnInit {
 
+  categories = [
+    { id: 1, name: 'Development' },
+    { id: 2, name: 'Art' },
+    { id: 3, name: 'Languages' },
+  ];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  submit(course) {
+    console.log(course);
   }
 
 }
