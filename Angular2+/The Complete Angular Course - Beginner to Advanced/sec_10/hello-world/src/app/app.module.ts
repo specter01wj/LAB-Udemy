@@ -62,8 +62,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpModule,
     RouterModule.forRoot([
         {path: '', component: HomeComponent},
-        {path: '', component: HomeComponent},
-        {path: '', component: HomeComponent}
+        {path: 'followers', component: GithubFollowersComponent},
+        {path: 'profile/:username', component: GithubProfileComponent}
     ])
   ],
   providers: [
