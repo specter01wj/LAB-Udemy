@@ -17,7 +17,7 @@ export class AppComponent implements OnDestroy {
   subscription: Subscription;
   subscription2: Subscription;
 
-  constructor(db: AngularFireDatabase) {
+  constructor(private db: AngularFireDatabase) {
   	// async pipe
   	// this.courses$ = db.list('/courses').valueChanges();
 
@@ -44,6 +44,11 @@ export class AppComponent implements OnDestroy {
 		price: 2400,
 		title: "NBA"
   	});
+  }
+
+  update(course) {
+  	this.db.object('/courses' + course.$key)
+  		.set(course.author + ' UPDATED');
   }
 
 }
