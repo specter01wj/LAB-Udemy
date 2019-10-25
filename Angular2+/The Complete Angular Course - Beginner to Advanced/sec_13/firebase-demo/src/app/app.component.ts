@@ -48,7 +48,18 @@ export class AppComponent implements OnDestroy {
 
   update(course) {
   	this.db.object('/courses' + course.$key)
-  		.set(course.author + ' UPDATED');
+  		.set({
+  			title: course.title + ' UPDATED',
+  			author: course.author + ' UPDATED',
+  			price: course.price + ' UPDATED'
+  		});
+  }
+
+  delete(course) {
+  	this.db.object('/courses' + course.$key)
+  		.remove()
+  		.then(x => console.log("Deleted!"))
+  		.catch(err => console.log("Error!"));
   }
 
 }
