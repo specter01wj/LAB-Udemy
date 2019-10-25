@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { FirebaseListObservable } from 'angularfire2/database';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -9,10 +10,12 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class AppComponent implements OnDestroy {
   title = 'firebase-demo';
-  courses: any[];
+  // courses: any[];
+  courses: FirebaseListObservable<any[]>;
   courseObj: any[];
-  courses$;
+  courses$: FirebaseListObservable<any[]>;
   subscription: Subscription;
+  subscription2: Subscription;
 
   constructor(db: AngularFireDatabase) {
   	// async pipe
@@ -33,6 +36,14 @@ export class AppComponent implements OnDestroy {
 
   ngOnDestroy() {
   	this.subscription.unsubscribe();
+  }
+
+  add(course: HTMLInputElement) {
+  	this.courses.push({
+  		author: course.value,
+		price: 2400,
+		title: "NBA"
+  	});
   }
 
 }
