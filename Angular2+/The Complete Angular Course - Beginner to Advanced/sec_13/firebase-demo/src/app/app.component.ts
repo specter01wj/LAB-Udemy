@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs/Subscription';
 export class AppComponent implements OnDestroy {
   title = 'firebase-demo';
   courses: any[];
+  courseObj: any[];
   courses$;
   subscription: Subscription;
 
@@ -21,6 +22,12 @@ export class AppComponent implements OnDestroy {
   		.subscribe(courses => {
   			this.courses = courses;
   			console.log(this.courses);
+  		});
+
+  	db.object('/courses/1').valueChanges()
+  		.subscribe(course => {
+  			this.courseObj = course;
+  			console.log(this.courseObj);
   		});
   }
 
