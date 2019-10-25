@@ -10,9 +10,13 @@ import { Subscription } from 'rxjs/Subscription';
 export class AppComponent implements OnDestroy {
   title = 'firebase-demo';
   courses: any[];
+  courses$;
   subscription: Subscription;
 
   constructor(db: AngularFireDatabase) {
+  	// async pipe
+  	// this.courses$ = db.list('/courses').valueChanges();
+
   	this.subscription = db.list('/courses').valueChanges()
   		.subscribe(courses => {
   			this.courses = courses;
