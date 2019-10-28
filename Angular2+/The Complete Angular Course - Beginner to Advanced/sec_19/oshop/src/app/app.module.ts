@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 
@@ -42,7 +43,8 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NgbModule
     // RouterModule.forRoot([])
   ],
   providers: [],
