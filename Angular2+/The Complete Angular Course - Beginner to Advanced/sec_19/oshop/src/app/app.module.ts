@@ -7,10 +7,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BsNavbarComponent
   ],
   imports: [
     BrowserModule,
