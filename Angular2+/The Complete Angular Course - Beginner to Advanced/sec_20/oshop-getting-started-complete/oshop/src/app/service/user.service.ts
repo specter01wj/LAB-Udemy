@@ -14,4 +14,8 @@ export class UserService {
   	});
   }
 
+  get(uid: string) {
+  	return this.db.object('/users/' + uid);
+  }
+
 }
