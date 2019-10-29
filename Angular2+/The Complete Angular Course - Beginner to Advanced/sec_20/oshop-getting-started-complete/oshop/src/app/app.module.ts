@@ -52,8 +52,8 @@ import { LoginComponent } from './login/login.component';
       { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuardService] },
       { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuardService] },
       { path: 'login', component: LoginComponent },
-      { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService]},
-      { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService]}
+      { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+      { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService, AdminAuthGuardService]}
     ])    
   ],
   providers: [
