@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AuthService } from './service/auth.service'; 
 import { AuthGuardService } from './service/auth-guard.service'; 
+import { UserService } from './service/user.service'; 
 
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
