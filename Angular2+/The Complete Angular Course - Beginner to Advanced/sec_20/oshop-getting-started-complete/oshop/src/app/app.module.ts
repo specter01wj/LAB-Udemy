@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 
 import { AuthService } from './service/auth.service'; 
+import { AuthGuardService } from './service/auth-guard.service'; 
 
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
@@ -54,7 +55,8 @@ import { LoginComponent } from './login/login.component';
     ])    
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
