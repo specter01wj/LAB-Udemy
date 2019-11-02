@@ -73,6 +73,11 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
         canActivate: [AuthGuard, AdminAuthGuard] 
       },
       { 
+        path: 'admin/products/:id', 
+        component: ProductFormComponent, 
+        canActivate: [AuthGuard, AdminAuthGuard] 
+      },
+      { 
         path: 'admin/orders', 
         component: AdminOrdersComponent, 
         canActivate: [AuthGuard, AdminAuthGuard] 
