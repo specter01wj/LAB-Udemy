@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CategoryService } from './../../category.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { CategoryService } from './../../category.service';
   styleUrls: ['./product-filter.component.css']
 })
 export class ProductFilterComponent implements OnInit {
+	@Input('categorybtn') categoryBtn;
 
 	categories$;
 
