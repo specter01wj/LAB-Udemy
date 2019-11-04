@@ -8,6 +8,7 @@ import { Product } from './../../models/product';
 })
 export class ProductCardComponent implements OnInit {
 	@Input('product') product: Product;
+	@Input('show-actions') showActions = true;
 
   constructor() { }
 
