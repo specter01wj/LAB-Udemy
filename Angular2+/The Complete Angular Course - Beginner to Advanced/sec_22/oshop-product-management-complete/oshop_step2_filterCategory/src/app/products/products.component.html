@@ -4,15 +4,16 @@
 		<div class="list-group">
 			<a *ngFor="let category of categories$ | async" 
 				[routerLink]="['/']"
-				[queryParams]="{{ category: category.$key }}"
-				class="list-group-item list-group-item-action">
+				[queryParams]="{ category: category.$key }"
+				class="list-group-item list-group-item-action"
+				[class.active]="categoryBtn === category.$key">
 				{{ category.name }}
 			</a>
 		</div>
 	</div>
 	<div class="col-9">
 		<div class="row">
-			<ng-container *ngFor="let product of products$ | async; let i = index">
+			<ng-container *ngFor="let product of filteredProducts; let i = index">
 				<div class="col">
 					<div class="card" style="width: 15rem;">
 					  <img [src]="product.imageUrl" class="card-img-top" alt="Card image cap">
