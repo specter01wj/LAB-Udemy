@@ -1,8 +1,9 @@
 import { Product } from './../models/product';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from './../product.service';
-import { ShoppingCartService } from './shopping-cart.service';
+import { ShoppingCartService } from './../shopping-cart.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -44,7 +45,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsuscribe();
+    this.subscription.unsubscribe();
   }
 
 }
