@@ -16,16 +16,14 @@ export class ShoppingCartService {
   	return this.db.object('/shopping-carts/', cardId);
   }
 
-  private getOrCreateCart() {
+  private async getOrCreateCart() {
   	let cardId = localStorage.getItem('cardId');
   	if(!cardId) {
-  		this.create().then(result => {
-  			localStorage.setItem('cardId', result.key);
-  			return this.getCart(result.key);
-  		});
-  	} else {
-  		return this.getCart(cardId);
+  		let result = await this.create();
+  		localStorage.setItem('cardId', result.key);
+  		return this.getCart(result.key);
   	}
+  	return this.getCart(cardId);
   }
 
 }
