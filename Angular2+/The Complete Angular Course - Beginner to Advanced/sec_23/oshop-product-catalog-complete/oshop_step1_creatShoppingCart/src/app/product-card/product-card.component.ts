@@ -11,4 +11,12 @@ export class ProductCardComponent {
   @Input('show-actions') showActions = true;
 
   constructor() { }
+
+  addToCart(product: Product) {
+  	let cardId = localStorage.getItem('cardId');
+  	if(!cardId) {
+
+  	}
+  }
+
 }
