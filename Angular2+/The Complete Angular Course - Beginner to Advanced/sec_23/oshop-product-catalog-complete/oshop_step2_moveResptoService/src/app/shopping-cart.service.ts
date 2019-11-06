@@ -26,4 +26,8 @@ export class ShoppingCartService {
   	return this.getCart(cardId);
   }
 
+  async addToCart(product: Pruduct) {
+  	let cart = await this.getOrCreateCart();
+  }
+
 }
