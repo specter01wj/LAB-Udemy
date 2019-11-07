@@ -12,7 +12,7 @@ export class ProductFilterComponent implements OnInit {
 	categories$;
 
   constructor(categoryService: CategoryService) { 
-	this.categories$ = categoryService.getCategories();
+	  this.categories$ = categoryService.getCategories();
   }
 
   ngOnInit() {
