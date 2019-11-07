@@ -20,7 +20,7 @@ export class ShoppingCartService {
   }
 
   private getItem(cartId: string, productId: string) {
-    return this.db.object('/shopping-carts/' + cartId + '/item/' + productId);
+    return this.db.object('/shopping-carts/' + cartId + '/items/' + productId);
   }
 
   private async getOrCreateCartId(): Promise<string> {
