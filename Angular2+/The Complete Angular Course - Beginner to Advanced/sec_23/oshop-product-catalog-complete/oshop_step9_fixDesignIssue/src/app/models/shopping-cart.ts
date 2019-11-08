@@ -11,6 +11,14 @@ export class ShoppingCart {
 		}
 	}
 
+	get totalSum() {
+		let sum = 0;
+		for (let productId in this.items) {
+			sum += this.items[productId].totalPrice;
+		}
+		return sum;
+	}
+
 	get totalItemsCount() {
   		let count = 0;
 		for(let productId in this.itemsMap) {
