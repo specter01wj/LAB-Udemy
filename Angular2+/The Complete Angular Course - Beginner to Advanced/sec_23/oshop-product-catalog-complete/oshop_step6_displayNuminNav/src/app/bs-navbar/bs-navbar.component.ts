@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BsNavbarComponent implements OnInit {
   appUser: AppUser;
+  shoppingCartItemCount: number;
 
   constructor(private auth: AuthService,
     private shoppingCartService: ShoppingCartService) { 
@@ -20,7 +21,10 @@ export class BsNavbarComponent implements OnInit {
     auth.appUser$.subscribe(appUser => this.appUser = appUser);
     let cart$ = await this.shoppingCartService.getCart();
     cart$.subscribe(cart => {
-      cart.items
+      this.shoppingCartItemCount = 0;
+      for(let productId in cart.items) {
+        this.shoppingCartItemCount += cart.items[productId].quantity;
+      }
     });
   }
 
