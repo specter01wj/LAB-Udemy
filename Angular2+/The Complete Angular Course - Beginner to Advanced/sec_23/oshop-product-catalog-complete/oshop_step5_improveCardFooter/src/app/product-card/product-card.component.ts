@@ -14,10 +14,12 @@ export class ProductCardComponent {
 
   constructor(private shoppingCartService: ShoppingCartService) { }
 
-  addToCart(product: Product) {
+  addToCart() {
+    this.shoppingCartService.addToCart(this.product);
+  }
 
-    this.shoppingCartService.addToCart(product);
-  	
+  removeFromCart() {
+    this.shoppingCartService.removeFromCart(this.product);
   }
 
   getQuantity() {
