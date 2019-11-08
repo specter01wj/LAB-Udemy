@@ -5,6 +5,8 @@ export class ShoppingCart {
 	items: ShoppingCartItem[] = [];
 
 	constructor(public itemsMap: {[productId: string]: ShoppingCartItem}) {
+		this.itemsMap = itemsMap || {};
+
 		for (let productId in itemsMap) {
 			// this.items.push(itemsMap[productId]);
 			let item = itemsMap[productId];
