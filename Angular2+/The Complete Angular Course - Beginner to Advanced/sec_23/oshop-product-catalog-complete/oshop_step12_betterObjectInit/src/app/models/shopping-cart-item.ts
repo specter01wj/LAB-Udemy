@@ -9,7 +9,7 @@ export class ShoppingCartItem {
   price: number;
   quantity: number;
 
-  // constructor(public product: Product, public quantity: number) {}
+  constructor(intit?: Partial<ShoppingCartItem>) {}
 
   get totalPrice() {
   	return this.price * this.quantity;
