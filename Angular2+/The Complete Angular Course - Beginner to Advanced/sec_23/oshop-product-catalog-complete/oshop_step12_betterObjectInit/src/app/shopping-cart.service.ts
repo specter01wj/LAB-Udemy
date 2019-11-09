@@ -50,11 +50,18 @@ export class ShoppingCartService {
     let cartId = await this.getOrCreateCartId();
     let item$ = this.getItem(cartId, product.$key);
     item$.take(1).subscribe(item => {
-      item$.update({ 
-        title: product.title,
-        imageUrl: product.imageUrl,
-        price: product.price,
-        quantity: (item.quantity || 0) + change });
+      let quantity = (item.quantity || 0) + change;
+
+      if(quantity === 0) {
+        item$.remove();
+      } else {
+        item$.update({ 
+            title: product.title,
+            imageUrl: product.imageUrl,
+            price: product.price,
+            quantity: quantity
+        });
+      }
     });
   }
 
