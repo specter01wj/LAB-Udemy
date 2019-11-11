@@ -29,6 +29,17 @@ export class CheckOutComponent implements OnInit, OnDestroy {
     let order = {
     	datePlaced: new Date().getTime(),
     	shipping: this.shipping,
+    	items: this.cart.items.map(i => {
+    		return {
+    			product: {
+    				title: i.title,
+    				imageUrl: i.imageUrl,
+    				price: i.price
+    			},
+    			quantity: i.quantity,
+    			totalPrice: i.totalPrice
+    		}
+    	})
     }
   }    
 
