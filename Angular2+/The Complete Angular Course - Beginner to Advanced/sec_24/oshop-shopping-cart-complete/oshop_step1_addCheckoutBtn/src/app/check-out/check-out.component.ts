@@ -15,7 +15,7 @@ export class CheckOutComponent implements OnInit, OnDestroy {
 	
   constructor(private shoppingCartService: ShoppingCartService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
   	let cart$ = await this.shoppingCartService.getCart();
   	this.subscription = cart$.subscribe(cart => this.cart = cart);
   }
