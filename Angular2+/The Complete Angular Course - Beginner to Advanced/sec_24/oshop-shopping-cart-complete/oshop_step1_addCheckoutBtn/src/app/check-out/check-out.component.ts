@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ShoppingCart } from './../models/shopping-cart';
 import { ShoppingCartService } from './../shopping-cart.service';
+import { OrderService } from './../order.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -13,7 +14,9 @@ export class CheckOutComponent implements OnInit, OnDestroy {
 	cart: ShoppingCart;
 	subscription: Subscription;
 	
-  constructor(private shoppingCartService: ShoppingCartService) { }
+  constructor(
+  	private orderService: OrderService,
+  	private shoppingCartService: ShoppingCartService) { }
 
   async ngOnInit() {
   	let cart$ = await this.shoppingCartService.getCart();
@@ -40,7 +43,9 @@ export class CheckOutComponent implements OnInit, OnDestroy {
     			totalPrice: i.totalPrice
     		}
     	})
-    }
+    };
+
+    this.orderService.storeOrder(order);
   }    
 
 }
