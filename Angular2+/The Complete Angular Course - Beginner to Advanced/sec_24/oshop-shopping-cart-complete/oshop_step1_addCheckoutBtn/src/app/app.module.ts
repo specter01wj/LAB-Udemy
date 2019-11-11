@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation'; 
 import { DataTableModule } from 'angular-4-data-table';
 
+import { OrderService } from './order.service';
+
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { HomeComponent } from './home/home.component';
@@ -99,7 +101,8 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
     UserService,
     CategoryService,
     ProductService,
-    ShoppingCartService
+    ShoppingCartService,
+    OrderService
   ],
   bootstrap: [AppComponent]
 })
