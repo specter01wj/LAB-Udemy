@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from './../shopping-cart.service';
 
 @Component({
   selector: 'app-check-out',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CheckOutComponent implements OnInit {
 	shipping = {}; 
 	
-  constructor() { }
+  constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit() {
   }
@@ -16,7 +17,11 @@ export class CheckOutComponent implements OnInit {
 
   
   placeOrder() {
-    console.log(this.shipping);
+    // console.log(this.shipping);
+    let order = {
+    	datePlaced: new Date().getTime(),
+    	shipping: this.shipping,
+    }
   }    
 
 }
