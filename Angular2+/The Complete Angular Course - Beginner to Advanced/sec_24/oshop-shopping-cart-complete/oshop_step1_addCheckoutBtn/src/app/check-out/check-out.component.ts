@@ -3,6 +3,7 @@ import { ShoppingCart } from './../models/shopping-cart';
 import { ShoppingCartService } from './../shopping-cart.service';
 import { OrderService } from './../order.service';
 import { Subscription } from 'rxjs/Subscription';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-check-out',
