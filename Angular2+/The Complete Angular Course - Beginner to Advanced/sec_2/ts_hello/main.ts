@@ -8,7 +8,7 @@ var message = 'James Wang';
 log(message);
 
 
-// declare variables
+// Declare variables
 
 function doSomething() {
 	for (var i = 0; i < 5; i++) {
@@ -27,4 +27,7 @@ function doSomething2() {
 }
 
 doSomething();
+
+
+// Types
 
