@@ -29,17 +29,5 @@ function doSomething2() {
 doSomething();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Types
 
