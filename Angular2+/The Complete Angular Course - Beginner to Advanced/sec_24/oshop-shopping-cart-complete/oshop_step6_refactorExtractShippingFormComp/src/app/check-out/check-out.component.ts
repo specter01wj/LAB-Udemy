@@ -35,20 +35,6 @@ export class CheckOutComponent implements OnInit {
   	this.cartSubscription.unsubscribe();
   	this.userSubscription.unsubscribe();
   }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 }
