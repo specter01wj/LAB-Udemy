@@ -12,6 +12,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 
 
+
 export class ShoppingCartSummaryComponent  {
   @Input('cart') cart: ShoppingCart;
 }
