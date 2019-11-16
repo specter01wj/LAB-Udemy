@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./shopping-cart-summary.component.css']
 })
 
+
 export class ShoppingCartSummaryComponent  {
   @Input('cart') cart: ShoppingCart;
 }
