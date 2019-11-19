@@ -48,16 +48,25 @@ console.log(backgourndColor);*/
 
 // Type Assertions
 
-let message;
+/*let message;
 message = 'abc';
 let endsWithC = (<string>message).endsWith('c');
 let endsWithC2 = (message as string).endsWith('c');
 console.log(endsWithC);
-console.log(endsWithC2);
+console.log(endsWithC2);*/
 
 // Arrow Functions
 
+let log1 = function(message) {
+	console.log(message);
+}
 
+let log2 = (message) => {
+	console.log(message);
+}
+
+log1('Hello');
+log2('World');
 
 // Interfaces
 

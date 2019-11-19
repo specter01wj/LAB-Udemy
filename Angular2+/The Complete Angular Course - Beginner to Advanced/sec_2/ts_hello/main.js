@@ -38,13 +38,21 @@ enum Color { Red, Green, Blue};
 let backgourndColor = Color.Blue;
 console.log(backgourndColor);*/
 // Type Assertions
-var message;
+/*let message;
 message = 'abc';
-var endsWithC = message.endsWith('c');
-var endsWithC2 = message.endsWith('c');
+let endsWithC = (<string>message).endsWith('c');
+let endsWithC2 = (message as string).endsWith('c');
 console.log(endsWithC);
-console.log(endsWithC2);
+console.log(endsWithC2);*/
 // Arrow Functions
+var log1 = function (message) {
+    console.log(message);
+};
+var log2 = function (message) {
+    console.log(message);
+};
+log1('Hello');
+log2('World');
 // Interfaces
 // Classes
 // Objects
