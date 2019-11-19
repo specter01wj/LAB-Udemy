@@ -86,7 +86,7 @@ drawPoint({
 
 // Classes
 
-class Point {
+/*class Point {
 	x: number;
 	y: number;
 
@@ -95,16 +95,29 @@ class Point {
 	}
 
 	getDistance(another: Point) {
+
+	}
+
+}*/
+
+// Objects
+
+class Point {
+	x: number;
+	y: number;
+
+	draw() {
+		console.log('X: ' + this.x + ', Y: ' + this.y);
+	}
+
+	getDistance(another: Point) {
 		
 	}
 
 }
 
-// Objects
-
-
-
-
+let point: Point;
+point.draw();
 
 
 
