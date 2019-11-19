@@ -121,6 +121,24 @@ point.draw();*/
 let point: Point = new Point(3, 12);
 point.draw();*/
 // Access Modifiers
+/*class Point {
+    private x: number;
+    private y: number;
+
+    constructor(x?: number, y?: number) {
+        this.x = x;
+        this.y = y;
+    }
+
+    draw() {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+
+}
+
+let point: Point = new Point(3, 12);
+point.draw();*/
+// Access Modifiers in Constructor Parameters
 var Point = /** @class */ (function () {
     function Point(x, y) {
         this.x = x;
@@ -133,4 +151,3 @@ var Point = /** @class */ (function () {
 }());
 var point = new Point(3, 12);
 point.draw();
-// Access Modifiers in Constructor Parameters

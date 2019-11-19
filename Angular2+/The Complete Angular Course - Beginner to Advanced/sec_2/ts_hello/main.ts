@@ -144,7 +144,7 @@ point.draw();*/
 
 // Access Modifiers
 
-class Point {
+/*class Point {
 	private x: number;
 	private y: number;
 
@@ -160,11 +160,23 @@ class Point {
 }
 
 let point: Point = new Point(3, 12);
-point.draw();
+point.draw();*/
 
 // Access Modifiers in Constructor Parameters
 
+class Point {
 
+	constructor(private x?: number, private y?: number) {
+	}
+
+	draw() {
+		console.log('X: ' + this.x + ', Y: ' + this.y);
+	}
+
+}
+
+let point: Point = new Point(3, 12);
+point.draw();
 
 
 
