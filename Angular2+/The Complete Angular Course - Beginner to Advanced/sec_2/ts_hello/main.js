@@ -153,21 +153,28 @@ point.draw();*/
 let point: Point = new Point(3, 12);
 point.draw();*/
 // Properties
-var Point = /** @class */ (function () {
-    function Point(x, y) {
+class Point {
+    constructor(x, y) {
         this.x = x;
         this.y = y;
     }
-    Point.prototype.draw = function () {
+    draw() {
         console.log('X: ' + this.x + ', Y: ' + this.y);
-    };
-    Point.prototype.getX = function () {
+    }
+    get X() {
         return this.x;
-    };
-    return Point;
-}());
-var point = new Point(3, 12);
-var x = point.getX();
+    }
+    set X(value) {
+        if (value < 0) {
+            throw new Error('value cannot be less than 0!');
+        }
+        this.x = value;
+    }
+}
+let point = new Point(3, 12);
+// let x = point.getX();
+let x = point.X;
+point.X = 100;
 console.log(x);
 point.draw();
 // Modules
