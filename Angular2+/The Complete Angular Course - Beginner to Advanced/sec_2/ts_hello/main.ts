@@ -190,8 +190,15 @@ class Point {
 		console.log('X: ' + this.x + ', Y: ' + this.y);
 	}
 
-	getX() {
+	get X() { //getX() {
 		return this.x;
+	}
+
+	set X(value) {
+		if(value < 0) {
+			throw new Error('value cannot be less than 0!');
+		}
+		this.x = value;
 	}
 
 }
