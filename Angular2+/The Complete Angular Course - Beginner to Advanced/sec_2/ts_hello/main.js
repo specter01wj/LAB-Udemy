@@ -1,3 +1,4 @@
+"use strict";
 /*function log(message) {
     console.log(message);
 }
@@ -5,6 +6,7 @@
 var message = 'James Wang';
 
 log(message);*/
+exports.__esModule = true;
 // Declare variables
 /*function doSomething() {
     for (var i = 0; i < 5; i++) {
@@ -153,28 +155,35 @@ point.draw();*/
 let point: Point = new Point(3, 12);
 point.draw();*/
 // Properties
-class Point {
-    constructor(_x, _y) {
-        this._x = _x;
-        this._y = _y;
+/*class Point {
+
+    constructor(private _x?: number, private _y?: number) {
     }
+
     draw() {
         console.log('X: ' + this._x + ', Y: ' + this._y);
     }
-    get x() {
+
+    get x() { //getX() {
         return this._x;
     }
+
     set x(value) {
-        if (value < 0) {
+        if(value < 0) {
             throw new Error('value cannot be less than 0!');
         }
         this._x = value;
     }
+
 }
-let point = new Point(3, 12);
+
+let point: Point = new Point(3, 12);
 // let x = point.getX();
 let x = point.x;
 point.x = 100;
 console.log(point.x);
-point.draw();
+point.draw();*/
 // Modules
+var point_1 = require("./point");
+var point = new point_1.Point(3, 12);
+point.draw();

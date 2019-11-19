@@ -181,7 +181,7 @@ point.draw();*/
 
 // Properties
 
-class Point {
+/*class Point {
 
 	constructor(private _x?: number, private _y?: number) {
 	}
@@ -208,11 +208,15 @@ let point: Point = new Point(3, 12);
 let x = point.x;
 point.x = 100;
 console.log(point.x);
-point.draw();
+point.draw();*/
 
 // Modules
 
+import { Point } from './point';
 
+let point: Point = new Point(3, 12);
+
+point.draw();
 
 
 
