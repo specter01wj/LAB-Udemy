@@ -31,6 +31,14 @@ selected or unselected state on the console.
 
 */
 
+import { LikeComponent } from './like.component';
+
+let component = new LikeComponent(10, false);
+
+component.onClick();
+
+console.log(`likesCount: ${component.likeCnt}, isSelected: ${component.isSel}`);
+
 
 
 
