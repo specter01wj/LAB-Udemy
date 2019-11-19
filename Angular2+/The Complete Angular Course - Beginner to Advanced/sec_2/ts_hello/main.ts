@@ -1,16 +1,16 @@
 
-function log(message) {
+/*function log(message) {
 	console.log(message);
 }
 
 var message = 'James Wang';
 
-log(message);
+log(message);*/
 
 
 // Declare variables
 
-function doSomething() {
+/*function doSomething() {
 	for (var i = 0; i < 5; i++) {
 		console.log(i);
 	}
@@ -26,8 +26,17 @@ function doSomething2() {
 	console.log('Final: ' + i);
 }
 
-doSomething();
+doSomething();*/
 
 
 // Types
+
+let count = 5;
+count = 'a';
+
+
+
+
+
+
 
