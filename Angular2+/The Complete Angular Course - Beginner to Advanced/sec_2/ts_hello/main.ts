@@ -116,7 +116,9 @@ class Point {
 
 }
 
-let point: Point;
+let point: Point = new Point();
+point.x = 3;
+point.y = 12;
 point.draw();
 
 
