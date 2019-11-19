@@ -41,7 +41,8 @@ let d: any;
 let e: number[] = [1,2,3];
 let f: any[] = [1,true, 'a'];
 
-
-
+enum Color { Red, Green, Blue};
+let backgourndColor = Color.Green;
+console.log(backgourndColor);
 
 
