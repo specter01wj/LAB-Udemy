@@ -70,7 +70,7 @@ log2('World');*/
 
 // Interfaces
 
-interface Point {
+/*interface Point {
 	x: number,
 	y: number
 }
@@ -82,11 +82,23 @@ let drawPoint = (point: Point) => {
 drawPoint({
 	x: 3,
 	y: 12
-});
+});*/
 
 // Classes
 
+class Point {
+	x: number;
+	y: number;
 
+	draw() {
+
+	}
+
+	getDistance(another: Point) {
+		
+	}
+
+}
 
 // Objects
 
