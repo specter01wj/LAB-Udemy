@@ -204,7 +204,9 @@ class Point {
 }
 
 let point: Point = new Point(3, 12);
-let x = point.getX();
+// let x = point.getX();
+let x = point.X;
+point.X = 100;
 console.log(x);
 point.draw();
 
