@@ -57,7 +57,7 @@ console.log(endsWithC2);*/
 
 // Arrow Functions
 
-let log1 = function(message) {
+/*let log1 = function(message) {
 	console.log(message);
 }
 
@@ -66,11 +66,23 @@ let log2 = (message) => {
 }
 
 log1('Hello');
-log2('World');
+log2('World');*/
 
 // Interfaces
 
+interface Point {
+	x: number,
+	y: number
+}
 
+let drawPoint = (point: Point) => {
+	console.log(point.x * point.y);
+}
+
+drawPoint({
+	x: 3,
+	y: 12
+});
 
 // Classes
 
