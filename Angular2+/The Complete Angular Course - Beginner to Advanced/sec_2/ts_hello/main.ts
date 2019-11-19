@@ -31,8 +31,8 @@ doSomething();*/
 
 // Types
 
-let count = 5;
-count = 'a';
+/*let count = 5;
+// count = 'a';
 
 let a: number;
 let b: boolean;
@@ -42,7 +42,49 @@ let e: number[] = [1,2,3];
 let f: any[] = [1,true, 'a'];
 
 enum Color { Red, Green, Blue};
-let backgourndColor = Color.Green;
-console.log(backgourndColor);
+let backgourndColor = Color.Blue;
+console.log(backgourndColor);*/
+
+
+// Type Assertions
+
+let message;
+message = 'abc';
+let endsWithC = (<string>message).endsWith('c');
+let endsWithC2 = (message as string).endsWith('c');
+console.log(endsWithC);
+console.log(endsWithC2);
+
+// Arrow Functions
+
+
+
+// Interfaces
+
+
+
+// Classes
+
+
+
+// Objects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

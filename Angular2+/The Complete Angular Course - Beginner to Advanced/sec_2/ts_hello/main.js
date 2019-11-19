@@ -24,20 +24,27 @@ function doSomething2() {
 
 doSomething();*/
 // Types
-var count = 5;
-count = 'a';
-var a;
-var b;
-var c;
-var d;
-var e = [1, 2, 3];
-var f = [1, true, 'a'];
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
-})(Color || (Color = {}));
-;
-var backgourndColor = Color.Green;
-console.log(backgourndColor);
+/*let count = 5;
+// count = 'a';
+
+let a: number;
+let b: boolean;
+let c: string;
+let d: any;
+let e: number[] = [1,2,3];
+let f: any[] = [1,true, 'a'];
+
+enum Color { Red, Green, Blue};
+let backgourndColor = Color.Blue;
+console.log(backgourndColor);*/
+// Type Assertions
+var message;
+message = 'abc';
+var endsWithC = message.endsWith('c');
+var endsWithC2 = message.endsWith('c');
+console.log(endsWithC);
+console.log(endsWithC2);
+// Arrow Functions
+// Interfaces
+// Classes
+// Objects
