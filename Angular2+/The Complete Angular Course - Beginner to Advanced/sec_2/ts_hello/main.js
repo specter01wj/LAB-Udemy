@@ -139,6 +139,20 @@ point.draw();*/
 let point: Point = new Point(3, 12);
 point.draw();*/
 // Access Modifiers in Constructor Parameters
+/*class Point {
+
+    constructor(private x?: number, private y?: number) {
+    }
+
+    draw() {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+
+}
+
+let point: Point = new Point(3, 12);
+point.draw();*/
+// Properties
 var Point = /** @class */ (function () {
     function Point(x, y) {
         this.x = x;
@@ -147,7 +161,13 @@ var Point = /** @class */ (function () {
     Point.prototype.draw = function () {
         console.log('X: ' + this.x + ', Y: ' + this.y);
     };
+    Point.prototype.getX = function () {
+        return this.x;
+    };
     return Point;
 }());
 var point = new Point(3, 12);
+var x = point.getX();
+console.log(x);
 point.draw();
+// Modules
