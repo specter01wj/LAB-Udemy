@@ -84,17 +84,36 @@ drawPoint({
 
 }*/
 // Objects
+/*class Point {
+    x: number;
+    y: number;
+
+    draw() {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+
+    getDistance(another: Point) {
+        
+    }
+
+}
+
+let point: Point = new Point();
+point.x = 3;
+point.y = 12;
+point.draw();*/
+// Constructors
 var Point = /** @class */ (function () {
-    function Point() {
+    function Point(x, y) {
+        this.x = x;
+        this.y = y;
     }
     Point.prototype.draw = function () {
         console.log('X: ' + this.x + ', Y: ' + this.y);
     };
-    Point.prototype.getDistance = function (another) {
-    };
     return Point;
 }());
-var point = new Point();
-point.x = 3;
-point.y = 12;
+var point = new Point(3, 12);
 point.draw();
+// Access Modifiers
+// Access Modifiers in Constructor Parameters
