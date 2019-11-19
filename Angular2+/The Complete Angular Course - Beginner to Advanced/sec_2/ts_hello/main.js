@@ -154,27 +154,27 @@ let point: Point = new Point(3, 12);
 point.draw();*/
 // Properties
 class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
+    constructor(_x, _y) {
+        this._x = _x;
+        this._y = _y;
     }
     draw() {
-        console.log('X: ' + this.x + ', Y: ' + this.y);
+        console.log('X: ' + this._x + ', Y: ' + this._y);
     }
-    get X() {
-        return this.x;
+    get x() {
+        return this._x;
     }
-    set X(value) {
+    set x(value) {
         if (value < 0) {
             throw new Error('value cannot be less than 0!');
         }
-        this.x = value;
+        this._x = value;
     }
 }
 let point = new Point(3, 12);
 // let x = point.getX();
-let x = point.X;
-point.X = 100;
-console.log(x);
+let x = point.x;
+point.x = 100;
+console.log(point.x);
 point.draw();
 // Modules

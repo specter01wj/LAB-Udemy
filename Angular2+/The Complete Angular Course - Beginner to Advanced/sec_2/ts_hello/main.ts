@@ -183,31 +183,31 @@ point.draw();*/
 
 class Point {
 
-	constructor(private x?: number, private y?: number) {
+	constructor(private _x?: number, private _y?: number) {
 	}
 
 	draw() {
-		console.log('X: ' + this.x + ', Y: ' + this.y);
+		console.log('X: ' + this._x + ', Y: ' + this._y);
 	}
 
-	get X() { //getX() {
-		return this.x;
+	get x() { //getX() {
+		return this._x;
 	}
 
-	set X(value) {
+	set x(value) {
 		if(value < 0) {
 			throw new Error('value cannot be less than 0!');
 		}
-		this.x = value;
+		this._x = value;
 	}
 
 }
 
 let point: Point = new Point(3, 12);
 // let x = point.getX();
-let x = point.X;
-point.X = 100;
-console.log(x);
+let x = point.x;
+point.x = 100;
+console.log(point.x);
 point.draw();
 
 // Modules
