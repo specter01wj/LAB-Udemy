@@ -15,6 +15,7 @@
             class="alert alert-danger">
             <div *ngIf="username.errors.required">Username is required.</div>
             <div *ngIf="username.errors.minlength">Username should be minimum {{ username.errors.minlength.requiredLength }} characters.</div>
+            <div *ngIf="username.errors.cannotContainSpace">Username cannot contain space.</div>
         </div>
     </div>
     
