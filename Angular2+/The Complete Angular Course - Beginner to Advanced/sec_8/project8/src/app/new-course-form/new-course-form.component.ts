@@ -22,10 +22,10 @@ export class NewCourseFormComponent implements OnInit {
 		topics: new FormArray([])
 	});*/
 
-  // constructor() { }
+  constructor() { }
 
- /* 
-	form;
+  
+/*	form;
 
  	constructor(fb: FormBuilder) { 
   	this.form = fb.group({
