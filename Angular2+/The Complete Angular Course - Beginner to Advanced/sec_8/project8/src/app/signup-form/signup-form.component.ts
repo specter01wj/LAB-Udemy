@@ -44,7 +44,8 @@ export class SignupFormComponent implements OnInit {
   }
 
   get username() {
-  	return this.form.get('username');
+  	// return this.form.get('username');
+  	return this.form.get('account.username');
   }
 
 }
