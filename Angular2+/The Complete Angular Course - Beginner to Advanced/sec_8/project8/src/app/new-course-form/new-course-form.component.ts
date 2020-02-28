@@ -20,6 +20,7 @@ export class NewCourseFormComponent implements OnInit {
 
   addTopic(topic: HTMLInputElement) {
   	(this.form.get('topics') as FormArray).push(new FormControl(topic.value));
+  	topic.value = '';
   }
 
 }
