@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="login()">
 
     <div class="form-group">
         <label for="username">Username</label>
@@ -11,6 +11,7 @@
             class="alert alert-danger">Username is required.</div> -->
         <!-- <div *ngIf="username.touched && username.invalid" 
             class="alert alert-danger">Username is required.</div> -->
+        <div *ngIf="username.pending">Checking for uniqueness...</div>
         <div *ngIf="username.touched && username.invalid" 
             class="alert alert-danger">
             <div *ngIf="username.errors.required">Username is required.</div>
