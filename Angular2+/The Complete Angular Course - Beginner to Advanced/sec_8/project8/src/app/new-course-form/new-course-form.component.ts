@@ -24,7 +24,10 @@ export class NewCourseFormComponent implements OnInit {
 
   // constructor() { }
 
- /* constructor(fb: FormBuilder) { 
+ /* 
+	form;
+
+ 	constructor(fb: FormBuilder) { 
   	this.form = fb.group({
   		name: ['', Validators.required],
 		contact: fb.group({
