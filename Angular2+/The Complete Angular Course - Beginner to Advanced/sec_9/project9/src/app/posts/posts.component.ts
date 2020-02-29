@@ -58,6 +58,7 @@ export class PostsComponent implements OnInit {
   			post['id'] = response.id;
   			this.posts.splice(0, 0, post);
 
+
   			
   			// console.log(response);
   		});
