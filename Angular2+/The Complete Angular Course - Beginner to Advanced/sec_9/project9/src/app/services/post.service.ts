@@ -14,15 +14,15 @@ export class PostService {
   		return this.http.get(this.url);
   	}
 
-	createPosts(post) {
+	createPost(post) {
   		return this.http.post(this.url, JSON.stringify(post));
   	}
 
-	updatePosts(post) {
+	updatePost(post) {
   		return this.http.patch(this.url + '/' + post.id, JSON.stringify({ isRead: true }));
   	}
 
-	deletePosts(post) {
+	deletePost(post) {
   		return this.http.delete(this.url + '/' + post.id);
   	}
 
