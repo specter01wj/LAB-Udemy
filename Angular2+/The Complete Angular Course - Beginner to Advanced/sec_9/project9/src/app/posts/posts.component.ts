@@ -53,7 +53,7 @@ export class PostsComponent implements OnInit {
   	let post = { title: input.value };
   	input.value = '';
 
-  	this.postService.createPosts(post)
+  	this.postService.createPost(post)
   		.subscribe(response => {
   			post['id'] = response.id;
   			this.posts.splice(0, 0, post);
@@ -69,7 +69,7 @@ export class PostsComponent implements OnInit {
   }*/
 
   updatePost(post) {
-  	this.postService.updatePosts(post)
+  	this.postService.updatePost(post)
   		.subscribe(response => {
   			console.log(response);
   		});
