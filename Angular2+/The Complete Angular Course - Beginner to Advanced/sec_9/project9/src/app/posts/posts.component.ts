@@ -30,12 +30,22 @@ export class PostsComponent implements OnInit {
   		});
   }*/
 
-  ngOnInit() {
+  /*ngOnInit() {
   	this.postService.getPosts()
   		.subscribe(response => {
   			// console.log(response);
   			this.posts = response;
   		});
+  }*/
+
+  ngOnInit() {
+    this.postService.getPosts()
+      .subscribe(response => {
+        this.posts = response;
+      }, error => {
+        alert('An unexpected error occurred.');
+        console.log(error);
+      });
   }
 
   /*createPost(input: HTMLInputElement) {
