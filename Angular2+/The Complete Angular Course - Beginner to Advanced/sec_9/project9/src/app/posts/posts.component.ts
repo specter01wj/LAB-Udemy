@@ -59,7 +59,7 @@ export class PostsComponent implements OnInit {
   		});
   }*/
 
-  createPost(input: HTMLInputElement) {
+  /*createPost(input: HTMLInputElement) {
   	let post = { title: input.value };
   	input.value = '';
 
@@ -72,6 +72,27 @@ export class PostsComponent implements OnInit {
   		}, error => {
         alert('An unexpected error occurred.');
         console.log(error);
+      });
+  }*/
+
+  createPost(input: HTMLInputElement) {
+    let post = { title: input.value };
+    input.value = '';
+
+    this.postService.createPost(post)
+      .subscribe(response => {
+        let res: any = response;
+        post['id'] = res.id;
+        this.posts.splice(0, 0, post);
+        // console.log(response);
+      }, 
+      (error: Response) => {
+        if(error.status === 400) {
+          alert('400 error.');
+        } else {
+          alert('An unexpected error occurred.');
+          console.log(error);
+        }
       });
   }
 
