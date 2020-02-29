@@ -55,7 +55,8 @@ export class PostsComponent implements OnInit {
 
   	this.postService.createPost(post)
   		.subscribe(response => {
-  			post['id'] = response.id;
+  			let res: any = response;
+  			post['id'] = res.id;
   			this.posts.splice(0, 0, post);
   			// console.log(response);
   		});
