@@ -56,8 +56,15 @@ export class PostService {
         });*/
     }
 
-    handleError(error) {
-        let errorMessage = '';
+    private handleError(error: Response) {
+        if(error.status === 400) {
+          return Observable.throw(new BadInput(error.json));
+        }
+        if(error.status === 404) {
+          return Observable.throw(new NotFoundError());
+        }
+        return Observable.throw(new AppError(error));
+        /*let errorMessage = '';
         if (error.error instanceof ErrorEvent) {
             // client-side error
             errorMessage = `Error: ${error.error.message}`;
@@ -66,7 +73,8 @@ export class PostService {
             errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
         }
         console.log(errorMessage);
-        return throwError(errorMessage);
+        return throwError(errorMessage);*/
+
     }
 
 
