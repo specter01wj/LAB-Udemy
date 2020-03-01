@@ -1,6 +1,9 @@
+import { ErrorHandler } from '@angular/core';
 
-export class AppError {
+export class AppErrorHandler implements ErrorHandler {
 
-  constructor(public originalError?: any) {}
+  handleError(error) {
+  	
+  }
 
 }
