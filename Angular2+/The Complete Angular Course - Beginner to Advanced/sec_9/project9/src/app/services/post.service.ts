@@ -4,8 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { AppError } from '../common/app-error';
 import { NotFoundError } from '../common/not-found-error';
 
-import { Observable } from 'rxjs';
-import 'rxjs/add/operator/catch';
+import { Observable, throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
+// import 'rxjs/add/operator/catch';
 
 @Injectable({
   providedIn: 'root'
@@ -33,12 +34,28 @@ export class PostService {
 
     deletePost(post) {
       return this.http.delete(this.url + '/' + post.id)
-        .catch((error: Response) => {
+        .pipe(
+          catchError(this.handleError)
+        );
+        /*.catch((error: Response) => {
           if(error.status === 404) {
             return Observable.throw(new NotFoundError());
           }
           return Observable.throw(new AppError(error));
-        });
+        });*/
+    }
+
+    handleError(error) {
+        let errorMessage = '';
+        if (error.error instanceof ErrorEvent) {
+            // client-side error
+            errorMessage = `Error: ${error.error.message}`;
+        } else {
+            // server-side error
+            errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+        }
+        console.log(errorMessage);
+        return throwError(errorMessage);
     }
 
 
