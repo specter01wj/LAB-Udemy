@@ -5,6 +5,7 @@ import { PostService } from '../services/post.service';
 
 import { AppError } from '../common/app-error';
 import { NotFoundError } from '../common/not-found-error';
+import { BadInput } from '../common/bad-input';
 
 @Component({
   selector: 'app-posts',
@@ -78,7 +79,7 @@ export class PostsComponent implements OnInit {
       });
   }*/
 
-  createPost(input: HTMLInputElement) {
+  /*createPost(input: HTMLInputElement) {
     let post = { title: input.value };
     input.value = '';
 
@@ -91,6 +92,27 @@ export class PostsComponent implements OnInit {
       }, 
       (error: Response) => {
         if(error.status === 400) {
+          alert('400 error.');
+        } else {
+          alert('An unexpected error occurred.');
+          console.log(error);
+        }
+      });
+  }*/
+
+  createPost(input: HTMLInputElement) {
+    let post = { title: input.value };
+    input.value = '';
+
+    this.postService.createPost(post)
+      .subscribe(response => {
+        let res: any = response;
+        post['id'] = res.id;
+        this.posts.splice(0, 0, post);
+        // console.log(response);
+      }, 
+      (error: AppError) => {
+        if(error instanceof BadInput) {
           alert('400 error.');
         } else {
           alert('An unexpected error occurred.');
