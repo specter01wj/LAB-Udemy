@@ -53,7 +53,8 @@ export class PostsComponent implements OnInit {
   }*/
 
   ngOnInit() {
-    this.postService.getPosts()
+    // this.postService.getPosts()
+    this.postService.getAll()
       .subscribe(response => {
         this.posts = response;
       });
@@ -132,7 +133,8 @@ export class PostsComponent implements OnInit {
     let post = { title: input.value };
     input.value = '';
 
-    this.postService.createPost(post)
+    // this.postService.createPost(post)
+    this.postService.create(post)
       .subscribe(response => {
         let res: any = response;
         post['id'] = res.id;
@@ -164,7 +166,8 @@ export class PostsComponent implements OnInit {
   }*/
 
   updatePost(post) {
-    this.postService.updatePost(post)
+    // this.postService.updatePost(post)
+    this.postService.update(post)
       .subscribe(response => {
         console.log(response);
       });
@@ -206,7 +209,8 @@ export class PostsComponent implements OnInit {
   }*/
 
   deletePost(post) {
-    this.postService.deletePost(post)
+    // this.postService.deletePost(post)
+    this.postService.delete(post)
       .subscribe(response => {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
