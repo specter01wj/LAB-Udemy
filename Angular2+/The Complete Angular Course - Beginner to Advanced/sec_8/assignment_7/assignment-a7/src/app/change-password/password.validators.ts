@@ -12,7 +12,7 @@ export class PasswordValidators {
         });
     }
 
-    static passwordsShouldNotSame(control: AbstractControl) {
+    static oldNewpasswordsShouldNotSame(control: AbstractControl) {
         let oldPassword = control.get('oldPassword');
         let newPassword = control.get('newPassword');
 
@@ -23,7 +23,7 @@ export class PasswordValidators {
         return null;
     }
 
-    static passwordsShouldMatch(control: AbstractControl) {
+    static caretePasswordsShouldMatch(control: AbstractControl) {
         let newPassword = control.get('newPassword');
         let confirmPassword = control.get('confirmPassword');
 
