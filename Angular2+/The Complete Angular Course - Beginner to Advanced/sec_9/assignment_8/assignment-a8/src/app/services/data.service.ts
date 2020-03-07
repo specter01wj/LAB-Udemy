@@ -4,6 +4,9 @@ import { BadInput } from './../common/bad-input';
 import { NotFoundError } from './../common/not-found-error';
 import { AppError } from './../common/app-error';
 import { HttpClient } from '@angular/common/http';
+
+import { Followers } from "../models/followers";
+
 import { Observable, throwError } from 'rxjs';
 import { map, take, catchError, delay } from 'rxjs/operators';
 
@@ -11,18 +14,18 @@ import { map, take, catchError, delay } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DataService {
-
+  private url_follwers = 'https://api.github.com/users/mosh-hamedani/followers';
   constructor(private url: string, private http: HttpClient) { }
 
-  getAll() {
-    return this.http.get(this.url)
-    	.pipe(
+  getAll(): Observable<Followers[]> {
+    return this.http.get<Followers[]>(this.url_follwers);
+    	/*.pipe(
 	    	map(response => response),
 	      	catchError(this.handleError)
-    	);
+    	)*/
   }
 
-  create(resource) {
+  /*create(resource) {
     return this.http.post(this.url, JSON.stringify(resource))
       	.pipe(
 	    	map(response => response),
@@ -40,14 +43,14 @@ export class DataService {
 
   delete(id) {
     return this.http.delete(this.url + '/' + id)
-      /*.map(response => response.json())
-      .toPromise()
-      .catch(this.handleError);*/
+      // .map(response => response.json())
+      // .toPromise()
+      // .catch(this.handleError);
       	.pipe(
 	    	map(response => response),
 	      	catchError(this.handleError)
     	);
-  }
+  }*/
 
   private handleError(error: Response) {
     if (error.status === 400)

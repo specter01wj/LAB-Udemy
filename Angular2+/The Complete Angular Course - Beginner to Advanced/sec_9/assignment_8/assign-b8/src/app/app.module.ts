@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { GithubFollowersService } from './services/github-followers.service';
+
 import { AppComponent } from './app.component';
+
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
 @NgModule({
@@ -13,10 +16,13 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    GithubFollowersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

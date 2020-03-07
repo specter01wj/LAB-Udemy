@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { GithubFollowersService } from './../services/github-followers.service';
+import { DataService } from '../services/data.service';
+
+import { Followers } from "../models/followers";
 
 @Component({
   selector: 'app-github-followers',
@@ -8,13 +11,16 @@ import { GithubFollowersService } from './../services/github-followers.service';
   styleUrls: ['./github-followers.component.less']
 })
 export class GithubFollowersComponent implements OnInit {
-  followers: any[];
+  followers: Followers[];
 
-  constructor(private service: GithubFollowersService) { }
+  constructor(private service: GithubFollowersService,
+  		private dataService: DataService) { }
 
   ngOnInit() {
-  	this.service.getAll()
-      .subscribe(followers => this.followers = followers);
+  	this.dataService.getAll()
+      .subscribe(
+      	(data: Followers[]) => this.followers = data
+      );
   }
 
 }
