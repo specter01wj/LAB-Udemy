@@ -3,8 +3,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
-import { GithubFollowersService } from './services/github-followers.service';
-
 import { AppComponent } from './app.component';
 
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
