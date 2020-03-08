@@ -20,9 +20,7 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [
-    GithubFollowersService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
