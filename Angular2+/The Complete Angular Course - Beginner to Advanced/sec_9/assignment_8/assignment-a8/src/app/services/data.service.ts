@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Optional } from '@angular/core';
 
 import { BadInput } from './../common/bad-input';
 import { NotFoundError } from './../common/not-found-error';
@@ -14,15 +14,15 @@ import { map, take, catchError, delay } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DataService {
-  private url_follwers = 'https://api.github.com/users/mosh-hamedani/followers';
-  constructor(private url: string, private http: HttpClient) { }
+
+  constructor(@Optional() private url: string, private http: HttpClient) { }
 
   getAll(): Observable<Followers[]> {
-    return this.http.get<Followers[]>(this.url_follwers);
-    	/*.pipe(
+    return this.http.get<Followers[]>(this.url)
+    	.pipe(
 	    	map(response => response),
-	      	catchError(this.handleError)
-    	)*/
+	      catchError(this.handleError)
+    	);
   }
 
   /*create(resource) {

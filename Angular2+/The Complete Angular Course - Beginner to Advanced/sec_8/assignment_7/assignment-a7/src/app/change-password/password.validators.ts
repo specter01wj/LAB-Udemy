@@ -23,7 +23,7 @@ export class PasswordValidators {
         return null;
     }
 
-    static caretePasswordsShouldMatch(control: AbstractControl) {
+    static createPasswordsShouldMatch(control: AbstractControl) {
         let newPassword = control.get('newPassword');
         let confirmPassword = control.get('confirmPassword');
 

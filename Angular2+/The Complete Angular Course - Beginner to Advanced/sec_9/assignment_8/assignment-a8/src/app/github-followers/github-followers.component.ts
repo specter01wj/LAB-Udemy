@@ -13,13 +13,13 @@ import { Followers } from "../models/followers";
 export class GithubFollowersComponent implements OnInit {
   followers: Followers[];
 
-  constructor(private service: GithubFollowersService,
-  		private dataService: DataService) { }
+  constructor(private service: GithubFollowersService) { }
 
   ngOnInit() {
-  	this.dataService.getAll()
+  	this.service.getAll()
       .subscribe(
-      	(data: Followers[]) => this.followers = data
+      	(data: Followers[]) => this.followers = data,
+        (err: any) => console.log(err)
       );
   }
 

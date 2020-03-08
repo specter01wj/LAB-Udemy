@@ -20,7 +20,7 @@ export class ChangePasswordComponent implements OnInit {
 	      confirmPassword: ['', Validators.required]
 	    }, {
 	      	validator: [ 
-	      		PasswordValidators.caretePasswordsShouldMatch, 
+	      		PasswordValidators.createPasswordsShouldMatch, 
 	      		PasswordValidators.oldNewpasswordsShouldNotSame
 	      	]
 	    });
