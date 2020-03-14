@@ -12,7 +12,7 @@ export class AppComponent implements OnDestroy {
   title = 'firebase-demo';
   // courses: any[];
   courses: FirebaseListObservable<any[]>;
-  courseObj: any[];
+  courseObj: any;
   courses$: FirebaseListObservable<any[]>;
   subscription: Subscription;
   subscription2: Subscription;
