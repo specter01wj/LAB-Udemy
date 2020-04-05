@@ -11,6 +11,9 @@ export class ShoppingCart {
 			let item = itemsMap[productId];
 			this.items.push(
 				new ShoppingCartItem({
+					// title: item.title,
+					// imageUrl: item.imageUrl,
+					// price: item.price,
 					...item,
 					$key: productId
 				})
