@@ -41,7 +41,7 @@ export class ShoppingCartService {
 
   async addToCart(product: Product) {
   	let cartId = await this.getOrCreateCartId();
-  	let item$ = this.db.object('/shopping-carts/' + cartId + '/item/' + product.$key);
+  	let item$ = this.db.object('/shopping-carts/' + cartId + '/items/' + product.$key);
   	item$.take(1).subscribe(item => {
   		if(item.$exists()) {
   			item$.update({
