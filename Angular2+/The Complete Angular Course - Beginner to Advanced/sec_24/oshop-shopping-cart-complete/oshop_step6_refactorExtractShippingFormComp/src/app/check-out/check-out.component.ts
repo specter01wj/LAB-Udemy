@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+//import { Router } from '@angular/router';
 import { ShoppingCart } from './../models/shopping-cart';
 import { ShoppingCartService } from './../shopping-cart.service';
-import { OrderService } from './../order.service';
-import { AuthService } from './../auth.service';
-import { Order } from './../models/order';
-import { Subscription } from 'rxjs/Subscription';
-import 'rxjs/add/operator/map';
+//import { OrderService } from './../order.service';
+//import { AuthService } from './../auth.service';
+//import { Order } from './../models/order';
+//import { Subscription } from 'rxjs/Subscription';
+//import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
