@@ -1,0 +1,109 @@
+//semantic.gs
+@import "_components/grid.less";
+
+//http://lesselements.com
+@import "_components/elements.less"; 
+
+//customs
+@import "_components/variables.less";
+@import "_components/mixins.less";
+
+
+body {
+ margin: 0;
+ //background: #EAE4E4;
+ //background: lighten(@template-color,50%); 
+}
+
+header {
+ background: #fff;
+ color: @template-color;
+ padding: @padding+30 0 0 @padding+10;
+
+	.container {
+    .container-layout;  
+
+		h1 {
+		.column(6);
+		
+		}
+
+		nav {
+		.column(6);
+
+			ul {
+				padding-left: 0;
+
+				li {
+				display: inline-block;
+				margin: 0 @margin+10;
+				font-size: @fontSize*1.5;	
+
+					&:first-child {
+						margin-left:0;
+					}
+				}
+		  }					
+		}
+	}
+	
+.clearfix();
+
+}
+
+
+#main {
+	padding-top: 50px;
+	color: @dark;
+	.gradient(@template-color,@light, @template-color);
+	
+	.container {
+	.container-layout;  
+
+      aside{
+		.column(6);
+		//.right;
+	
+			img {
+			.border-radius(50%);
+			max-width: 100%;
+			.bordered(@template-color,@template-color,@template-color,@template-color);
+			.drop-shadow(10px, 10px, 10px, 0.2);
+			}
+		}
+
+		article {
+		.column(6);
+
+			h2 {
+			 font-size: @fontSize*3;
+			}
+
+			p {
+				font-size: @fontSize + 10;
+			}
+
+		}
+	}
+	.clearfix();
+}
+
+footer {
+    background: lighten(@template-color, 5%);
+    color:#fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: @padding+10 0;
+
+		.container {
+		.container-layout;  
+	  .push(2);
+
+	    ul {
+	      .column(3);
+	      list-style-type: none;
+	      font-size: @fontSize*1.5;	    
+		  }
+	  }
+}
