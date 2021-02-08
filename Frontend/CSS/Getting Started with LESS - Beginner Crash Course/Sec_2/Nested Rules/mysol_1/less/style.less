@@ -1,0 +1,57 @@
+
+//color variables
+@wisteria: #8e44ad;                          // hex color value
+@nephretis: #27ae60;                         // hex color value
+@midnight_blue: #2c3e50;                     // hex color value
+@black: #000;                                // named color value
+
+//change the value of this variable to change the template color   
+@template_color: @black;                          
+
+//font type variables
+@fontSize: 24px;                             // numeric value
+
+//layout variables
+@border: 2px solid @black;                   // multi-value variable
+@padding: 15px;  
+@margin: 10px;
+
+@stringVar: " - on CodePen";
+
+header {
+	font-size: @fontSize;
+	color: @wisteria;
+	border: @border;
+	text-align: center;
+	h1 {
+		color: @wisteria;
+
+		&:after {
+			content: @stringVar;
+		}
+	}
+}
+
+.container {
+	padding: @padding @padding + 15;
+	margin: @margin+30 0;
+	p {
+		padding: 0 @padding+40;
+		a {
+			color: @wisteria;
+			text-decoration: none;
+			&:hover {
+				color: darken(@wisteria, 20%);
+			}
+		}
+	}
+}
+
+footer {
+	border: @border;
+	text-align: center;
+	p {
+		color: @wisteria;
+	}
+}
+
