@@ -6,7 +6,7 @@
 @black: #000;                                // named color value
 
 //change the value of this variable to change the template color   
-@template_color: @black;                          
+@template_color: @midnight_blue;                          
 
 //font type variables
 @fontSize: 24px;                             // numeric value
@@ -19,39 +19,44 @@
 @stringVar: " - on CodePen";
 
 header {
-	font-size: @fontSize;
-	color: @wisteria;
-	border: @border;
-	text-align: center;
-	h1 {
-		color: @wisteria;
-
-		&:after {
-			content: @stringVar;
-		}
-	}
+  font-size: @fontSize;
+  background: lighten(@template_color, 40%);
+  border: @border;
+  text-align: center;
+  
+  h1 {
+    color: @template_color;
+    
+    &:after {
+      content: @stringVar;
+      color: darken(@template_color, 20%);
+    }
+  }
 }
 
 .container {
-	padding: @padding @padding + 15;
-	margin: @margin+30 0;
-	p {
-		padding: 0 @padding+40;
-		a {
-			color: @wisteria;
-			text-decoration: none;
-			&:hover {
-				color: darken(@wisteria, 20%);
-			}
-		}
-	}
+  margin: @margin+30 0;
+  
+  p {
+    padding: 0 @padding+30;
+  
+    a {
+     color: @wisteria;
+     text-decoration: none;
+    
+     &:hover {
+      color: darken(@template_color,20%);
+     }
+   }
+  }
 }
 
 footer {
-	border: @border;
-	text-align: center;
-	p {
-		color: @wisteria;
-	}
+  border: @border;
+  text-align: center;
+  
+  p {
+    color: @template_color;
+  }
 }
 
