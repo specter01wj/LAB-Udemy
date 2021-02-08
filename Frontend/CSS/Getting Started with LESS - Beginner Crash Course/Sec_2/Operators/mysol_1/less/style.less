@@ -6,13 +6,13 @@
 @black: #000;                                // named color value
 
 //change the value of this variable to change the template color   
-@template_color: @midnight_blue;                          
+@template_color: @wisteria;                          
 
 //font type variables
 @fontSize: 24px;                             // numeric value
 
 //layout variables
-@border: 2px solid @black;                   // multi-value variable
+@border: 2px solid @template_color;                   // multi-value variable
 @padding: 15px;  
 @margin: 10px;
 
@@ -20,20 +20,29 @@
 
 
 .commonRules {
-	border: @border;
-  text-align: center;
-  padding: @padding;
+   border: @border;
+   text-align: center;
+   .border-radius(10px);
 }
 
 .border-radius(@radius) {
-	border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  -ms-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.clearfix {
+  clear: both;
 }
 
 header {
   font-size: @fontSize;
   background: lighten(@template_color, 40%);
   .commonRules;
-  .border-radius(10px);
+
+ 
   
   h1 {
     color: @template_color;
@@ -46,25 +55,27 @@ header {
 }
 
 .container {
-  margin: @margin+30 0;
+  margin: @margin+30 auto;
+  width: 960px;
   
   p {
-    padding: 0 @padding+30;
+    padding: 0 @padding+10;
   
-    a {
-     color: @wisteria;
-     text-decoration: none;
+    
+   a {
+    color: @wisteria;
+    text-decoration: none;
     
      &:hover {
       color: darken(@template_color,20%);
-     }
+     }   
    }
   }
 }
 
 footer {
   .commonRules;
-  .border-radius(10px);
+  .clearfix;
   
   p {
     color: @template_color;
