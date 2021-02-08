@@ -18,11 +18,22 @@
 
 @stringVar: " - on CodePen";
 
+
+.commonRules {
+	border: @border;
+  text-align: center;
+  padding: @padding;
+}
+
+.border-radius(@radius) {
+	border-radius: @radius;
+}
+
 header {
   font-size: @fontSize;
   background: lighten(@template_color, 40%);
-  border: @border;
-  text-align: center;
+  .commonRules;
+  .border-radius(10px);
   
   h1 {
     color: @template_color;
@@ -52,8 +63,8 @@ header {
 }
 
 footer {
-  border: @border;
-  text-align: center;
+  .commonRules;
+  .border-radius(10px);
   
   p {
     color: @template_color;
