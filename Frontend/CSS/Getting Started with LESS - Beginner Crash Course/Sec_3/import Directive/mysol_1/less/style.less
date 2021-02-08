@@ -49,6 +49,12 @@
 .container {
   width: 90%;
   margin: @margin auto;
+  a {
+    background: @template_color;
+    &:hover {
+      background: darken(@template_color, 10%);
+    }
+  }
 }
 
 header {
