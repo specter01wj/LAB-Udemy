@@ -1,4 +1,4 @@
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
@@ -13,7 +13,9 @@ export class OrderService {
     let token = localStorage.getItem('token');
     headers.append('Authorization', 'Bearer ' + token);
 
-    return this.http.get('/api/orders')
+    let options = new RequestOptions({headers: headers});
+
+    return this.http.get('/api/orders', options)
       .map(response => response.json());
   }
 }
