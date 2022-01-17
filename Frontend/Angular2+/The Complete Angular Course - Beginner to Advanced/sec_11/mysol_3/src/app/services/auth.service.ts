@@ -28,18 +28,6 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    /* let jwtHelper = new JwtHelper();
-    let token = localStorage.getItem('token');
-
-    if(!token) {
-      return false;
-    }
-
-    let expirationDate = jwtHelper.getTokenExpirationDate(token);
-    let isExpired = jwtHelper.isTokenExpired(token);
-
-    return !isExpired; */
-
     return tokenNotExpired();
   }
 }
