@@ -12,6 +12,13 @@ export class AuthService {
       JSON.stringify(credentials))
       .map(response => {
         let result = response.json();
+
+        if (result && result.token) {
+          localStorage.setItem('token', result.token);
+          return true;
+        } else {
+          return false;
+        }
       });
   }
 
