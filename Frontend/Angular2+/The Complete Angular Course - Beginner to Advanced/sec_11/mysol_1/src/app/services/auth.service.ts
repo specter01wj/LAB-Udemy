@@ -11,7 +11,7 @@ export class AuthService {
    return this.http.post('/api/authenticate',
       JSON.stringify(credentials))
       .map(response => {
-
+        let result = response.json();
       });
   }
 
