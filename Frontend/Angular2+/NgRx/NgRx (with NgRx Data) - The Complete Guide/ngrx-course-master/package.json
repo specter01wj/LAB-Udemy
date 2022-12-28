@@ -35,8 +35,10 @@
     "core-js": "^2.4.1",
     "cors": "^2.8.5",
     "express": "^4.16.2",
+    "latest-version": "^7.0.0",
     "moment": "^2.22.2",
-    "rxjs": "^6.5.4",
+    "npm": "^9.2.0",
+    "rxjs": "^7.8.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },
@@ -60,6 +62,6 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "ts-node": "~3.2.0",
-    "typescript": "~4.8.4"
+    "typescript": "^4.9.4"
   }
 }
