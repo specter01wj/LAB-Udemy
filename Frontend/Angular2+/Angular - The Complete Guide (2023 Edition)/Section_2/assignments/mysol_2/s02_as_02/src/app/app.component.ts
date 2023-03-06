@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's02_as_02';
-  username = '';
+  username: string = '';
 
   resetUsername() {
     this.username = '';
