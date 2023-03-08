@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 's04_01';
   servers: string[] = ['RC-10', 'RC-11', 'RC-12'];
+  add_server_id: number = 1;
 
   onAddServer() {
-    this.servers.push('Another Server');
+    this.servers.push('Another Server ' + this.add_server_id);
+    this.add_server_id++;
   }
 
   onRemoveServer(id: number) {
