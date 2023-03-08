@@ -16,6 +16,7 @@ export class AppComponent {
   onRemoveServer(id: number) {
     const position = id + 1;
 
+
     this.servers.splice(position, 1);
   }
 }
