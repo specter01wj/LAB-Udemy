@@ -17,6 +17,7 @@ export class AppComponent {
     const position = id + 1;
 
 
+
     this.servers.splice(position, 1);
   }
 }
