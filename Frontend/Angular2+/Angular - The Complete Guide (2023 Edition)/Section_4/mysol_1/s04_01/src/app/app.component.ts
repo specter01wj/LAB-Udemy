@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's04_01';
-  servers: any;
+  servers: any = ['RC-10', 'RC-11', 'RC-12'];
 
   onAddServer() {
     this.servers.push('Another Server');
