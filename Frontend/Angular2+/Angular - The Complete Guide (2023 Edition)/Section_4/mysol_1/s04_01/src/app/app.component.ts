@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's04_01';
+  servers: any;
+
+  onAddServer() {
+    this.servers.push('Another Server');
+  }
+
+  onRemoveServer(id: number) {
+    const position = id + 1;
+    this.servers.splice(position, 1);
+  }
 }
