@@ -21,6 +21,7 @@ export class AppComponent {
 
 
 
+
     this.servers.splice(position, 1);
   }
 }
