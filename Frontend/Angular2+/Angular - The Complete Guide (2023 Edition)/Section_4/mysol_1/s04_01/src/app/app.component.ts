@@ -14,6 +14,7 @@ export class AppComponent {
     this.servers.push('Another Server ' + this.add_server_id);
 
 
+
     this.add_server_id++;
   }
 
