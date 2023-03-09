@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's05_01';
+  serverElements: any[] = [];
+  newServerName = '';
+  newServerContent = '';
+
+  onAddServer() {
+    this.serverElements.push({
+      type: 'server',
+      name: this.newServerName,
+      content: this.newServerContent
+    });
+  }
+
+  onAddBlueprint() {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: this.newServerName,
+      content: this.newServerContent
+    });
+  }
 }
