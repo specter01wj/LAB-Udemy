@@ -20,6 +20,7 @@ export class CockpitComponent {
 
 
 
+
       type: 'server',
       name: this.newServerName,
       content: this.newServerContent
