@@ -12,6 +12,7 @@ export class CockpitComponent {
   onAddServer() {
     this.serverElements.push({
 
+
       type: 'server',
       name: this.newServerName,
       content: this.newServerContent
