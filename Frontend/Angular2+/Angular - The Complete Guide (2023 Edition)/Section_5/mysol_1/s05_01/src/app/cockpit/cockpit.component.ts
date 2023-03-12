@@ -21,6 +21,7 @@ export class CockpitComponent {
     this.serverElements.push({
       type: 'blueprint',
 
+
       name: this.newServerName,
       content: this.newServerContent
     });
