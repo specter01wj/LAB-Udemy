@@ -24,6 +24,7 @@ export class CockpitComponent {
 
 
 
+
       content: this.newServerContent
     });
   }
