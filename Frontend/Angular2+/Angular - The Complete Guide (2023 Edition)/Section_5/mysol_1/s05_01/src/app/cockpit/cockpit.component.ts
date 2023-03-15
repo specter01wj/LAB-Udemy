@@ -7,11 +7,6 @@ import { Component } from '@angular/core';
 })
 export class CockpitComponent {
   newServerName = '';
-
-
-
-
-
   newServerContent = '';
 
   onAddServer() {
