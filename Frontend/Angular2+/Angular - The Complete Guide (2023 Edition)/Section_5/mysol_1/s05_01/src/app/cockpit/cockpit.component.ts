@@ -10,19 +10,19 @@ export class CockpitComponent {
   newServerContent = '';
 
   onAddServer() {
-    this.serverElements.push({
+    /* this.serverElements.push({
       type: 'server',
       name: this.newServerName,
       content: this.newServerContent
-    });
+    }); */
   }
 
   onAddBlueprint() {
-    this.serverElements.push({
+    /* this.serverElements.push({
       type: 'blueprint',
       name: this.newServerName,
       content: this.newServerContent
-    });
+    }); */
   }
 
 }
