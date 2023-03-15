@@ -13,18 +13,6 @@ export class CockpitComponent {
     this.serverElements.push({
       type: 'server',
       name: this.newServerName,
-
-
-
-
-
-
-
-
-
-
-
-
       content: this.newServerContent
     });
   }
