@@ -12,6 +12,12 @@ describe('CockpitComponent', () => {
     })
     .compileComponents();
 
+    // fixture = TestBed.createComponent(CockpitComponent);
+    // component = fixture.componentInstance;
+    // fixture.detectChanges();
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(CockpitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
