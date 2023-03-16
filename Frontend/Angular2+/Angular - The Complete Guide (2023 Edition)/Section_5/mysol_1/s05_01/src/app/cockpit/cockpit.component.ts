@@ -9,6 +9,7 @@ export class CockpitComponent {
   newServerName = '';
 
 
+
   newServerContent = '';
 
   onAddServer() {
