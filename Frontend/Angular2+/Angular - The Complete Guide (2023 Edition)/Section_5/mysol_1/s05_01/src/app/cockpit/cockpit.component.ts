@@ -13,6 +13,7 @@ export class CockpitComponent {
 
 
 
+
   newServerContent = '';
 
   onAddServer() {
