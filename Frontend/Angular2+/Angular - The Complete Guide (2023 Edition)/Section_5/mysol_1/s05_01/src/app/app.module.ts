@@ -12,6 +12,7 @@ import { ServerElementComponent } from './server-element/server-element.componen
     AppComponent,
     CockpitComponent,
 
+
     ServerElementComponent
   ],
   imports: [
