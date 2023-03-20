@@ -11,18 +11,6 @@ import { ServerElementComponent } from './server-element/server-element.componen
   declarations: [
     AppComponent,
     CockpitComponent,
-
-
-
-
-
-
-
-
-
-
-
-
     ServerElementComponent
   ],
   imports: [
