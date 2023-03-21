@@ -10,18 +10,6 @@ import { ServerElementComponent } from './server-element/server-element.componen
 @NgModule({
   declarations: [
     AppComponent,
-
-
-
-
-
-
-
-
-
-
-
-
     CockpitComponent,
     ServerElementComponent
   ],
