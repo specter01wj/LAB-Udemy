@@ -16,17 +16,6 @@ export class AppComponent {
     {
       type: 'server',
       name: 'Test_server2',
-
-
-
-
-
-
-
-
-
-
-
       content: 'Just a test2!'
     }
   ];
