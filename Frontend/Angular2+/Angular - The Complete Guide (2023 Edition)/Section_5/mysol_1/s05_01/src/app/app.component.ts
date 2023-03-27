@@ -28,6 +28,7 @@ export class AppComponent {
 
 
 
+
       content: 'Just a test2!'
     }
   ];
