@@ -3,7 +3,7 @@ import {LoggerService} from './logger.service';
 import {TestBed} from '@angular/core/testing';
 
 
-describe('CalculatorService', () => {
+fdescribe('CalculatorService', () => {
 
     let calculator: CalculatorService,
         loggerSpy: any;
