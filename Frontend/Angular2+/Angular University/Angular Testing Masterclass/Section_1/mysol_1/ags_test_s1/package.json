@@ -1,6 +1,7 @@
 {
-  "name": "ags-test-s1",
+  "name": "angular-testing-course",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve  --proxy-config ./proxy.json",
