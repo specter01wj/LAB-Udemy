@@ -18,6 +18,7 @@ fdescribe('CalculatorService', () => {
             providers: [
                 CalculatorService,
 
+
                 {provide: LoggerService, useValue: loggerSpy}
             ]
         });
