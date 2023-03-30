@@ -17,26 +17,6 @@ fdescribe('CalculatorService', () => {
         TestBed.configureTestingModule({
             providers: [
                 CalculatorService,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 {provide: LoggerService, useValue: loggerSpy}
             ]
         });
