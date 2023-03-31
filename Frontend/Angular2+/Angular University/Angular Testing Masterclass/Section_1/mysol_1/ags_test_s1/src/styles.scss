@@ -1,8 +1,14 @@
+@use '@angular/material'as mat;
 
-@use '@angular/material' as mat;
+html,
+body {
+  height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 
 @include mat.core();
@@ -15,14 +21,12 @@ $primary: mat.define-palette(mat.$teal-palette, 500);
 
 $accent: mat.define-palette(mat.$red-palette, A200, A100, A400);
 
-$theme: mat.define-light-theme((
-  color: (
-    primary: $primary,
-    accent: $accent,
-  ),
-  typography: mat.define-typography-config(),
-  density: 0,
-));
+$theme: mat.define-light-theme((color: (primary: $primary,
+      accent: $accent,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  ));
 
 @include mat.all-component-themes($theme);
 
@@ -38,4 +42,3 @@ $theme: mat.define-light-theme((
   max-width: 400px;
   margin: 0 auto;
 }
-
