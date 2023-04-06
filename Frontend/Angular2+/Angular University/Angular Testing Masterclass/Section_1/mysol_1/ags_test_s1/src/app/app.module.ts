@@ -37,6 +37,7 @@ import { CoursesModule } from "./courses/courses.module";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
     HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
