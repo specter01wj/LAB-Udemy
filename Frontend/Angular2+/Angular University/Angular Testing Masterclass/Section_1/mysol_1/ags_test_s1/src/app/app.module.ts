@@ -42,12 +42,6 @@ import { CoursesModule } from "./courses/courses.module";
     MatButtonModule,
     CoursesModule,
     AppRoutingModule,
-
-
-
-
-
-
   ],
   providers: [],
   bootstrap: [AppComponent],
