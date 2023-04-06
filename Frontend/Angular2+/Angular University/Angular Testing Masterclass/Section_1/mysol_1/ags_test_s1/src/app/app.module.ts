@@ -43,6 +43,7 @@ import { CoursesModule } from "./courses/courses.module";
     CoursesModule,
     AppRoutingModule,
 
+
   ],
   providers: [],
   bootstrap: [AppComponent],
