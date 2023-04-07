@@ -41,23 +41,6 @@ import { CoursesModule } from "./courses/courses.module";
     MatToolbarModule,
     MatButtonModule,
     CoursesModule,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     AppRoutingModule,
   ],
   providers: [],
