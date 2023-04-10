@@ -8,18 +8,6 @@ import { CourseResolver } from "./courses/services/course.resolver";
 const routes: Routes = [
   {
     path: "",
-
-
-
-
-
-
-
-
-
-
-
-
     component: HomeComponent,
   },
   {
