@@ -3,7 +3,8 @@ import { LoggerService } from "./logger.service";
 import { TestBed } from "@angular/core/testing";
 
 fdescribe("CalculatorService", () => {
-  let calculator: CalculatorService, loggerSpy: any;
+  let calculator: CalculatorService;
+  let loggerSpy: any;
 
   beforeEach(() => {
     console.log("Calling beforeEach");
