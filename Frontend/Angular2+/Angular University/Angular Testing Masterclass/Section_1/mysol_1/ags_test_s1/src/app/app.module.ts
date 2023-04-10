@@ -36,6 +36,7 @@ import { CoursesModule } from "./courses/courses.module";
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
