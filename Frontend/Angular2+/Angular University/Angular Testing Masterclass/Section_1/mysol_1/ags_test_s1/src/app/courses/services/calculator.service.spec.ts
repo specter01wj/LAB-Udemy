@@ -8,7 +8,6 @@ fdescribe("CalculatorService", () => {
 
   beforeEach(() => {
     console.log("Calling beforeEach");
-
     loggerSpy = jasmine.createSpyObj("LoggerService", ["log"]);
 
     TestBed.configureTestingModule({
