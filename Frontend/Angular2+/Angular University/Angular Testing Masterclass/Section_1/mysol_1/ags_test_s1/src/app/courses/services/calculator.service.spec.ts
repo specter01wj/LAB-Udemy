@@ -31,7 +31,6 @@ fdescribe("CalculatorService", () => {
   it("should subtract two numbers", () => {
     console.log("subtract test");
     const result = calculator.subtract(2, 2);
-
     expect(result).toBe(0, "unexpected subtraction result");
 
     expect(loggerSpy.log).toHaveBeenCalledTimes(1);
