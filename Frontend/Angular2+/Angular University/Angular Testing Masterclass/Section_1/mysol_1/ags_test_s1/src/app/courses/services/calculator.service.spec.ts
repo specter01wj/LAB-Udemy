@@ -24,7 +24,6 @@ fdescribe("CalculatorService", () => {
   it("should add two numbers", () => {
     console.log("add test");
     const result = calculator.add(2, 2);
-
     expect(result).toBe(4);
 
     expect(loggerSpy.log).toHaveBeenCalledTimes(1);
