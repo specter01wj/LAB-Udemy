@@ -35,6 +35,7 @@ export class LessonsDataSource implements DataSource<Lesson> {
     console.log("Connecting data source");
     return this.lessonsSubject.asObservable();
 
+
   }
 
   disconnect(collectionViewer: CollectionViewer): void {
