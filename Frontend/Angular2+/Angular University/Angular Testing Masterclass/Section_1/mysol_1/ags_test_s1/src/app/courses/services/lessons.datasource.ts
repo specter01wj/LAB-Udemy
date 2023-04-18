@@ -39,6 +39,7 @@ export class LessonsDataSource implements DataSource<Lesson> {
   disconnect(collectionViewer: CollectionViewer): void {
     this.lessonsSubject.complete();
 
+
     this.loadingSubject.complete();
   }
 }
