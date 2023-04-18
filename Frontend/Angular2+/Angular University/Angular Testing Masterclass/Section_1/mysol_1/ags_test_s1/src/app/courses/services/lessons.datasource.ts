@@ -33,6 +33,7 @@ export class LessonsDataSource implements DataSource<Lesson> {
 
   connect(collectionViewer: CollectionViewer): Observable<Lesson[]> {
     console.log("Connecting data source");
+
     return this.lessonsSubject.asObservable();
   }
 
