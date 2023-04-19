@@ -24,5 +24,6 @@ export class CourseResolver implements Resolve<Course> {
 
 
 
+
   }
 }
