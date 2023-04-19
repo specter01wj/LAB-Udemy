@@ -19,5 +19,6 @@ export class CourseResolver implements Resolve<Course> {
     return this.coursesService.findCourseById(route.params["id"]);
 
 
+
   }
 }
