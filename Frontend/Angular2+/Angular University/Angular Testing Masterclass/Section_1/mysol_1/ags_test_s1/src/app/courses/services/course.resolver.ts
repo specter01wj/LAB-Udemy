@@ -18,5 +18,6 @@ export class CourseResolver implements Resolve<Course> {
   ): Observable<Course> {
     return this.coursesService.findCourseById(route.params["id"]);
 
+
   }
 }
