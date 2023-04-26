@@ -31,18 +31,6 @@ export class CoursesService {
     return this.http
       .get("/api/lessons", {
         params: new HttpParams()
-
-
-
-
-
-
-
-
-
-
-
-
           .set("courseId", courseId.toString())
           .set("filter", filter)
           .set("sortOrder", sortOrder)
