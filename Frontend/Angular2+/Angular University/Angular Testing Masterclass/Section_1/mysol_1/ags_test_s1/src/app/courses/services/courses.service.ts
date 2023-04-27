@@ -24,7 +24,6 @@ export class CoursesService {
   findLessons(
     courseId: number,
     filter = "",
-
     sortOrder = "asc",
     pageNumber = 0,
     pageSize = 3
