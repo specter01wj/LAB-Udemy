@@ -15,6 +15,7 @@ export class CoursesService {
 
   findAllCourses(): Observable<Course[]> {
     return this.http.get("/api/courses").pipe(map((res) => res["payload"]));
+
   }
 
   saveCourse(courseId: number, changes: Partial<Course>): Observable<Course> {
