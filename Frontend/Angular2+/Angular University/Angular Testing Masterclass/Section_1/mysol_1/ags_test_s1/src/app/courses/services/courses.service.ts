@@ -17,6 +17,7 @@ export class CoursesService {
     return this.http.get("/api/courses").pipe(map((res) => res["payload"]));
 
 
+
   }
 
   saveCourse(courseId: number, changes: Partial<Course>): Observable<Course> {
