@@ -33,18 +33,6 @@ export class CoursesService {
         params: new HttpParams()
           .set("courseId", courseId.toString())
           .set("filter", filter)
-
-
-
-
-
-
-
-
-
-
-
-
           .set("sortOrder", sortOrder)
           .set("pageNumber", pageNumber.toString())
           .set("pageSize", pageSize.toString()),
