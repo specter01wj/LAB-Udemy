@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +15,8 @@ export class AppComponent {
 
   }
 
-  onKeyClick() {
-
+  onKeyClick(newTitle: any) {
+    this.data.title = newTitle.value;
   }
 
 

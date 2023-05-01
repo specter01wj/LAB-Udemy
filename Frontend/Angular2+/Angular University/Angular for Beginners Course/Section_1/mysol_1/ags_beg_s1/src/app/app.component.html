@@ -48,7 +48,7 @@
 
 </div>
 
-<input class="demo" (click)="onKeyClick()" [value]="data.title" #titleInput>
+<input class="demo" (keyup)="onKeyClick(titleInput)" [value]="data.title" #titleInput>
 <input class="demo" [value]="'Test'">
 
 <router-outlet></router-outlet>
