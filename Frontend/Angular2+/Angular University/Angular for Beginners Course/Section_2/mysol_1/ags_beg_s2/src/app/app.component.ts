@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ags_beg_s2';
+
+  data = {
+    title: 'Angular Core Deep Dive',
+  }
+
+  onLogoClick() {
+
+  }
+
+  onKeyClick(newTitle: any) {
+    this.data.title = newTitle.value;
+  }
+
+
 }
