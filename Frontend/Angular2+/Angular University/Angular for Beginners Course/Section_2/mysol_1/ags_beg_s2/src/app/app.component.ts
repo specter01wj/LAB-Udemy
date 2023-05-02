@@ -11,6 +11,7 @@ export class AppComponent {
     title: 'Angular Core Deep Dive',
 
 
+
   }
 
   onLogoClick() {
