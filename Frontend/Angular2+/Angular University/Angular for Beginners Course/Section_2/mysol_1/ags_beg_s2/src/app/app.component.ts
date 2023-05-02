@@ -10,6 +10,7 @@ export class AppComponent {
   data = {
     title: 'Angular Core Deep Dive',
 
+
   }
 
   onLogoClick() {
