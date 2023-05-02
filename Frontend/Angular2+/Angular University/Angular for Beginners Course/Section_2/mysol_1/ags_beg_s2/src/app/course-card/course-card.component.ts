@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { COURSES } from '../../db-data';
 
 @Component({
@@ -7,5 +7,6 @@ import { COURSES } from '../../db-data';
   styleUrls: ['./course-card.component.scss']
 })
 export class CourseCardComponent {
+  @Input() title: string | undefined;
 
 }

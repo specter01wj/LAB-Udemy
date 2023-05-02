@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { COURSES } from '../db-data';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,7 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  courses = COURSES;
   data = {
     title: 'Angular Core Deep Dive',
   }
