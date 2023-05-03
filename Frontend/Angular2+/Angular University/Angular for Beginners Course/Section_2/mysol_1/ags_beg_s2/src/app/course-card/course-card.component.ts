@@ -10,4 +10,5 @@ import { Course } from '../model/course';
 export class CourseCardComponent {
   @Input() course: Course | undefined;
 
+
 }
