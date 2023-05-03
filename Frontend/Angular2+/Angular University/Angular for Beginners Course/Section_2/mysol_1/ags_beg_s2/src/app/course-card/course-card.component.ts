@@ -11,16 +11,4 @@ export class CourseCardComponent {
   @Input() course: Course | undefined;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
