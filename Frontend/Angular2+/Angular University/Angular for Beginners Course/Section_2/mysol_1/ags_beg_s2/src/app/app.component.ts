@@ -13,6 +13,9 @@ export class AppComponent {
     title: 'Angular Core Deep Dive',
   }
 
+  constructor() {}
+
+
   onLogoClick() {
 
   }
@@ -22,7 +25,7 @@ export class AppComponent {
   }
 
   onCourseSelected(course:Course) {
-
+    console.log('received courses', course);
   }
 
 

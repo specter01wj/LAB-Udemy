@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { COURSES } from '../../db-data';
 import { Course } from '../model/course';
 
@@ -10,9 +10,12 @@ import { Course } from '../model/course';
 export class CourseCardComponent {
   @Input() course: Course | undefined;
 
+  @Output() courseSelected = new EventEmitter<Course>();
+
+  constructor() {}
 
   onCourseViewed() {
-    // this.courseEmitter.emit(this.course);
+    this.courseSelected.emit(this.course);
   }
 
 }
