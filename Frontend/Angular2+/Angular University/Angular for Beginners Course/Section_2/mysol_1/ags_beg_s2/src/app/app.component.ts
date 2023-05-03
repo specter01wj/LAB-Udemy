@@ -9,9 +9,6 @@ import { Course } from './model/course';
 })
 export class AppComponent {
   courses = COURSES;
-  data = {
-    title: 'Angular Core Deep Dive',
-  }
 
   constructor() {}
 
@@ -20,9 +17,9 @@ export class AppComponent {
 
   }
 
-  onKeyClick(newTitle: any) {
+  /* onKeyClick(newTitle: any) {
     this.data.title = newTitle.value;
-  }
+  } */
 
   onCourseSelected(course:Course) {
     console.log('received courses', course);
