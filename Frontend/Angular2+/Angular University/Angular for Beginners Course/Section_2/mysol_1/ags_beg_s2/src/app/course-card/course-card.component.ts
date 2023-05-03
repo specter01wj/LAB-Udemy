@@ -10,12 +10,12 @@ import { Course } from '../model/course';
 export class CourseCardComponent {
   @Input() course: Course | undefined;
 
-  @Output() courseSelected = new EventEmitter<Course>();
+  @Output('courseSelected') courseEmitter = new EventEmitter<Course>();
 
   constructor() {}
 
   onCourseViewed() {
-    this.courseSelected.emit(this.course);
+    this.courseEmitter.emit(this.course);
   }
 
 }
