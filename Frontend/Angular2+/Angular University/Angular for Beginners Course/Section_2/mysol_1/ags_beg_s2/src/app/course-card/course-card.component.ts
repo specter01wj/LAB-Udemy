@@ -11,4 +11,8 @@ export class CourseCardComponent {
   @Input() course: Course | undefined;
 
 
+  onCourseViewed() {
+    // this.courseEmitter.emit(this.course);
+  }
+
 }

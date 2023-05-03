@@ -1,5 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
 import { COURSES } from '../db-data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,10 @@ export class AppComponent {
 
   onKeyClick(newTitle: any) {
     this.data.title = newTitle.value;
+  }
+
+  onCourseSelected(course:Course) {
+
   }
 
 

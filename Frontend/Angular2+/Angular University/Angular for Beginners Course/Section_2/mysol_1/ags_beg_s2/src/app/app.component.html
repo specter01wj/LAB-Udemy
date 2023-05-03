@@ -8,7 +8,7 @@
 
 <div class="courses">
 
-  <app-course-card [course]="courses[1]"></app-course-card>
+  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="courses[1]"></app-course-card>
 
 
 
