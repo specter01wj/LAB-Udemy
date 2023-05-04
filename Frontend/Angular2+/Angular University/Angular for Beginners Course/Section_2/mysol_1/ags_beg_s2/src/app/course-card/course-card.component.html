@@ -1,6 +1,6 @@
-<div class="course-card" *ngIf="course" [ngClass]="cardClasses()">
+<div class="course-card" *ngIf="course" [ngClass]="cardClasses()" [ngStyle]="cardStyles()">
 
-  <div class="course-title" [ngStyle]="cardStyles()">
+  <div class="course-title">
       No.{{ cardIndex }} - {{ course.description }}
   </div>
   <img width="300" alt="Angular Logo" *ngIf="isImageVisible(); else noImage"
