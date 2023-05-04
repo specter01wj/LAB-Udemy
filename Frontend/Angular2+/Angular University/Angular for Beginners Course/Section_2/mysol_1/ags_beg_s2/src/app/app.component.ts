@@ -14,7 +14,6 @@ export class AppComponent {
 
 
   onLogoClick() {
-
   }
 
   onCourseSelected(course:Course) {
