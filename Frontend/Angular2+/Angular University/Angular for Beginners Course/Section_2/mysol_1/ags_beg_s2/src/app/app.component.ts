@@ -17,10 +17,6 @@ export class AppComponent {
 
   }
 
-  /* onKeyClick(newTitle: any) {
-    this.data.title = newTitle.value;
-  } */
-
   onCourseSelected(course:Course) {
     console.log('received courses', course);
   }
