@@ -19,4 +19,8 @@ export class CourseCardComponent {
     this.courseEmitter.emit(this.course);
   }
 
+  isImageVisible() {
+    return this.course && this.course.iconUrl;
+  }
+
 }

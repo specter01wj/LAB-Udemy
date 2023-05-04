@@ -3,7 +3,7 @@
   <div class="course-title">
       No.{{ cardIndex }} - {{ course.description }}
   </div>
-  <img width="300" alt="Angular Logo" *ngIf="course.iconUrl"
+  <img width="300" alt="Angular Logo" *ngIf="isImageVisible()"
        [src]="course.iconUrl">
 
   <div class="course-description">
