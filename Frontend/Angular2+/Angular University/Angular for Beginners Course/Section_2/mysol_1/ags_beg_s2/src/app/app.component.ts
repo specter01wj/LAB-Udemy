@@ -20,6 +20,7 @@ export class AppComponent {
   onCourseSelected(course:Course) {
     console.log('received courses', course);
 
+
   }
 
 
