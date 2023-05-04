@@ -3,6 +3,10 @@ app-course-card {
     display: block;
 }
 
+.courses {
+  padding-bottom: 3rem;
+}
+
 .course-card {
     margin-bottom: 40px;
     text-align: center;
@@ -38,12 +42,12 @@ button {
 }
 
 app-course-card.is-first {
-    border-top: 2px solid grey;
+    border-top: 2px solid red;
     padding-top: 20px;
 }
 
 app-course-card.is-last {
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid green;
     padding-top: 20px;
 }
 
