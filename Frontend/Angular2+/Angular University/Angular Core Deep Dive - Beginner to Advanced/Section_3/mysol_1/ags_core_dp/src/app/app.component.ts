@@ -11,7 +11,9 @@ import { CourseCardComponent } from './course-card/course-card.component';
 export class AppComponent {
   courses = COURSES;
 
-  @ViewChild(CourseCardComponent) card: CourseCardComponent;
+  @ViewChild('cardRef') card: CourseCardComponent;
+
+  @ViewChild('container') containerDiv: ElementRef;
 
   constructor() {}
 
@@ -21,6 +23,7 @@ export class AppComponent {
 
   onCourseSelected(course:Course) {
     console.log(this.card);
+    console.log(this.containerDiv);
   }
 
 
