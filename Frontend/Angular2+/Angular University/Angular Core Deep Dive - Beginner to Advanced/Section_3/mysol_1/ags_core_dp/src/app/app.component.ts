@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { COURSES } from '../db-data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ags_core_dp';
+  courses = COURSES;
+
+  constructor() {}
+
+
+  onLogoClick() {
+  }
+
+  onCourseSelected(course:Course) {
+    console.log('received courses', course);
+  }
+
+
 }
