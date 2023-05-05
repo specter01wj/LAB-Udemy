@@ -1,6 +1,7 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { COURSES } from '../db-data';
 import { Course } from './model/course';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ import { Course } from './model/course';
 export class AppComponent {
   courses = COURSES;
 
+  @ViewChild(CourseCardComponent) card: CourseCardComponent;
+
   constructor() {}
 
 
@@ -17,7 +20,7 @@ export class AppComponent {
   }
 
   onCourseSelected(course:Course) {
-    console.log('received courses', course);
+    console.log(this.card);
   }
 
 
