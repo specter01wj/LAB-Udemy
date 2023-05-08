@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { COURSES } from '../db-data';
 import { Course } from './model/course';
 import { CourseCardComponent } from './course-card/course-card.component';
@@ -8,7 +8,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   courses = COURSES;
 
   @ViewChild('cardRef') card: CourseCardComponent;
@@ -16,6 +16,10 @@ export class AppComponent {
   @ViewChild('container') containerDiv: ElementRef;
 
   constructor() {}
+
+  ngAfterViewInit(): void {
+
+  }
 
 
   onLogoClick() {
