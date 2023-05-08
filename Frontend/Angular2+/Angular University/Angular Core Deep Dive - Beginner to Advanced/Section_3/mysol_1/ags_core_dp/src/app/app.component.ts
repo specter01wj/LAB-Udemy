@@ -24,14 +24,6 @@ export class AppComponent {
   onCourseSelected(course:Course) {
     console.log(this.card);
     console.log(this.containerDiv);
-
-
-
-
-
-
-
-
   }
 
 
