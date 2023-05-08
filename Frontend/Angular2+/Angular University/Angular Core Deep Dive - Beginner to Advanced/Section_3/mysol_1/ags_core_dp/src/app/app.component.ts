@@ -25,6 +25,7 @@ export class AppComponent {
     console.log(this.card);
     console.log(this.containerDiv);
 
+
   }
 
 
