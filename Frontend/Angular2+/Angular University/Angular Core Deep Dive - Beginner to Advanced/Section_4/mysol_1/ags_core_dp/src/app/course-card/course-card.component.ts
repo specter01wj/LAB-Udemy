@@ -32,6 +32,7 @@ export class CourseCardComponent {
 
 
 
+
   }
 
   cardClasses() {
