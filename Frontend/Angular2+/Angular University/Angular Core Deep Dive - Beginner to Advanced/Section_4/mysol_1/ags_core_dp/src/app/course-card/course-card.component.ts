@@ -27,6 +27,7 @@ export class CourseCardComponent {
 
 
 
+
   }
 
   cardClasses() {
