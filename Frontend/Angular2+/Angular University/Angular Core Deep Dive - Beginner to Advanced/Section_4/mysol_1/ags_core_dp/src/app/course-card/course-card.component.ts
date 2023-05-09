@@ -22,6 +22,7 @@ export class CourseCardComponent {
   isImageVisible() {
     return this.course && this.course.iconUrl;
 
+
   }
 
   cardClasses() {
