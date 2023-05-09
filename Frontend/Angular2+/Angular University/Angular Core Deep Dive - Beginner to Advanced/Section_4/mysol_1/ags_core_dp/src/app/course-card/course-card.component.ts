@@ -23,6 +23,7 @@ export class CourseCardComponent {
     return this.course && this.course.iconUrl;
 
 
+
   }
 
   cardClasses() {
