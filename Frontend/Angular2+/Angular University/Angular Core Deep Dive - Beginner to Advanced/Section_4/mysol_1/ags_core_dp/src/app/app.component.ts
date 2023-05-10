@@ -32,6 +32,7 @@ export class AppComponent implements AfterViewInit {
     this.cards.changes.subscribe(
       cards => console.log(cards)
 
+
     );
   }
 
