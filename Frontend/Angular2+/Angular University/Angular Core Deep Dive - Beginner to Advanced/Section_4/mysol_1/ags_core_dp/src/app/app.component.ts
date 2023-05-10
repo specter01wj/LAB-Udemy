@@ -47,6 +47,7 @@ export class AppComponent implements AfterViewInit {
     this.courses.push(this.newCourse);
 
 
+
   }
 
 }
