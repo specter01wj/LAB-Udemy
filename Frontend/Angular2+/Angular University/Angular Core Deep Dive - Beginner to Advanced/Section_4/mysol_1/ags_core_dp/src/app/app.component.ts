@@ -42,6 +42,7 @@ export class AppComponent implements AfterViewInit {
     console.log(this.card);
 
 
+
     // console.log(this.containerDiv);
   }
 
