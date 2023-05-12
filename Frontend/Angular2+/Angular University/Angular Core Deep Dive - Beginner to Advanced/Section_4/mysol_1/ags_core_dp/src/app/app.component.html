@@ -1,7 +1,6 @@
 <div class="top-menu">
 
-  <img class="logo"
-       src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+  <img class="logo" src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
 </div>
 
@@ -9,14 +8,10 @@
 
 <div class="courses" #container>
 
-  <app-course-card *ngFor="let course of courses; index as i;" #cardRef
-    (courseSelected)="onCourseSelected($event)"
-    [course]="course" [cardIndex]="i + 1" >
-    <img #courseImage width="300" alt="Angular Logo"
-       [src]="course.iconUrl">
+  <app-course-card *ngFor="let course of courses; index as i;" #cardRef (courseSelected)="onCourseSelected($event)"
+    [course]="course" [cardIndex]="i + 1">
+    <img #courseImage width="300" alt="Angular Logo" [src]="course.iconUrl">
   </app-course-card>
 
 
 </div>
-
-
