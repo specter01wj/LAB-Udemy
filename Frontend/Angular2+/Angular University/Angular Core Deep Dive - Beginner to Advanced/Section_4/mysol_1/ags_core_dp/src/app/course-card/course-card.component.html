@@ -12,9 +12,11 @@
 
   <ng-content select=".course-image"></ng-content>
 
-  <div class="course-description">
+  <ng-content select=".course-description"></ng-content>
+
+  <!-- <div class="course-description">
       {{ course.longDescription }}
-  </div>
+  </div> -->
 
   <div class="course-category" [ngSwitch]="course.category">
     <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
