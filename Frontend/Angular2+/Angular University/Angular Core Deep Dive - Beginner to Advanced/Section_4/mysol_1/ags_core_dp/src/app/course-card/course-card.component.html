@@ -1,4 +1,4 @@
-<div class="course-card" *ngIf="course" [ngClass]="cardClasses()">
+<div class="course-card" *ngIf="course" [ngClass]="cardClasses()" #container>
 
   <div class="course-title">
       No.{{ cardIndex || '' }} - {{ course.description }}
