@@ -10,7 +10,10 @@
 
   <app-course-card *ngFor="let course of courses; index as i;" #cardRef (courseSelected)="onCourseSelected($event)"
     [course]="course" [cardIndex]="i + 1">
-    <img #courseImage width="300" alt="Angular Logo" [src]="course.iconUrl">
+    <div class="course-image">
+      <img width="300" alt="Angular Logo" [src]="course.iconUrl">
+    </div>
+
   </app-course-card>
 
 
