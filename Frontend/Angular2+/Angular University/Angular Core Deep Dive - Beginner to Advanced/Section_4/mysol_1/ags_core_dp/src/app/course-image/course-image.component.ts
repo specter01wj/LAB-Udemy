@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'app-course-image',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./course-image.component.scss']
 })
 export class CourseImageComponent {
+  @Input() course: Course;
 
 }
