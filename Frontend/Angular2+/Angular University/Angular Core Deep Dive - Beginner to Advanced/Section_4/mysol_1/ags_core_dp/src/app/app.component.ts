@@ -41,6 +41,7 @@ export class AppComponent implements AfterViewInit {
   onCourseSelected(course:Course) {
     console.log(this.card);
 
+
     // console.log(this.containerDiv);
   }
 
