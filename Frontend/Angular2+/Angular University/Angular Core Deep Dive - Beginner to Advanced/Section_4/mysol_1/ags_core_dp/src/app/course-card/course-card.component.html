@@ -3,12 +3,12 @@
   <div class="course-title">
       No.{{ cardIndex || '' }} - {{ course.description }}
   </div>
-  <img #courseImage width="300" alt="Angular Logo" *ngIf="isImageVisible(); else noImage"
-       [src]="course.iconUrl">
+<!--   <img #courseImage width="300" alt="Angular Logo" *ngIf="isImageVisible(); else noImage"
+       [src]="course.iconUrl"> -->
 
-  <ng-template #noImage>
+<!--   <ng-template #noImage>
     <p>No image is available.</p>
-  </ng-template>
+  </ng-template> -->
 
   <div class="course-description">
       {{ course.longDescription }}
