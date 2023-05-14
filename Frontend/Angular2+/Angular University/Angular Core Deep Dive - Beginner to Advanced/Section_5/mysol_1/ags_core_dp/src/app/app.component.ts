@@ -33,6 +33,7 @@ export class AppComponent implements AfterViewInit {
       cards => console.log(cards)
 
 
+
     );
   }
 
