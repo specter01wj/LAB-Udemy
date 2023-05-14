@@ -31,7 +31,8 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.cards.changes.subscribe(
       cards => console.log(cards)
-      
+
+
     );
   }
 
