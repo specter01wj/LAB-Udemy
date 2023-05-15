@@ -9,11 +9,11 @@
 <div class="courses" #container>
 
   <ng-template #blankImage let-courseName="description">
-    <p class="warn">{{courseName.description}} has no image!</p>
+    <p class="warn">{{courseName}} has no image!</p>
     <img src="/assets/empty-image.png">
   </ng-template>
 
-  <div *ngTemplateOutlet="blankImage;"></div>
+  <div *ngTemplateOutlet="blankImage; context: {description: courses[0].description}"></div>
 
   <app-course-card *ngFor="let course of courses; index as i;" #cardRef (courseSelected)="onCourseSelected($event)"
     [course]="course" [cardIndex]="i + 1">

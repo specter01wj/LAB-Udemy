@@ -10,7 +10,7 @@
     <p>No image is available.</p>
   </ng-template> -->
 
-  <ng-content select="app-course-image" *ngIf="course.iconUrl; else noImage"></ng-content>
+  <ng-content select="app-course-image" *ngIf="course.iconUrl"></ng-content>
 
   <!-- <ng-template #noImage>
     <p class="warn">{{course.description}} has no image!</p>
