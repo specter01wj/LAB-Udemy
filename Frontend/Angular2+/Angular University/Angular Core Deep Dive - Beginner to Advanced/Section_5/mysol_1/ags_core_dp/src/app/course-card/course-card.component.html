@@ -12,10 +12,10 @@
 
   <ng-content select="app-course-image" *ngIf="course.iconUrl; else noImage"></ng-content>
 
-  <ng-template #noImage>
+  <!-- <ng-template #noImage>
     <p class="warn">{{course.description}} has no image!</p>
     <img src="/assets/empty-image.png">
-  </ng-template>
+  </ng-template> -->
 
   <ng-content select=".course-description"></ng-content>
 

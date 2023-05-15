@@ -8,6 +8,13 @@
 
 <div class="courses" #container>
 
+  <ng-template #blankImage let-courseName="description">
+    <p class="warn">{{courseName.description}} has no image!</p>
+    <img src="/assets/empty-image.png">
+  </ng-template>
+
+  <div *ngTemplateOutlet="blankImage;"></div>
+
   <app-course-card *ngFor="let course of courses; index as i;" #cardRef (courseSelected)="onCourseSelected($event)"
     [course]="course" [cardIndex]="i + 1">
     <!-- <div class="course-image" #courseImage>
