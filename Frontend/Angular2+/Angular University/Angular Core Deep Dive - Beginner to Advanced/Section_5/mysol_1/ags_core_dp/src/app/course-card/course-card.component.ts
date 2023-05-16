@@ -30,6 +30,7 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
     console.log(this.courseImages);
 
 
+
   }
 
   onCourseViewed() {
