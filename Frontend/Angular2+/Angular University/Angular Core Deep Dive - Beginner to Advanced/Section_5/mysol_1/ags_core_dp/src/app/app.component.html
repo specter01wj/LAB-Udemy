@@ -13,10 +13,10 @@
     <img src="/assets/empty-image.png">
   </ng-template>
 
-  <ng-container *ngTemplateOutlet="blankImage; context: {description: courses[0].description}"></ng-container>
+  <!-- <ng-container *ngTemplateOutlet="blankImage; context: {description: courses[0].description}"></ng-container> -->
 
   <app-course-card *ngFor="let course of courses; index as i;" #cardRef (courseSelected)="onCourseSelected($event)"
-    [course]="course" [cardIndex]="i + 1">
+    [course]="course" [cardIndex]="i + 1" [noImageTpl]="blankImage">
     <!-- <div class="course-image" #courseImage>
       <img width="300" alt="Angular Logo" [src]="course.iconUrl">
     </div> -->
