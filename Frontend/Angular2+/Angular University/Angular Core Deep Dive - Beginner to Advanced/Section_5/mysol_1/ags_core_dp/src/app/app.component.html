@@ -13,7 +13,7 @@
     <img src="/assets/empty-image.png">
   </ng-template>
 
-  <div *ngTemplateOutlet="blankImage; context: {description: courses[0].description}"></div>
+  <ng-container *ngTemplateOutlet="blankImage; context: {description: courses[0].description}"></ng-container>
 
   <app-course-card *ngFor="let course of courses; index as i;" #cardRef (courseSelected)="onCourseSelected($event)"
     [course]="course" [cardIndex]="i + 1">
