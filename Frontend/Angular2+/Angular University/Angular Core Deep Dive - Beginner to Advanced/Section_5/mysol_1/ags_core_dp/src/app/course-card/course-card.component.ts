@@ -38,6 +38,7 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
 
 
 
+
   }
 
   onCourseViewed() {
