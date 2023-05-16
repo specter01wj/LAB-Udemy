@@ -7,6 +7,6 @@ import { Course } from '../model/course';
   styleUrls: ['./course-image.component.scss']
 })
 export class CourseImageComponent {
-  @Input() course: Course;
+  @Input('src') imageUrl:string;
 
 }

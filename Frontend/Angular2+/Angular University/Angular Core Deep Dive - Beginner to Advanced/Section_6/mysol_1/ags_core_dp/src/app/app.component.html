@@ -4,27 +4,17 @@
 
 </div>
 
-<button (click)="onCoursesEdited()">Edit Courses</button>
+<div class="courses" *ngIf="courses[0] as course">
 
-<div class="courses" #container>
+  <app-course-card
+          (courseSelected)="onCourseSelected($event)"
+               [course]="course">
 
-  <ng-template #blankImage let-courseName="description">
-    <p class="warn">{{courseName}} has no image!</p>
-    <img src="/assets/empty-image.png">
-  </ng-template>
+      <app-course-image [src]="course.iconUrl"></app-course-image>
 
-  <!-- <ng-container *ngTemplateOutlet="blankImage; context: {description: courses[0].description}"></ng-container> -->
-
-  <app-course-card *ngFor="let course of courses; index as i;" #cardRef (courseSelected)="onCourseSelected($event)"
-    [course]="course" [cardIndex]="i + 1" [noImageTpl]="blankImage">
-    <!-- <div class="course-image" #courseImage>
-      <img width="300" alt="Angular Logo" [src]="course.iconUrl">
-    </div> -->
-    <app-course-image [course]="course"></app-course-image>
-
-    <div class="course-description">
-      {{ course.longDescription }}
-    </div>
+      <div class="course-description">
+          {{ course.longDescription }}
+      </div>
 
   </app-course-card>
 
