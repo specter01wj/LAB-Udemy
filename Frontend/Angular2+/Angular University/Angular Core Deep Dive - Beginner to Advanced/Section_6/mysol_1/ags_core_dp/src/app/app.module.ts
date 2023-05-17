@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseImageComponent } from './course-image/course-image.component';
+import { HighlightedDirective } from './directives/highlighted.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseCardComponent,
-    CourseImageComponent
+    CourseImageComponent,
+    HighlightedDirective
   ],
   imports: [
     BrowserModule,
