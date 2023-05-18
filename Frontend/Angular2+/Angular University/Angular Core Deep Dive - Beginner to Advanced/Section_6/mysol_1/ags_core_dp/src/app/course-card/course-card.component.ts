@@ -44,6 +44,7 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
 
 
 
+
   }
 
   cardClasses() {
