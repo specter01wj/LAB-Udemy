@@ -7,9 +7,13 @@ export class HighlightedDirective {
 
   constructor() { }
 
-  @HostBinding('className')
+  /* @HostBinding('className')
   get cssClasses() {
     return 'highlighted';
+  } */
+  @HostBinding('class.highlighted')
+  get cssClasses() {
+    return true;
   }
 
 }
