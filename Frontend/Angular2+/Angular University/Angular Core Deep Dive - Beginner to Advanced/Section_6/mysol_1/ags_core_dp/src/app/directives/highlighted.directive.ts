@@ -1,9 +1,12 @@
-import { Directive, HostBinding } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlighted]'
 })
 export class HighlightedDirective {
+  @Input('isHighlighted') isHighlighted = false;
+
+
 
   constructor() { }
 
@@ -13,7 +16,7 @@ export class HighlightedDirective {
   } */
   @HostBinding('class.highlighted')
   get cssClasses() {
-    return true;
+    return this.isHighlighted;
   }
 
 }
