@@ -37,6 +37,7 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
 
 
 
+
   }
 
   isImageVisible() {
