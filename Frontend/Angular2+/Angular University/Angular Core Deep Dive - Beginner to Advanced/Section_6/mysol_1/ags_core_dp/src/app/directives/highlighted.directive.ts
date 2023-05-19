@@ -1,4 +1,4 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[appHighlighted]'
@@ -6,5 +6,10 @@ import { Directive } from '@angular/core';
 export class HighlightedDirective {
 
   constructor() { }
+
+  @HostBinding('className')
+  get cssClasses() {
+    return 'highlighted';
+  }
 
 }
