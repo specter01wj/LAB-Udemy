@@ -24,6 +24,7 @@ export class HighlightedDirective {
   get disabled() {
     return true;
 
+
   }
 
 }
