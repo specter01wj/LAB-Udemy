@@ -18,6 +18,7 @@ export class HighlightedDirective {
   get cssClasses() {
     return this.isHighlighted;
 
+
   }
 
 
