@@ -1,4 +1,4 @@
-import { Directive, HostBinding, Input } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlighted]'
@@ -24,5 +24,17 @@ export class HighlightedDirective {
   get disabled() {
     return true;
   }
+
+  @HostListener('mouseover')
+  mouseOver() {
+    this.isHighlighted = true;
+  }
+
+  @HostListener('mouseleave')
+  mouseLeave() {
+    this.isHighlighted = false;
+  }
+
+
 
 }
