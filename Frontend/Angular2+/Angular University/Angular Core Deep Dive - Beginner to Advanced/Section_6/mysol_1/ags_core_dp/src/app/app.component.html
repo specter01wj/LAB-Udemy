@@ -7,6 +7,7 @@
 <div class="courses" *ngIf="courses[0] as course">
 
   <app-course-card appHighlighted [isHighlighted]=true
+          (toggleHighlight)="onToggle($event)"
           (courseSelected)="onCourseSelected($event)"
                [course]="course">
 
