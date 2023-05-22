@@ -25,8 +25,8 @@ export class HighlightedDirective {
     return true;
   }
 
-  @HostListener('mouseover')
-  mouseOver() {
+  @HostListener('mouseover', ['$event'])
+  mouseOver($event) {
     this.isHighlighted = true;
   }
 
