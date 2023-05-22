@@ -1,7 +1,8 @@
 import { Directive, EventEmitter, HostBinding, HostListener, Input, Output } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlighted]'
+  selector: '[appHighlighted]',
+  exportAs: 'hl'
 })
 export class HighlightedDirective {
   @Input('isHighlighted') isHighlighted = false;
