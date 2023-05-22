@@ -7,13 +7,14 @@
 <div class="courses" *ngIf="courses[0] as course">
 
   <app-course-card appHighlighted [isHighlighted]=true
+          #highlighter="hl"
           (toggleHighlight)="onToggle($event)"
           (courseSelected)="onCourseSelected($event)"
                [course]="course">
 
       <app-course-image [src]="course.iconUrl"></app-course-image>
 
-      <div class="course-description">
+      <div class="course-description" (dblclick)="highlighter.toggle()">
           {{ course.longDescription }}
       </div>
 
