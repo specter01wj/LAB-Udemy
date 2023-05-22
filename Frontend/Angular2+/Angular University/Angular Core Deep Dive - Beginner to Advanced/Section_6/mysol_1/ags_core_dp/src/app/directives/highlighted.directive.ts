@@ -23,6 +23,7 @@ export class HighlightedDirective {
   @HostBinding('attr.disabled')
   get disabled() {
     return true;
+
   }
 
 }
