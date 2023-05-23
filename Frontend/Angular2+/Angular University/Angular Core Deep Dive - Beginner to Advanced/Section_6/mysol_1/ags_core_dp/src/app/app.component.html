@@ -13,7 +13,7 @@
             (courseSelected)="onCourseSelected($event)"
                  [course]="course">
 
-        <app-course-image [src]="course.iconUrl"></app-course-image>
+        <app-course-image [src]="course.iconUrl" *appNgxUnless="!course.iconUrl"></app-course-image>
 
         <div class="course-description" (dblclick)="highlighter.toggle()">
             {{ course.longDescription }}
