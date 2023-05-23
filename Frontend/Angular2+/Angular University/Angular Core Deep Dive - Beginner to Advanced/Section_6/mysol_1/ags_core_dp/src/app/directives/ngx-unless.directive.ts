@@ -15,7 +15,7 @@ export class NgxUnlessDirective {
     if (!condition && !this.visible) {
       this.viewContainer.createEmbeddedView(this.templateRef);
       this.visible = true;
-    } else {
+    } else if (condition && this.visible) {
       this.viewContainer.clear();
       this.visible = false;
     }
