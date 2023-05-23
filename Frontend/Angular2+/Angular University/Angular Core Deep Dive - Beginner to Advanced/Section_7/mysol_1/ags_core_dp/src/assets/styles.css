@@ -3,7 +3,7 @@ app-course-card {
     display: block;
 }
 
-.courses {
+/* .courses {
   padding-bottom: 3rem;
 }
 
@@ -18,7 +18,7 @@ app-course-card {
 .course-card .course-title {
     font-size: 27px;
     font-weight: bold;
-}
+} */
 
 .course-card .course-description {
     max-width: 360px;
