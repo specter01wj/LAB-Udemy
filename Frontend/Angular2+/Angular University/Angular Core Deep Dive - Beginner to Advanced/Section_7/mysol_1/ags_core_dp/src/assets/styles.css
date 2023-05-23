@@ -1,10 +1,10 @@
 
-/*app-course-card {
-    display: block;
+.courses {
+  padding-bottom: 3rem;
 }
 
- .courses {
-  padding-bottom: 3rem;
+/*app-course-card {
+    display: block;
 }
 
 .course-card {
