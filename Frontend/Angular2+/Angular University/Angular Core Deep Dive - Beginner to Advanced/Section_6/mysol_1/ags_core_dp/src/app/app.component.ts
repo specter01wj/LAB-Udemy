@@ -23,6 +23,7 @@ export class AppComponent implements AfterViewInit {
     console.log(this.highlighted);
 
 
+
   }
 
 
