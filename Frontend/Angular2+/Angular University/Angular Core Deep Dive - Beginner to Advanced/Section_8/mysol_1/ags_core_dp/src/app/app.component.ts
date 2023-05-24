@@ -21,9 +21,9 @@ export class AppComponent implements AfterViewInit, OnInit {
   ngOnInit() {
     const params = new HttpParams()
                     .set('page', 1)
-                    .set('pageSize', 1);
+                    .set('pageSize', 10);
 
-    this.http.get('/api/courses').subscribe({
+    this.http.get('/api/courses', { params }).subscribe({
       next: val => this.courses = val,
     });
   }
