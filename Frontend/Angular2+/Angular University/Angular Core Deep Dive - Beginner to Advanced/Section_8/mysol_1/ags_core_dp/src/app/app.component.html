@@ -5,51 +5,22 @@
 </div>
 
 
-<div class="salmon-theme">
-  <div class="course-card">
+<div>
 
-    Test Card
+  <div class="courses">
 
-  </div>
-
-  <ng-template [ngIf]="courses[0]" let-course>
-    <div class="courses salmon-theme">
-
-      <app-course-card appHighlighted [isHighlighted]=true
-              #highlighter="hl"
-              (toggleHighlight)="onToggle($event)"
-              (courseSelected)="onCourseSelected($event)"
-                   [course]="course">
-
-          <app-course-image [src]="course.iconUrl" *appNgxUnless="!course.iconUrl"></app-course-image>
-
-          <div class="course-description" (dblclick)="highlighter.toggle()">
-              {{ course.longDescription }}
-          </div>
-
-      </app-course-card>
-
-    </div>
-  </ng-template>
-</div>
-
-
-
-<div class="courses" *ngIf="courses[0] as course">
-
-  <app-course-card appHighlighted [isHighlighted]=true
-          #highlighter="hl"
-          (toggleHighlight)="onToggle($event)"
-          (courseSelected)="onCourseSelected($event)"
-               [course]="course">
+    <app-course-card *ngFor="let course of courses"
+                 [course]="course">
 
       <app-course-image [src]="course.iconUrl"></app-course-image>
 
-      <div class="course-description" (dblclick)="highlighter.toggle()">
-          {{ course.longDescription }}
-      </div>
+    </app-course-card>
 
-  </app-course-card>
+  </div>
 
 
 </div>
+
+
+
+
