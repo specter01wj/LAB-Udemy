@@ -11,7 +11,7 @@ import { HighlightedDirective } from './directives/highlighted.directive';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  courses = COURSES;
+  courses;
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +20,7 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     this.http.get('/api/courses').subscribe({
-      next: val => console.log(val),
+      next: val => this.courses = val,
     });
   }
 
