@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, ContentChild, ContentChildren, ElementRef, EventEmitter, Input, OnInit, Output, QueryList, TemplateRef, ViewChild } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ContentChild, ContentChildren, ElementRef, EventEmitter, Input, OnInit, Output, QueryList, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { COURSES } from '../../db-data';
 import { Course } from '../model/course';
 import { CourseImageComponent } from '../course-image/course-image.component';
@@ -6,7 +6,8 @@ import { CourseImageComponent } from '../course-image/course-image.component';
 @Component({
   selector: 'app-course-card',
   templateUrl: './course-card.component.html',
-  styleUrls: ['./course-card.component.scss']
+  styleUrls: ['./course-card.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentInit {
   @Input() course: Course | undefined;
