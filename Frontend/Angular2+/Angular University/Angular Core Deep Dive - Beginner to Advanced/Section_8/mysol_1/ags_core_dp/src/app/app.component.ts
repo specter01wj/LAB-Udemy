@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { COURSES } from '../db-data';
 import { Course } from './model/course';
 import { CourseCardComponent } from './course-card/course-card.component';
@@ -19,6 +19,10 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit() {
+    const params = new HttpParams()
+                    .set('page', 1)
+                    .set('pageSize', 1);
+
     this.http.get('/api/courses').subscribe({
       next: val => this.courses = val,
     });
