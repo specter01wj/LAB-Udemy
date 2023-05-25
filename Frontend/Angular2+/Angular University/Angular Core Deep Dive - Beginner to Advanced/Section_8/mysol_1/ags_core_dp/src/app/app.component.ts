@@ -41,6 +41,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.coursesService.saveCourse(course).subscribe({
       next: val => console.log(val),
 
+
     });;
   }
 
