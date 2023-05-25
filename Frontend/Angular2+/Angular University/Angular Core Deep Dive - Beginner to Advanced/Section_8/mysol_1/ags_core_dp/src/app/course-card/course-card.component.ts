@@ -53,4 +53,8 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
     };
   }
 
+  onSaveClicked(description: string) {
+    this.courseEmitter.emit({...this.course, description});
+  }
+
 }
