@@ -4,6 +4,7 @@ import { COURSES } from '../db-data';
 import { Course } from './model/course';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { HighlightedDirective } from './directives/highlighted.directive';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { HighlightedDirective } from './directives/highlighted.directive';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  courses;
+  courses$: Observable<Course>;
+  // courses;
 
   constructor(private http: HttpClient) {}
 
@@ -23,9 +25,12 @@ export class AppComponent implements AfterViewInit, OnInit {
                     .set('page', 1)
                     .set('pageSize', 10);
 
-    this.http.get('/api/courses', { params }).subscribe({
+    /* this.http.get('/api/courses', { params }).subscribe({
       next: val => this.courses = val,
-    });
+    }); */
+    this.courses$ = this.http.get<Course[]>('/api/courses', { params });
+
+
   }
 
 }
