@@ -14,7 +14,7 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
   @Input() cardIndex: number | undefined;
   @Input() noImageTpl: TemplateRef<any>;
 
-  @Output('courseSelected') courseEmitter = new EventEmitter<Course>();
+  @Output('courseChanged') courseEmitter = new EventEmitter<Course>();
 
   @ContentChildren(CourseImageComponent, {read: ElementRef})
     images: QueryList<ElementRef>;
