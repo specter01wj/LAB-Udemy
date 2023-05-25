@@ -18,5 +18,9 @@ export class CoursesService {
     return this.http.get<Course[]>('/api/courses', { params });
   }
 
+  saveCourse(course: Course) {
+    return this.http.put(`/api/courses/${course.id}`, course);
+  }
+
 
 }
