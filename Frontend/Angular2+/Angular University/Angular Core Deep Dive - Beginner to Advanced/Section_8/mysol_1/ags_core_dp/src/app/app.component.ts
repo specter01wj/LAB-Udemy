@@ -25,12 +25,6 @@ export class AppComponent implements AfterViewInit, OnInit {
 
     this.http.get('/api/courses', { params }).subscribe({
       next: val => this.courses = val,
-
-
-
-
-
-
     });
   }
 
