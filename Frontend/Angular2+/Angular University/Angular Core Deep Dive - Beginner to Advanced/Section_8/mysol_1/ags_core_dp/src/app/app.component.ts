@@ -16,11 +16,6 @@ export class AppComponent implements AfterViewInit, OnInit {
   constructor(private http: HttpClient) {}
 
   ngAfterViewInit(): void {
-
-
-
-
-
   }
 
   ngOnInit() {
