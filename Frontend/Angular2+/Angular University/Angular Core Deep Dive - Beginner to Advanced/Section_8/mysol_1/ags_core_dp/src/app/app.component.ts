@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  courses$: Observable<Course>;
+  courses$: Observable<Course[]>;
   // courses;
 
   constructor(private http: HttpClient) {}
