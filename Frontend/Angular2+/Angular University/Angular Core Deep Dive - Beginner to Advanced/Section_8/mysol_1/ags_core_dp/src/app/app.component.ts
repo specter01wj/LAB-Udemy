@@ -16,21 +16,23 @@ export class AppComponent implements AfterViewInit, OnInit {
   courses$: Observable<Course[]>;
   // courses;
 
-  constructor(private http: HttpClient,
+  constructor(
+              // private http: HttpClient,
               private coursesService: CoursesService) {}
 
   ngAfterViewInit(): void {
   }
 
   ngOnInit() {
-    const params = new HttpParams()
-                    .set('page', 1)
-                    .set('pageSize', 10);
+    // const params = new HttpParams()
+    //                 .set('page', 1)
+    //                 .set('pageSize', 10);
 
     /* this.http.get('/api/courses', { params }).subscribe({
       next: val => this.courses = val,
     }); */
-    this.courses$ = this.http.get<Course[]>('/api/courses', { params });
+    // this.courses$ = this.http.get<Course[]>('/api/courses', { params });
+    this.courses$ = this.coursesService.loadCourses();
 
 
   }
