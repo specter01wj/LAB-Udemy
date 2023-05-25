@@ -37,4 +37,8 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   }
 
+  save(course: Course) {
+    this.coursesService.saveCourse(course);
+  }
+
 }
