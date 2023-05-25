@@ -5,6 +5,7 @@ import { Course } from './model/course';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { HighlightedDirective } from './directives/highlighted.directive';
 import { Observable } from 'rxjs';
+import { CoursesService } from './services/courses.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent implements AfterViewInit, OnInit {
   courses$: Observable<Course[]>;
   // courses;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+              private coursesService: CoursesService) {}
 
   ngAfterViewInit(): void {
   }
