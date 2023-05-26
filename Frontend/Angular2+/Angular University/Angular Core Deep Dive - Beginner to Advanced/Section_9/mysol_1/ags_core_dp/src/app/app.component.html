@@ -1,0 +1,27 @@
+<div class="top-menu">
+
+  <img class="logo" src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+
+</div>
+
+
+<div>
+
+  <div class="courses">
+
+    <app-course-card *ngFor="let course of (courses$ | async)"
+                  (courseChanged)="save(course)"
+                 [course]="course">
+
+      <app-course-image [src]="course.iconUrl"></app-course-image>
+
+    </app-course-card>
+
+  </div>
+
+
+</div>
+
+
+
+
