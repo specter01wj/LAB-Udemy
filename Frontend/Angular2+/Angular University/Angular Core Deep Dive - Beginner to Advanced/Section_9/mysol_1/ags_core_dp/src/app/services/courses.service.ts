@@ -16,18 +16,6 @@ export class CoursesService {
                     .set('pageSize', 10);
 
     return this.http.get<Course[]>('/api/courses', { params });
-
-
-
-
-
-
-
-
-
-
-
-
   }
 
   saveCourse(course: Course) {
