@@ -3,9 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Course } from '../model/course';
 
-@Injectable({
+/* @Injectable({
   providedIn: 'root'
-})
+}) */
+@Injectable()
 export class CoursesService {
 
   constructor(private http: HttpClient) { }
