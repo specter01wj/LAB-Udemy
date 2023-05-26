@@ -1,24 +1,39 @@
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import {Directive, Input, TemplateRef, ViewContainerRef} from '@angular/core';
 
 @Directive({
-  selector: '[appNgxUnless]'
+  selector: '[ngxUnless]'
 })
 export class NgxUnlessDirective {
 
-  visible: boolean = false;
+  visible = false;
+
 
   constructor(private templateRef: TemplateRef<any>,
-              private viewContainer: ViewContainerRef) { }
+              private viewContainer: ViewContainerRef) {
 
 
-  @Input() set appNgxUnless(condition: boolean) {
-    if (!condition && !this.visible) {
-      this.viewContainer.createEmbeddedView(this.templateRef);
-      this.visible = true;
-    } else if (condition && this.visible) {
-      this.viewContainer.clear();
-      this.visible = false;
-    }
   }
 
+  @Input()
+  set ngxUnless(condition:boolean) {
+      if (!condition && !this.visible) {
+          this.viewContainer.createEmbeddedView(this.templateRef);
+          this.visible = true;
+      }
+      else if (condition && this.visible) {
+          this.viewContainer.clear();
+          this.visible = false;
+      }
+
+  }
+
+
 }
+
+
+
+
+
+
+
+
