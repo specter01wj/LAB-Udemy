@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, InjectionToken, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Inject, InjectionToken, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {COURSES} from '../db-data';
 import {Course} from './model/course';
 import {CourseCardComponent} from './course-card/course-card.component';
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
 
   // courses = COURSES;
 
-  constructor(private coursesService: CoursesService) {
+  constructor(@Inject(COURSE_SERVICE)private coursesService: CoursesService) {
 
   }
 
