@@ -5,6 +5,7 @@ import {
     ContentChildren,
     ElementRef,
     EventEmitter,
+    Inject,
     Input,
     OnInit,
     Output,
@@ -13,6 +14,8 @@ import {
 } from '@angular/core';
 import {Course} from '../model/course';
 import {CourseImageComponent} from '../course-image/course-image.component';
+import { CoursesService } from '../services/courses.service';
+import { COURSE_SERVICE } from '../app.component';
 
 @Component({
     selector: 'course-card',
@@ -31,7 +34,7 @@ export class CourseCardComponent implements OnInit {
     courseEmitter = new EventEmitter<Course>();
 
 
-    constructor() {
+    constructor(@Inject(COURSE_SERVICE)private coursesService: CoursesService) {
 
     }
 
