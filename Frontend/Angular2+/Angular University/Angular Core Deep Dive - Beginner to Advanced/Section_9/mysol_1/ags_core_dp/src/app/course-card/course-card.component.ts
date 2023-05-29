@@ -34,7 +34,8 @@ export class CourseCardComponent implements OnInit {
     courseEmitter = new EventEmitter<Course>();
 
 
-    constructor(@Inject(COURSE_SERVICE)private coursesService: CoursesService) {
+    // constructor(@Inject(COURSE_SERVICE)private coursesService: CoursesService) {
+    constructor(private coursesService: CoursesService) {
 
     }
 
