@@ -18,9 +18,11 @@ export const COURSE_SERVICE = new InjectionToken<CoursesService>('COURSE_SERVICE
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [
-    { provide: COURSE_SERVICE,
-      useFactory: courseServiceProvider,
-      deps: [ HttpClient ]
+    {
+      provide: CoursesService,
+      useClass: CoursesService,
+      // useFactory: courseServiceProvider,
+      // deps: [ HttpClient ]
     }
   ]
 })
