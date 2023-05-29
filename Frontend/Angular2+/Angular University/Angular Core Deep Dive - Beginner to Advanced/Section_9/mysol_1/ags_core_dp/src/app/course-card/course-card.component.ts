@@ -15,7 +15,7 @@ import {
 import {Course} from '../model/course';
 import {CourseImageComponent} from '../course-image/course-image.component';
 import { CoursesService } from '../services/courses.service';
-import { COURSE_SERVICE } from '../app.component';
+// import { COURSE_SERVICE } from '../app.component';
 
 @Component({
     selector: 'course-card',
