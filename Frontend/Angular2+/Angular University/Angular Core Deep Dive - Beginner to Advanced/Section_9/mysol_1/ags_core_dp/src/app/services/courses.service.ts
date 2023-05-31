@@ -26,6 +26,7 @@ export class CoursesService {
     return this.http.put(`/api/courses/${course.id}`, course, { headers });
 
 
+
   }
 
 
