@@ -24,18 +24,6 @@ export class CoursesService {
           .set("X-Auth", "userId");
 
     return this.http.put(`/api/courses/${course.id}`, course, { headers });
-
-
-
-
-
-
-
-
-
-
-
-
   }
 
 
