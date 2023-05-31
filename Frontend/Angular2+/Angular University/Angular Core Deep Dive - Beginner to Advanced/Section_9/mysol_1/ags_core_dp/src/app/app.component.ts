@@ -6,6 +6,7 @@ import {HighlightedDirective} from './directives/highlighted.directive';
 import {Observable} from 'rxjs';
 import { CoursesService } from './services/courses.service';
 import { HttpClient } from '@angular/common/http';
+import { APP_CONFIG, CONFIG_TOKEN } from './config';
 
 /* function courseServiceProvider(http: HttpClient): CoursesService {
   return new CoursesService(http);
@@ -18,7 +19,10 @@ export const COURSE_SERVICE = new InjectionToken<CoursesService>('COURSE_SERVICE
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [
-    CoursesService
+    {
+      provide: CONFIG_TOKEN, useFactory: () => APP_CONFIG
+    }
+    // CoursesService
     /* {
       provide: CoursesService,
       useClass: CoursesService,
