@@ -48,6 +48,7 @@ export class CourseCardComponent implements OnInit {
         this.courseEmitter.emit({...this.course, description});
 
 
+
     }
 
 
