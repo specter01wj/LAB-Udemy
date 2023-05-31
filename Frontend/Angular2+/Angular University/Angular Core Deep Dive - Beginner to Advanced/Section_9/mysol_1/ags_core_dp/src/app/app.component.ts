@@ -19,10 +19,10 @@ export const COURSE_SERVICE = new InjectionToken<CoursesService>('COURSE_SERVICE
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [
-    {
+    /* {
       provide: CONFIG_TOKEN, useFactory: () => APP_CONFIG
-    }
-    // CoursesService
+    }, */
+    CoursesService
     /* {
       provide: CoursesService,
       useClass: CoursesService,
