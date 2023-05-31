@@ -6,7 +6,7 @@ import {HighlightedDirective} from './directives/highlighted.directive';
 import {Observable} from 'rxjs';
 import { CoursesService } from './services/courses.service';
 import { HttpClient } from '@angular/common/http';
-import { APP_CONFIG, CONFIG_TOKEN } from './config';
+import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
 
 /* function courseServiceProvider(http: HttpClient): CoursesService {
   return new CoursesService(http);
@@ -37,8 +37,10 @@ export class AppComponent implements OnInit {
   // courses = COURSES;
 
   // constructor(@Inject(COURSE_SERVICE)private coursesService: CoursesService) {
-  constructor(private coursesService: CoursesService) {
-
+  constructor(
+    private coursesService: CoursesService) {
+    // @Inject(CONFIG_TOKEN) private config: AppConfig) {
+    // console.log(config);
   }
 
   ngOnInit() {
