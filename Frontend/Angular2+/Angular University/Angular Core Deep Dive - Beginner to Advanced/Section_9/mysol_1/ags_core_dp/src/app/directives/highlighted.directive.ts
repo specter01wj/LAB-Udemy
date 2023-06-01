@@ -31,18 +31,6 @@ export class HighlightedDirective {
 
         this.isHighlighted = true;
         this.toggleHighlight.emit(this.isHighlighted);
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     @HostListener('mouseleave')
