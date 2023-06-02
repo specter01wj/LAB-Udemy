@@ -39,6 +39,7 @@ export class HighlightedDirective {
         this.toggleHighlight.emit(this.isHighlighted);
 
 
+
     }
 
     toggle() {
