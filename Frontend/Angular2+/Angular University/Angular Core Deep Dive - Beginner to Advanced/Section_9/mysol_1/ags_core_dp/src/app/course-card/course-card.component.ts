@@ -31,6 +31,7 @@ export class CourseCardComponent implements OnInit {
     cardIndex: number;
 
     @Output('courseChanged')
+
     courseEmitter = new EventEmitter<Course>();
 
 
