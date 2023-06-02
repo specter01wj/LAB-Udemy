@@ -33,6 +33,7 @@ export class CourseCardComponent implements OnInit {
     @Output('courseChanged')
 
 
+
     courseEmitter = new EventEmitter<Course>();
 
 
