@@ -31,12 +31,7 @@ export class CourseCardComponent implements OnInit {
     cardIndex: number;
 
     @Output('courseChanged')
-
-
-
-
     courseEmitter = new EventEmitter<Course>();
-
 
 
     // constructor(@Inject(COURSE_SERVICE)private coursesService: CoursesService) {
