@@ -37,19 +37,6 @@ export class HighlightedDirective {
     mouseLeave() {
         this.isHighlighted = false;
         this.toggleHighlight.emit(this.isHighlighted);
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     toggle() {
