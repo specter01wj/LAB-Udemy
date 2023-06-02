@@ -34,6 +34,7 @@ export class CourseCardComponent implements OnInit {
 
 
 
+
     courseEmitter = new EventEmitter<Course>();
 
 
