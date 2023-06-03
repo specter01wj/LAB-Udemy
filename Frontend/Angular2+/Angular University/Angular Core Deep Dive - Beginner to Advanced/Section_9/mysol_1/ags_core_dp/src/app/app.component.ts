@@ -35,18 +35,6 @@ export class AppComponent implements OnInit {
   save(course: Course) {
     this.coursesService.saveCourse(course).subscribe({
       next: val => console.log(val),
-
-
-
-
-
-
-
-
-
-
-
-
     });
   }
 
