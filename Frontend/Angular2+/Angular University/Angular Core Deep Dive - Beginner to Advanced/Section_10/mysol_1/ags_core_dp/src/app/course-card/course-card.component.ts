@@ -33,16 +33,16 @@ export class CourseCardComponent implements OnInit {
     @Output('courseChanged')
     courseEmitter = new EventEmitter<Course>();
 
-
-    // constructor(@Inject(COURSE_SERVICE)private coursesService: CoursesService) {
     constructor(private coursesService: CoursesService) {
-
     }
 
     ngOnInit() {
 
     }
 
+    onTitleChanged(newTitle: string) {
+      this.course.description = newTitle;
+    }
 
     onSaveClicked(description:string) {
         this.courseEmitter.emit({...this.course, description});
