@@ -18,29 +18,13 @@ export const COURSE_SERVICE = new InjectionToken<CoursesService>('COURSE_SERVICE
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [
-    /* {
-      provide: CONFIG_TOKEN, useFactory: () => APP_CONFIG
-    }, */
-    CoursesService
-    /* {
-      provide: CoursesService,
-      useClass: CoursesService,
-      // useFactory: courseServiceProvider,
-      // deps: [ HttpClient ]
-    } */
   ]
 })
 export class AppComponent implements OnInit {
   courses$: Observable<Course[]>;
 
-  // courses = COURSES;
-
-  // constructor(@Inject(COURSE_SERVICE)private coursesService: CoursesService) {
   constructor(
     private coursesService: CoursesService) {
-    // @Inject(CONFIG_TOKEN) private config: AppConfig) {
-    // console.log(config);
   }
 
   ngOnInit() {
