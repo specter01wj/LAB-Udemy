@@ -21,14 +21,15 @@ export const COURSE_SERVICE = new InjectionToken<CoursesService>('COURSE_SERVICE
   ]
 })
 export class AppComponent implements OnInit {
-  courses$: Observable<Course[]>;
+  courses = COURSES;
+  // courses$: Observable<Course[]>;
 
   constructor(
     private coursesService: CoursesService) {
   }
 
   ngOnInit() {
-    this.courses$ = this.coursesService.loadCourses();
+    // this.courses$ = this.coursesService.loadCourses();
   }
 
   save(course: Course) {
