@@ -22,17 +22,6 @@ export class HighlightedDirective {
     @HostBinding('class.highlighted')
     get cssClasses() {
         return this.isHighlighted;
-
-
-
-
-
-
-
-
-
-
-
     }
 
     @HostListener('mouseover', ['$event'])
