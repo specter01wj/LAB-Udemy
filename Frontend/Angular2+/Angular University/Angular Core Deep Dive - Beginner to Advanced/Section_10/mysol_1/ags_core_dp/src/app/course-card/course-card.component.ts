@@ -45,6 +45,7 @@ export class CourseCardComponent implements OnInit {
 
 
 
+
     }
 
     onSaveClicked(description:string) {
