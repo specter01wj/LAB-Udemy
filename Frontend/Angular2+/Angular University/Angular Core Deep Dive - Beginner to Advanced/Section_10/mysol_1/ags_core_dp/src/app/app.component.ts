@@ -14,7 +14,7 @@ import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  courses = COURSES;
+  // courses = COURSES;
   courses$: Observable<Course[]>;
 
   constructor(private coursesService: CoursesService) {
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   }
 
   onEditCourse() {
-    this.courses[0].description = 'New Value';
+    // this.courses[0].description = 'New Value';
   }
 
   save(course: Course) {
