@@ -22,7 +22,7 @@ import { CoursesService } from '../services/courses.service';
     selector: 'course-card',
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseCardComponent implements OnInit {
 
