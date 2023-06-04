@@ -7,6 +7,10 @@
 
 <div>
 
+  <div class="demo">
+    <button (click)="onEditCourse()" i18n>Edit Course</button>
+  </div>
+
   <div class="courses">
 
     <course-card highlighted *ngFor="let course of courses"
