@@ -1,6 +1,7 @@
 import {
     AfterContentInit,
     AfterViewInit,
+    ChangeDetectionStrategy,
     Component,
     ContentChildren,
     ElementRef,
@@ -20,7 +21,8 @@ import { CoursesService } from '../services/courses.service';
 @Component({
     selector: 'course-card',
     templateUrl: './course-card.component.html',
-    styleUrls: ['./course-card.component.css']
+    styleUrls: ['./course-card.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseCardComponent implements OnInit {
 
