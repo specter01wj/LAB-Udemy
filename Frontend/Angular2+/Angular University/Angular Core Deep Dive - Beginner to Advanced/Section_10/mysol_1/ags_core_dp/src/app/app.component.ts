@@ -24,6 +24,10 @@ export class AppComponent implements OnInit {
     this.courses$ = this.coursesService.loadCourses();
   }
 
+  onEditCourse() {
+    this.courses[1].category = 'ADVANCED';
+  }
+
   save(course: Course) {
     this.coursesService.saveCourse(course).subscribe({
       next: val => console.log(val),
