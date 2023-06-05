@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Inject, InjectionToken, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, InjectionToken, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {COURSES} from '../db-data';
 import {Course} from './model/course';
 import {CourseCardComponent} from './course-card/course-card.component';
@@ -19,13 +19,18 @@ export class AppComponent implements OnInit {
   // courses$: Observable<Course[]>;
   courses: Course[];
 
-  constructor(private coursesService: CoursesService) {
+  constructor(
+    private coursesService: CoursesService,
+    private cd: ChangeDetectorRef) {
   }
 
   ngOnInit() {
     // this.courses$ = this.coursesService.loadCourses();
     this.coursesService.loadCourses().subscribe({
-      next: courses => this.courses = courses,
+      next: courses => {
+        this.courses = courses,
+        this.cd.markForCheck();
+      }
     });
   }
 
