@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, InjectionToken, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, ElementRef, Inject, InjectionToken, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {COURSES} from '../db-data';
 import {Course} from './model/course';
 import {CourseCardComponent} from './course-card/course-card.component';
@@ -14,7 +14,7 @@ import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
   styleUrls: ['./app.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, DoCheck {
   // courses = COURSES;
   // courses$: Observable<Course[]>;
   courses: Course[];
@@ -24,13 +24,16 @@ export class AppComponent implements OnInit {
     private cd: ChangeDetectorRef) {
   }
 
+  ngDoCheck(): void {
+    this.cd.markForCheck();
+  }
+
   ngOnInit() {
     // this.courses$ = this.coursesService.loadCourses();
     this.coursesService.loadCourses().subscribe({
       next: courses => {
-        this.courses = courses,
-        console.log(this.courses);
-        this.cd.markForCheck();
+        this.courses = courses
+        // this.cd.markForCheck();
       }
     });
   }
