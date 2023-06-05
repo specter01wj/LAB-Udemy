@@ -26,12 +26,6 @@ export class AppComponent implements OnInit {
     // this.courses$ = this.coursesService.loadCourses();
     this.coursesService.loadCourses().subscribe({
       next: courses => this.courses = courses,
-
-
-
-
-
-
     });
   }
 
