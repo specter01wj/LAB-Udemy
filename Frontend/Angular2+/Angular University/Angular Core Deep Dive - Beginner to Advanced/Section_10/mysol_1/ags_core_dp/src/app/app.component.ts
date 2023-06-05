@@ -12,7 +12,7 @@ import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   // courses = COURSES;
@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
     // this.courses$ = this.coursesService.loadCourses();
     this.coursesService.loadCourses().subscribe({
       next: courses => this.courses = courses,
+
     });
   }
 
