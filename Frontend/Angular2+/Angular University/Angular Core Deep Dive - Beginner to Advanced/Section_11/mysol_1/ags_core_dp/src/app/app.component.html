@@ -11,7 +11,6 @@
     <button (click)="onEditCourse()">Edit Course</button>
   </div>
 
-  <!-- <div class="courses" *ngIf="(courses$ | async) as courses"> -->
   <div class="courses">
 
     <course-card highlighted *ngFor="let course of courses"
