@@ -41,6 +41,7 @@ export class AppComponent implements OnInit, DoCheck {
 
 
 
+
         // this.cd.markForCheck();
       }
     });
