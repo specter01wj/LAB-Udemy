@@ -34,6 +34,7 @@ export class AppComponent implements OnInit, DoCheck {
       next: courses => {
         this.courses = courses
 
+
         // this.cd.markForCheck();
       }
     });
