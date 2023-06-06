@@ -44,6 +44,7 @@ export class CourseCardComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
+      console.log('ngOnDestroy');
     }
 
     onTitleChanged(newTitle: string) {
