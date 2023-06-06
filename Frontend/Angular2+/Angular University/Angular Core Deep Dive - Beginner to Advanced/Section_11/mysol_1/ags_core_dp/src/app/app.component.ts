@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, ElementRef, Inject, InjectionToken, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, ElementRef, Inject, InjectionToken, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {COURSES} from '../db-data';
 import {Course} from './model/course';
 import {CourseCardComponent} from './course-card/course-card.component';
@@ -14,13 +14,14 @@ import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
   styleUrls: ['./app.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent implements OnInit, DoCheck {
+export class AppComponent implements OnInit, DoCheck, OnDestroy {
   courses: Course[] = COURSES;
 
   constructor(
     private coursesService: CoursesService,
     private cd: ChangeDetectorRef) {
   }
+
 
   ngDoCheck(): void {
     this.cd.markForCheck();
@@ -32,6 +33,9 @@ export class AppComponent implements OnInit, DoCheck {
         this.courses = courses
       }
     }); */
+  }
+
+  ngOnDestroy(): void {
   }
 
   onEditCourse() {
