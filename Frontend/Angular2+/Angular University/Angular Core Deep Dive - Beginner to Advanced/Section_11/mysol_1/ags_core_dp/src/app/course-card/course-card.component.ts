@@ -8,6 +8,7 @@ import {
     EventEmitter,
     Inject,
     Input,
+    OnDestroy,
     OnInit,
     Output,
     QueryList,
@@ -24,7 +25,7 @@ import { CoursesService } from '../services/courses.service';
     styleUrls: ['./course-card.component.css'],
     // changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseCardComponent implements OnInit {
+export class CourseCardComponent implements OnInit, OnDestroy {
 
     @Input()
     course: Course;
@@ -40,6 +41,9 @@ export class CourseCardComponent implements OnInit {
 
     ngOnInit() {
 
+    }
+
+    ngOnDestroy(): void {
     }
 
     onTitleChanged(newTitle: string) {
