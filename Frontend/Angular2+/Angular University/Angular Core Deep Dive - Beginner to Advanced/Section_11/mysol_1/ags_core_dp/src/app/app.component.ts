@@ -39,7 +39,14 @@ export class AppComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   onEditCourse() {
-    this.courses = [undefined];
+    // this.courses = [undefined];
+    // this.courses[0].description = 'ngOnchanges';
+    const course = this.courses[0];
+    const newCourse = {
+      ...course,
+      description: 'ngOnchanges'
+    };
+    this.courses[0] = newCourse;
   }
 
   save(course: Course) {
