@@ -33,18 +33,6 @@ export class AppComponent implements OnInit, DoCheck {
     this.coursesService.loadCourses().subscribe({
       next: courses => {
         this.courses = courses
-
-
-
-
-
-
-
-
-
-
-
-
         // this.cd.markForCheck();
       }
     });
