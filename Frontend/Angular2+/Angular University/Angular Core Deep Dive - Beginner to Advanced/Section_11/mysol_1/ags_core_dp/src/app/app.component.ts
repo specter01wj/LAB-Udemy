@@ -15,9 +15,7 @@ import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, DoCheck {
-  // courses = COURSES;
-  // courses$: Observable<Course[]>;
-  courses: Course[];
+  courses: Course[] = COURSES;
 
   constructor(
     private coursesService: CoursesService,
@@ -29,17 +27,14 @@ export class AppComponent implements OnInit, DoCheck {
   }
 
   ngOnInit() {
-    // this.courses$ = this.coursesService.loadCourses();
-    this.coursesService.loadCourses().subscribe({
+    /* this.coursesService.loadCourses().subscribe({
       next: courses => {
         this.courses = courses
-        // this.cd.markForCheck();
       }
-    });
+    }); */
   }
 
   onEditCourse() {
-    // this.courses[0].description = 'New Value';
   }
 
   save(course: Course) {
