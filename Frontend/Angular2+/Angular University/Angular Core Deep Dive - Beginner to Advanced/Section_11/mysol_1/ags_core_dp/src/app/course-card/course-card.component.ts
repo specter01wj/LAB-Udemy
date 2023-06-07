@@ -30,7 +30,8 @@ import { CoursesService } from '../services/courses.service';
     // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseCardComponent implements OnInit, OnDestroy,
-  OnChanges, AfterContentChecked, AfterViewChecked {
+  OnChanges, AfterContentChecked, AfterViewChecked,
+  AfterContentInit, AfterViewInit {
 
     @Input()
     course: Course;
@@ -61,6 +62,14 @@ export class CourseCardComponent implements OnInit, OnDestroy,
     }
 
     ngAfterViewChecked(): void {
+
+    }
+
+    ngAfterContentInit(): void {
+
+    }
+
+    ngAfterViewInit(): void {
 
     }
 
