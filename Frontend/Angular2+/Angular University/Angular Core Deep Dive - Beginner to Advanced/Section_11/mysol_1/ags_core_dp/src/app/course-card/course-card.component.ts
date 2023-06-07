@@ -6,6 +6,7 @@ import {
     ChangeDetectionStrategy,
     Component,
     ContentChildren,
+    DoCheck,
     ElementRef,
     EventEmitter,
     Inject,
@@ -31,7 +32,7 @@ import { CoursesService } from '../services/courses.service';
 })
 export class CourseCardComponent implements OnInit, OnDestroy,
   OnChanges, AfterContentChecked, AfterViewChecked,
-  AfterContentInit, AfterViewInit {
+  AfterContentInit, AfterViewInit, DoCheck {
 
     @Input()
     course: Course;
@@ -70,6 +71,10 @@ export class CourseCardComponent implements OnInit, OnDestroy,
     }
 
     ngAfterViewInit(): void {
+
+    }
+
+    ngDoCheck(): void {
 
     }
 
