@@ -25,8 +25,6 @@ export class AppComponent implements OnInit, DoCheck, OnDestroy {
 
   ngDoCheck(): void {
     this.cd.markForCheck();
-
-
   }
 
   ngOnInit() {
