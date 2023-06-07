@@ -1,0 +1,31 @@
+<div class="top-menu">
+
+  <img class="logo"
+       src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+
+</div>
+
+<div>
+
+  <div class="demo">
+    <button (click)="onEditCourse()">Edit Course</button>
+  </div>
+
+  <div class="courses" *ngIf="courses[0] as course">
+
+    <course-card highlighted
+                (courseChanged)="save($event)"
+                 [course]="course">
+
+      <course-image [src]="course.iconUrl"></course-image>
+
+    </course-card>
+
+  </div>
+
+
+</div>
+
+
+
+
