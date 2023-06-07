@@ -1,6 +1,7 @@
 import {
   AfterContentChecked,
     AfterContentInit,
+    AfterViewChecked,
     AfterViewInit,
     ChangeDetectionStrategy,
     Component,
@@ -28,7 +29,8 @@ import { CoursesService } from '../services/courses.service';
     styleUrls: ['./course-card.component.css'],
     // changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseCardComponent implements OnInit, OnDestroy, OnChanges, AfterContentChecked {
+export class CourseCardComponent implements OnInit, OnDestroy,
+  OnChanges, AfterContentChecked, AfterViewChecked {
 
     @Input()
     course: Course;
@@ -55,6 +57,10 @@ export class CourseCardComponent implements OnInit, OnDestroy, OnChanges, AfterC
     }
 
     ngAfterContentChecked(): void {
+
+    }
+
+    ngAfterViewChecked(): void {
 
     }
 
