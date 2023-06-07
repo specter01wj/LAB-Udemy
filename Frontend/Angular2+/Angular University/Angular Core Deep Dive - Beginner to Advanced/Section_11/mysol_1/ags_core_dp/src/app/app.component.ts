@@ -47,6 +47,7 @@ export class AppComponent implements OnInit, DoCheck, OnDestroy {
       description: 'ngOnchanges'
     };
     this.courses[0] = newCourse;
+
   }
 
   save(course: Course) {
