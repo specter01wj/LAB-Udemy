@@ -80,18 +80,6 @@ export class CourseCardComponent implements OnInit, OnDestroy,
 
     onTitleChanged(newTitle: string) {
       this.course.description = newTitle;
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     onSaveClicked(description:string) {
