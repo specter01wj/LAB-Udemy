@@ -14,7 +14,7 @@ import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, DoCheck, OnDestroy {
-  courses: Course[] = COURSES;
+  courses: Course[];
 
   constructor(
     private coursesService: CoursesService,
@@ -27,11 +27,11 @@ export class AppComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   ngOnInit() {
-    /* this.coursesService.loadCourses().subscribe({
+    this.coursesService.loadCourses().subscribe({
       next: courses => {
         this.courses = courses
       }
-    }); */
+    });
   }
 
   ngOnDestroy(): void {
