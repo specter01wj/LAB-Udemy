@@ -91,6 +91,7 @@ export class CourseCardComponent implements OnInit, OnDestroy,
 
 
 
+
     }
 
     onSaveClicked(description:string) {
