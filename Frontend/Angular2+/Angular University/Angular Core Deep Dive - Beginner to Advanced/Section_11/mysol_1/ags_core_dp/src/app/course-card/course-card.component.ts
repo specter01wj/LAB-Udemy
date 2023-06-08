@@ -84,6 +84,7 @@ export class CourseCardComponent implements OnInit, OnDestroy,
 
     onSaveClicked(description:string) {
         this.courseEmitter.emit({...this.course, description});
+
     }
 
 
