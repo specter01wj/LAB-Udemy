@@ -92,6 +92,7 @@ export class CourseCardComponent implements OnInit, OnDestroy,
 
 
 
+
     }
 
 
