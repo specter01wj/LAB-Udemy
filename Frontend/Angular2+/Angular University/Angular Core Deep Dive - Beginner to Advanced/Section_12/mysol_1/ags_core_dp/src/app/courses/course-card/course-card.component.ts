@@ -19,9 +19,9 @@ import {
     SimpleChanges,
     ViewEncapsulation
 } from '@angular/core';
-import {Course} from '../model/course';
+import {Course} from '../../model/course';
 import {CourseImageComponent} from '../course-image/course-image.component';
-import { CoursesService } from '../services/courses.service';
+import { CoursesService } from '../../services/courses.service';
 // import { COURSE_SERVICE } from '../app.component';
 
 @Component({
