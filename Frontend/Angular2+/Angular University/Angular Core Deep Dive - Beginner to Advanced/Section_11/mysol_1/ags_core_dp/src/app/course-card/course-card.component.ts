@@ -86,6 +86,7 @@ export class CourseCardComponent implements OnInit, OnDestroy,
         this.courseEmitter.emit({...this.course, description});
 
 
+
     }
 
 
