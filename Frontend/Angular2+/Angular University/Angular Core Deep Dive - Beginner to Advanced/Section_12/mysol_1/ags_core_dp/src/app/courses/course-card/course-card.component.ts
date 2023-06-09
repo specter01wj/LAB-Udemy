@@ -59,6 +59,7 @@ export class CourseCardComponent implements OnInit, OnDestroy,
 
 
 
+
     }
 
     ngOnDestroy(): void {
