@@ -10,5 +10,6 @@ export class FilterByCategoryPipe implements PipeTransform {
     return courses.filter((course) => course.category === category);
 
 
+
   }
 }
