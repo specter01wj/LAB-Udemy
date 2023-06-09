@@ -7,6 +7,7 @@ import { HighlightedDirective } from "./directives/highlighted.directive";
 import { NgxUnlessDirective } from "./directives/ngx-unless.directive";
 import { HttpClientModule } from "@angular/common/http";
 import { CoursesModule } from "./courses/courses.module";
+import { CustomPipesModule } from './pipes/custom-pipes.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CoursesModule } from "./courses/courses.module";
     BrowserAnimationsModule,
     HttpClientModule,
     CoursesModule,
+    CustomPipesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
