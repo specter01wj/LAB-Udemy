@@ -5,6 +5,7 @@ import { CourseCardComponent } from "./course-card/course-card.component";
 import { CourseImageComponent } from "./course-image/course-image.component";
 
 import { CoursesRoutingModule } from './courses-routing.module';
+import { CustomPipesModule } from '../pipes/custom-pipes.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CoursesRoutingModule } from './courses-routing.module';
   ],
   imports: [
     CommonModule,
-    CoursesRoutingModule
+    CoursesRoutingModule,
+    CustomPipesModule,
   ],
   exports: [
     CourseCardComponent,
