@@ -18,6 +18,7 @@ import { CustomPipesModule } from '../pipes/custom-pipes.module';
     CoursesRoutingModule,
 
 
+
     CustomPipesModule,
   ],
   exports: [
