@@ -20,6 +20,7 @@ import { CustomPipesModule } from '../pipes/custom-pipes.module';
 
 
 
+
     CustomPipesModule,
   ],
   exports: [
