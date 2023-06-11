@@ -20,6 +20,7 @@ import { CustomPipesModule } from './pipes/custom-pipes.module';
     BrowserAnimationsModule,
     HttpClientModule,
     CoursesModule,
+
     CustomPipesModule,
   ],
   providers: [],
