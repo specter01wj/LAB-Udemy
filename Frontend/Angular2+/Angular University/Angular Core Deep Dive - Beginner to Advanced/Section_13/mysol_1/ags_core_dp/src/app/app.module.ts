@@ -21,6 +21,7 @@ import { CustomPipesModule } from './pipes/custom-pipes.module';
     HttpClientModule,
     CoursesModule,
 
+
     CustomPipesModule,
   ],
   providers: [],
