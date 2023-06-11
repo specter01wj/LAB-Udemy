@@ -23,6 +23,7 @@ import { CustomPipesModule } from '../pipes/custom-pipes.module';
     CourseImageComponent,
 
 
+
   ]
 })
 export class CoursesModule { }
