@@ -21,20 +21,6 @@ import { CustomPipesModule } from '../pipes/custom-pipes.module';
   exports: [
     CourseCardComponent,
     CourseImageComponent,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   ]
 })
 export class CoursesModule { }
