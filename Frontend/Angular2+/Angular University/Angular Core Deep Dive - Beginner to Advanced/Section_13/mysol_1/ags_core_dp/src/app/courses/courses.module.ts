@@ -33,6 +33,7 @@ import { CustomPipesModule } from '../pipes/custom-pipes.module';
 
 
 
+
   ]
 })
 export class CoursesModule { }
