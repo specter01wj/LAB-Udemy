@@ -30,6 +30,7 @@ export class AppComponent implements OnInit, DoCheck, OnDestroy {
     this.coursesService.loadCourses().subscribe({
       next: courses => {
         this.courses = courses
+
       }
     });
   }
