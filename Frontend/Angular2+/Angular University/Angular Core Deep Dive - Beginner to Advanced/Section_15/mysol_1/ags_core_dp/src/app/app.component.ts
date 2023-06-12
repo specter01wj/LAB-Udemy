@@ -16,9 +16,10 @@ import { createCustomElement } from '@angular/elements';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, DoCheck, OnDestroy {
-  courses: Course[] = COURSES;
+  // courses: Course[] = COURSES;
+  courses: Course[];
 
-  coursesTotal = this.courses.length;
+  // coursesTotal = this.courses.length;
 
   constructor(
     private coursesService: CoursesService,
@@ -32,8 +33,8 @@ export class AppComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   ngOnInit() {
-    const htmlElement = createCustomElement(CourseTitleComponent, {injector:this.injector});
-    customElements.define('course-title', htmlElement);
+    /* const htmlElement = createCustomElement(CourseTitleComponent, {injector:this.injector});
+    customElements.define('course-title', htmlElement); */
     this.coursesService.loadCourses().subscribe({
       next: courses => {
         this.courses = courses

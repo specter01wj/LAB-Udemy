@@ -1,7 +1,10 @@
 <div class="course-card" *ngIf="course" #container>
 
-  <div class="course-title">
+  <!-- <div class="course-title">
     {{ cardIndex || '' + ' ' + course.description }}
+  </div> -->
+  <div class="course-title">
+    <course-title [title]="course.description"></course-title>
   </div>
 
   <ng-content select="course-image"
@@ -11,12 +14,12 @@
     Edit Title: <input #courseTitle [value]="course.description" (keyup)="onTitleChanged(courseTitle.value)">
   </div>
 
-  <!-- <div class="course-category" [ngSwitch]="course.category">
+  <div class="course-category" [ngSwitch]="course.category">
     <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
     <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
     <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
-  </div> -->
-  <div class="category" i18n>
+  </div>
+  <!-- <div class="category" i18n>
       {
           course.category,
           select,
@@ -24,7 +27,7 @@
           INTERMEDIATE {Intermediate}
           ADVANCED {Advanced}
       }
-  </div>
+  </div> -->
 
   <button (click)="onSaveClicked(courseTitle.value)">Save Course</button>
 
