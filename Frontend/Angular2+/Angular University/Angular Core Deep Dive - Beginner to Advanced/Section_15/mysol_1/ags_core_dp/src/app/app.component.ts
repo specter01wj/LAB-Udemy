@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, ElementRef, Inject, InjectionToken, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, ElementRef, Inject, InjectionToken, Injector, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {COURSES} from '../db-data';
 import {Course} from './model/course';
 import {HighlightedDirective} from './directives/highlighted.directive';
@@ -6,6 +6,8 @@ import {Observable} from 'rxjs';
 import { CoursesService } from './services/courses.service';
 import { HttpClient } from '@angular/common/http';
 import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
+import { CourseTitleComponent } from './courses/course-title/course-title.component';
+import { createCustomElement } from '@angular/elements';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +22,8 @@ export class AppComponent implements OnInit, DoCheck, OnDestroy {
 
   constructor(
     private coursesService: CoursesService,
-    private cd: ChangeDetectorRef) {
+    private cd: ChangeDetectorRef,
+    private injector: Injector) {
   }
 
 
@@ -29,6 +32,8 @@ export class AppComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   ngOnInit() {
+    const htmlElement = createCustomElement(CourseTitleComponent, {injector:this.injector});
+    customElements.define('course-title', htmlElement);
     this.coursesService.loadCourses().subscribe({
       next: courses => {
         this.courses = courses
