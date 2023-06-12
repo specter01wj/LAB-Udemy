@@ -15,6 +15,7 @@ import { CustomPipesModule } from './pipes/custom-pipes.module';
     HighlightedDirective,
     NgxUnlessDirective,
 
+
   ],
   imports: [
     BrowserModule,
