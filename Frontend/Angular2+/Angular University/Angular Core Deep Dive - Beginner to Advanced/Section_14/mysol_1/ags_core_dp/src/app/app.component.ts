@@ -14,7 +14,9 @@ import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, DoCheck, OnDestroy {
-  courses: Course[];
+  courses: Course[] = COURSES;
+
+  coursesTotal = this.courses.length;
 
   constructor(
     private coursesService: CoursesService,
