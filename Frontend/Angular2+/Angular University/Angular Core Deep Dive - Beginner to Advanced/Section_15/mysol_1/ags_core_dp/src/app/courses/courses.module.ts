@@ -6,12 +6,14 @@ import { CourseImageComponent } from "./course-image/course-image.component";
 
 import { CoursesRoutingModule } from './courses-routing.module';
 import { CustomPipesModule } from '../pipes/custom-pipes.module';
+import { CourseTitleComponent } from './course-title/course-title.component';
 
 
 @NgModule({
   declarations: [
     CourseCardComponent,
     CourseImageComponent,
+    CourseTitleComponent,
   ],
   imports: [
     CommonModule,
