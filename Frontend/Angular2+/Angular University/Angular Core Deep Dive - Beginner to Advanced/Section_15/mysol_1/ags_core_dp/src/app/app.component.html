@@ -1,0 +1,34 @@
+<div class="top-menu">
+
+  <img class="logo"
+       src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+
+</div>
+
+<div>
+
+  <div class="demo">
+    <button (click)="onEditCourse()" i18n>Edit Course</button>
+    <div i18n>{ coursesTotal, plural, =0 {No courses available}
+                =1 {One course is available}
+                other {A total of {{coursesTotal}} courses are available. } }</div>
+  </div>
+
+  <div class="courses">
+
+    <course-card highlighted  *ngFor="let course of courses | filterByCategory: 'BEGINNER'"
+                (courseChanged)="save($event)"
+                 [course]="course">
+
+      <course-image [src]="course.iconUrl"></course-image>
+
+    </course-card>
+
+  </div>
+
+
+</div>
+
+
+
+
