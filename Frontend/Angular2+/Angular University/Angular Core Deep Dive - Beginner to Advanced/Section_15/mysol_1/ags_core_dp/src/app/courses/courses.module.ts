@@ -21,6 +21,7 @@ import { CourseTitleComponent } from './course-title/course-title.component';
     CustomPipesModule,
 
 
+
   ],
   exports: [
     CourseCardComponent,
