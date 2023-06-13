@@ -22,6 +22,7 @@ import { CourseTitleComponent } from './course-title/course-title.component';
 
 
 
+
   ],
   exports: [
     CourseCardComponent,
