@@ -19,6 +19,7 @@ import { CourseTitleComponent } from './course-title/course-title.component';
     CommonModule,
     CoursesRoutingModule,
     CustomPipesModule,
+
   ],
   exports: [
     CourseCardComponent,
