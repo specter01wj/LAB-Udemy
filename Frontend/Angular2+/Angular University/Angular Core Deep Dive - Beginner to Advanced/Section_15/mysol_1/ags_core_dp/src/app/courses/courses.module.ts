@@ -20,6 +20,7 @@ import { CourseTitleComponent } from './course-title/course-title.component';
     CoursesRoutingModule,
     CustomPipesModule,
 
+
   ],
   exports: [
     CourseCardComponent,
