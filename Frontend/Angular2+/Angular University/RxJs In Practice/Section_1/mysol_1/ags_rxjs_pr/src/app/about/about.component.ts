@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Observable, fromEvent, interval, timer } from 'rxjs';
+import { Observable, fromEvent, interval, noop, timer } from 'rxjs';
 
 @Component({
   selector: 'about',
@@ -47,6 +47,14 @@ export class AboutComponent implements OnInit {
             observer.error(err);
           })
       });
+
+      http$.subscribe(
+        courses => {
+          console.log(courses);
+        },
+        noop,
+        () => console.log('completed')
+      )
 
   }
 
