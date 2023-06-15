@@ -27,6 +27,9 @@ export class AboutComponent implements OnInit {
       },
       err => {
         console.log(err);
+      },
+      () => {
+        console.log('completed');
       });
 
   }
