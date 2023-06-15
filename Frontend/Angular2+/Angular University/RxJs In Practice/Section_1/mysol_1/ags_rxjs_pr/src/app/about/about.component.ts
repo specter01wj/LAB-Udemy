@@ -21,9 +21,13 @@ export class AboutComponent implements OnInit {
 
     const click$ = fromEvent(document, 'click');
 
-    click$.subscribe( evt => {
-      console.log(evt);
-    });
+    click$.subscribe(
+      evt => {
+        console.log(evt);
+      },
+      err => {
+        console.log(err);
+      });
 
   }
 
