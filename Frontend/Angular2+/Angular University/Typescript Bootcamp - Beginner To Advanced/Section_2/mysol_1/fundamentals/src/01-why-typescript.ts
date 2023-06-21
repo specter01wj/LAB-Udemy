@@ -1,20 +1,22 @@
 
 const courseName = "Typescript Bootcamp";
 
-debugger;
+// debugger;
 
 //comment
 
 if (courseName) {
 
-    const subtitle = "Learn the language fundamentals, build practical projects";
+    var subtitle = "Learn the language fundamentals, build practical projects";
 
     printCourseName(courseName);
 }
 
+// console.log(subtitle);
+
 function printCourseName(name: string) {
 
-    debugger;
+    // debugger;
 
     console.log("The course name is " + name.toUpperCase());
 
