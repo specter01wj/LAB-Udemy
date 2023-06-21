@@ -52,6 +52,7 @@ export class AboutComponent implements OnInit {
         courses => {
           console.log(courses);
 
+
         },
         noop,
         () => console.log('completed')
