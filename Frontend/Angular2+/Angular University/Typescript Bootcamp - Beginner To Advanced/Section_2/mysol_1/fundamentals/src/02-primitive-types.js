@@ -1,11 +1,8 @@
-
 // primitive types: number
-const lessonsCount = 10;
-
-const total = lessonsCount + 10;
-
+var lessonsCount = 10;
+var total = lessonsCount + 10;
 console.log("total =", total);
-/* 
+/*
 // primitive types: string
 let title = "Typescript Bootcamp";
 
@@ -47,19 +44,3 @@ let course = {
 console.log("type of course is " + typeof course);
 
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
