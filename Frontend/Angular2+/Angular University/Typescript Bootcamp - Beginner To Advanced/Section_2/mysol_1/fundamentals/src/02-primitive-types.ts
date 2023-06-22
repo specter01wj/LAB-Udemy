@@ -14,14 +14,14 @@ let subtitle = "Learn the language fundamentals, build practical projects";
 let fullTitle = `Full title:${title}: ${subtitle}`;
 
 console.log(`Full title: ${fullTitle}`);
-/* 
+
 // primitive types: boolean
 const published = true;
 
 if (published) {
     console.log("The course is published.");
 }
-
+/* 
 printCourse(title, subtitle, lessonsCount);
 
 function printCourse(title:string, subtitle:string, lessonsCount:number) {
