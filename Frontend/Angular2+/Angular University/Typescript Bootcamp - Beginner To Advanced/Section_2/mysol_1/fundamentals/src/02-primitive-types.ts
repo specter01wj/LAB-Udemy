@@ -20,18 +20,6 @@ const published = true;
 
 if (published) {
     console.log("The course is published.");
-
-
-
-
-
-
-
-
-
-
-
-    
 }
 /* 
 printCourse(title, subtitle, lessonsCount);
