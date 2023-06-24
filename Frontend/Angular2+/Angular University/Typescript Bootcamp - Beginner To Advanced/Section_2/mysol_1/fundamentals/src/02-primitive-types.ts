@@ -19,7 +19,7 @@ console.log(`Full title: ${fullTitle}`);
 const published = true;
 
 if (published) {
-    console.log("The course is published.");
+  console.log("The course is published.");
 }
 
 printCourse(title, subtitle, lessonsCount);
