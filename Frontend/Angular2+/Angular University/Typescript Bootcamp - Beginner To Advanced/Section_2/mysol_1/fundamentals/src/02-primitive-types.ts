@@ -21,7 +21,7 @@ const published = true;
 if (published) {
     console.log("The course is published.");
 }
-/* 
+
 printCourse(title, subtitle, lessonsCount);
 
 function printCourse(title:string, subtitle:string, lessonsCount:number) {
@@ -29,7 +29,7 @@ function printCourse(title:string, subtitle:string, lessonsCount:number) {
     let fullTitle = title + subtitle;
 
 }
-
+/* 
 // author: {
 //     firstName: "Vasco",
 //         lastName: "Cavalheiro"
