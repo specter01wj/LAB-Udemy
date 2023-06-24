@@ -24,10 +24,8 @@ if (published) {
 
 printCourse(title, subtitle, lessonsCount);
 
-function printCourse(title:string, subtitle:string, lessonsCount:number) {
-
-    let fullTitle = title + subtitle;
-
+function printCourse(title: string, subtitle: string, lessonsCount: number) {
+  let fullTitle = title + subtitle;
 }
 /* 
 // author: {
