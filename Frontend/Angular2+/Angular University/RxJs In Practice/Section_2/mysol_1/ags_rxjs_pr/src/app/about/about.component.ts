@@ -40,6 +40,7 @@ export class AboutComponent implements OnInit {
             return response.json();
 
 
+
           })
           .then(body => {
             observer.next(body);
