@@ -27,7 +27,7 @@ printCourse(title, subtitle, lessonsCount);
 function printCourse(title: string, subtitle: string, lessonsCount: number) {
   let fullTitle = title + subtitle;
 }
-/* 
+
 // author: {
 //     firstName: "Vasco",
 //         lastName: "Cavalheiro"
@@ -44,7 +44,6 @@ let course = {
 
 console.log("type of course is " + typeof course);
 
- */
 
 
 
