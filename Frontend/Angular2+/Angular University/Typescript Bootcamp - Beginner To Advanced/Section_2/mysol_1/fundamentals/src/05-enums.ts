@@ -5,9 +5,22 @@ enum CourseType {
   HIDDEN = "HIDDEN",
 }
 
+enum CourseType2 {
+  FREE,
+  PREMIUM,
+  PRIVATE,
+  HIDDEN,
+}
+
 const course = {
   title: "Typescript Bootcamp",
   type: CourseType.HIDDEN,
 };
 
+const course2 = {
+  title: "Typescript Bootcamp2",
+  type: CourseType.HIDDEN,
+};
+
 console.log(course);
+console.log(course2);
