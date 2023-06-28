@@ -7,3 +7,8 @@ const keys: (number | string)[] = [1000, "Hello"];
 let courseId: number | null = 1000;
 
 courseId = null;
+
+
+let courseId2 : number | null;
+
+courseId2!.toString();
