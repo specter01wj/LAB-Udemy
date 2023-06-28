@@ -19,7 +19,7 @@ const course = {
 
 const course2 = {
   title: "Typescript Bootcamp2",
-  type: CourseType.HIDDEN,
+  type: CourseType2.HIDDEN,
 };
 
 console.log(course);
