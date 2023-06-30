@@ -13,6 +13,7 @@ export const COURSE = {
 
 
 
+
   
   lessonsCount: 10,
 };
