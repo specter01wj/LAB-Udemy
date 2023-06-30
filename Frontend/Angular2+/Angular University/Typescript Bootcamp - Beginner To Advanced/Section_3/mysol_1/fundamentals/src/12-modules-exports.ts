@@ -7,6 +7,7 @@ export const COURSE = {
   subtitle: "Learn the language fundamentals, build practical projects",
 
 
+
   
   lessonsCount: 10,
 };
