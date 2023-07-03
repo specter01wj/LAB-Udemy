@@ -17,6 +17,9 @@ var course = {
     },
 };
 var newCourse = __assign({}, course);
+var newCourse_2;
+Object.assign(newCourse_2, course);
 console.log(newCourse);
 course.stats.lessonsCount = 100;
 console.log(newCourse);
+console.log(newCourse_2);
