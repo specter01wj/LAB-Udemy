@@ -12,7 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 var course = {
     title: "Typescript Bootcamp",
     subtitle: "Learn the language fundamentals, build practical projects",
-    lessonsCount: 10
+    lessonsCount: 10,
 };
 printCourse(course);
 function printCourse(course) {
