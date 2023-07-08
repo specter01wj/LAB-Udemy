@@ -56,6 +56,7 @@ export class AboutComponent implements OnInit {
 
 
 
+
         },
         noop,
         () => console.log('completed')
