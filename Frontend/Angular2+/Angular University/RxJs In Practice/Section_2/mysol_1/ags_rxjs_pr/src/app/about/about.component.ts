@@ -41,6 +41,7 @@ export class AboutComponent implements OnInit {
           })
           .then(body => {
             observer.next(body);
+
             observer.complete();
           })
           .catch(err => {
