@@ -38,18 +38,6 @@ export class AboutComponent implements OnInit {
         fetch('/api/courses')
           .then(response => {
             return response.json();
-
-
-
-
-
-
-
-
-
-
-
-
           })
           .then(body => {
             observer.next(body);
