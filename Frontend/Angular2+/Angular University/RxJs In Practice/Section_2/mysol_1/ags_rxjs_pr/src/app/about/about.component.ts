@@ -47,6 +47,7 @@ export class AboutComponent implements OnInit {
             observer.error(err);
 
 
+
           })
       });
 
