@@ -51,18 +51,6 @@ export class AboutComponent implements OnInit {
       http$.subscribe(
         courses => {
           console.log(courses);
-
-
-
-
-
-
-
-
-
-
-
-
         },
         noop,
         () => console.log('completed')
