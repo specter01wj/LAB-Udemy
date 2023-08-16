@@ -43,6 +43,7 @@ export class AboutComponent implements OnInit {
             observer.next(body);
 
 
+
             observer.complete();
           })
           .catch(err => {
