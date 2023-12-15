@@ -1,0 +1,2 @@
+- Q1: Define a UserInterface with id: string, name: string, age: number and method getMessage that returns string.
+- Q2: Write a usage example of this interface
