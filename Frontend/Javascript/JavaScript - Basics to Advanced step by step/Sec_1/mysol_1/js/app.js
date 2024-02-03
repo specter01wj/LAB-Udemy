@@ -1,32 +1,35 @@
+$( document ).ready(function() {
 
-setInterval(function(){
+  console.clear();
 
-  var currentTime = new Date();
-  var hours = currentTime.getHours();
-  var minutes = currentTime.getMinutes();
-  var seconds = currentTime.getSeconds();
-  var period = 'AM';
+  var firstNum = 10;
+  console.log(firstNum);
 
-  if( hours >= 12 ) {
-    period = 'PM';
-  }
+  var secondNum = 15;
+  console.log(secondNum);
 
-  if( hours > 12 ) {
-    hours -= 12;
-  }
+  // Camel case (Recommended for JS)
+  var firstNum;
+  // Pascal case
+  var FirstNum;
+  // Snake case
+  var first_num;
 
-  if( seconds < 10 ) {
-    seconds = '0' + seconds;
-  }
+  // Rules for naming JS variables
+  // - Name can contain letters, digits, _ and $
+  var mySubject1, math$
+  // - Name cannot start with a digit
+  var maths;
+  // - Name can start with an _ or $
+  var _subjectmarks, $rankInClass;
+  // - Names are case sentitive
+  var x, X;
+  // - Names cannnot be reserved keywords
+  var varName;
 
-  if( minutes < 10 ) {
-    minutes = '0' + minutes;
-  }
 
-  var clockTime = hours + ':' + minutes + ':' + seconds + ' ' + period;
 
-  var clock = $('#clock').html(clockTime);
+  $('#output').html('Length is: ' + secondNum);
 
-  //clock.innerText = clockTime;
 
-}, 1000);
+});
