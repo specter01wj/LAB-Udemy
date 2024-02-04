@@ -25,13 +25,6 @@ $( document ).ready(function() {
   // - Names are case sentitive
   var x, X;
   // - Names cannnot be reserved keywords
-
-
-
-
-
-
-  
   var varName;
 
 
