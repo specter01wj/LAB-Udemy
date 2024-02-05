@@ -1,35 +1,41 @@
 $( document ).ready(function() {
 
-  console.clear();
+  console.clear()
 
-  var firstNum = 10;
-  console.log(firstNum);
+  var num1 = 10 // Integer
+  var num2 = 10.9 // Decimal Number
 
-  var secondNum = 15;
-  console.log(secondNum);
+  console.log(typeof(num1))
+  console.log(typeof(num2))
 
-  // Camel case (Recommended for JS)
-  var firstNum;
-  // Pascal case
-  var FirstNum;
-  // Snake case
-  var first_num;
+  //Addition
+  var num3 = 15;
+  var sum = num3 + num1 + num2;
+  console.log(sum);
 
-  // Rules for naming JS variables
-  // - Name can contain letters, digits, _ and $
-  var mySubject1, math$
-  // - Name cannot start with a digit
-  var maths;
-  // - Name can start with an _ or $
-  var _subjectmarks, $rankInClass;
-  // - Names are case sentitive
-  var x, X;
-  // - Names cannnot be reserved keywords
-  var varName;
+  //Substraction
+  var diff = num3 - num1;
+  console.log(diff);
+
+  //Multiplication
+  var mul = num3 * num1;
+  console.log(mul);
+
+  // Division
+  var div = num3 / num1;
+  console.log(div);
+
+  var divByZero = num3 / 0;
+  console.log(divByZero);
+  console.log(typeof(divByZero));
+
+  var mulByString = num3 * 'A';
+  console.log(mulByString);
+  console.log(typeof(mulByString));
 
 
 
-  $('#output').html('Length is: ' + secondNum);
+  $('#output').html('Length is: ' + mulByString);
 
 
 });
