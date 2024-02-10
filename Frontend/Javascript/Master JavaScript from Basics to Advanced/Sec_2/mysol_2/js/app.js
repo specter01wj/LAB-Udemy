@@ -23,7 +23,7 @@ $( document ).ready(function() {
 
   // toFixed() takes floating number and rounds it off to given position
 
-  var strFloat = 87.987653;
+  var strFloat = 87.587653;
   console.log(strFloat.toFixed())
   console.log(strFloat.toFixed(2))
   console.log(strFloat.toFixed(5))
