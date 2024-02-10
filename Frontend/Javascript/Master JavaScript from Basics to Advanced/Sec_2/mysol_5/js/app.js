@@ -19,8 +19,9 @@ $( document ).ready(function() {
   // +
   console.log(firstName + ' ' + lastName + ' ' + exampleString);
 
-
-
+  // trim()
+  var extraSpaceString = "      mystring     ";
+  console.log(extraSpaceString.trim());
 
 
 
