@@ -10,7 +10,11 @@ $( document ).ready(function() {
   // toLowerCase()
   console.log(exampleString.toLowerCase());
 
-
+  // concat()
+  var firstName = "Javascript";
+  var lastNAme = "Playground";
+  console.log(exampleString.concat(firstName));
+  console.log(exampleString.concat(firstName, lastNAme));
 
 
 
