@@ -26,6 +26,12 @@ $( document ).ready(function() {
   console.log(myFirstString.substr(21, 10))
   console.log(myFirstString.substr(21))
 
+  // substring()
+  console.log('substring()---------');
+  console.log(myFirstString.substring(0, 4));
+  console.log(myFirstString.substring(21, 31));
+  console.log(myFirstString.substring(21));
+
   $('#output').html('Output is: ' + myFirstString);
 
 
