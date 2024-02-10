@@ -27,6 +27,10 @@ $( document ).ready(function() {
   var charAtExampleString = "This is my test string";
   console.log(charAtExampleString.charAt(5));
 
+  // split()
+  var sampleString = "This is my sample string";
+  console.log(sampleString.split(' '));
+
 
 
   $('#output').html('Output is: ' + exampleString);
