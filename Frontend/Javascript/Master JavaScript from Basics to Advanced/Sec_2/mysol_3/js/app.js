@@ -1,37 +1,28 @@
 $( document ).ready(function() {
 
   console.clear()
-  var num1 = 10;
-  var num2 = 20.3;
 
-  // toString() number as input and returns a string
-  console.log(num1.toString())
-  console.log(num2.toString())
+  var myFirstString = "I love JavaScript"
 
-  var strNum1 = "10";
-  var strNum2 = "11.5";
-  var strNum3 = "ABC";
+  console.log(typeof(myFirstString))
 
-  // parseInt() string numeral as input and returns a number
-  console.log(parseInt(strNum1));
-  console.log(parseInt(strNum2));
-  console.log(parseInt(strNum3));
+  var mySecondString = 'We will learn JavaScript together'
+  console.log(typeof(mySecondString))
 
-  // parseFloat() string numeral as an input and returns a foating
-  console.log(parseFloat(strNum2))
-  console.log(parseFloat(strNum3))
+  //What if my string contains a double quote
+  var doubleQuotesString = "This is a \"JavaScript\" string"
+  console.log(doubleQuotesString)
 
-  // toFixed() takes floating number and rounds it off to given position
+  // What if my string contains a single quote
+  var singleQuotesString = 'This is a \'JavaScript\' string'
+  console.log(singleQuotesString)
 
-  var strFloat = 87.587653;
-  console.log(strFloat.toFixed())
-  console.log(strFloat.toFixed(2))
-  console.log(strFloat.toFixed(5))
-  console.log(strFloat.toFixed(10))
+  var doubleQuotesString2 = "This is a 'JavaScript' string"
+  var singleQuotesString2 = 'This is a "JavaScript" string'
 
 
 
-  $('#output').html('Output is: ' + strFloat);
+  $('#output').html('Output is: ' + doubleQuotesString2);
 
 
 });
