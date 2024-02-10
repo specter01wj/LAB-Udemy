@@ -23,6 +23,10 @@ $( document ).ready(function() {
   var extraSpaceString = "      mystring     ";
   console.log(extraSpaceString.trim());
 
+  // charAt()
+  var charAtExampleString = "This is my test string";
+  console.log(charAtExampleString.charAt(5));
+
 
 
   $('#output').html('Output is: ' + exampleString);
