@@ -7,6 +7,17 @@ $( document ).ready(function() {
   // toUpperCase()
   console.log(exampleString.toUpperCase());
 
+  // toLowerCase()
+  console.log(exampleString.toLowerCase());
+
+
+
+
+
+
+
+
+
 
   $('#output').html('Output is: ' + exampleString);
 
