@@ -12,11 +12,12 @@ $( document ).ready(function() {
 
   // concat()
   var firstName = "Javascript";
-  var lastNAme = "Playground";
+  var lastName = "Playground";
   console.log(exampleString.concat(firstName));
-  console.log(exampleString.concat(firstName, lastNAme));
+  console.log(exampleString.concat(' ', firstName, ' ', lastName));
 
-
+  // +
+  console.log(firstName + ' ' + lastName + ' ' + exampleString);
 
 
 
