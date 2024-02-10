@@ -31,6 +31,12 @@ $( document ).ready(function() {
   var sampleString = "This is my sample string";
   console.log(sampleString.split(' '));
 
+  var sampleString2 = "This, is, my, sample, string";
+  console.log(sampleString2.split(','));
+
+  var sampleString3 = "This is my sample string";
+  console.log(sampleString3.split());
+
 
 
   $('#output').html('Output is: ' + exampleString);
