@@ -2,27 +2,31 @@ $( document ).ready(function() {
 
   console.clear()
 
-  var myFirstString = "I love JavaScript"
+  var myFirstString = "This is a string for Javascript string functions, Javascript"
 
-  console.log(typeof(myFirstString))
+  // Returns the length of the string
+  console.log(myFirstString.length)
 
-  var mySecondString = 'We will learn JavaScript together'
-  console.log(typeof(mySecondString))
+  // Find index of a string inside another string
+  console.log(myFirstString.indexOf('Javascript'))
+  console.log(myFirstString.indexOf('This'))
 
-  //What if my string contains a double quote
-  var doubleQuotesString = "This is a \"JavaScript\" string"
-  console.log(doubleQuotesString)
+  // Find LAST index of a string inside another string
+  console.log(myFirstString.lastIndexOf('Javascript'))
+  console.log(myFirstString.lastIndexOf('This'))
 
-  // What if my string contains a single quote
-  var singleQuotesString = 'This is a \'JavaScript\' string'
-  console.log(singleQuotesString)
+  // Get a part of our string slice(start, end)
+  console.log(myFirstString.slice(0, 4))
+  console.log(myFirstString.slice(21, 31))
+  console.log(myFirstString.slice(-10))
+  console.log(myFirstString.slice(5))
 
-  var doubleQuotesString2 = "This is a 'JavaScript' string"
-  var singleQuotesString2 = 'This is a "JavaScript" string'
+  // Get sub string function - substr(startPos, length)
+  console.log(myFirstString.substr(0, 4))
+  console.log(myFirstString.substr(21, 10))
+  console.log(myFirstString.substr(21))
 
-
-
-  $('#output').html('Output is: ' + doubleQuotesString2);
+  $('#output').html('Output is: ' + myFirstString);
 
 
 });
