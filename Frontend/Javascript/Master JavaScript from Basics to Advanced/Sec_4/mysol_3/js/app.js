@@ -2,37 +2,26 @@ $( document ).ready(function() {
 
   console.clear()
 
-  var num1 = 15;
-  var num2 = 30;
+  if(5 == '5') {console.log(true)}
+  if(5 === 5) {console.log(true)} else {console.log(false)}
+  if(5 != '5') {console.log(true)} else {console.log(false)}
+  if(5 !== '5') {console.log(true)} else {console.log(false)}
+  if(15 < 15) {console.log(true)} else {console.log(false)}
+  if(15 <= 15 ) {console.log(true)} else {console.log(false)}
+  if(15 > 15) {console.log(true)} else {console.log(false)}
+  if(15 >= 15) {console.log(true)} else {console.log(false)}
 
-  // =
-  num1 = 20;
+  //Logical Operators &&, ||, !
+  if(5 > 10 && 10 > 15) {console.log(true)} else {console.log(false)}
+  console.log(5 < 10 || 10 < 15)
+  console.log(!(5 < 10))
 
-  // +=
-  num1 += 10; // num1 = num1 + 10
-  num1 += num2 // num1 = num1 + num2
-  console.log(num1)
-
-  // -=
-  num1 -= 10; //num1 = num1 - 10
-  num1 -= num2 //num1 = num1 - num2
-  console.log(num1)
-
-  // *=
-  num1 *= 20 //num1 = num1 * 20
-  console.log(num1)
-
-  // /=
-  num1 /= 10 //num1 = num1 / 10
-  console.log(num1)
-
-  // %=
-  num1 %= 10 //num1 = num1 % 10
-  console.log(num1)
+  //Ternary Operator (expression) ? a : b
+  20 < 3 ? console.log(true) : console.log(false)
 
 
 
-  $('#output').html('Length is: ' + num1);
+  $('#output').html('Length is: ' + '');
 
 
 });
