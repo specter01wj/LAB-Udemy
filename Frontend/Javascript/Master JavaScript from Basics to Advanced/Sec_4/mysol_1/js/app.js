@@ -24,6 +24,9 @@ $( document ).ready(function() {
   console.log(num2 % num1)
 
   //Increment - Post and Pre
+  console.log('Increment - Post and Pre')
+  console.log(++num1)
+  console.log(num1)
   console.log(num1++)
   console.log(num1++)
   console.log(num1)
