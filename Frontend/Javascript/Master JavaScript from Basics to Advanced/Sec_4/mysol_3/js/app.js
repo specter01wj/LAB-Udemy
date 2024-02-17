@@ -12,11 +12,15 @@ $( document ).ready(function() {
   if(15 >= 15) {console.log(true)} else {console.log(false)}
 
   //Logical Operators &&, ||, !
-  if(5 > 10 && 10 > 15) {console.log(true)} else {console.log(false)}
-  console.log(5 < 10 || 10 < 15)
-  console.log(!(5 < 10))
+  console.log('Logical Operators &&, ||, !');
+  if(5 > 10 && 10 > 15) {console.log(true)} else {console.log(false)};
+  console.log(5 < 10 || 10 < 15);
+  console.log(5 < 10 || 20 < 15);
+  console.log(5 > 10 || 10 < 15);
+  console.log(!(5 < 10));
 
   //Ternary Operator (expression) ? a : b
+  console.log('Ternary Operator (expression) ? a : b');
   20 < 3 ? console.log(true) : console.log(false)
 
 
