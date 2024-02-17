@@ -16,3 +16,8 @@ user = {
     return `${this.name} is age: ${this.age}`;
   }
 }
+
+const appDiv = document.getElementById('app');
+if (appDiv) {
+  appDiv.innerHTML = user.getMessage();
+}
