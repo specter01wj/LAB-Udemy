@@ -5,5 +5,5 @@ const getItem = (item: number | undefined) => {
 
 const appDiv = document.getElementById('app');
 if (appDiv) {
-  appDiv.innerHTML = getItem.toString();
+  appDiv.innerHTML = getItem(140);
 }
