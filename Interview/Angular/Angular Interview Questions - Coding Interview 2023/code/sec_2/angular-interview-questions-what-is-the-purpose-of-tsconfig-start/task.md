@@ -1,0 +1,2 @@
+- Q1: What is tsconfig.json?
+- Q2: What does this options do? target, module, moduleResolution, noImplicitAny.
