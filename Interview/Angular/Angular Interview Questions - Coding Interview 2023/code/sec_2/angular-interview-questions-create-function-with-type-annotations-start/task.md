@@ -1,0 +1,4 @@
+- Q1: Create a UserInterface with id: string, name: string, age: number and method getMessage that returns string.
+- Q2: Create ProfileInterface with name, profileUrl, isActive
+- Q3: Create function which transforms UserInterface to ProfileInterface. The profileUrl is `/profile/${name}`
+- Q4: Add optional parameter isActive. Profile must be active if parameter is not provided
