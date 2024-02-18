@@ -1,0 +1,1 @@
+- Q1: Why any type is bad?
