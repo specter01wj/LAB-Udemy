@@ -1,0 +1,3 @@
+- Q1: What is an enum?
+- Q2: Write an enum example
+- Q3: Why are they so good?
