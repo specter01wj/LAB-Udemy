@@ -1,0 +1,2 @@
+- Q1: What is an elvis operator?
+- Q2: Write a common use case of elvis operator.
