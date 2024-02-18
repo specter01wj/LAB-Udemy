@@ -1,0 +1,2 @@
+- Q1: What is void type? Write an example
+- Q2: What is unknown type? Write an example
