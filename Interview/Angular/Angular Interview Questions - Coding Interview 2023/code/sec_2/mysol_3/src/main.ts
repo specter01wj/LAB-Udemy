@@ -1,4 +1,9 @@
 const getItem = (item: number | undefined) => {
-  return item.toString();
+  // return (<number>item).toString();
+  return (item as number).toString();
 };
-    }
+
+const appDiv = document.getElementById('app');
+if (appDiv) {
+  appDiv.innerHTML = getItem.toString();
+}
