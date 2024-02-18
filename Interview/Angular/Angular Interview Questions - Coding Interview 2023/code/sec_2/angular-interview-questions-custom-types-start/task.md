@@ -1,0 +1,2 @@
+- Q1: How to create a custom type?
+- Q2: When does it make sense?
