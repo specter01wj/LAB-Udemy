@@ -19,6 +19,11 @@ $( document ).ready(function() {
   console.log(typeof(50 + 'hola'))
 
 
+  var mValue = +'2';
+  console.log(mValue);
+  console.log(typeof(mValue));
+
+
   if('Rocket' + 10) {
     console.log('True')
   } else {
