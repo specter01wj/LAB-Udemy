@@ -10,6 +10,7 @@ $( document ).ready(function() {
   console.log(typeof(String(undefined)))
 
   // To Number
+  console.log('To Number');
   console.log(typeof(Number('2')))
   console.log(Number(true), typeof(Number(true)))
   console.log(Number(false), typeof(Number(true)))
@@ -17,6 +18,7 @@ $( document ).ready(function() {
   console.log(Number('apple'), typeof(Number('apple')))
 
   //To Boolean
+  console.log('To Boolean');
   console.log(Boolean(1), typeof(Boolean(1)))
   console.log(Boolean(0), typeof(Boolean(0)))
   console.log(Boolean('Apple'), typeof(Boolean('Apple')))
