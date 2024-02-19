@@ -2,45 +2,28 @@ $( document ).ready(function() {
 
   console.clear();
 
-  var num1 = 10;
-  var num2 = 15;
-  var num3 = 20;
+  // var mStr = 'Hello'
+  // var mNum = 5
+  // var mSum = mStr + mNum
 
-  //Addition
-  console.log(num1 + num2)
-  console.log(num1 + num2 + num3)
+  // console.log(mSum);
+  // console.log(typeof(mSum));
 
-  //Subtraction
-  console.log(num2 - num1)
-  console.log(num3 - num2 - num1)
+  // console.log('hola' + true);
+  // console.log(typeof('hola' + true))
 
-  //Multiplication
-  console.log(num1 * num2)
+  // console.log(null + 'hola');
+  // console.log(typeof(null + 'hola'))
 
-  //Division
-  console.log(num2/num1)
+  // console.log(50 + 'hola');
+  // console.log(typeof(50 + 'hola'))
 
-  //Modulus
-  console.log(num2 % num1)
 
-  //Increment - Post and Pre
-  console.log('Increment - Post and Pre');
-  console.log(++num1)
-  console.log(num1)
-  console.log(num1++)
-  console.log(num1++)
-  console.log(num1)
-
-  console.log(++num1)
-  console.log(num1)
-
-  //Decrement - Post and Pre
-  console.log('Decrement - Post and Pre')
-  console.log(num1--)
-  console.log(num1)
-
-  console.log(--num1)
-  console.log(num1)
+  if('Rocket' + 10) {
+    console.log('True')
+  } else {
+    console.log('False')
+  }
 
 
 
