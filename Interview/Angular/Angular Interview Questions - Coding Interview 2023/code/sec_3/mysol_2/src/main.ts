@@ -13,17 +13,15 @@ const getActiveUsers = (users$: Observable<UserInterface[]>): Observable<UserInt
 
 const mockUsers: UserInterface[] = [
   { id: '1', name: 'John Doe', age: 30, isActive: true },
-  { id: '2', name: 'Jane Doe', age: 25, isActive: false },
-  { id: '3', name: 'Jim Beam', age: 40, isActive: true },
 ];
 
-const mockUsers$ = of(mockUsers);
+const mockUsers$: Observable<UserInterface[]> = of(mockUsers);
 
 
 getActiveUsers(mockUsers$).subscribe((item) => {
   const appDiv = document.getElementById('app');
   if (appDiv) {
-    appDiv.innerHTML = item.toString();
+    appDiv.innerHTML = JSON.stringify(item);
   }
 })
 
