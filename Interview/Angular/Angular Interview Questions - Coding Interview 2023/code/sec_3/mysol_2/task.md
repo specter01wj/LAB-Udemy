@@ -1,0 +1,2 @@
+- Q1: Write an example of RxJS filter
+- Q2: How it differs from Javascript filter?
