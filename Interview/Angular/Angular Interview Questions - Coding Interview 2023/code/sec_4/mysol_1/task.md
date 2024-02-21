@@ -1,1 +1,0 @@
-- Q1: How does Angular work from files perspective? In what file it starts loading, what files are loaded next?
