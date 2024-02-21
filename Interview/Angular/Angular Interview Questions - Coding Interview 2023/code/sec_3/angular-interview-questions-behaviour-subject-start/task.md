@@ -1,0 +1,3 @@
+- Q1: What is BehaviorSubject?
+- Q2: What is the most common use case for BehaviorSubject in Angular?
+- Q3: How it differs from Subject?
