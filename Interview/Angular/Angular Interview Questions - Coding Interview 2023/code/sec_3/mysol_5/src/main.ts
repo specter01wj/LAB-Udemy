@@ -8,10 +8,14 @@ export interface UserInterface {
 
 const users$ = new BehaviorSubject<UserInterface[]>([]);
 
+setTimeout(() => {
+  users$.next([{ id: '1', name: 'John Doe', age: 30 },])
+}, 2000);
+
 users$.subscribe((item) => {
   const appDiv = document.getElementById('app');
   if (appDiv) {
-    appDiv.innerHTML = item.toString();
+    appDiv.innerHTML = JSON.stringify(item);
   }
 })
 
