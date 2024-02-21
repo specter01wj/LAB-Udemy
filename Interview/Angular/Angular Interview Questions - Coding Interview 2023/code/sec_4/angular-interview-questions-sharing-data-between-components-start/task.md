@@ -1,0 +1,1 @@
+- Q1: How you can share your data between 2 different components?
