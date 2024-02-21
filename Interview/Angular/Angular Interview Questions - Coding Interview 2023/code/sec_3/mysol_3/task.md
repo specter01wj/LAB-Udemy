@@ -1,0 +1,2 @@
+- Q1: Create an Observable and add error handling to it
+- Q2: How will you write subscribe to be ready for an error?
