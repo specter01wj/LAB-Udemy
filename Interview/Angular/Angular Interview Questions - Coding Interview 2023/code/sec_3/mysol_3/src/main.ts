@@ -8,7 +8,10 @@ export interface UserInterface {
 
 const normalizeUsers = (users$: Observable<UserInterface[]>): Observable<string[]> => {
   return users$.pipe(
-    map((users) => users.map((user) => user.name)), 
+    map((users) => {
+      throw new Error('foo');
+      return users.map((user) => user.name);
+    }), 
     catchError(err => {
       console.log('err', err);
       return of([]);
@@ -22,12 +25,20 @@ const mockUsers: UserInterface[] = [
 
 const mockUsers$ = of(mockUsers);
 
-normalizeUsers(mockUsers$).subscribe((item) => {
-  const appDiv = document.getElementById('app');
-  if (appDiv) {
-    appDiv.innerHTML = item.toString();
+normalizeUsers(mockUsers$).subscribe({
+  next: (item) => {
+    const appDiv = document.getElementById('app');
+    if (appDiv) {
+      appDiv.innerHTML = item.toString();
+    }
+  },
+  error: (err) => {
+    console.log('err', err);
+  },
+  complete: () => {
+    console.log('complete');
   }
-})
+});
 
 
 
