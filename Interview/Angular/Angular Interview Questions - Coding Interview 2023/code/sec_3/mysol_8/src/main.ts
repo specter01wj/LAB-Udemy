@@ -1,4 +1,4 @@
-import { delay, from, mergeMap, of } from "rxjs";
+import { concat, concatMap, delay, flatMap, from, mergeMap, of } from "rxjs";
 
 const example = (operator: any) => () => {
   from([0, 1, 2, 3, 4])
@@ -11,3 +11,5 @@ const example = (operator: any) => () => {
 };
 
 example(mergeMap)();
+example(flatMap)();
+example(concatMap)();
