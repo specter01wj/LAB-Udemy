@@ -1,8 +1,9 @@
 import { Observable } from "rxjs";
 
-
+const random = Math.random();
 const observable = new Observable((observer) => {
-  observer.next(Math.random());
+  // observer.next(Math.random());
+  observer.next(random);
 });
 
 observable.subscribe((item) => {
