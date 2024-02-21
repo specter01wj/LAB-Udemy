@@ -1,0 +1,2 @@
+- Q1: What is the difference between observables and promises?
+- Q2: What to use in Angular?
