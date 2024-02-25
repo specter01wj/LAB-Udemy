@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 's4-sol2';
   currentPage: number = 1;
+
+
+  handleNotify(event): void {
+    console.log(event);
+  }
+
 }
