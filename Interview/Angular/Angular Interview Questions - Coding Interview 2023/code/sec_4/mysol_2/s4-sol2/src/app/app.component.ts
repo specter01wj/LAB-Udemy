@@ -10,12 +10,12 @@ export class AppComponent implements OnInit {
   title = 's4-sol2';
   currentPage: number = 1;
 
-  constructor(private sharablbService: SharableService) {
+  constructor(private sharableService: SharableService) {
 
   }
 
   ngOnInit(): void {
-    console.log('Parent Service Val:', this.sharablbService.currentPage);
+    console.log('Parent Service Val:', this.sharableService.currentPage);
   }
 
 

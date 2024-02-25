@@ -2,3 +2,7 @@
 <div>{{current_page}}</div>
 
 <button (click)="someEventTrigger()">Go to Parent</button>
+<div>
+  <input type="number" [(ngModel)]="newPage" placeholder="Enter new page number">
+  <button (click)="changePage(newPage)">Change Page</button>
+</div>
