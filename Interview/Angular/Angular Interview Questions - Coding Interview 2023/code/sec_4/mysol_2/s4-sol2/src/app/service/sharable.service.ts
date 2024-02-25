@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharableService {
+  currentPage: number = 9;
 
   constructor() { }
 }
