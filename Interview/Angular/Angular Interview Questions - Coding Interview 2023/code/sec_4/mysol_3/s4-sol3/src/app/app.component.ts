@@ -9,6 +9,8 @@ export class AppComponent {
   title = 's4-sol3';
   initVal: string = 'Inital Value';
 
-
+  changeVal(event: Event): void {
+    this.initVal = (event.target as HTMLInputElement).value;
+  }
 
 }

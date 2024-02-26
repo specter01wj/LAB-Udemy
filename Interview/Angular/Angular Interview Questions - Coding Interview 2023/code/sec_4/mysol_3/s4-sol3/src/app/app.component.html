@@ -1,6 +1,7 @@
 <h1>Angular interview</h1>
 
-<input type="text" [value]="initVal" />
-
+<input type="text" [value]="initVal"
+  (keyup)="changeVal($event)"/>
+<div>{{ initVal }}</div>
 
 <router-outlet></router-outlet>
