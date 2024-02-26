@@ -1,0 +1,2 @@
+- Q1: What it dependency inject in Angular?
+- Q2: How does it work?
