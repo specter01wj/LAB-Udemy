@@ -1,0 +1,2 @@
+- Q1: What are services in Angular?
+- Q2: Write a DatesService with methods getTomorrow(), getYesterday(), getToday()
