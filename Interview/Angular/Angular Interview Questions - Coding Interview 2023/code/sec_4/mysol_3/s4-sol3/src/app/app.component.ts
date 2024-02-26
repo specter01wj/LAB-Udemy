@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's4-sol3';
+  initVal: string = 'Inital Value';
+
+
+
 }
