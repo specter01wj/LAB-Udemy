@@ -1,0 +1,2 @@
+- Q1: What ways of binding data exist in Angular?
+- Q2: Write examples
