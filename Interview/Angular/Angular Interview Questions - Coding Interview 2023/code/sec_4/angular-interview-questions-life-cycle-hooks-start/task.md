@@ -1,0 +1,2 @@
+- Q1: What are life cycle hooks?
+- Q2: When are they called?
