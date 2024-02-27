@@ -1,0 +1,2 @@
+- Q1: Write an example of ViewChild
+- Q2: Write an example of ViewChildren
