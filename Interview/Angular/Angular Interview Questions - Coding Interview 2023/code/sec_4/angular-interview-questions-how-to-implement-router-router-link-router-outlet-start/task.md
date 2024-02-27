@@ -1,0 +1,4 @@
+- Q1: How to add routing to the application?
+- Q2: When global routing can be bad?
+- Q3: What is router-outlet?
+- Q4: How to create router link?
