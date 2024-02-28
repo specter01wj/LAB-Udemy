@@ -1,0 +1,2 @@
+- Q1: What is the difference between constructor and ngOnInit?
+- Q2: What should we use?
