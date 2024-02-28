@@ -9,6 +9,14 @@ const routes: Routes = [
     path: 'users',
     loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
   },
+  {
+    path: 'agents',
+    loadChildren: () => import('./agents/agents.module').then(m => m.AgentsModule)
+  },
+  {
+    path: 'soldier',
+    loadChildren: () => import('./soldier/soldier.module').then(m => m.SoldierModule)
+  },
 ];
 
 @NgModule({
