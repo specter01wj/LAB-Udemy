@@ -1,0 +1,3 @@
+- Q1: What is change detection?
+- Q2: How does onPush work?
+- Q3: Why onPush is important?
