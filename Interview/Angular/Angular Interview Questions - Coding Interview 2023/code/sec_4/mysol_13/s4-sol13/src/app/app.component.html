@@ -1,4 +1,9 @@
 <h1>Angular interview</h1>
 
-<app-child [currentPage]="currentPage$ | async"></app-child>
+<!-- <app-child [currentPage]="currentPage$ | async"></app-child> -->
+
+<ng-container *ngIf="currentPage$ | async as currentPage">
+  <app-child [currentPage]="currentPage"></app-child>
+</ng-container>
+
 <router-outlet></router-outlet>
