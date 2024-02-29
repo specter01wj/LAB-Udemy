@@ -1,3 +1,14 @@
 <div>{{ todoProps.text }}</div>
 
 <div>{{ checkRender() }}</div>
+
+<div>{{ localProp }}</div>
+<button (click)="changeLocalProp()">Change Local Prop</button>
+
+
+<div>
+  Filter: {{ filter$ | async }}
+  <button (click)="changeFilter()">Change Filter</button>
+</div>
+
+

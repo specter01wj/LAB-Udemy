@@ -29,7 +29,10 @@ export class TodosComponent {
     console.log('Change Text');
   }
 
-
+  changeArray() {
+    // this.todos[0].text = "James";
+    this.todos[0] = {...this.todos[0], text: "James"};
+  }
 
 
 }
