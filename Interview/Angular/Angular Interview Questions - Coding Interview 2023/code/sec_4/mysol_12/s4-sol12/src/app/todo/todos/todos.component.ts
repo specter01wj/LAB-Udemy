@@ -24,4 +24,12 @@ export class TodosComponent {
       isCompleted: true,
     },
   ];
+
+  changeText() {
+    console.log('Change Text');
+  }
+
+
+
+
 }
