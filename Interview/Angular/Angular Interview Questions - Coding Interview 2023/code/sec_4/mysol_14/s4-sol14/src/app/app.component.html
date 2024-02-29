@@ -1,3 +1,10 @@
 <h1>Angular interview</h1>
 
+<!-- <div>{{ user$ | async }}</div> -->
+<div *ngIf="user$ | async as users">
+  <div *ngFor="let user of users">
+    ID: {{user.id}}, Name: {{user.name}}, Age: {{user.age}}
+  </div>
+</div>
+
 <router-outlet></router-outlet>
