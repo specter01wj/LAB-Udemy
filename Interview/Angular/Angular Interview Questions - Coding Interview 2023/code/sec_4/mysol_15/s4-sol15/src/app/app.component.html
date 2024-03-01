@@ -19,5 +19,18 @@
 </app-child>
 
 
+<ng-container *ngTemplateOutlet="articleTemplate; context: {article}">
+</ng-container>
+
+<ng-template #loadingTemplate>
+  <div>Loading...</div>
+</ng-template>
+
+<ng-template #articleTemplate let-article="article">
+  <div>{{ article.title }}</div>
+</ng-template>
+
+
+
 
 <router-outlet></router-outlet>
