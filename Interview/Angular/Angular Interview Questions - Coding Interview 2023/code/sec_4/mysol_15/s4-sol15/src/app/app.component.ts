@@ -9,9 +9,10 @@ import { Article } from './model/article';
 export class AppComponent {
   title = 's4-sol15';
 
-  article: Article | null = { id: '101', title: 'Lead' }
+  // article: Article | null = { id: '101', title: 'Lead' };
+  article: Article | null = null;
 
-
+  numbers = [1,2,3];
 
 
 

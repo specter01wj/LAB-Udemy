@@ -7,8 +7,16 @@
 </ng-template>
 
 
+<ng-container *ngIf="numbers">
+  <ng-container *ngFor="let number of numbers">
+    {{ number }}
+  </ng-container>
+</ng-container>
 
 
+<app-child>
+  <div>James</div>
+</app-child>
 
 
 
