@@ -1,0 +1,4 @@
+- Q1: What is ng-container?
+- Q2: What is ng-template?
+- Q3: What is ng-content?
+- Q4: What is ng-template-outlet?
