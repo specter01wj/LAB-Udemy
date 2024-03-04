@@ -9,6 +9,8 @@ import { combineLatest, of } from 'rxjs';
 export class AppComponent {
   title = 's4-sol17';
 
+  currentUser$ = of({name: 'James', id: 1001, age: 34});
+
   foo$ = of('foo');
   bar$ = of('bar');
   baz$ = of('baz');
