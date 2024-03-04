@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { combineLatest, of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's4-sol17';
+
+  foo$ = of('foo');
+  bar$ = of('bar');
+  baz$ = of('baz');
+
+  data$ = combineLatest({
+    foo: this.foo$,
+    bar: this.bar$,
+    baz: this.baz$
+  });
+
+
 }
