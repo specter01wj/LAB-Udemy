@@ -1,5 +1,9 @@
 <h1>Angular interview</h1>
 
 <button (click)="fadeInOut()">Fade in / out</button>
-<div *ngIf="isShown">This is a block with fade in / out</div>
+
+<!-- <div @fadeIn @fadeOut *ngIf="isShown">This is a block with fade in / out</div> -->
+<div [@fadeInOut]="isShown ? 'open': 'close'">This is a block with fade in / out</div>
+
+
 <router-outlet></router-outlet>
