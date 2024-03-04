@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's4-sol16';
+  isShown = false;
+
+  fadeInOut(): void {
+    this.isShown = !this.isShown;
+  }
 }
