@@ -1,0 +1,1 @@
+- Q1: What is the difference between structural directives and component directives?
