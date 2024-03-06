@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BackgroundChangerDirective } from './shared/background-changer.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BackgroundChangerDirective
   ],
   imports: [
     BrowserModule,
