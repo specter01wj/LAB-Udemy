@@ -10,4 +10,9 @@ export class AppComponent {
 
   currentDate = new Date();
 
+  person = {
+    name: "James",
+    surname: "Wang"
+  };
+
 }
