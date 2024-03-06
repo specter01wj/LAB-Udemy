@@ -1,0 +1,2 @@
+- Q1: Why do we need interceptors?
+- Q2: Write an example of interceptor
