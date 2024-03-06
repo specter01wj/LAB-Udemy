@@ -1,0 +1,1 @@
+- Q1: Why is it bad to call a function in template?
