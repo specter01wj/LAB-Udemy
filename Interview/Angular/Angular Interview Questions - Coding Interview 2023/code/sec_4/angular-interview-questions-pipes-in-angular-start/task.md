@@ -1,0 +1,3 @@
+- Q1: What are pipes?
+- Q2: What build in pipes do you know?
+- Q3: Create a simple pipe
