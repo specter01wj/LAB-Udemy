@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's4-sol21';
+
+  currentDate = new Date();
+
 }
