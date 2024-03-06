@@ -13,6 +13,8 @@ export class AppComponent {
     surname: "Wang"
   };
 
+  fullName = `${this.person.name} ${this.person.surname}`;
+
   getFullname(): string {
     console.log('getFullname');
     return `${this.person.name} ${this.person.surname}`;
