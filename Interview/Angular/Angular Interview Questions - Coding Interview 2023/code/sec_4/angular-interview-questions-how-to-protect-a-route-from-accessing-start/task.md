@@ -1,0 +1,2 @@
+- Q1: What are Angular guards?
+- Q2: Write an example of code to protect a route with both sync and async ways
