@@ -1,0 +1,1 @@
+- Q1: Write an example how to inject a module with some configuration
