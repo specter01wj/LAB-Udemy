@@ -1,0 +1,3 @@
+- Q1: How to execute code outside Angular change detection?
+- Q2: When does it make sense?
+- Q3: Write a small example
