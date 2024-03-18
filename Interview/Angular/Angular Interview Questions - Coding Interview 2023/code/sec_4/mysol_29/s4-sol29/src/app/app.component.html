@@ -3,6 +3,11 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <div>
     <input type="text" formControlName="username" />
+    <span *ngIf="registerForm.get('username')?.hasError('required') &&
+                registerForm.get('username')?.dirty ||
+                registerForm.get('username')?.touched || isSubmitted">
+      This field is required.
+    </span>
   </div>
   <div>
     <input type="text" formControlName="email" />

@@ -8,6 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 's4-sol29';
+  isSubmitted: boolean = false;
 
   registerForm = this.fb.group({
     username: ['', Validators.required],
@@ -19,6 +20,7 @@ export class AppComponent {
 
 
   onSubmit(): void {
+    this.isSubmitted = true;
     console.log('onSubmit', this.registerForm.value);
   }
 
