@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's4-sol30';
+  currrentPage = 1;
 }
