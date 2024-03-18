@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 's4-sol29';
   isSubmitted: boolean = false;
 
@@ -18,6 +18,12 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {}
 
+
+  ngOnInit(): void {
+    this.registerForm.get('username')?.valueChanges.subscribe(value => {
+      console.log('valueChanges', value);
+    })
+  }
 
   onSubmit(): void {
     this.isSubmitted = true;
