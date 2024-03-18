@@ -18,6 +18,8 @@ export class AppComponent {
   constructor(private fb: FormBuilder) {}
 
 
-
+  onSubmit(): void {
+    console.log('onSubmit', this.registerForm.value);
+  }
 
 }
