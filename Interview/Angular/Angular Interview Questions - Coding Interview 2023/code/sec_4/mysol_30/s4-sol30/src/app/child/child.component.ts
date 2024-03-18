@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './child.component.scss'
 })
 export class ChildComponent {
-  @Input() currrentPage: number;
+  @Input() currrentPage: number = 1;
 }
