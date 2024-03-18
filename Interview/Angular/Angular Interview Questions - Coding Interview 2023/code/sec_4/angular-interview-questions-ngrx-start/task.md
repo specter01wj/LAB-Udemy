@@ -1,0 +1,1 @@
+- Q1: Are you familiar with Redux or NgRx?
