@@ -1,3 +1,19 @@
 <h1>Angular interview</h1>
 
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div>
+    <input type="text" formControlName="username" />
+  </div>
+  <div>
+    <input type="text" formControlName="email" />
+  </div>
+  <div>
+    <input type="password" formControlName="password" />
+  </div>
+  <div>
+    <button type="submit">Register</button>
+  </div>
+</form>
+
+
 <router-outlet></router-outlet>
