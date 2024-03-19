@@ -1,0 +1,2 @@
+- Q1: How to use inject in Angular?
+- Q2: What are the benefits?
