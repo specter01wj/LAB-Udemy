@@ -3,3 +3,5 @@
 <div *ngIf="isLoading$ | async">Loading...</div>
 
 <div *ngIf="error$ | async as error">{{ error }}</div>
+
+<div *ngFor="let user of users$ | async">{{ user.name }}</div>
