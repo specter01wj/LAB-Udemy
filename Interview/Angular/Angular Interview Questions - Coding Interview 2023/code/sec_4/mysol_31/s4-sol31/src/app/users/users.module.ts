@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { UsersComponent } from './users/users.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from '../store/reducers';
 
 const routes: Routes = [
   {
@@ -17,7 +19,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    StoreModule.forFeature('users', reducers),
   ],
   exports: [
     UsersComponent
