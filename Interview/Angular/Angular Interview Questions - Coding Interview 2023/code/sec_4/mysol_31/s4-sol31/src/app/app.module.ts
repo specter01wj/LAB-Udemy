@@ -8,6 +8,7 @@ import { UsersModule } from './users/users.module';
 import { HomeComponent } from './home/home.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
       logOnly: false,
       autoPause: true,
     }),
+    EffectsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
