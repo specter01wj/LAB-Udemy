@@ -1,1 +1,5 @@
-<p>users works!</p>
+<h1>Users</h1>
+
+<div *ngIf="isLoading$ | async">Loading...</div>
+
+<div *ngIf="error$ | async as error">{{ error }}</div>
