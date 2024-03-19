@@ -11,7 +11,7 @@ import { errorSelector, isLoadingSelector, usersSelector } from '../../store/sel
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
-export class UsersComponent implements OnInit, OnDestroy {
+export class UsersComponent implements OnInit {
   isLoading$: Observable<boolean>;
   error$: Observable<string | null>;
   users$: Observable<User[]>;
@@ -24,15 +24,8 @@ export class UsersComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-      /* this.dataSubscription = this.data$.subscribe((data) => {
-        console.log('data:', data);
-      }); */
     this.store.dispatch(UsersActions.getUsers())
   }
 
-
-  ngOnDestroy(): void {
-    this.dataSubscription?.unsubscribe();
-  }
 
 }
