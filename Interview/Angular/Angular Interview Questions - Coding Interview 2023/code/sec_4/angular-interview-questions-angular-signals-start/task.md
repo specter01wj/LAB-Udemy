@@ -1,0 +1,2 @@
+- Q1: How to use Angular Signals?
+- Q2: What are the benefits?
