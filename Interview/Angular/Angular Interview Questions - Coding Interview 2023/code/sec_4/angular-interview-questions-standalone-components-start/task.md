@@ -1,0 +1,2 @@
+- Q1: How to use standalone components?
+- Q2: What are the benefits?
