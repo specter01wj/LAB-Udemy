@@ -8,11 +8,6 @@ public class MainExe {
         OneDimensionalArrayDemo.run();
 
         System.out.println("\n=== Multi Dimensional Array ===");
-
-
-
-
-        
         MultiDimensionalArrayDemo.run();
 
         System.out.println("\n=== Simple Object Demo ===");
