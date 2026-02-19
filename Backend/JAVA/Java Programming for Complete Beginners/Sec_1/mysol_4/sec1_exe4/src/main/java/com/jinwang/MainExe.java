@@ -11,6 +11,7 @@ public class MainExe {
         MultiDimensionalArrayDemo.run();
 
         System.out.println("\n=== Simple Object Demo ===");
+        
         SimpleObjectDemo.run();
 
         System.out.println("\n=== Advanced Object Demo ===");
