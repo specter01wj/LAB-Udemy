@@ -20,11 +20,6 @@ class Program {
         this();
         this.value = value;
         this.text = text;
-
-
-
-
-        
         System.out.println("Third Constructor");
     }
 }
