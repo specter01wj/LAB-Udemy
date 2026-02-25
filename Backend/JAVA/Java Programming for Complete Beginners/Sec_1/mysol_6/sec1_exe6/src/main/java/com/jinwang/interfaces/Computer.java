@@ -12,5 +12,5 @@ public class Computer implements Information {
     public void displayInformation() {
         System.out.println("Computer serial number is: " + serialNumber);
     }
-    
+
 }
