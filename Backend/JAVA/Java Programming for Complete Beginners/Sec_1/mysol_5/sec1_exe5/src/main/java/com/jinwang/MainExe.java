@@ -9,6 +9,7 @@ public class MainExe {
 
         System.out.println("\n=== Static Demo ===");
 
+
         
         StaticDemo.run();
 
