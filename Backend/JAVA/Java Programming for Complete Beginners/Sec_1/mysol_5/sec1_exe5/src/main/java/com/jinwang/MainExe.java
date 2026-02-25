@@ -8,6 +8,7 @@ public class MainExe {
         ConstructorDemo.run();
 
         System.out.println("\n=== Static Demo ===");
+        
         StaticDemo.run();
 
         System.out.println("\n=== Inheritance Demo ===");
