@@ -1,5 +1,7 @@
 package com.jinwang;
 
+import com.jinwang.interfaces.InterfaceDemo;
+
 public class MainExe {
 
     public static void main(String[] args) {

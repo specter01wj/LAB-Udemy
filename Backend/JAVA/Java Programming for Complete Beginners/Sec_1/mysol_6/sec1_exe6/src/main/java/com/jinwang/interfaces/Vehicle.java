@@ -16,5 +16,5 @@ public class Vehicle implements Information {
     public void displayInformation() {
         System.out.println("Vehicle type is: " + type);
     }
-    
+
 }
