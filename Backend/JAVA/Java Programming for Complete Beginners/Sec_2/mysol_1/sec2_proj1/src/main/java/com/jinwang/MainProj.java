@@ -6,6 +6,7 @@ public class MainProj {
 
         GuessTheWord game = new GuessTheWord();
         game.start();
+
         
         game.end();
     }
