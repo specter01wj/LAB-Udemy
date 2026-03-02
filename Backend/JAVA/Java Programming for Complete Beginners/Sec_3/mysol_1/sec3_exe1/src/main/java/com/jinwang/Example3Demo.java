@@ -10,6 +10,7 @@ public class Example3Demo {
 
         try {
             read();
+            
         } catch (FileNotFoundException e) {
             System.out.println("File not found in read() method.");
         }
