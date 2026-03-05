@@ -11,10 +11,6 @@ public class RuntimeExceptionDemo {
             value = value / 0;
         } catch (ArithmeticException e) {
             System.out.println("Cannot divide by zero.");
-
-
-
-            
         }
 
         System.out.println("\n=== NullPointerException ===");
