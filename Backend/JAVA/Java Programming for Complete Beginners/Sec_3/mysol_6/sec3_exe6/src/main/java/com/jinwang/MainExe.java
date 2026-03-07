@@ -1,5 +1,9 @@
 package com.jinwang;
 
+import com.jinwang.passbyvalue.PassByValueDemo;
+import com.jinwang.lambda.LambdaDemo;
+import com.jinwang.enums.EnumDemo;
+
 public class MainExe {
 
     public static void main(String[] args) {
