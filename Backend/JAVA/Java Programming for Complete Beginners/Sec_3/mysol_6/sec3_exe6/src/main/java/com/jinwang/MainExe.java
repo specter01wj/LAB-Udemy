@@ -13,6 +13,7 @@ public class MainExe {
 
         System.out.println();
         System.out.println("=== Lambda Demo ===");
+        
         LambdaDemo.run();
 
         System.out.println();
