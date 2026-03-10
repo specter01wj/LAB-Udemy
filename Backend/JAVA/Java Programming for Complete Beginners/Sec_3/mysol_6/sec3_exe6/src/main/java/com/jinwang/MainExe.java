@@ -9,11 +9,6 @@ public class MainExe {
     public static void main(String[] args) {
 
         System.out.println("=== Pass By Value Demo ===");
-
-
-
-
-        
         PassByValueDemo.run();
 
         System.out.println();
