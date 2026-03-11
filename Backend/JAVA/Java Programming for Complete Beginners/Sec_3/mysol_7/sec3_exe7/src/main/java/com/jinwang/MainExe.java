@@ -1,5 +1,10 @@
 package com.jinwang;
 
+import com.jinwang.serialization.WritingDemo;
+import com.jinwang.serialization.ReadingDemo;
+import com.jinwang.serializationmulti.WritingMultiDemo;
+import com.jinwang.serializationmulti.ReadingMultiDemo;
+
 public class MainExe {
 
     public static void main(String[] args) {
