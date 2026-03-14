@@ -17,6 +17,7 @@ public class WritingMultiDemo {
 
 
 
+
                 
                 new Vehicle(505, "Ford"),
                 new Vehicle(203, "Chevrolet")
