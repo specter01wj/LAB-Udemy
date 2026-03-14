@@ -14,13 +14,8 @@ public class WritingMultiDemo {
 
         Vehicle[] vehicles = {
                 new Vehicle(805, "Toyota"),
-                new Vehicle(505, "Ford"),
-
-
-
-
-
                 
+                new Vehicle(505, "Ford"),
                 new Vehicle(203, "Chevrolet")
         };
 
