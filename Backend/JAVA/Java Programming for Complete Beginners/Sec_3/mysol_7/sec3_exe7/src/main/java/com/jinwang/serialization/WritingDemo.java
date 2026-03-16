@@ -13,6 +13,7 @@ public class WritingDemo {
         Vehicle car = new Vehicle(369, "Toyota");
 
 
+
         
         Vehicle truck = new Vehicle(852, "Ford");
 
