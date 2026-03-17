@@ -12,6 +12,7 @@ public class MainExe {
         System.out.println("=== Serialization Demo ===");
 
         WritingDemo.run();
+        
         ReadingDemo.run();
 
         System.out.println();
