@@ -18,6 +18,7 @@ public class MainExe {
         System.out.println("=== Serialization Multiple Objects Demo ===");
 
         WritingMultiDemo.run();
+        
         ReadingMultiDemo.run();
     }
 
