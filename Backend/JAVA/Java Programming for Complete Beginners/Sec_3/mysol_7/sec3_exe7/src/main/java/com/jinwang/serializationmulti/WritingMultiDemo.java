@@ -27,6 +27,7 @@ public class WritingMultiDemo {
             out.writeObject(vehicles);
 
 
+
             
             out.writeObject(vehicleList);
 
