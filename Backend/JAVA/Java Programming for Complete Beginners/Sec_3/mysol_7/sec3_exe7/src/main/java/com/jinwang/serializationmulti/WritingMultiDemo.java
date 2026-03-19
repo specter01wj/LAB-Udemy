@@ -25,12 +25,6 @@ public class WritingMultiDemo {
                      new ObjectOutputStream(new FileOutputStream("vehicle.data"))) {
 
             out.writeObject(vehicles);
-
-
-
-
-
-            
             out.writeObject(vehicleList);
 
             out.writeInt(vehicleList.size());
