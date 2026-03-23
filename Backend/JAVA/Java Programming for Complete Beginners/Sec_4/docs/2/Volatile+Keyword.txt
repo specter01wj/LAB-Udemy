@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+class Engine extends Thread {
+
+	private volatile boolean on = true;
+
+	public void run() {
+		while (on) {
+			System.out.println("The engine is on...");
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void off() {
+		on = false;
+	}
+}
+
+public class App {
+
+	public static void main(String[] args) {
+
+		Engine en1 = new Engine();
+		en1.start();
+
+		System.out.println("Press enter to stop...");
+		Scanner scanner = new Scanner(System.in);
+		scanner.nextLine();
+
+		en1.off();
+	}
+
+}
