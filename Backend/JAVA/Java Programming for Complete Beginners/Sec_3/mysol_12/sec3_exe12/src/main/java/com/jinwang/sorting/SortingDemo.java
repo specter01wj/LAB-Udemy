@@ -47,11 +47,6 @@ public class SortingDemo {
         values.add(59);
         values.add(2);
         values.add(5);
-
-
-
-
-        
         values.add(9);
         values.add(21);
 
