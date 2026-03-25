@@ -1,0 +1,50 @@
+
+public class Application {
+
+	private int number = 0;
+
+	public synchronized void numberIncrementation() {
+		number++;
+	}
+
+	public static void main(String[] args) {
+
+		Application app = new Application();
+		app.multipleThreads();
+	}
+
+	public void multipleThreads() {
+
+		Thread firstThread = new Thread(new Runnable() {
+			public void run() {
+
+				for (int n = 0; n < 20000; n++) {
+					numberIncrementation();
+				}
+			}
+		});
+
+		Thread secondThread = new Thread(new Runnable() {
+			public void run() {
+
+				for (int n = 0; n < 20000; n++) {
+					numberIncrementation();
+				}
+			}
+		});
+
+		firstThread.start();
+		secondThread.start();
+
+		try {
+			firstThread.join();
+			secondThread.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println("Number is: " + number);
+	}
+
+}
