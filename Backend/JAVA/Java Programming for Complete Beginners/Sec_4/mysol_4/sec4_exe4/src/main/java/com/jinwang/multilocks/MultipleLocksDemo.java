@@ -40,6 +40,7 @@ public class MultipleLocksDemo {
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
 
+
                 
             }
 
