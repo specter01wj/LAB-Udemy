@@ -41,6 +41,7 @@ public class MultipleLocksDemo {
                 Thread.currentThread().interrupt();
 
 
+
                 
             }
 
