@@ -39,6 +39,7 @@ public class MultipleLocksDemo {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
+
                 
             }
 
