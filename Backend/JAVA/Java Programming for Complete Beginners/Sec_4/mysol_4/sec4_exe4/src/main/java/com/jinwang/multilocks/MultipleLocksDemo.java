@@ -39,12 +39,6 @@ public class MultipleLocksDemo {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-
-
-
-
-
-                
             }
 
             list2.add(random.nextInt(200));
