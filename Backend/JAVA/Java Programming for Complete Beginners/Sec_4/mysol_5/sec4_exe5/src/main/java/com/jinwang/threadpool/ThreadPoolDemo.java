@@ -46,6 +46,7 @@ public class ThreadPoolDemo {
             executor.awaitTermination(1, TimeUnit.HOURS);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+            
         }
 
         System.out.println("All tasks completed.");
