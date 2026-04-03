@@ -47,6 +47,7 @@ public class CountDownLatchDemo {
             latch.await();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+
             
         }
 
