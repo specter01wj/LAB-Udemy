@@ -47,12 +47,6 @@ public class CountDownLatchDemo {
             latch.await();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-
-
-
-
-
-            
         }
 
         System.out.println("All threads completed.");
