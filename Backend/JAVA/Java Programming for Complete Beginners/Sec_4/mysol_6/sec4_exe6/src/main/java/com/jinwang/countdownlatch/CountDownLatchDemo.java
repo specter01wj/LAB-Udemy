@@ -39,12 +39,6 @@ public class CountDownLatchDemo {
 
         for (int i = 0; i < 6; i++) {
             executor.submit(new Task(latch));
-
-
-
-
-
-            
         }
 
         executor.shutdown();
