@@ -22,11 +22,6 @@ public class Engine {
             synchronized (this) {
                 System.out.println("Press ENTER to continue...");
                 scanner.nextLine();
-
-
-
-
-                
                 System.out.println("ENTER pressed.");
 
                 notify(); // wake up waiting thread
