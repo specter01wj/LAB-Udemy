@@ -10,11 +10,6 @@ public class Engine {
             System.out.println("Engine started. Waiting...");
             wait(); // release lock + wait
             System.out.println("Resumed.");
-
-
-
-
-            
         }
     }
 
