@@ -34,11 +34,6 @@ public class MessageService {
         synchronized (this) {
             activeMessages++;
             System.out.println("Active messages: " + activeMessages);
-
-
-
-
-            
         }
 
         try {
