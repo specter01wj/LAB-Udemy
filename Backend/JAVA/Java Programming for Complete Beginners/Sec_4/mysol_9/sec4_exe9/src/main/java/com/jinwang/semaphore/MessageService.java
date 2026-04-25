@@ -25,6 +25,7 @@ public class MessageService {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
 
+
             
         } finally {
             semaphore.release(); // release permit
