@@ -1,0 +1,22 @@
+Exercise 1: Counting and Displaying Even Numbers
+
+Requirement:
+
+Create a class named EvenNumberCounter.
+
+Inside the class, implement a method:
+
+countAndDisplayEvens(int limit)
+
+Functionality:
+
+- The method takes an integer parameter called "limit".
+- It should count and display all even numbers starting from 2 up to the given limit (inclusive).
+- Use a loop to iterate through numbers.
+- Use a condition to check if a number is even.
+
+Learning Objective:
+
+- Practice using loops.
+- Practice using conditional statements.
+- Understand how to identify even numbers using modulus operator (%).
