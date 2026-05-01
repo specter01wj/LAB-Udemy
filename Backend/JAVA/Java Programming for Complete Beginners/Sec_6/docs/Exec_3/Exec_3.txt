@@ -1,0 +1,39 @@
+Exercise 2: Polymorphism
+
+Requirement:
+
+Create a Java program that demonstrates polymorphism using animals.
+
+1. Create a base class: Animal
+
+Attributes:
+- name (String): name of the animal
+
+Methods:
+- Constructor to initialize name
+- makeSound(): prints a generic message (e.g., "The animal makes a sound")
+
+2. Create subclasses:
+- Dog
+- Cat
+- Bird
+
+Each subclass should:
+- Inherit from Animal
+- Override makeSound() method
+
+Specific behavior:
+- Dog → "The dog barks."
+- Cat → "The cat meows."
+- Bird → "The bird chirps."
+
+3. In main:
+- Create a list/array of Animal objects
+- Include Dog, Cat, Bird
+- Loop through the list
+- Call makeSound() on each object
+
+Learning Objective:
+- Understand inheritance
+- Understand method overriding
+- Understand polymorphism
