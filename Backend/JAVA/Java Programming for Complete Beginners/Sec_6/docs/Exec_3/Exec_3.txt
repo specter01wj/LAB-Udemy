@@ -1,39 +1,24 @@
-Exercise 2: Polymorphism
+Exercise 3: Student Grades
 
 Requirement:
 
-Create a Java program that demonstrates polymorphism using animals.
+Create a Java program that determines a student's grade using the ternary operator.
 
-1. Create a base class: Animal
+Grading rules:
+- 90 and above → Grade A
+- 80 and above → Grade B
+- 70 and above → Grade C
+- 60 and above → Grade D
+- Below 60 → Grade F
 
-Attributes:
-- name (String): name of the animal
+Functionality:
 
-Methods:
-- Constructor to initialize name
-- makeSound(): prints a generic message (e.g., "The animal makes a sound")
-
-2. Create subclasses:
-- Dog
-- Cat
-- Bird
-
-Each subclass should:
-- Inherit from Animal
-- Override makeSound() method
-
-Specific behavior:
-- Dog → "The dog barks."
-- Cat → "The cat meows."
-- Bird → "The bird chirps."
-
-3. In main:
-- Create a list/array of Animal objects
-- Include Dog, Cat, Bird
-- Loop through the list
-- Call makeSound() on each object
+- Input: student score (int or double)
+- Use ternary operator to determine grade
+- Output the grade
 
 Learning Objective:
-- Understand inheritance
-- Understand method overriding
-- Understand polymorphism
+
+- Practice ternary operator
+- Understand conditional evaluation
+- Replace if-else with compact syntax
