@@ -1,0 +1,41 @@
+Exercise 4: Website Access Age Verification
+
+Requirement:
+
+Create a Java program to verify if a user is old enough to access a website using exception handling.
+
+Components:
+
+1. Main method
+2. Custom exception class: AgeNotAllowedException (extends Exception)
+
+Functionality:
+
+- Use Scanner to read user input
+- Prompt: "Enter your age: "
+- Use try-catch to handle exceptions
+
+Validation:
+
+1. If input is NOT an integer:
+   - Catch InputMismatchException
+   - Print: "Error: Invalid input. Please enter a valid age."
+
+2. If age < 18:
+   - Throw AgeNotAllowedException
+   - Message: "Sorry, you are not old enough to access this website."
+
+3. If age >= 18:
+   - Print: "Welcome to the website!"
+
+Custom Exception:
+
+- Class: AgeNotAllowedException
+- Constructor takes a String message
+- Calls super(message)
+
+Learning Objective:
+
+- Practice exception handling
+- Create custom exceptions
+- Handle invalid user input
