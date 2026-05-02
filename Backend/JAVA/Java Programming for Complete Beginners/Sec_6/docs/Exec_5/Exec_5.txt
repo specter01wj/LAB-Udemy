@@ -1,41 +1,29 @@
-Exercise 4: Website Access Age Verification
+Exercise 5: Movie Rating System using HashSet
 
 Requirement:
 
-Create a Java program to verify if a user is old enough to access a website using exception handling.
+Create a program that stores and displays unique movie ratings using a HashSet.
 
-Components:
+Classes:
 
-1. Main method
-2. Custom exception class: AgeNotAllowedException (extends Exception)
+1. MovieRating
+   Attributes:
+   - movieTitle (String)
+   - rating (int or double)
+
+2. RatingSystem
+   Methods:
+   - addRating(MovieRating rating): add a movie rating to HashSet
+   - displayRatings(): display all unique movie ratings
 
 Functionality:
 
-- Use Scanner to read user input
-- Prompt: "Enter your age: "
-- Use try-catch to handle exceptions
-
-Validation:
-
-1. If input is NOT an integer:
-   - Catch InputMismatchException
-   - Print: "Error: Invalid input. Please enter a valid age."
-
-2. If age < 18:
-   - Throw AgeNotAllowedException
-   - Message: "Sorry, you are not old enough to access this website."
-
-3. If age >= 18:
-   - Print: "Welcome to the website!"
-
-Custom Exception:
-
-- Class: AgeNotAllowedException
-- Constructor takes a String message
-- Calls super(message)
+- Use HashSet to store ratings (no duplicates)
+- Add multiple movie ratings
+- Display all unique ratings
 
 Learning Objective:
 
-- Practice exception handling
-- Create custom exceptions
-- Handle invalid user input
+- Understand HashSet
+- Handle uniqueness
+- Practice class design
