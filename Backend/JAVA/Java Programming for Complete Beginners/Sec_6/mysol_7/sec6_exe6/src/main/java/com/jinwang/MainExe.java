@@ -3,7 +3,7 @@ package com.jinwang;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class MainExe {
 
     public static void main(String[] args) throws InterruptedException {
 
