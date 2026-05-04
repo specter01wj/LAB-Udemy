@@ -1,29 +1,45 @@
-Exercise 5: Movie Rating System using HashSet
+Exercise 6: Using Multiple Locks to Synchronize Threads with Bank Accounts
 
 Requirement:
 
-Create a program that stores and displays unique movie ratings using a HashSet.
+Create a multithreaded banking system using multiple locks.
 
 Classes:
 
-1. MovieRating
+1. BankAccount
    Attributes:
-   - movieTitle (String)
-   - rating (int or double)
+   - accountNumber (int)
+   - balance (double)
 
-2. RatingSystem
-   Methods:
-   - addRating(MovieRating rating): add a movie rating to HashSet
-   - displayRatings(): display all unique movie ratings
+   Constructor:
+   - initialize accountNumber and balance
 
-Functionality:
+2. BankTransactionDemo
+   - Create a list of BankAccount objects
 
-- Use HashSet to store ratings (no duplicates)
-- Add multiple movie ratings
-- Display all unique ratings
+3. Runnable Tasks:
+   - DepositTask
+   - WithdrawTask
+
+DepositTask:
+- Lock specific account
+- Deposit random amount (100–500)
+- Unlock
+- Repeat multiple times
+
+WithdrawTask:
+- Lock specific account
+- Withdraw random amount (50–200) if sufficient balance
+- Unlock
+- Repeat multiple times
+
+Main Flow:
+- Create multiple accounts
+- Start multiple threads (deposit + withdraw)
+- Wait for all threads (join)
+- Print final balances
 
 Learning Objective:
-
-- Understand HashSet
-- Handle uniqueness
-- Practice class design
+- Practice multithreading
+- Use multiple locks
+- Avoid race conditions
