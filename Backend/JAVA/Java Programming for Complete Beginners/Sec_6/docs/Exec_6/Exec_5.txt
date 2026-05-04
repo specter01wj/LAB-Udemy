@@ -1,0 +1,29 @@
+Exercise 5: Movie Rating System using HashSet
+
+Requirement:
+
+Create a program that stores and displays unique movie ratings using a HashSet.
+
+Classes:
+
+1. MovieRating
+   Attributes:
+   - movieTitle (String)
+   - rating (int or double)
+
+2. RatingSystem
+   Methods:
+   - addRating(MovieRating rating): add a movie rating to HashSet
+   - displayRatings(): display all unique movie ratings
+
+Functionality:
+
+- Use HashSet to store ratings (no duplicates)
+- Add multiple movie ratings
+- Display all unique ratings
+
+Learning Objective:
+
+- Understand HashSet
+- Handle uniqueness
+- Practice class design
