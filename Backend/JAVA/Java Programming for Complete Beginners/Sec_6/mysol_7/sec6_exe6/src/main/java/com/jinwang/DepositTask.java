@@ -17,11 +17,6 @@ public class DepositTask implements Runnable {
         for (int i = 0; i < 10; i++) {
             BankAccount acc = accounts.get(random.nextInt(accounts.size()));
             double amount = 100 + random.nextInt(401);
-
-
-
-
-            
             acc.deposit(amount);
         }
     }
