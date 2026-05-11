@@ -6,11 +6,6 @@ import java.util.Random;
 public class WithdrawTask implements Runnable {
 
     private List<BankAccount> accounts;
-
-
-
-
-    
     private Random random = new Random();
 
     public WithdrawTask(List<BankAccount> accounts) {
