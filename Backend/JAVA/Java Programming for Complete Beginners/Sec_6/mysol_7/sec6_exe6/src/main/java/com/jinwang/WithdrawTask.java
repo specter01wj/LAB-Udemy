@@ -18,6 +18,7 @@ public class WithdrawTask implements Runnable {
             BankAccount acc = accounts.get(random.nextInt(accounts.size()));
             double amount = 50 + random.nextInt(151);
             acc.withdraw(amount);
+
         }
     }
 }
