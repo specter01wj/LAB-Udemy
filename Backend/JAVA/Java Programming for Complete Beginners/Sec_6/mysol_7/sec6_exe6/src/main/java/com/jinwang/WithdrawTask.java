@@ -19,6 +19,7 @@ public class WithdrawTask implements Runnable {
             double amount = 50 + random.nextInt(151);
             acc.withdraw(amount);
 
+            
         }
     }
 }
